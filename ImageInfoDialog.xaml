@@ -1,0 +1,50 @@
+﻿<Window x:Class="VietOCR.ImageInfoDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VietOCR"
+        xmlns:resx="clr-namespace:VietOCR"
+        mc:Ignorable="d"
+        Title="{x:Static resx:ImageInfoDialog.this_Title}" Height="246" Width="280.8" Loaded="Window_Loaded" ResizeMode="NoResize">
+    <Grid>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" Margin="0 20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="labelWidth" Content="{x:Static resx:ImageInfoDialog.labelWidth_Text}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <TextBox x:Name="textBoxWidth" Grid.Column="1" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" Width="56" IsReadOnly="True" Height="23"/>
+            <Label x:Name="labelHeight" Content="{x:Static resx:ImageInfoDialog.labelHeight_Text}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" />
+            <Label x:Name="labelXRes" Content="{x:Static resx:ImageInfoDialog.labelXRes_Text}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" />
+            <Label x:Name="labelYRes" Content="{x:Static resx:ImageInfoDialog.labelYRes_Text}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="3" />
+            <TextBox x:Name="textBoxHeight" Grid.Column="1" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" Width="56" Grid.Row="1" IsReadOnly="True" Height="23"/>
+            <TextBox x:Name="textBoxXRes" Grid.Column="1" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" Width="56" Grid.Row="2" IsReadOnly="True" Height="23" />
+            <TextBox x:Name="textBoxYRes" Grid.Column="1" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" Width="56" Grid.Row="3" IsReadOnly="True" Height="23" />
+            <Label x:Name="labelBitDepth" Content="{x:Static resx:ImageInfoDialog.labelBitDepth_Text}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="4" />
+            <TextBox x:Name="textBoxBitDepth" Grid.Column="1" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" Width="56" Grid.Row="4" IsReadOnly="True" Height="23" />
+            <ComboBox x:Name="comboBoxW" Grid.Column="2" Margin="5,0,0,0" Width="60" VerticalAlignment="Center" SelectionChanged="comboBoxW_SelectionChanged" >
+                <ComboBoxItem Content="pixels"/>
+                <ComboBoxItem Content="inches"/>
+                <ComboBoxItem Content="cm"/>
+            </ComboBox>
+            <ComboBox x:Name="comboBoxH" Grid.Column="2" Margin="5,0,0,0" Width="60" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1" SelectionChanged="comboBoxH_SelectionChanged" >
+                <ComboBoxItem Content="pixels"/>
+                <ComboBoxItem Content="inches"/>
+                <ComboBoxItem Content="cm"/>
+            </ComboBox>
+            <Label x:Name="label5" Content="{x:Static resx:ImageInfoDialog.label5_Text}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" />
+            <Label x:Name="label6" Content="{x:Static resx:ImageInfoDialog.label6_Text}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="3" Grid.Column="2" />
+        </Grid>
+        <Button x:Name="buttonOK" Content="{x:Static resx:ImageInfoDialog.buttonOK_Text}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="60" Click="buttonOK_Click" Margin="0 20"/>
+    </Grid>
+</Window>

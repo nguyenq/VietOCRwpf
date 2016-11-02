@@ -1,0 +1,850 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DDD5F42-D710-4AB7-BAA9-5A8C2A83EFCF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VietOCR</RootNamespace>
+    <AssemblyName>VietOCR</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\VietOCR.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Library\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Tesseract, Version=3.0.2.0, Culture=neutral, PublicKeyToken=ebeb3d86bef60cbe, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Tesseract.3.0.2.0\lib\net451\Tesseract.dll</HintPath>
+    </Reference>
+    <Reference Include="VietKeyInput, Version=4.0.6120.35233, Culture=neutral, PublicKeyToken=7c2367f2fb8ce189, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Library\VietKeyInput.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BulkDialog.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BulkDialog.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkDialog.xaml.cs">
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeCaseDialog.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChangeCaseDialog.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeCaseDialog.xaml.cs">
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ImageCanvas.cs" />
+    <Compile Include="Controls\MoveThumb.cs" />
+    <Compile Include="Controls\ResizeThumb.cs" />
+    <Compile Include="DownloadDialog.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DownloadDialog.resx</DependentUpon>
+    </Compile>
+    <Compile Include="DownloadDialog.xaml.cs">
+      <DependentUpon>DownloadDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Gui.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gui.resx</DependentUpon>
+    </Compile>
+    <Compile Include="GuiWithBatch.cs" />
+    <Compile Include="GuiWithBulkOCR.cs" />
+    <Compile Include="GuiWithFormat.cs" />
+    <Compile Include="GuiWithImage.cs" />
+    <Compile Include="GuiWithImageOps.cs" />
+    <Compile Include="GUIWithInputMethod.cs" />
+    <Compile Include="GuiWithFile.cs" />
+    <Compile Include="GuiWithOCR.cs" />
+    <Compile Include="GuiWithPostprocess.cs" />
+    <Compile Include="GuiWithPSM.cs" />
+    <Compile Include="GuiWithRegistry.cs" />
+    <Compile Include="GUIWithScan.cs" />
+    <Compile Include="GUIWithSettings.cs" />
+    <Compile Include="GUIWithSpellcheck.cs" />
+    <Compile Include="GUIWithThumbnail.cs" />
+    <Compile Include="GUIWithTools.cs" />
+    <Compile Include="GUIWithUILanguage.cs" />
+    <Compile Include="HtmlHelpDialog.xaml.cs">
+      <DependentUpon>HtmlHelpDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ImageInfoDialog.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImageInfoDialog.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ImageInfoDialog.xaml.cs">
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsDialog.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OptionsDialog.resx</DependentUpon>
+    </Compile>
+    <Compile Include="OptionsDialog.xaml.cs">
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SliderDialog.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SliderDialog.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SpellCheckHelper.cs" />
+    <Compile Include="SplitPdfArgs.cs" />
+    <Compile Include="SplitPdfDialog.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SplitPdfDialog.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SplitPdfDialog.xaml.cs">
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StatusForm.xaml.cs">
+      <DependentUpon>StatusForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SliderDialog.xaml.cs">
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\BreakIterator.cs" />
+    <Compile Include="Utilities\FileExtractor.cs" />
+    <Compile Include="Utilities\FixedSizeStack.cs" />
+    <Compile Include="Utilities\FormLocalizer.cs" />
+    <Compile Include="Utilities\gmseDeskew.cs" />
+    <Compile Include="Utilities\GrayBMP_File.cs" />
+    <Compile Include="Utilities\ImageConverter.cs" />
+    <Compile Include="Utilities\ImageHelper.cs" />
+    <Compile Include="Utilities\ImageIOHelper.cs" />
+    <Compile Include="Utilities\PDFConvert.cs" />
+    <Compile Include="Utilities\PdfUtilities.cs" />
+    <Compile Include="Utilities\TextUtilities.cs" />
+    <Compile Include="Utilities\Utilities.cs" />
+    <Compile Include="Utilities\Watcher.cs" />
+    <Compile Include="WIA\WiaOperationException.cs" />
+    <Compile Include="WIA\WiaScannerAdapter.cs" />
+    <Page Include="BulkDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChangeCaseDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DownloadDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Gui.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui.xaml.cs">
+      <DependentUpon>Gui.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="HtmlHelpDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ImageInfoDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OptionsDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SplitPdfDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StatusForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SliderDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OCR.cs" />
+    <Compile Include="OCRHelper.cs" />
+    <Compile Include="OCRImageEntity.cs" />
+    <Compile Include="OCRImages.cs" />
+    <Compile Include="Postprocessing\EngPP.cs" />
+    <Compile Include="Postprocessing\IPostProcessor.cs" />
+    <Compile Include="Postprocessing\Processor.cs" />
+    <Compile Include="Postprocessing\ProcessorFactory.cs" />
+    <Compile Include="Postprocessing\TextUtilities.cs" />
+    <Compile Include="Postprocessing\ViePP.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="BulkDialog.bn-IN.resx" >
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.ca-ES.resx" >
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.cs-CZ.resx" >
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.de-DE.resx" >
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.fa-IR.resx" >
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.hi-IN.resx" >
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.it-IT.resx" >
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.ja-JP.resx" >
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.lt-LT.resx" >
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.nl-NL.resx" >
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.pl-PL.resx" >
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>BulkDialog.Designer.cs</LastGenOutput>
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.ru-RU.resx" >
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.sk-SK.resx" >
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.tr-TR.resx" >
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.vi-VN.resx" >
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.bn-IN.resx" >
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.ca-ES.resx" >
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.cs-CZ.resx" >
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.de-DE.resx" >
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.fa-IR.resx" >
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.hi-IN.resx" >
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.it-IT.resx" >
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.ja-JP.resx" >
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.lt-LT.resx" >
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.nl-NL.resx" >
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.pl-PL.resx" >
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ChangeCaseDialog.Designer.cs</LastGenOutput>
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.ru-RU.resx" >
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.sk-SK.resx" >
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.tr-TR.resx" >
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.vi-VN.resx" >
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.bn-IN.resx" >
+      <DependentUpon>DownloadDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.ca-ES.resx" >
+      <DependentUpon>DownloadDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.cs-CZ.resx" >
+      <DependentUpon>DownloadDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.de-DE.resx" >
+      <DependentUpon>DownloadDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.fa-IR.resx" >
+      <DependentUpon>DownloadDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.hi-IN.resx" >
+      <DependentUpon>DownloadDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.it-IT.resx" >
+      <DependentUpon>DownloadDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.ja-JP.resx" >
+      <DependentUpon>DownloadDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.lt-LT.resx" >
+      <DependentUpon>DownloadDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.nl-NL.resx" >
+      <DependentUpon>DownloadDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.pl-PL.resx" >
+      <DependentUpon>DownloadDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DownloadDialog.Designer.cs</LastGenOutput>
+      <DependentUpon>DownloadDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.ru-RU.resx" >
+      <DependentUpon>DownloadDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.sk-SK.resx" >
+      <DependentUpon>DownloadDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.tr-TR.resx" >
+      <DependentUpon>DownloadDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.vi-VN.resx" >
+      <DependentUpon>DownloadDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui.cs-CZ.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui.de-DE.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui.fa-IR.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui.hi-IN.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui.it-IT.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui.ja-JP.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui.lt-LT.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui.nl-NL.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui.pl-PL.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui.resx">
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Gui.Designer.cs</LastGenOutput>
+      <DependentUpon>Gui.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui.ru-RU.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui.sk-SK.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui.tr-TR.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui.vi-VN.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.bn-IN.resx" >
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.ca-ES.resx" >
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.cs-CZ.resx" >
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.de-DE.resx" >
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.fa-IR.resx" >
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.hi-IN.resx" >
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.it-IT.resx" >
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.ja-JP.resx" >
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.lt-LT.resx" >
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.nl-NL.resx" >
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.pl-PL.resx" >
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ImageInfoDialog.Designer.cs</LastGenOutput>
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.ru-RU.resx" >
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.sk-SK.resx" >
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.tr-TR.resx" >
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.vi-VN.resx" >
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.bn-IN.resx" >
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.ca-ES.resx" >
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.cs-CZ.resx" >
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.de-DE.resx" >
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.fa-IR.resx" >
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.hi-IN.resx" >
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.it-IT.resx" >
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.ja-JP.resx" >
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.lt-LT.resx" >
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.nl-NL.resx" >
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.pl-PL.resx" >
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>OptionsDialog.Designer.cs</LastGenOutput>
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.ru-RU.resx" >
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.sk-SK.resx" >
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.tr-TR.resx" >
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.vi-VN.resx" >
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.bn-IN.resx" />
+    <EmbeddedResource Include="Properties\Resources.ca-ES.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs-CZ.resx" />
+    <EmbeddedResource Include="Properties\Resources.de-DE.resx" />
+    <EmbeddedResource Include="Properties\Resources.fa-IR.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi-IN.resx" />
+    <EmbeddedResource Include="Properties\Resources.it-IT.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx" />
+    <EmbeddedResource Include="Properties\Resources.lt-LT.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl-NL.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl-PL.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="dict\en_US.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dict\en_US.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dict\user.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dict\vi_VN.aff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="dict\vi_VN.dic">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Properties\Resources.ru-RU.resx" />
+    <EmbeddedResource Include="Properties\Resources.sk-SK.resx" />
+    <EmbeddedResource Include="Properties\Resources.tr-TR.resx" />
+    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+    <EmbeddedResource Include="SliderDialog.bn-IN.resx" >
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SliderDialog.ca-ES.resx" >
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SliderDialog.cs-CZ.resx" >
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SliderDialog.de-DE.resx" >
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SliderDialog.fa-IR.resx" >
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SliderDialog.hi-IN.resx" >
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SliderDialog.it-IT.resx" >
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SliderDialog.ja-JP.resx" >
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SliderDialog.lt-LT.resx" >
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SliderDialog.nl-NL.resx" >
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SliderDialog.pl-PL.resx" >
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SliderDialog.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SliderDialog.Designer.cs</LastGenOutput>
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SliderDialog.ru-RU.resx" >
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SliderDialog.sk-SK.resx" >
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SliderDialog.tr-TR.resx" >
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SliderDialog.vi-VN.resx" >
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.bn-IN.resx" >
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.ca-ES.resx" >
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.cs-CZ.resx" >
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.de-DE.resx" >
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.fa-IR.resx" >
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.hi-IN.resx" >
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.it-IT.resx" >
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.ja-JP.resx" >
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.lt-LT.resx" >
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.nl-NL.resx" >
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.pl-PL.resx" >
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SplitPdfDialog.Designer.cs</LastGenOutput>
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.ru-RU.resx" >
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.sk-SK.resx" >
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.tr-TR.resx" >
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.vi-VN.resx" >
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="README.md" />
+    <None Include="samples\vietsample1.pdf" />
+    <None Include="tessdata\configs\hocr" />
+    <None Include="tessdata\configs\tess_configs" />
+    <None Include="tessdata\configs\tess_configvars" />
+    <Resource Include="readme_cs.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <None Include="gsdll32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="gsdll64.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Resource Include="readme_cs_bn.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="readme_cs_ca.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="readme_cs_cs.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="readme_cs_de.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="readme_cs_fa.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="readme_cs_hi.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="readme_cs_it.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="readme_cs_ja.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="readme_cs_lt.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="readme_cs_nl.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="readme_cs_pl.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="readme_cs_ru.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="readme_cs_sk.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="readme_cs_tr.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="readme_cs_vi.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Resources\VietOCR.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tessdata\eng.traineddata">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tessdata\vie.traineddata">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\fatcow\cancel.png" />
+    <Resource Include="Icons\fatcow\document_page_next.png" />
+    <Resource Include="Icons\fatcow\document_page_previous.png" />
+    <Resource Include="Icons\fatcow\draw_eraser.png" />
+    <Resource Include="Icons\fatcow\gear_in.png" />
+    <Resource Include="Icons\fatcow\image_paste.png" />
+    <Resource Include="Icons\fatcow\inline_spellcheck.png" />
+    <Resource Include="Icons\fatcow\ocr.png" />
+    <Resource Include="Icons\fatcow\ocr_small.png" />
+    <Resource Include="Icons\fatcow\open.png" />
+    <Resource Include="Icons\fatcow\pilcrow_delete.png" />
+    <Resource Include="Icons\fatcow\rotate_ccw.png" />
+    <Resource Include="Icons\fatcow\rotate_cw.png" />
+    <Resource Include="Icons\fatcow\save.png" />
+    <Resource Include="Icons\fatcow\scan.png" />
+    <Resource Include="Icons\fatcow\zoom_actual.png" />
+    <Resource Include="Icons\fatcow\zoom_fit.png" />
+    <Resource Include="Icons\fatcow\zoom_in.png" />
+    <Resource Include="Icons\fatcow\zoom_out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\eng.DangAmbigs.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\ISO639-1.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\ISO639-3.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\OO-SpellDictionaries.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\san.DangAmbigs.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\slk.DangAmbigs.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Tess3DataURL.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\vie.DangAmbigs.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="samples\vietsample.tif" />
+    <Resource Include="samples\vietsample1.tif" />
+    <Resource Include="samples\vietsample2.png" />
+    <Resource Include="samples\vietsample2.tif" />
+    <Content Include="x64\liblept172.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x64\libtesseract304.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\liblept172.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\libtesseract304.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WIA">
+      <Guid>{94A0E92D-43C0-494E-AC29-FD45948A5221}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Themes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

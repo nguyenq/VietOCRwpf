@@ -1,0 +1,30 @@
+﻿<Window x:Class="VietOCR.DownloadDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VietOCR"
+        xmlns:resx="clr-namespace:VietOCR"
+        mc:Ignorable="d"
+        Title="{x:Static resx:DownloadDialog.this_Title}" Height="245.6" Width="328.8" Loaded="Window_Loaded">
+    <DockPanel>
+        <StatusBar DockPanel.Dock="Bottom" Height="20">
+            <StatusBarItem>
+                <Label x:Name="toolStripStatusLabel1" Content=""/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <ProgressBar x:Name="toolStripProgressBar1" Height="14" Width="150" Visibility="Hidden"/>
+            </StatusBarItem>
+        </StatusBar>
+        <GroupBox x:Name="groupBox1" Header="{x:Static resx:DownloadDialog.groupBox1_Text}" DockPanel.Dock="Left" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,5,0,0" Padding="2" Width="190" Height="172">
+            <ListBox x:Name="listBox" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  SelectionChanged="listBox_SelectionChanged" SelectionMode="Multiple"/>
+        </GroupBox>
+        <Border Padding="16,20,16,15">
+            <StackPanel DockPanel.Dock="Right" >
+                <Button x:Name="buttonDownload" Content="{x:Static resx:DownloadDialog.buttonDownload_Text}"  Click="buttonDownload_Click"/>
+                <Button x:Name="buttonCancel" Content="{x:Static resx:DownloadDialog.buttonCancel_Text}" Click="buttonCancel_Click" Margin="0, 5, 0, 20"/>
+                <Button x:Name="buttonClose" Content="{x:Static resx:DownloadDialog.buttonClose_Text}"  Click="buttonClose_Click"/>
+            </StackPanel>
+        </Border>
+    </DockPanel>
+</Window>

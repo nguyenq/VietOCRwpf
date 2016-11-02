@@ -1,0 +1,20 @@
+﻿<Window x:Class="VietOCR.SliderDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VietOCR"
+        xmlns:resx="clr-namespace:VietOCR"
+        mc:Ignorable="d"
+        Title="{x:Static resx:SliderDialog.this_Title}" Height="170" Width="260" ResizeMode="NoResize">
+    <Border Padding="20,0,20,20">
+        <StackPanel HorizontalAlignment="Stretch">
+            <Label x:Name="label1" Content="{x:Static resx:SliderDialog.label1_Text}" HorizontalAlignment="Left" Margin="20,5" />
+            <Slider x:Name="slider" HorizontalAlignment="Center" Width="170" TickPlacement="BottomRight" ValueChanged="slider_ValueChanged" TickFrequency="20" LargeChange="10" Maximum="100" Minimum="-100" SmallChange="5"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+                <Button x:Name="buttonApply" Content="{x:Static resx:SliderDialog.buttonApply_Text}" Width="75" IsDefault="True" Click="buttonApply_Click"/>
+                <Button x:Name="buttonCancel" Content="{x:Static resx:SliderDialog.buttonCancel_Text}" Width="75" IsCancel="True" Margin="10,0,0,0" Click="buttonCancel_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Window>
