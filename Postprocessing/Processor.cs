@@ -35,11 +35,16 @@ namespace VietOCR.NET.Postprocessing
             }
         }
 
-        public static string PostProcess(string text, string langCode, string dangAmbigsPath, bool dangAmbigsOn)
+        public static string PostProcess(string text, string langCode, string dangAmbigsPath, bool dangAmbigsOn, bool replaceHyphens)
         {
             if (text.Trim().Length == 0)
             {
                 return text;
+            }
+
+            if (replaceHyphens)
+            {
+                text = Net.SourceForge.Vietpad.Utilities.TextUtilities.ReplaceHyphensWithSoftHyphens(text);
             }
 
             // correct using external x.DangAmbigs.txt file first, if enabled

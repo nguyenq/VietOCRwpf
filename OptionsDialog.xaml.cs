@@ -72,6 +72,20 @@ namespace VietOCR
             set { dangAmbigsEnabled = value; }
         }
 
+        private bool replaceHyphensEnabled;
+        public bool ReplaceHyphensEnabled
+        {
+            get { return replaceHyphensEnabled; }
+            set { replaceHyphensEnabled = value; }
+        }
+
+        private bool removeHyphensEnabled;
+        public bool RemoveHyphensEnabled
+        {
+            get { return removeHyphensEnabled; }
+            set { removeHyphensEnabled = value; }
+        }
+
         public string OutputFormat
         {
             get { return this.comboBoxOutputFormat.SelectedItem.ToString(); }
@@ -97,6 +111,8 @@ namespace VietOCR
             this.checkBoxWatch.IsChecked = watchEnabled;
             this.textBoxDangAmbigs.Text = dangAmbigsPath;
             this.checkBoxDangAmbigs.IsChecked = dangAmbigsEnabled;
+            this.checkBoxReplaceHyphens.IsChecked = replaceHyphensEnabled;
+            this.checkBoxRemoveHyphens.IsChecked = removeHyphensEnabled;
 
             //this.toolTip1.SetToolTip(this.btnWatch, Properties.Resources.Browse);
             //this.toolTip1.SetToolTip(this.btnOutput, Properties.Resources.Browse);
@@ -120,6 +136,8 @@ namespace VietOCR
             watchEnabled = this.checkBoxWatch.IsChecked.Value;
             dangAmbigsPath = this.textBoxDangAmbigs.Text;
             dangAmbigsEnabled = this.checkBoxDangAmbigs.IsChecked.Value;
+            replaceHyphensEnabled = this.checkBoxReplaceHyphens.IsChecked.Value;
+            removeHyphensEnabled = this.checkBoxRemoveHyphens.IsChecked.Value;
         }
 
         public virtual void ChangeUILanguage(string locale)

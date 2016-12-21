@@ -24,6 +24,8 @@ namespace Net.SourceForge.Vietpad.Utilities
 {
     class TextUtilities
     {
+        public const string SOFT_HYPHEN = "\u00AD";
+
         /// <summary>
         /// Changes letter case.
         /// </summary>
@@ -111,13 +113,56 @@ namespace Net.SourceForge.Vietpad.Utilities
         /// Removes line breaks.
         /// </summary>
         /// <param name="text"></param>
+        /// <param name="removeSoftHyphens"></param>
         /// <returns></returns>
-        public static string RemoveLineBreaks(string text)
+        public static string RemoveLineBreaks(string text, bool removeSoftHyphens)
         {
-            return Regex.Replace(
+            text = Regex.Replace(
                     Regex.Replace(text.Replace(Environment.NewLine, "\n"),
                     "(?<=\n|^)[\t ]+|[\t ]+(?=$|\n)", string.Empty),
                     "(?<=.)\n(?=.)", " ").Replace("\n", Environment.NewLine);
+
+            if (removeSoftHyphens)
+            {
+                text = text.Replace(SOFT_HYPHEN, string.Empty);
+            }
+
+            return text;
+        }
+
+        /// <summary>
+        /// Replaces hard hyphens at end of line with soft hyphens.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static string ReplaceHyphensWithSoftHyphens(string input)
+        {
+            VietOCR.SpellCheckHelper spellCheck = new VietOCR.SpellCheckHelper(null, "en");
+            if (!spellCheck.InitializeSpellCheck())
+            {
+                return input;
+            }
+
+            Regex regex = new Regex("(\\b\\p{L}+)(-|\u2010|\u2011|\u2012|\u2013|\u2014|\u2015)\n(\\p{L}+\\b)");
+            return regex.Replace(input, new MatchEvaluator(delegate (Match match) { return ReplaceHyphens(match, spellCheck); }));
+        }
+
+        static string ReplaceHyphens(Match m, VietOCR.SpellCheckHelper spellCheck)
+        {
+            string before = m.Groups[0].Value;
+            string after = m.Groups[3].Value;
+            char last = before[before.Length - 1];
+            char first = after[0];
+            if (Char.IsUpper(first) && Char.IsUpper(last) || Char.IsLower(first) && Char.IsLower(last))
+            {
+                string word = before + after;
+                if (!spellCheck.IsMispelled(word))
+                {
+                    return before + SOFT_HYPHEN + "\n" + after;
+                }
+            }
+            // Return the matched string.
+            return m.Value;
         }
     }
 }

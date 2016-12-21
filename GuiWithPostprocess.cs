@@ -27,9 +27,14 @@ namespace VietOCR
     {
         const string strDangAmbigsPath = "DangAmbigsPath";
         const string strDangAmbigsOn = "DangAmbigsOn";
+        const string strReplaceHyphensEnabled = "ReplaceHyphensEnabled";
+        const string strRemoveHyphensEnabled = "RemoveHyphensEnabled";
 
         protected string dangAmbigsPath;
         protected bool dangAmbigsOn;
+        protected bool replaceHyphensEnabled;
+        protected bool removeHyphensEnabled;
+
         private System.ComponentModel.BackgroundWorker backgroundWorkerCorrect;
 
         public GuiWithPostprocess()
@@ -68,7 +73,7 @@ namespace VietOCR
         {
             // Perform post-OCR corrections
             string text = (string)e.Argument;
-            e.Result = Processor.PostProcess(text, curLangCode, dangAmbigsPath, dangAmbigsOn);
+            e.Result = Processor.PostProcess(text, curLangCode, dangAmbigsPath, dangAmbigsOn, replaceHyphensEnabled);
         }
 
         private void backgroundWorkerCorrect_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -133,6 +138,10 @@ namespace VietOCR
             dangAmbigsPath = (string)regkey.GetValue(strDangAmbigsPath, Path.Combine(baseDir, "Data"));
             dangAmbigsOn = Convert.ToBoolean(
                 (int)regkey.GetValue(strDangAmbigsOn, Convert.ToInt32(true)));
+            replaceHyphensEnabled = Convert.ToBoolean(
+                (int)regkey.GetValue(strReplaceHyphensEnabled, Convert.ToInt32(true)));
+            removeHyphensEnabled = Convert.ToBoolean(
+                (int)regkey.GetValue(strRemoveHyphensEnabled, Convert.ToInt32(true)));
         }
 
         protected override void SaveRegistryInfo(RegistryKey regkey)
@@ -141,6 +150,8 @@ namespace VietOCR
 
             regkey.SetValue(strDangAmbigsPath, dangAmbigsPath);
             regkey.SetValue(strDangAmbigsOn, Convert.ToInt32(dangAmbigsOn));
+            regkey.SetValue(strReplaceHyphensEnabled, Convert.ToInt32(replaceHyphensEnabled));
+            regkey.SetValue(strRemoveHyphensEnabled, Convert.ToInt32(removeHyphensEnabled));
         }
     }
 }

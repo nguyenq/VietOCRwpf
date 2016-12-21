@@ -317,7 +317,7 @@ namespace VietOCR
 
         protected virtual void buttonOCR_Click(object sender, RoutedEventArgs e)
         {
-            oCRToolStripMenuItem_Click(sender, e);
+            this.oCRToolStripMenuItem_Click(sender, e);
         }
 
         protected string inputfilename;
@@ -335,21 +335,12 @@ namespace VietOCR
 
         private void buttonRemoveLineBreaks_Click(object sender, RoutedEventArgs e)
         {
-            if (textBox1.SelectedText == "")
-            {
-                textBox1.SelectAll();
-                if (textBox1.SelectedText == "") return;
-            }
-
-            int start = textBox1.SelectionStart;
-            string result = TextUtilities.RemoveLineBreaks(textBox1.SelectedText);
-            textBox1.SelectedText = result;
-            textBox1.Select(start, result.Length);
+            this.removeLineBreaksToolStripMenuItem_Click(sender, e);
         }
 
         private void buttonScan_Click(object sender, RoutedEventArgs e)
         {
-
+            this.scanToolStripMenuItem_Click(sender, e);
         }
 
         protected virtual void loadThumbnails()

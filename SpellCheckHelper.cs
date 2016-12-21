@@ -39,29 +39,42 @@ namespace VietOCR
             baseDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         }
 
-        public void EnableSpellCheck()
+        public bool InitializeSpellCheck()
         {
             if (localeId == null)
             {
-                return;
+                return false;
             }
             try
             {
                 string dictPath = baseDir + "/dict/" + localeId;
                 //spellChecker = new Hunspell(dictPath + ".aff", dictPath + ".dic");
-                //LoadUserDictionary();
-
-                //listeners.Add(new System.EventHandler(this.textbox_TextChanged));
-
-                //this.textbox.TextChanged += (System.EventHandler)listeners[0];
-                //cntl = new CustomPaintTextBox(this.textbox, this);
-
-                SpellCheck();
+                //if (!LoadUserDictionary())
+                //{
+                //    return false;
+                //}
             }
-            catch (Exception e)
+            catch
             {
-                MessageBox.Show(e.Message);
+                return false;
             }
+
+            return true;
+        }
+
+        public void EnableSpellCheck()
+        {
+            if (!InitializeSpellCheck())
+            {
+                throw new Exception("Spellcheck initialization error!");
+            }
+
+            listeners.Add(new System.EventHandler(this.textbox_TextChanged));
+
+            //this.textbox.TextChanged += (System.EventHandler)listeners[0];
+            //cntl = new CustomPaintTextBox(this.textbox, this);
+
+            SpellCheck();
         }
 
         public void DisableSpellCheck()
@@ -103,25 +116,34 @@ namespace VietOCR
             //{
             //    spellingErrorRanges.Add(new CharacterRange(mc[i].Index, mc[i].Length));
             //}
-            
+
             //new CustomPaintTextBox(textbox, this);
+        }
+
+        public bool IsMispelled(string word)
+        {
+            //if (!spellChecker.Spell(word))
+            //{
+            // is mispelled word in user.dic?
+            if (!userWordList.Contains(word.ToLower()))
+            {
+                return true;
+            }
+            //}
+
+            return false;
         }
 
         List<String> SpellCheck(List<String> words)
         {
             List<String> misspelled = new List<String>();
 
-            foreach (String word in words)
+            foreach (string word in words)
             {
-                //if (!spellChecker.Spell(word))
-                //{
-                //    // is mispelled word in user.dic?
-                //    if (!userWordList.Contains(word.ToLower()))
-                //    {
-                //        misspelled.Add(word);
-                //    }
-
-                //}
+                if (IsMispelled(word))
+                {
+                    misspelled.Add(word);
+                }
             }
 
             return misspelled;

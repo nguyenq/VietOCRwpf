@@ -58,6 +58,8 @@ namespace VietOCR
             optionsDialog.DangAmbigsPath = dangAmbigsPath;
             optionsDialog.DangAmbigsEnabled = dangAmbigsOn;
             optionsDialog.CurLangCode = curLangCode;
+            optionsDialog.ReplaceHyphensEnabled = replaceHyphensEnabled;
+            optionsDialog.RemoveHyphensEnabled = removeHyphensEnabled;
             optionsDialog.OutputFormat = outputFormat;
 
             Nullable<bool> dialogResult = optionsDialog.ShowDialog();
@@ -69,6 +71,8 @@ namespace VietOCR
                 dangAmbigsPath = optionsDialog.DangAmbigsPath;
                 dangAmbigsOn = optionsDialog.DangAmbigsEnabled;
                 curLangCode = optionsDialog.CurLangCode;
+                replaceHyphensEnabled = optionsDialog.ReplaceHyphensEnabled;
+                removeHyphensEnabled = optionsDialog.RemoveHyphensEnabled;
                 outputFormat = optionsDialog.OutputFormat;
 
                 updateWatch();
