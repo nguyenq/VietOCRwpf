@@ -194,7 +194,7 @@
   <data name="toolStripButtonPasteImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        dAAAEnQB3mYfeAAABUxJREFUWEe1l/tPU2cYx13mfjRZlthkyf6D/bBkvyxmSevYlrjMCzIFLPc5J16G
+        cwAAEnMBjCK5BwAABUxJREFUWEe1l/tPU2cYx13mfjRZlthkyf6D/bBkvyxmSevYlrjMCzIFLPc5J16G
         MpfFLNniZd6YXNtCLxTFjCgtpcUCCrKBFidQSwFJ1GxRubRQLkVuCkL87nlOS0fxtKNd9k0+6el53ud5
         vu/7np6es2YVWltYWGhVqVRQKpUCfMznOOYb8v9qXUFBAVwuFwYGBgT4uJDOccw35L9p7cWjn9aWH/0E
         F7+P8fMRLn33IYqKdei5dx/Orh7cdTjRcbcTHXaHAH93OHuEMTyWc5byhVpUk2v7WoTXOk6a7DHD22XC
@@ -701,7 +701,7 @@
   <data name="toolStripButtonPostProcess.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        dAAAEnQB3mYfeAAABnpJREFUWEe1VnlM03cUZ4r/mOjEqftjWfbHlsWERQfTmC2LGrPMDccckpnFOSbU
+        cwAAEnMBjCK5BwAABnpJREFUWEe1VnlM03cUZ4r/mOjEqftjWfbHlsWERQfTmC2LGrPMDccckpnFOSbU
         lVZKAdECLaWUQ+5ChxonKiL36RUERNThcGYTVGAq91kKRQ4ZwjYX397nWzCLJ3i85OX1nb/v8b6fV5vH
         kG18QtKpA4cOk8FgGGR9ltVsMws67PCzbms1v3iaE5eQRHfGxujQ4XTaERDgyraZkNBhhx9xIvol0Pyg
         IG151a+XqLr6CunCws+wbS4kdNjhR5yIfgk0d9WqNV/t3ZdC/QODFBUTR/rwKCGhww4/4qzhL55mq/UR
@@ -741,7 +741,7 @@
   <data name="toolStripButtonRemoveLineBreaks.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        dAAAEnQB3mYfeAAABXtJREFUWEftl3lMVFcUxt/AMIPKzlCGtYIKsrlRm9ZSqZFVRUAWWYSidUQ0anGp
+        cwAAEnMBjCK5BwAABXtJREFUWEftl3lMVFcUxt/AMIPKzlCGtYIKsrlRm9ZSqZFVRUAWWYSidUQ0anGp
         S0TRRFMaq4AEFFBAIIIoCh1ErQI1sW1Sq+yLsi8Oi1tFTRrTfD3vDWMrYg2+P+uX/DL3nXvfOd999777
         Msx7vddYMo8uNDPddG6p3Y6yrBk7rjTP3HMNKmbtfTOz4ytgGlv6G6XQUGYavwTSdcUx9rsu33TNqPxr
         zalGrMxqRhQRSQQdb0QwsTy9CSHpzRxsm40HHWvkri23loHy6CjTjVOGspNzP9p7dXCfvBNR2S3wTKqF
@@ -938,7 +938,7 @@
   <data name="toolStripDropDownButtonSegmentedRegions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        dAAAEnQB3mYfeAAAAgNJREFUOE+lkutLk2EYxvePhJaHShFBUTEPiCieQOmDiEZgrEbpYGiCQxkqA80I
+        cwAAEnMBjCK5BwAAAgNJREFUOE+lkutLk2EYxvePhJaHShFBUTEPiCieQOmDiEZgrEbpYGiCQxkqA80I
         RUkUEZ0YRMS+DDI70MkTmzJnDc8iU8QT2mAEItnle90wHwTDyBduXnie5/rd133Q4ZKfAJqHFs9E08A8
         zD1emDpmYXjqRlnTFIrMk8iuGkNaxWekGEaQrHecBfw+/vPXODw6hj9whN2fh/Bt/8LSRgA3cxr/DeBZ
         9kvmTNMoHGNbIrYN+3Aj23IxgJkpds0doP3VstgmsNexhutZ9QrAms8T0zYzU5xXM46kcjsmvfvoeL2i
@@ -1223,5 +1223,14 @@
         rf+vr63/sLCu/7Ozse8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAABAAAAAQAAAAMAAAAD
         AAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAA=
 </value>
+  </data>
+  <data name="bilateralFilterMenuItem.Text" xml:space="preserve">
+    <value>Bilate_ral</value>
+  </data>
+  <data name="gammaMenuItem.Text" xml:space="preserve">
+    <value>Gamm_a...</value>
+  </data>
+  <data name="thresholdMenuItem.Text" xml:space="preserve">
+    <value>_Threshold...</value>
   </data>
 </root>

@@ -76,6 +76,20 @@ namespace VietOCR
             this.slider.TickFrequency = 10;
         }
 
+        public void SetForGamma()
+        {
+            this.slider.Minimum = 0;
+            this.slider.Value = 50;
+            this.slider.TickFrequency = 10;
+        }
+
+        public void SetForThreshold()
+        {
+            this.slider.Minimum = 0;
+            this.slider.Value = 50;
+            this.slider.TickFrequency = 10;
+        }
+
         private void buttonApply_Click(object sender, RoutedEventArgs e)
         {
             this.DialogResult = true;

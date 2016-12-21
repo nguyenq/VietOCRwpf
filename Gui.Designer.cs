@@ -27,8 +27,7 @@ namespace VietOCR {
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
-       
+           
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -72,6 +71,15 @@ namespace VietOCR {
         public static string autocropToolStripMenuItem_Text {
             get {
                 return ResourceManager.GetString("autocropToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bilate_ral.
+        /// </summary>
+        public static string bilateralFilterMenuItem_Text {
+            get {
+                return ResourceManager.GetString("bilateralFilterMenuItem.Text", resourceCulture);
             }
         }
         
@@ -198,6 +206,15 @@ namespace VietOCR {
         public static string formatToolStripMenuItem_Text {
             get {
                 return ResourceManager.GetString("formatToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gamm_a....
+        /// </summary>
+        public static string gammaMenuItem_Text {
+            get {
+                return ResourceManager.GetString("gammaMenuItem.Text", resourceCulture);
             }
         }
         
@@ -477,6 +494,15 @@ namespace VietOCR {
         public static string statusStrip1_Text {
             get {
                 return ResourceManager.GetString("statusStrip1.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Threshold....
+        /// </summary>
+        public static string thresholdMenuItem_Text {
+            get {
+                return ResourceManager.GetString("thresholdMenuItem.Text", resourceCulture);
             }
         }
         

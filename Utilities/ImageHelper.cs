@@ -207,8 +207,78 @@ namespace VietOCR.NET.Utilities
             return bmpNew;
         }
 
+        /// <summary>
+        /// Gamma correction.
+        /// </summary>
+        /// <param name="bmp">Source image</param>
+        /// <param name="value">Should be greater than 0.0. Typical values range between 1 and 2.2.</param>
+        /// <returns></returns>
+        public static Image AdjustGamma(Image bmp, float value)
+        {
+            Image bmpNew = null;
+
+            try
+            {
+                ImageAttributes ia = new ImageAttributes();
+                ia.SetGamma(value);
+
+                bmpNew = new Bitmap(bmp.Width, bmp.Height);
+                ((Bitmap)bmpNew).SetResolution(bmp.HorizontalResolution, bmp.VerticalResolution);
+                using (Graphics g = Graphics.FromImage(bmpNew))
+                {
+                    g.DrawImage(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height), 0, 0, bmp.Width, bmp.Height, GraphicsUnit.Pixel, ia);
+                    ia.Dispose();
+                }
+            }
+            catch
+            {
+                if (bmpNew != null)
+                {
+                    bmpNew.Dispose();
+                    bmpNew = null;
+                }
+            }
+
+            return bmpNew;
+        }
+
+        /// <summary>
+        /// Adjust threshold to image.
+        /// </summary>
+        /// <param name="bmp"></param>
+        /// <param name="value">a float value between 0 and 1</param>
+        /// <returns></returns>
+        public static Image AdjustThreshold(Image bmp, float value)
+        {
+            Image bmpNew = null;
+
+            try
+            {
+                ImageAttributes ia = new ImageAttributes();
+                ia.SetThreshold(value);
+
+                bmpNew = new Bitmap(bmp.Width, bmp.Height);
+                ((Bitmap)bmpNew).SetResolution(bmp.HorizontalResolution, bmp.VerticalResolution);
+                using (Graphics g = Graphics.FromImage(bmpNew))
+                {
+                    g.DrawImage(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height), 0, 0, bmp.Width, bmp.Height, GraphicsUnit.Pixel, ia);
+                    ia.Dispose();
+                }
+            }
+            catch
+            {
+                if (bmpNew != null)
+                {
+                    bmpNew.Dispose();
+                    bmpNew = null;
+                }
+            }
+
+            return bmpNew;
+        }
+
         // allow a 10px-margin
-        private const int margin = 10;
+        private const int MARGIN = 10;
 
         /// <summary>
         /// Autocrops an image.
@@ -284,24 +354,24 @@ namespace VietOCR.NET.Utilities
             }
         lable4:
 
-            if ((minX - margin) >= 0)
+            if ((minX - MARGIN) >= 0)
             {
-                minX -= margin;
+                minX -= MARGIN;
             }
 
-            if ((minY - margin) >= 0)
+            if ((minY - MARGIN) >= 0)
             {
-                minY -= margin;
+                minY -= MARGIN;
             }
 
-            if ((maxX + margin) < width)
+            if ((maxX + MARGIN) < width)
             {
-                maxX += margin;
+                maxX += MARGIN;
             }
 
-            if ((maxY + margin) < height)
+            if ((maxY + MARGIN) < height)
             {
-                maxY += margin;
+                maxY += MARGIN;
             }
 
             int newWidth = maxX - minX + 1;
@@ -809,6 +879,16 @@ namespace VietOCR.NET.Utilities
                   { 4, 09, 12, 09, 4 },
                   { 2, 04, 05, 04, 2 }, };
 
+        /// <summary>
+        /// Bilateral filter.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        public static Image BilateralFilter(Image input)
+        {
+            // searching for a C# implementation of the algorithm
+            return input;
+        }
 
         /// <summary>
         /// Clones a bitmap using DrawImage.

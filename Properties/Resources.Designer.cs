@@ -106,6 +106,15 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bilateral.
+        /// </summary>
+        internal static string Bilateral {
+            get {
+                return ResourceManager.GetString("Bilateral", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Brightness.
         /// </summary>
         internal static string Brightness {
@@ -300,6 +309,15 @@ namespace VietOCR.Properties {
         internal static string Error {
             get {
                 return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gamma.
+        /// </summary>
+        internal static string Gamma {
+            get {
+                return ResourceManager.GetString("Gamma", resourceCulture);
             }
         }
         
@@ -669,6 +687,15 @@ namespace VietOCR.Properties {
         internal static string Task_canceled {
             get {
                 return ResourceManager.GetString("Task_canceled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Threshold.
+        /// </summary>
+        internal static string Threshold {
+            get {
+                return ResourceManager.GetString("Threshold", resourceCulture);
             }
         }
         

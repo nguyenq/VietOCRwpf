@@ -253,6 +253,85 @@ namespace VietOCR
             this.imageMain.Source = ImageConverter.BitmapToImageSource(imageList[imageIndex]);
         }
 
+        protected override void gammaMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (imageList == null)
+            {
+                MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
+                return;
+            }
+            SliderDialog dialog = new SliderDialog();
+            dialog.SetForGamma();
+            dialog.LabelText = Properties.Resources.Gamma;
+            dialog.ValueUpdated += new SliderDialog.HandleValueChange(UpdatedGamma);
+
+            originalImage = imageList[imageIndex];
+            stack.Push(originalImage);
+            Nullable<bool> dialogResult = dialog.ShowDialog();
+            if (dialogResult.HasValue && !dialogResult.Value)
+            {
+                // restore original image
+                imageList[imageIndex] = originalImage;
+                this.imageMain.Source = ImageConverter.BitmapToImageSource(originalImage);
+            }
+        }
+
+        private void UpdatedGamma(object sender, SliderDialog.ValueChangedEventArgs e)
+        {
+            System.Drawing.Image image = ImageHelper.AdjustGamma(originalImage, (float) e.NewValue * 0.005f);
+            if (image != null)
+            {
+                imageList[imageIndex] = image;
+                this.imageMain.Source = ImageConverter.BitmapToImageSource(image);
+            }
+        }
+
+        protected override void thresholdMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (imageList == null)
+            {
+                MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
+                return;
+            }
+            SliderDialog dialog = new SliderDialog();
+            dialog.SetForThreshold();
+            dialog.LabelText = Properties.Resources.Threshold;
+            dialog.ValueUpdated += new SliderDialog.HandleValueChange(UpdatedThreshold);
+
+            originalImage = imageList[imageIndex];
+            stack.Push(originalImage);
+            Nullable<bool> dialogResult = dialog.ShowDialog();
+            if (dialogResult.HasValue && !dialogResult.Value)
+            {
+                // restore original image
+                imageList[imageIndex] = originalImage;
+                this.imageMain.Source = ImageConverter.BitmapToImageSource(originalImage);
+            }
+        }
+
+        private void UpdatedThreshold(object sender, SliderDialog.ValueChangedEventArgs e)
+        {
+            System.Drawing.Image image = ImageHelper.AdjustThreshold(originalImage, (float) e.NewValue * 0.01f);
+            if (image != null)
+            {
+                imageList[imageIndex] = image;
+                this.imageMain.Source = ImageConverter.BitmapToImageSource(image);
+            }
+        }
+
+        protected override void bilateralFilterMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (imageList == null)
+            {
+                MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
+                return;
+            }
+            originalImage = imageList[imageIndex];
+            stack.Push(originalImage);
+            imageList[imageIndex] = ImageHelper.BilateralFilter((Bitmap)originalImage);
+            this.imageMain.Source = ImageConverter.BitmapToImageSource(imageList[imageIndex]);
+        }
+
         protected override void invertToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
             if (imageList == null)
