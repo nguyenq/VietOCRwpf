@@ -65,9 +65,9 @@ namespace VietOCR
             System.Windows.Forms.FontDialog fontdlg = new System.Windows.Forms.FontDialog();
 
             fontdlg.ShowColor = true;
-            fontdlg.Font = new Font(this.textBox1.FontFamily.ToString(), (float) this.textBox1.FontSize, this.textBox1.FontWeight == FontWeights.Bold ? System.Drawing.FontStyle.Bold : System.Drawing.FontStyle.Regular);
-            //fontdlg.Color = this.textBox1.ForeColor;
-
+            fontdlg.Font = new Font(this.textBox1.FontFamily.ToString(), (float) (this.textBox1.FontSize * 72.0 / 96.0), this.textBox1.FontWeight == FontWeights.Bold ? System.Drawing.FontStyle.Bold : System.Drawing.FontStyle.Regular);
+            System.Windows.Media.Color textColor = ((System.Windows.Media.SolidColorBrush)this.textBox1.Foreground).Color;
+            fontdlg.Color = Color.FromArgb(textColor.R, textColor.G, textColor.B);
             if (fontdlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 this.textBox1.FontFamily = new System.Windows.Media.FontFamily(fontdlg.Font.Name);

@@ -8,7 +8,7 @@
         xmlns:localcon="clr-namespace:VietOCR.Controls"
         xmlns:resx="clr-namespace:VietOCR"
         Icon="./Resources/VietOCR.ico"
-        Title="VietOCR.NET" Height="350" Width="525" Loaded="Window_Loaded" Closed="Window_Closed" SizeChanged="Window_SizeChanged" LocationChanged="Window_LocationChanged" Closing="Window_Closing" >
+        Title="VietOCR.NET" Height="350" Width="1260" Loaded="Window_Loaded" Closed="Window_Closed" SizeChanged="Window_SizeChanged" LocationChanged="Window_LocationChanged" Closing="Window_Closing" >
     <Window.CommandBindings>
         <CommandBinding Command="ApplicationCommands.Open" Executed="Open_Executed" CanExecute="Open_CanExecute"/>
         <CommandBinding Command="ApplicationCommands.Save" Executed="Save_Executed" CanExecute="Save_CanExecute"/>
@@ -290,13 +290,13 @@
                             <Border BorderBrush="Gray" BorderThickness="1">
                                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                                     <StackPanel x:Name="panelThumbnail" HorizontalAlignment="Center" Margin="10"/>
-                                </ScrollViewer>                                
+                                </ScrollViewer>
                             </Border>
                             <GridSplitter Grid.Column="1" Width="5" ResizeBehavior="PreviousAndCurrent" ResizeDirection="Columns"/>
                         </Grid>
                     </Expander.Content>
                 </Expander>
-                <ScrollViewer x:Name="scrollViewer" DockPanel.Dock="Right" HorizontalScrollBarVisibility="Auto" AllowDrop="True" DragOver="Window_DragOver" Drop="Window_Drop" >
+                <ScrollViewer x:Name="scrollViewer" DockPanel.Dock="Right" HorizontalScrollBarVisibility="Auto" AllowDrop="True" DragOver="Window_DragOver" Drop="Window_Drop" PreviewMouseWheel="scrollViewer_PreviewMouseWheel" >
                     <localcon:ImageCanvas x:Name="imageCanvas" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=imageMain}" Height="{Binding ActualHeight, ElementName=imageMain}" >
                         <ContentControl x:Name="canvasContent" Width="0" Height="0" 
                                 Canvas.Top="0" Canvas.Left="0"

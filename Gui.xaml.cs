@@ -593,12 +593,12 @@ namespace VietOCR
             }
             this.textBox1.TextWrapping = (TextWrapping)regkey.GetValue(strWordWrap, TextWrapping.NoWrap);
             this.textBox1.FontFamily = new System.Windows.Media.FontFamily(regkey.GetValue(strFontFace, "Microsoft Sans Serif").ToString());
-            //this.textBox1.FontSize = float.Parse((string)regkey.GetValue(strFontSize, "10"));
-            //this.textBox1.FontStyle = (FontStyle)regkey.GetValue(strFontStyle, FontStyle.Regular));
-            //this.textBox1.ForeColor = Color.FromArgb(
-            //    (int)regkey.GetValue(strForeColor, Color.FromKnownColor(KnownColor.Black).ToArgb()));
-            //this.textBox1.BackColor = Color.FromArgb(
-            //    (int)regkey.GetValue(strBackColor, Color.FromKnownColor(KnownColor.White).ToArgb()));
+            this.textBox1.FontSize = double.Parse((string)regkey.GetValue(strFontSize, "10"));
+            var fsc = new FontStyleConverter();
+            this.textBox1.FontStyle = (FontStyle)fsc.ConvertFromString((string)regkey.GetValue(strFontStyle, "Normal"));
+            var bc = new BrushConverter();
+            this.textBox1.Foreground = (Brush)bc.ConvertFromString((string)regkey.GetValue(strForeColor, "Black"));
+            this.textBox1.Background = (Brush)bc.ConvertFromString((string)regkey.GetValue(strBackColor, "White"));
             filterIndex = (int)regkey.GetValue(strFilterIndex, 1);
             selectedUILanguage = Thread.CurrentThread.CurrentUICulture.Name;
 
@@ -619,8 +619,9 @@ namespace VietOCR
             regkey.SetValue(strFontFace, this.textBox1.FontFamily);
             regkey.SetValue(strFontSize, this.textBox1.FontSize);
             regkey.SetValue(strFontStyle, this.textBox1.FontStyle.ToString());
-            //regkey.SetValue(strForeColor, this.textBox1.ForeColor.ToArgb());
-            //regkey.SetValue(strBackColor, this.textBox1.BackColor.ToArgb());
+            var bc = new BrushConverter();
+            regkey.SetValue(strForeColor, bc.ConvertToString(this.textBox1.Foreground));
+            regkey.SetValue(strBackColor, bc.ConvertToString(this.textBox1.Background));
             regkey.SetValue(strFilterIndex, filterIndex);
             regkey.SetValue(strUILang, Thread.CurrentThread.CurrentUICulture.Name);
             regkey.SetValue(strSegmentedRegions, Convert.ToInt32(this.segmentedRegionsToolStripMenuItem.IsChecked));
@@ -918,6 +919,37 @@ namespace VietOCR
                 {
                     this.textBox1.FontSize = newSize;
                 }
+            }
+        }
+
+        private void scrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            if ((Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
+            {
+                if (e.Delta <= 0)
+                {
+                    // set minimum size to zoom
+                    if (this.imageCanvas.Width < 100)
+                        return;
+                }
+                else
+                {
+                    // set maximum size to zoom
+                    if (this.imageCanvas.Width > 10000)
+                        return;
+                }
+
+                this.imageCanvas.Deselect();
+                this.imageMain.Width += this.imageMain.Width * e.Delta / 1000;
+                this.imageMain.Height += this.imageMain.Height * e.Delta / 1000;
+                System.Drawing.Bitmap currentImage = (System.Drawing.Bitmap)imageList[imageIndex];
+                scaleX = (float)currentImage.Width / (float)this.imageMain.Width;
+                scaleY = (float)currentImage.Height / (float)this.imageMain.Height;
+                this.centerPicturebox();
+                isFitImageSelected = false;
+                this.buttonActualSize.IsEnabled = true;
+
+                e.Handled = true;
             }
         }
     }
