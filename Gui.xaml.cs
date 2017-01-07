@@ -36,6 +36,9 @@ namespace VietOCR
         protected float scaleX = 1f;
         protected float scaleY = 1f;
 
+        private const int FONT_MIN_SIZE = 6;
+        private const int FONT_MAX_SIZE = 50;
+
         const string strUILang = "UILanguage";
         const string strOcrLanguage = "OcrLanguage";
         const string strWordWrap = "WordWrap";
@@ -904,6 +907,18 @@ namespace VietOCR
             //    this.toolStripButtonSpellCheck.PerformClick();
             //    this.toolStripButtonSpellCheck.PerformClick();
             //}
+        }
+
+        private void textBox1_MouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            if ((Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control) 
+            {
+                double newSize = this.textBox1.FontSize + e.Delta / 120;
+                if (newSize > FONT_MIN_SIZE && newSize < FONT_MAX_SIZE)
+                {
+                    this.textBox1.FontSize = newSize;
+                }
+            }
         }
     }
 }
