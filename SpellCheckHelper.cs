@@ -4,39 +4,41 @@ using System.Text;
 using System.Xml;
 using System.IO;
 using System.Drawing;
-//using NHunspell;
 using System.Text.RegularExpressions;
 using System.Collections;
-//using VietOCR.NET.Controls;
 using Net.SourceForge.Vietpad.Utilities;
 using System.Windows;
 using System.Windows.Controls;
+using NHunspell;
+using VietOCR.Controls;
+using System.Windows.Documents;
+using System.Collections.ObjectModel;
 
 namespace VietOCR
 {
-    class SpellCheckHelper
+    public class SpellCheckHelper
     {
         TextBox textbox;
         string localeId;
-        String baseDir;
-        static ArrayList listeners = new ArrayList();
-        static List<CharacterRange> spellingErrorRanges = new List<CharacterRange>();
-        static List<String> userWordList = new List<String>();
+        static ObservableCollection<CharacterRange> spellingErrorRanges = new ObservableCollection<CharacterRange>();
+        static ObservableCollection<String> userWordList = new ObservableCollection<String>();
         static DateTime mapLastModified = DateTime.MinValue;
-        //Hunspell spellChecker;
-        //CustomPaintTextBox cntl;
+        Hunspell spellChecker;
 
-        public CharacterRange[] GetSpellingErrorRanges
+        static AdornerLayer myAdornerLayer;
+        static RedUnderlineAdorner myAdorner;
+
+        static string baseDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+
+        public ObservableCollection<CharacterRange> GetSpellingErrorRanges
         {
-            get { return spellingErrorRanges.ToArray(); }
+            get { return spellingErrorRanges; }
         }
 
         public SpellCheckHelper(TextBox textbox, string localeId)
         {
             this.textbox = textbox;
             this.localeId = localeId;
-
-            baseDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         }
 
         public bool InitializeSpellCheck()
@@ -48,11 +50,11 @@ namespace VietOCR
             try
             {
                 string dictPath = baseDir + "/dict/" + localeId;
-                //spellChecker = new Hunspell(dictPath + ".aff", dictPath + ".dic");
-                //if (!LoadUserDictionary())
-                //{
-                //    return false;
-                //}
+                spellChecker = new Hunspell(dictPath + ".aff", dictPath + ".dic");
+                if (!LoadUserDictionary())
+                {
+                    return false;
+                }
             }
             catch
             {
@@ -69,67 +71,66 @@ namespace VietOCR
                 throw new Exception("Spellcheck initialization error!");
             }
 
-            listeners.Add(new System.EventHandler(this.textbox_TextChanged));
-
-            //this.textbox.TextChanged += (System.EventHandler)listeners[0];
-            //cntl = new CustomPaintTextBox(this.textbox, this);
+            myAdornerLayer = AdornerLayer.GetAdornerLayer(this.textbox);
+            myAdorner = new RedUnderlineAdorner(this.textbox, this);
+            myAdornerLayer.Add(myAdorner);
 
             SpellCheck();
         }
 
         public void DisableSpellCheck()
         {
-            if (listeners.Count > 0)
-            {
-                //this.textbox.TextChanged -= (System.EventHandler)listeners[0];
-                listeners.RemoveAt(0);
-            }
             spellingErrorRanges.Clear();
+
+            myAdornerLayer.Remove(myAdorner);
+            myAdorner.Dispose();
+
+            if (spellChecker != null)
+            {
+                spellChecker.Dispose();
+            }
         }
 
         public void SpellCheck()
         {
-            //this.textbox.Invalidate();
-            //spellingErrorRanges.Clear();
-            //List<String> words = ParseText(textbox.Text);
-            //List<String> misspelledWords = SpellCheck(words);
-            //if (misspelledWords.Count == 0)
-            //{
-            //    return;
-            //}
+            spellingErrorRanges.Clear();
+            List<string> words = ParseText(textbox.Text);
+            List<string> misspelledWords = SpellCheck(words);
+            if (misspelledWords.Count == 0)
+            {
+                return;
+            }
 
-            //StringBuilder sb = new StringBuilder();
-            //foreach (String word in misspelledWords)
-            //{
-            //    sb.Append(word).Append("|");
-            //}
-            //sb.Length -= 1; //remove last |
+            StringBuilder sb = new StringBuilder();
+            foreach (String word in misspelledWords)
+            {
+                sb.Append(word).Append("|");
+            }
+            sb.Length -= 1; //remove last |
 
-            //// build regex
-            //String patternStr = "\\b(" + sb.ToString() + ")\\b";
-            //Regex regex = new Regex(patternStr, RegexOptions.IgnoreCase);
-            //MatchCollection mc = regex.Matches(textbox.Text);
+            // build regex
+            string patternStr = "\\b(" + sb.ToString() + ")\\b";
+            Regex regex = new Regex(patternStr, RegexOptions.IgnoreCase);
+            MatchCollection mc = regex.Matches(textbox.Text);
 
-            //// Loop through  the match collection to retrieve all 
-            //// matches and positions.
-            //for (int i = 0; i < mc.Count; i++)
-            //{
-            //    spellingErrorRanges.Add(new CharacterRange(mc[i].Index, mc[i].Length));
-            //}
-
-            //new CustomPaintTextBox(textbox, this);
+            // Loop through the match collection to retrieve all 
+            // matches and positions.
+            for (int i = 0; i < mc.Count; i++)
+            {
+                spellingErrorRanges.Add(new CharacterRange(mc[i].Index, mc[i].Length));
+            }
         }
 
         public bool IsMispelled(string word)
         {
-            //if (!spellChecker.Spell(word))
-            //{
-            // is mispelled word in user.dic?
-            if (!userWordList.Contains(word.ToLower()))
+            if (!spellChecker.Spell(word))
             {
-                return true;
+                // is mispelled word in user.dic?
+                if (!userWordList.Contains(word.ToLower()))
+                {
+                    return true;
+                }
             }
-            //}
 
             return false;
         }
@@ -167,11 +168,6 @@ namespace VietOCR
             return words;
         }
 
-        private void textbox_TextChanged(object sender, EventArgs e)
-        {
-            SpellCheck();
-        }
-
         public List<String> Suggest(string misspelled)
         {
             List<String> list = new List<String>();
@@ -183,7 +179,7 @@ namespace VietOCR
             }
             else
             {
-                return null; // spellChecker.Suggest(misspelled); // TODO: exception thrown here.
+                return spellChecker.Suggest(misspelled); // TODO: exception thrown here.
             }
         }
 
@@ -200,28 +196,27 @@ namespace VietOCR
             if (!userWordList.Contains(word.ToLower()))
             {
                 userWordList.Add(word.ToLower());
-                String baseDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+                
                 string strUserDictFile = Path.Combine(baseDir, @"dict\user.dic");
 
                 using (StreamWriter sw = new StreamWriter(strUserDictFile, true, Encoding.UTF8))
                 {
                     sw.WriteLine(word);
-                    sw.Close();
                 }
             }
         }
-        void LoadUserDictionary()
+
+        bool LoadUserDictionary()
         {
             try
             {
-                String baseDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
                 string strUserDictFile = Path.Combine(baseDir, @"dict\user.dic");
                 FileInfo userDict = new FileInfo(strUserDictFile);
                 DateTime fileLastModified = userDict.LastWriteTime;
 
                 if (fileLastModified <= mapLastModified)
                 {
-                    return; // no need to reload dictionary
+                    return true; // no need to reload dictionary
                 }
 
                 mapLastModified = fileLastModified;
@@ -235,13 +230,14 @@ namespace VietOCR
                     {
                         userWordList.Add(str.ToLower());
                     }
-                    //sr.Close();
                 }
             }
-            catch (IOException e)
+            catch
             {
-                MessageBox.Show(e.Message);
+                return false;
             }
+
+            return true;
         }
     }
 }

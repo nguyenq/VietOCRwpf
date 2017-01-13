@@ -341,13 +341,14 @@
                     <Label x:Name="toolStripLabelLanguage" Content="{x:Static resx:Gui.toolStripLabelLanguage_Text}" VerticalAlignment="Center"/>
                     <ComboBox x:Name="comboBoxLang" Margin="0" Width="120" SelectionChanged="comboBoxLang_SelectionChanged" />
                 </ToolBar>
-                <TextBox x:Name="textBox1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" AcceptsReturn="True" TextWrapping="Wrap"  PreviewDragOver="Window_DragOver" PreviewDrop="Window_Drop" MouseWheel="textBox1_MouseWheel" >
-                    <!--<SpellCheck.CustomDictionaries>
-                            -->
-                    <!-- vi_VN.dic is included as a content file-->
-                    <!--
-                            <sys:Uri>pack://application:,,,/dict/vi_VN.dic</sys:Uri>
-                        </SpellCheck.CustomDictionaries>-->
+                <TextBox x:Name="textBox1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" AcceptsReturn="True" TextWrapping="Wrap"  PreviewDragOver="Window_DragOver" PreviewDrop="Window_Drop" MouseWheel="textBox1_MouseWheel" ContextMenuOpening="textBox1_ContextMenuOpening" >
+                    <TextBox.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Command="ApplicationCommands.Cut"/>
+                            <MenuItem Command="ApplicationCommands.Copy"/>
+                            <MenuItem Command="ApplicationCommands.Paste"/>
+                        </ContextMenu>
+                    </TextBox.ContextMenu>
                 </TextBox>
             </DockPanel>
         </Grid>

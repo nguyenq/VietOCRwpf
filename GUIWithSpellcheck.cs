@@ -23,6 +23,8 @@ using System.Text;
 using Net.SourceForge.Vietpad.Utilities;
 using System.Windows.Controls;
 using System.Windows;
+using System.Windows.Input;
+using System.Windows.Documents;
 
 namespace VietOCR
 {
@@ -37,32 +39,67 @@ namespace VietOCR
 
         }
 
-        //protected override void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
-        //{
-        //    try
-        //    {
-        //        this.contextMenuStrip1.Items.Clear();
-        //        if (this.buttonSpellCheck.Checked)
-        //        {
-        //            int offset = this.textBox1.GetCharIndexFromPosition(pointClicked);
-        //            BreakIterator boundary = BreakIterator.GetWordInstance();
-        //            boundary.Text = this.textBox1.Text;
-        //            end = boundary.Following(offset);
+        protected override void textBox1_ContextMenuOpening(object sender, ContextMenuEventArgs e)
+        {
+            try
+            {
+                this.textBox1.ContextMenu.Items.Clear();
+                if (this.buttonSpellcheck.IsChecked.Value)
+                {
+                    int offset = this.textBox1.CaretIndex;
+                    BreakIterator boundary = BreakIterator.GetWordInstance();
+                    boundary.Text = this.textBox1.Text;
+                    end = boundary.Following(offset);
 
-        //            if (end != BreakIterator.DONE)
-        //            {
-        //                start = boundary.Previous();
-        //                curWord = this.textBox1.Text.Substring(start, end - start);
-        //                makeSuggestions(curWord);
-        //            }
-        //        }
-        //    }
-        //    finally
-        //    {
-        //        // load standard menu items
-        //        this.contextMenuStrip1.RepopulateContextMenu();
-        //    }
-        //}
+                    if (end != BreakIterator.DONE)
+                    {
+                        start = boundary.Previous();
+                        curWord = this.textBox1.Text.Substring(start, end - start);
+                        makeSuggestions(curWord);
+                    }
+                }
+            }
+            finally
+            {
+                // load standard menu items
+                RepopulateDefaultContextMenu();
+            }
+        }
+
+        void RepopulateDefaultContextMenu()
+        {
+            MenuItem item = new MenuItem();
+            //item.Header = "Undo";
+            item.Command = ApplicationCommands.Undo;
+            this.textBox1.ContextMenu.Items.Add(item);
+            item = new MenuItem();
+            //item.Header = "Undo";
+            item.Command = ApplicationCommands.Redo;
+            this.textBox1.ContextMenu.Items.Add(item);
+            this.textBox1.ContextMenu.Items.Add(new Separator());
+            item = new MenuItem();
+            //item.Header = "Undo";
+            item.Command = ApplicationCommands.Cut;
+            this.textBox1.ContextMenu.Items.Add(item);
+            item = new MenuItem();
+            //item.Header = "Undo";
+            item.Command = ApplicationCommands.Copy;
+            this.textBox1.ContextMenu.Items.Add(item);
+            item = new MenuItem();
+            //item.Header = "Undo";
+            item.Command = ApplicationCommands.Paste;
+            this.textBox1.ContextMenu.Items.Add(item);
+            item = new MenuItem();
+            //item.Header = "Undo";
+            item.Command = ApplicationCommands.Delete;
+            this.textBox1.ContextMenu.Items.Add(item);
+            this.textBox1.ContextMenu.Items.Add(new Separator());
+            item = new MenuItem();
+            //item.Header = "Undo";
+            item.Command = ApplicationCommands.SelectAll;
+            this.textBox1.ContextMenu.Items.Add(item);
+        }
+
         /// <summary>
         /// Populates suggestions at top of context menu.
         /// </summary>
@@ -80,42 +117,47 @@ namespace VietOCR
                 return;
             }
 
-            //foreach (string word in suggests)
-            //{
-            //    MenuItem item = new MenuItem(word);
-            //    item.Font = new Font(item.Font, FontStyle.Bold);
-            //    item.Click += new EventHandler(item_Click);
-            //    this.contextMenuStrip1.Items.Add(item);
-            //}
-            //this.contextMenuStrip1.Items.Add("-");
+            foreach (string word in suggests)
+            {
+                MenuItem item = new MenuItem();
+                item.Header = word;
+                item.FontWeight = FontWeights.Bold;
+                item.Tag = EditingCommands.CorrectSpellingError;
+                item.Click += new RoutedEventHandler(item_Click);
+                this.textBox1.ContextMenu.Items.Add(item);
+            }
+            this.textBox1.ContextMenu.Items.Add(new Separator());
 
-            //MenuItem item1 = new MenuItem(Properties.Resources.Ignore_All);
-            //item1.Tag = "ignore.word";
-            //item1.Click += new EventHandler(item_Click);
-            //this.contextMenuStrip1.Items.Add(item1);
+            MenuItem item1 = new MenuItem();
+            item1.Header = "Ignore All";
+            item1.Tag = EditingCommands.IgnoreSpellingError;
+            item1.Click += new RoutedEventHandler(item_Click);
+            this.textBox1.ContextMenu.Items.Add(item1);
 
-            //item1 = new MenuItem(Properties.Resources.Add_to_Dictionary);
-            //item1.Tag = "add.word";
-            //item1.Click += new EventHandler(item_Click);
-            //this.contextMenuStrip1.Items.Add(item1);
-            //this.contextMenuStrip1.Items.Add("-");
+            item1 = new MenuItem();
+            item1.Header = "Add to Dictionary";
+            item1.Tag = "AddToDict";
+            item1.Click += new RoutedEventHandler(item_Click);
+            this.textBox1.ContextMenu.Items.Add(item1);
+            this.textBox1.ContextMenu.Items.Add(new Separator());
         }
 
         void item_Click(object sender, RoutedEventArgs e)
         {
             MenuItem item = (MenuItem)sender;
-            object command = item.Tag;
 
-            if (command == null)
+            if (item.Tag == EditingCommands.CorrectSpellingError)
             {
                 this.textBox1.Select(start, end - start);
                 this.textBox1.SelectedText = item.Header.ToString();
+                this.textBox1.SelectionStart = start + item.Header.ToString().Length;
+                this.textBox1.SelectionLength = 0;
             }
-            else if (command.ToString() == "ignore.word")
+            else if (item.Tag == EditingCommands.IgnoreSpellingError)
             {
                 speller.IgnoreWord(curWord);
             }
-            else if (command.ToString() == "add.word")
+            else if (item.Tag.ToString() == "AddToDict")
             {
                 speller.AddWord(curWord);
             }
@@ -142,17 +184,22 @@ namespace VietOCR
                 return;
             }
 
-            System.Collections.IList dictionaries = SpellCheck.GetCustomDictionaries(textBox1);
-            try
-            {            
-                // *.dic is included as content files
-                Uri uri = new Uri(String.Format(@"pack://application:,,,/dict/{0}.dic", localeId));
-                dictionaries.Add(uri);
-                this.textBox1.SpellCheck.IsEnabled = this.buttonSpellcheck.IsChecked.HasValue ? this.buttonSpellcheck.IsChecked.Value : false;
-            }
-            catch (System.IO.IOException exc)
+            speller = new SpellCheckHelper(this.textBox1, localeId);
+
+            if (this.buttonSpellcheck.IsChecked.Value)
             {
-                MessageBox.Show(exc.Message);
+                try
+                {
+                    speller.EnableSpellCheck();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                speller.DisableSpellCheck();
             }
         }
     }

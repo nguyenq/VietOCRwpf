@@ -9,6 +9,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows;
+using System.Windows.Automation.Peers;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -903,11 +904,15 @@ namespace VietOCR
             VietKeyHandler.VietModeEnabled = vie;
             this.vietInputMethodToolStripMenuItem.Visibility = vie ? Visibility.Visible : Visibility.Collapsed;
 
-            //if (this.toolStripButtonSpellCheck.Checked)
-            //{
-            //    this.toolStripButtonSpellCheck.PerformClick();
-            //    this.toolStripButtonSpellCheck.PerformClick();
-            //}
+            if (this.buttonSpellcheck.IsChecked.Value)
+            {
+                ToggleButtonAutomationPeer peer = new ToggleButtonAutomationPeer(buttonSpellcheck);
+                System.Windows.Automation.Provider.IToggleProvider toggleProvider = peer.GetPattern(PatternInterface.Toggle) as System.Windows.Automation.Provider.IToggleProvider;
+                toggleProvider.Toggle(); // disable spellcheck
+                buttonSpellcheck.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                toggleProvider.Toggle(); // re-enable spellcheck
+                buttonSpellcheck.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+            }
         }
 
         private void textBox1_MouseWheel(object sender, MouseWheelEventArgs e)
@@ -951,6 +956,11 @@ namespace VietOCR
 
                 e.Handled = true;
             }
+        }
+
+        protected virtual void textBox1_ContextMenuOpening(object sender, ContextMenuEventArgs e)
+        {
+
         }
     }
 }
