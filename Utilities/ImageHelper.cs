@@ -20,6 +20,7 @@ using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Media.Imaging;
+using Tesseract;
 
 namespace VietOCR.NET.Utilities
 {
@@ -914,27 +915,26 @@ namespace VietOCR.NET.Utilities
         /// <returns></returns>
         public static Bitmap RemoveLines(Bitmap image)
         {
-            return image;
-            //using (Pix pix = PixConverter.ToPix(image))
-            //{
-            //    // remove horizontal lines
-            //    using (Pix result = pix.RemoveLines())
-            //    {
-            //        // rotate 90 degrees CW
-            //        using (Pix result1 = result.Rotate90(1))
-            //        {
-            //            // effectively remove vertical lines
-            //            using (Pix result2 = result1.RemoveLines())
-            //            {
-            //                // rotate 90 degrees CCW
-            //                using (Pix result3 = result2.Rotate90(-1))
-            //                {
-            //                    return PixConverter.ToBitmap(result3);
-            //                }
-            //            }
-            //        }
-            //    }
-            //}
+            using (Pix pix = PixConverter.ToPix(image))
+            {
+                // remove horizontal lines
+                using (Pix result = pix.RemoveLines())
+                {
+                    // rotate 90 degrees CW
+                    using (Pix result1 = result.Rotate90(1))
+                    {
+                        // effectively remove vertical lines
+                        using (Pix result2 = result1.RemoveLines())
+                        {
+                            // rotate 90 degrees CCW
+                            using (Pix result3 = result2.Rotate90(-1))
+                            {
+                                return PixConverter.ToBitmap(result3);
+                            }
+                        }
+                    }
+                }
+            }
         }
 
     }
