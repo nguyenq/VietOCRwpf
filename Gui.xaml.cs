@@ -312,9 +312,10 @@ namespace VietOCR
         {
             string releaseDate = System.Configuration.ConfigurationManager.AppSettings["ReleaseDate"];
             string version = System.Configuration.ConfigurationManager.AppSettings["Version"];
+            string tessVersion = System.Configuration.ConfigurationManager.AppSettings["TessVersion"];
 
             MessageBox.Show("VietOCR.NET WPF Beta\n" +
-                ".NET GUI Frontend for Tesseract 3.04 OCR Engine\n" +
+                string.Format(Properties.Resources.Program_desc, tessVersion) + "\n" +
                 DateTime.Parse(releaseDate).ToString("D", System.Threading.Thread.CurrentThread.CurrentUICulture).Normalize() + "\n" +
                 "http://vietocr.sourceforge.net", "About VietOCR.NET", MessageBoxButton.OK, MessageBoxImage.Information);
         }

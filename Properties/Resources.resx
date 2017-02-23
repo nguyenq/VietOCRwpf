@@ -298,7 +298,7 @@
     <value>Please_restart</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>.NET GUI Frontend for Tesseract 3.04 OCR Engine</value>
+    <value>.NET GUI Frontend for Tesseract {0} OCR Engine</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs.html</value>

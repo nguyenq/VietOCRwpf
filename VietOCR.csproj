@@ -124,12 +124,12 @@
     <Compile Include="GuiWithPostprocess.cs" />
     <Compile Include="GuiWithPSM.cs" />
     <Compile Include="GuiWithRegistry.cs" />
-    <Compile Include="GUIWithScan.cs" />
-    <Compile Include="GUIWithSettings.cs" />
-    <Compile Include="GUIWithSpellcheck.cs" />
-    <Compile Include="GUIWithThumbnail.cs" />
-    <Compile Include="GUIWithTools.cs" />
-    <Compile Include="GUIWithUILanguage.cs" />
+    <Compile Include="GuiWithScan.cs" />
+    <Compile Include="GuiWithSettings.cs" />
+    <Compile Include="GuiWithSpellcheck.cs" />
+    <Compile Include="GuiWithThumbnail.cs" />
+    <Compile Include="GuiWithTools.cs" />
+    <Compile Include="GuiWithUILanguage.cs" />
     <Compile Include="HtmlHelpDialog.xaml.cs">
       <DependentUpon>HtmlHelpDialog.xaml</DependentUpon>
     </Compile>
@@ -280,6 +280,7 @@
     <None Include="Hunspellx86.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Content Include="readme_cs_ne.html" />
     <Content Include="x64\liblept172.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -317,6 +318,9 @@
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.lt-LT.resx">
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.ne-NP.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.nl-NL.resx">
@@ -370,6 +374,9 @@
     <EmbeddedResource Include="ChangeCaseDialog.lt-LT.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.ne-NP.resx">
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.nl-NL.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
@@ -420,6 +427,9 @@
     <EmbeddedResource Include="DownloadDialog.lt-LT.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.ne-NP.resx">
+      <DependentUpon>DownloadDialog.xaml</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.nl-NL.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
@@ -462,6 +472,9 @@
       <DependentUpon>Gui.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.lt-LT.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui.ne-NP.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.nl-NL.resx">
@@ -515,6 +528,9 @@
     <EmbeddedResource Include="ImageInfoDialog.lt-LT.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.ne-NP.resx">
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ImageInfoDialog.nl-NL.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
@@ -565,6 +581,9 @@
     <EmbeddedResource Include="OptionsDialog.lt-LT.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.ne-NP.resx">
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.nl-NL.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
@@ -597,6 +616,7 @@
     <EmbeddedResource Include="Properties\Resources.it-IT.resx" />
     <EmbeddedResource Include="Properties\Resources.ja-JP.resx" />
     <EmbeddedResource Include="Properties\Resources.lt-LT.resx" />
+    <EmbeddedResource Include="Properties\Resources.ne-NP.resx" />
     <EmbeddedResource Include="Properties\Resources.nl-NL.resx" />
     <EmbeddedResource Include="Properties\Resources.pl-PL.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -608,6 +628,9 @@
     <EmbeddedResource Include="Properties\Resources.sk-SK.resx" />
     <EmbeddedResource Include="Properties\Resources.tr-TR.resx" />
     <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
+    <EmbeddedResource Include="SlideDialog.ne-NP.resx">
+	  <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SliderDialog.bn-IN.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
@@ -684,6 +707,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.lt-LT.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.ne-NP.resx">
+	  <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.nl-NL.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>

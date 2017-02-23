@@ -53,206 +53,215 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="_of_" xml:space="preserve">
-    <value>в</value>
+    <value>को</value>
   </data>
   <data name="About_VietOCR" xml:space="preserve">
-    <value>О программе VietOCR.NET</value>
+    <value>VietOCR.NETको बारेमा</value>
   </data>
   <data name="Access_denied" xml:space="preserve">
-    <value>У вас нет прав для записи в папку &quot;{0}&quot;.
-Пожалуйста, запустите программу от имени Администратора.</value>
+    <value>तपाईँ सँग  &quot;{0}&quot; फोल्डरमा लेख्ने अधिकार छैन।
+कृपया कार्यक्रमलाई व्यवस्थापकको रूपमा चलाउनुहोस्।</value>
   </data>
   <data name="Add_to_Dictionary" xml:space="preserve">
-    <value>Добавить в словарь</value>
+    <value>शब्दकोशमा थप्नुहोस्</value>
   </data>
   <data name="BatchProcessStatus" xml:space="preserve">
-    <value>Статус пакетной обработки</value>
+    <value>एकमुस्ट प्रसोधन स्थिति</value>
   </data>
   <data name="Beginning_of_task" xml:space="preserve">
-    <value>Начало задачи</value>
+    <value>कामको शुरुवात</value>
+  </data>
+  <data name="Bilateral" xml:space="preserve">
+    <value>Bilateral</value>
   </data>
   <data name="Brightness" xml:space="preserve">
-    <value>Яркость</value>
+    <value>उज्यालोपन</value>
   </data>
   <data name="Browse" xml:space="preserve">
-    <value>Выбрать</value>
+    <value>ब्राउज</value>
   </data>
   <data name="Bulk_OCR" xml:space="preserve">
-    <value>Пакетное распознавание</value>
+    <value>थोक ओसीआर</value>
   </data>
   <data name="BulkProcessStatus" xml:space="preserve">
-    <value>Статус пакетной обработки</value>
+    <value>एकमुस्ट प्रसोधन स्थिति</value>
   </data>
   <data name="CancelBulkOCR" xml:space="preserve">
-    <value>Отменить пакетное распознавание</value>
+    <value>एकमुस्ट ओसीआर रद्द गर्नुहोस्</value>
   </data>
   <data name="canceled" xml:space="preserve">
-    <value>прервано.</value>
+    <value>रद्द गरियो</value>
   </data>
   <data name="Cannotloadimage" xml:space="preserve">
-    <value>Не удается загрузить изображение.</value>
+    <value>तस्वीर भर्न सकिएन</value>
   </data>
   <data name="Cannotprocess" xml:space="preserve">
-    <value>Не могу продолжить</value>
+    <value>प्रसोधन गर्न सकिएन</value>
   </data>
   <data name="check_output_in" xml:space="preserve">
-    <value>Пожалуйста, проверьте выходной(ые) файл(ы) в</value>
+    <value>आउटपुट फाइ(हरू) यहाँ जाच्नुहोस्</value>
   </data>
   <data name="Clear_Recent_Files" xml:space="preserve">
-    <value>Очистить список</value>
+    <value>&amp;Clear Recent Files</value>
   </data>
   <data name="Contrast" xml:space="preserve">
-    <value>Контраст</value>
+    <value>चमक</value>
   </data>
   <data name="Correcting_completed" xml:space="preserve">
-    <value>Корректировка завершена.</value>
+    <value>सच्याउने काम सकियो।</value>
   </data>
   <data name="Correcting_errors" xml:space="preserve">
-    <value>Исправление ошибок распознавания...</value>
+    <value>पहिचान त्रुटी सच्याउँदै...</value>
   </data>
   <data name="created" xml:space="preserve">
-    <value>был создан.</value>
+    <value>बनाइयो।</value>
   </data>
   <data name="Do_you_want_to_save_the_changes_to_" xml:space="preserve">
-    <value>Вы действительно хотите сохранить изменения в</value>
+    <value>के तपाईं यसमा गरिएका परिवर्तनहरू सञ्चय गर्न चाहनुहुन्छ</value>
   </data>
   <data name="Downloadcanceled" xml:space="preserve">
-    <value>Загрузка отменена.</value>
+    <value>डाउनलोड रद्द गरियो।</value>
   </data>
   <data name="Downloadcompleted" xml:space="preserve">
-    <value>Загрузка завершена.</value>
+    <value>डाउनलोड सकियो।</value>
   </data>
   <data name="Downloaderror" xml:space="preserve">
-    <value>Ошибка загрузки.</value>
+    <value>डाउनलोड त्रुटी।</value>
   </data>
   <data name="Downloading" xml:space="preserve">
-    <value>Загрузка...</value>
+    <value>डाउनलोड गरिँदै...</value>
   </data>
   <data name="Elapsed_time" xml:space="preserve">
-    <value>Времени прошло</value>
+    <value>बितेको समय:</value>
   </data>
   <data name="End_of_task" xml:space="preserve">
-    <value>Конец задачи</value>
+    <value>कामको समापन</value>
   </data>
   <data name="Error" xml:space="preserve">
-    <value>Ошибка</value>
+    <value>त्रुटी</value>
+  </data>
+  <data name="Gamma" xml:space="preserve">
+    <value>Gamma</value>
   </data>
   <data name="Ignore_All" xml:space="preserve">
-    <value>Игнорировать все</value>
+    <value>सबै बेवास्ता गर्नुहोस्</value>
   </data>
   <data name="Inputincomplete" xml:space="preserve">
-    <value>Ввод незавершен.</value>
+    <value>अपूर्ण इनपुट।</value>
   </data>
   <data name="Inputinvalid" xml:space="preserve">
-    <value>Некорректный ввод.</value>
+    <value>अमान्य इनपुट।</value>
   </data>
   <data name="InvalidPageMessage" xml:space="preserve">
-    <value>There is no page numbered &apos;{0}&apos; in this image.</value>
+    <value>यो चित्रमा  &apos;{0}&apos; क्रमाङ्क भएको पाना छैन।</value>
   </data>
   <data name="Load_image" xml:space="preserve">
-    <value>Загрузить изображение</value>
+    <value>चित्र लोड गर्नुहोस्</value>
   </data>
   <data name="LoadImage" xml:space="preserve">
-    <value>Пожалуйста, загрузить изображение.</value>
+    <value>कृपया तस्वीर लोड गर्नुहोस्।</value>
   </data>
   <data name="Loading_completed" xml:space="preserve">
-    <value>Загрузка завершена.</value>
+    <value>भरण पूर्ण।</value>
   </data>
   <data name="Loading_image" xml:space="preserve">
-    <value>Загрузка изображения...</value>
+    <value>तस्वीर लोड गर्दै...</value>
   </data>
   <data name="MergePDF_running" xml:space="preserve">
-    <value>Идет объединение PDF...</value>
+    <value>PDF गाँस्ने काम चलिरहेको छ...</value>
   </data>
   <data name="MergePDFcompleted" xml:space="preserve">
-    <value>Объединение PDF завершено.</value>
+    <value>PDF गाँस्ने काम सकियो।</value>
   </data>
   <data name="MergeTIFF_running" xml:space="preserve">
-    <value>Идет объединение TIFF...</value>
+    <value>TIFF गाँस्ने काम चलिरहेको छ...</value>
   </data>
   <data name="MergeTIFFcompleted" xml:space="preserve">
-    <value>Объединение TIFF завершено.</value>
+    <value>TIFF गाँस्ने काम सकियो।</value>
   </data>
   <data name="No_Recent_Files" xml:space="preserve">
-    <value>Пусто</value>
+    <value>No Recent Files</value>
   </data>
   <data name="OCRcompleted" xml:space="preserve">
-    <value>Распознавание выполнено</value>
+    <value>ओसीआर सम्पन्न।</value>
   </data>
   <data name="OCROperation" xml:space="preserve">
-    <value>Процесс распознавания</value>
+    <value>ओसीआर प्रक्रिया</value>
   </data>
   <data name="OCRrunning" xml:space="preserve">
-    <value>Идет распознавание...</value>
+    <value>ओसीआर चलिरहेको छ...</value>
   </data>
   <data name="Open" xml:space="preserve">
-    <value>Открыть</value>
+    <value>खोल्नुहोस्</value>
   </data>
   <data name="OpenImageFile" xml:space="preserve">
-    <value>Открыть файл с изображением</value>
+    <value>तस्वीर फाइल खोल्नुहोस्</value>
   </data>
   <data name="Page_" xml:space="preserve">
-    <value>Страница</value>
+    <value>पाना</value>
   </data>
   <data name="Please_restart" xml:space="preserve">
-    <value>Пожалуйста, перезапустите программу, для регистрации новых языковых пакетов.</value>
+    <value>कृपया प्रोग्राम फेरि शुरू गर्नुहोस् ता कि यसले नयाँ भाषा प्याक(हरू) दर्ता गर्न सकोस।</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>.NET GUI Frontend for Tesseract {0} OCR Engine</value>
+    <value>टेसेर्‍याक्ट {0} ओसीआर यन्त्रको लागि .NET जीयूआइ फ्रन्टएण्ड</value>
   </data>
   <data name="readme" xml:space="preserve">
-    <value>readme_cs_ru.html</value>
+    <value>readme_cs_ne.html</value>
+  </data>
+  <data name="Require_grayscale" xml:space="preserve">
+    <value>चित्रलाई ग्रेस्केलमा परिवर्तन गर्न आवश्यक हुन सक्छ।</value>
   </data>
   <data name="Resource_not_exist" xml:space="preserve">
-    <value>Ресурс не существует.</value>
+    <value>स्रोत उपलब्ध छैन।</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Сохранить</value>
+    <value>सञ्चय</value>
   </data>
   <data name="Save_As" xml:space="preserve">
-    <value>Сохранить как</value>
+    <value>को रूपमा सञ्चय</value>
   </data>
   <data name="Save_Merged_PDF" xml:space="preserve">
-    <value>Сохранить объединенный PDF</value>
+    <value>गाँसिएको PDF सञ्चय गर्नुहोस्</value>
   </data>
   <data name="Save_Multipage_TIFF_Image" xml:space="preserve">
-    <value>Сохранить многостраничный TIFF</value>
+    <value>बहु-पृष्ठीय TIFF चित्र सञ्चय गर्नुहोस्</value>
   </data>
   <data name="Scancompleted" xml:space="preserve">
-    <value>Сканирование выполнено.</value>
+    <value>स्क्यान सकियो।</value>
   </data>
   <data name="Scanning" xml:space="preserve">
-    <value>Сканинование...</value>
+    <value>स्क्यान गर्दै...</value>
   </data>
   <data name="ScanningOperation" xml:space="preserve">
-    <value>Процесс сканирования</value>
+    <value>स्क्यानिङ प्रक्रिया</value>
   </data>
   <data name="Select" xml:space="preserve">
-    <value>Выбрать</value>
+    <value>छान्नुहोस्</value>
   </data>
   <data name="Select_Input_Images" xml:space="preserve">
-    <value>Выбрать входные изображения</value>
+    <value>इनपुट तस्वीरहरू छान्नुहोस्</value>
   </data>
   <data name="Select_Input_PDFs" xml:space="preserve">
-    <value>Выбрать входные PDF файлы</value>
+    <value>इनपुट PDFहरू छान्नुहोस्</value>
   </data>
   <data name="Select_Input_TIFF" xml:space="preserve">
     <value>Select Input Multi-page TIFF</value>
   </data>
   <data name="selectLanguage" xml:space="preserve">
-    <value>Пожалуйста, выберите язык.</value>
+    <value>कृपया भाषा छान्नुहोस्।</value>
   </data>
   <data name="SplitPDF_completed" xml:space="preserve">
-    <value>Разбиение PDF завершено.</value>
+    <value>Split PDF completed.</value>
   </data>
   <data name="SplitPDF_running" xml:space="preserve">
-    <value>Идет разбиение PDF...</value>
+    <value>Split PDF running...</value>
   </data>
   <data name="SplitTIFF_running" xml:space="preserve">
     <value>Split TIFF running...</value>
@@ -261,15 +270,18 @@
     <value>Split TIFF completed.</value>
   </data>
   <data name="suggest_split" xml:space="preserve">
-    <value>Возможно, вы должны разбить PDF файл на файлы меньшего размера, прежде чем продолжить.</value>
+    <value>You may need to split the PDF file into smaller files before proceed.</value>
   </data>
   <data name="Task_canceled" xml:space="preserve">
-    <value>Задача отменена</value>
+    <value>काम रद्द गरियो</value>
+  </data>
+  <data name="Threshold" xml:space="preserve">
+    <value>Threshold</value>
   </data>
   <data name="Untitled" xml:space="preserve">
-    <value>Новый</value>
+    <value>शीर्षकबिहीन</value>
   </data>
   <data name="VietOCR_Help" xml:space="preserve">
-    <value>Справка</value>
+    <value>VietOCR.NET सहयोग</value>
   </data>
 </root>
