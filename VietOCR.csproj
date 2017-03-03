@@ -122,6 +122,7 @@
     <Compile Include="GuiWithFile.cs" />
     <Compile Include="GuiWithOCR.cs" />
     <Compile Include="GuiWithPostprocess.cs" />
+    <Compile Include="GuiWithOEM.cs" />
     <Compile Include="GuiWithPSM.cs" />
     <Compile Include="GuiWithRegistry.cs" />
     <Compile Include="GuiWithScan.cs" />
@@ -629,7 +630,7 @@
     <EmbeddedResource Include="Properties\Resources.tr-TR.resx" />
     <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
     <EmbeddedResource Include="SlideDialog.ne-NP.resx">
-	  <DependentUpon>SliderDialog.xaml</DependentUpon>
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SliderDialog.bn-IN.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
@@ -709,7 +710,7 @@
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.ne-NP.resx">
-	  <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.nl-NL.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>

@@ -27,6 +27,8 @@ namespace VietOCR
     public class GuiWithOCR : GuiWithImageOps
     {
         protected string selectedPSM = "Auto"; // 3 - Fully automatic page segmentation, but no OSD (default)
+        protected string selectedOEM = "3"; // Default
+
         BackgroundWorker backgroundWorkerOcr;
 
         public GuiWithOCR()
@@ -135,6 +137,7 @@ namespace VietOCR
             OCRImageEntity entity = (OCRImageEntity)e.Argument;
             OCR<Image> ocrEngine = new OCRImages();
             ocrEngine.PageSegMode = selectedPSM;
+            ocrEngine.OcrEngineMode = selectedOEM;
             ocrEngine.Language = entity.Language;
 
             // Assign the result of the computation to the Result property of the DoWorkEventArgs

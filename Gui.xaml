@@ -133,6 +133,7 @@
                 <MenuItem x:Name="downloadLangDataToolStripMenuItem" Header="{x:Static resx:Gui.downloadLangDataToolStripMenuItem_Text}" Click="downloadLangDataToolStripMenuItem_Click" />
                 <Separator  />
                 <MenuItem x:Name="psmToolStripMenuItem" Header="{x:Static resx:Gui.psmToolStripMenuItem_Text}" />
+                <MenuItem x:Name="oemToolStripMenuItem" Header="{x:Static resx:Gui.oemToolStripMenuItem_Text}" />
                 <Separator  />
                 <MenuItem x:Name="optionsToolStripMenuItem" Header="{x:Static resx:Gui.optionsToolStripMenuItem_Text}" Click="optionsToolStripMenuItem_Click" />
             </MenuItem>
@@ -165,6 +166,8 @@
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="Auto" />
@@ -224,7 +227,14 @@
                     <Label x:Name="statusLabelPSMvalue" Content="Auto"  />
                 </StackPanel>
             </StatusBarItem>
-            <Separator Margin="1,2,18,2"  Grid.Column="10"/>
+            <Separator  Grid.Column="10" />
+            <StatusBarItem Grid.Column="11">
+                <StackPanel Orientation="Horizontal">
+                    <Label x:Name="toolStripStatusLabelOEM" Content="{x:Static resx:Gui.toolStripStatusLabelOEM_Text}" />
+                    <Label x:Name="statusLabelOEMvalue" Content="Default"  />
+                </StackPanel>
+            </StatusBarItem>
+            <Separator Margin="1,2,18,2"  Grid.Column="12"/>
         </StatusBar>
         <Grid DockPanel.Dock="Top" >
             <Grid.ColumnDefinitions>

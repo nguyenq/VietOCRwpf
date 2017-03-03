@@ -237,7 +237,7 @@ namespace VietOCR
             originalImage = imageList[imageIndex];
             stack.Push(originalImage);
             imageList[imageIndex] = ImageHelper.ConvertGrayscale((Bitmap)originalImage);
-            this.imageMain.Source = ImageConverter.BitmapToImageSource(imageList[imageIndex]);
+            displayImage();
         }
 
         protected override void monochromeToolStripMenuItem_Click(object sender, RoutedEventArgs e)
@@ -250,7 +250,7 @@ namespace VietOCR
             originalImage = imageList[imageIndex];
             stack.Push(originalImage);
             imageList[imageIndex] = ImageHelper.ConvertMonochrome((Bitmap)originalImage);
-            this.imageMain.Source = ImageConverter.BitmapToImageSource(imageList[imageIndex]);
+            displayImage();
         }
 
         protected override void gammaMenuItem_Click(object sender, RoutedEventArgs e)

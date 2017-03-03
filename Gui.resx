@@ -1233,4 +1233,10 @@
   <data name="thresholdMenuItem.Text" xml:space="preserve">
     <value>_Threshold...</value>
   </data>
+  <data name="oemToolStripMenuItem.Text" xml:space="preserve">
+    <value>OCR _Engine Mode</value>
+  </data>
+  <data name="toolStripStatusLabelOEM.Text" xml:space="preserve">
+    <value>OEM:</value>
+  </data>
 </root>

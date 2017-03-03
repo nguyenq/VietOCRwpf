@@ -28,7 +28,7 @@ using System.Windows.Documents;
 
 namespace VietOCR
 {
-    public class GuiWithSpellcheck : GuiWithPSM
+    public class GuiWithSpellcheck : GuiWithOEM
     {
         private int start, end;
         private SpellCheckHelper speller;
