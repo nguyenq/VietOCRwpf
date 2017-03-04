@@ -27,7 +27,7 @@ namespace VietOCR {
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
-                
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -1116,6 +1116,15 @@ namespace VietOCR {
         public static string toolStripStatusLabelOEM_Text {
             get {
                 return ResourceManager.GetString("toolStripStatusLabelOEM.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to OCR Engine Mode.
+        /// </summary>
+        public static string toolStripStatusLabelOEM_ToolTipText {
+            get {
+                return ResourceManager.GetString("toolStripStatusLabelOEM.ToolTipText", resourceCulture);
             }
         }
         

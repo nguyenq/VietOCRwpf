@@ -186,7 +186,7 @@
             <Separator Grid.Column="1" />
             <StatusBarItem Grid.Column="2">
                 <StackPanel Orientation="Horizontal">
-                    <Label x:Name="toolStripStatusLabelDim" Content="{x:Static resx:Gui.toolStripStatusLabelDim_Text}"/>
+                    <Label x:Name="toolStripStatusLabelDim" Content="{x:Static resx:Gui.toolStripStatusLabelDim_Text}" ToolTip="{x:Static resx:Gui.toolStripStatusLabelDim_ToolTipText}"/>
                     <Label x:Name="statusLabelDimValue" Content="0 x 0px 0bpp"/>
                 </StackPanel>
             </StatusBarItem>
@@ -195,7 +195,7 @@
                 <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Name="buttonSegmentedRegions" ContextMenuService.IsEnabled="False" VerticalAlignment="Top" Click="buttonSegmentedRegions_Click" >
                     <Button.Content>
                         <DockPanel FlowDirection="LeftToRight" >
-                            <Label x:Name="toolStripDropDownButtonSegmentedRegions" Content="{x:Static resx:Gui.toolStripDropDownButtonSegmentedRegions_Text}" />
+                            <Label x:Name="toolStripDropDownButtonSegmentedRegions" Content="{x:Static resx:Gui.toolStripDropDownButtonSegmentedRegions_Text}" ToolTip="{x:Static resx:Gui.toolStripDropDownButtonSegmentedRegions_Text}" />
                             <Path x:Name="BtnArrow" Margin="4" VerticalAlignment="Center" Width="10" Fill="Black" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "/>
                         </DockPanel>
                     </Button.Content>
@@ -216,21 +216,21 @@
             <Separator  Grid.Column="6"/>
             <StatusBarItem Grid.Column="7">
                 <StackPanel Orientation="Horizontal">
-                    <Label x:Name="toolStripStatusLabelSM" Content="{x:Static resx:Gui.toolStripStatusLabelSM_Text}"  />
+                    <Label x:Name="toolStripStatusLabelSM" Content="{x:Static resx:Gui.toolStripStatusLabelSM_Text}" ToolTip="{x:Static resx:Gui.toolStripStatusLabelSM_ToolTipText}"  />
                     <Label x:Name="statusLabelSMvalue" Content="Off" />
                 </StackPanel>
             </StatusBarItem>
             <Separator  Grid.Column="8" />
             <StatusBarItem Grid.Column="9">
                 <StackPanel Orientation="Horizontal">
-                    <Label x:Name="toolStripStatusLabelPSM" Content="{x:Static resx:Gui.toolStripStatusLabelPSM_Text}" />
+                    <Label x:Name="toolStripStatusLabelPSM" Content="{x:Static resx:Gui.toolStripStatusLabelPSM_Text}" ToolTip="{x:Static resx:Gui.toolStripStatusLabelPSM_ToolTipText}" />
                     <Label x:Name="statusLabelPSMvalue" Content="Auto"  />
                 </StackPanel>
             </StatusBarItem>
             <Separator  Grid.Column="10" />
             <StatusBarItem Grid.Column="11">
                 <StackPanel Orientation="Horizontal">
-                    <Label x:Name="toolStripStatusLabelOEM" Content="{x:Static resx:Gui.toolStripStatusLabelOEM_Text}" />
+                    <Label x:Name="toolStripStatusLabelOEM" Content="{x:Static resx:Gui.toolStripStatusLabelOEM_Text}" ToolTip="{x:Static resx:Gui.toolStripStatusLabelOEM_ToolTipText}"  />
                     <Label x:Name="statusLabelOEMvalue" Content="Default"  />
                 </StackPanel>
             </StatusBarItem>
@@ -244,23 +244,23 @@
             </Grid.ColumnDefinitions>
             <DockPanel LastChildFill="True" Grid.Column="0">
                 <ToolBar x:Name="toolBar" DockPanel.Dock="Top" >
-                    <Button x:Name="buttonOpen" Command="ApplicationCommands.Open" Height="38" VerticalAlignment="Top" ToolTip="Open Image File">
+                    <Button x:Name="buttonOpen" Command="ApplicationCommands.Open" Height="38" VerticalAlignment="Top" ToolTip="{x:Static resx:Gui.toolStripBtnOpen_ToolTipText}">
                         <Image Source="Icons/fatcow/open.png" Width="36" Height="36" />
                     </Button>
-                    <Button x:Name="buttonScan" VerticalAlignment="Top" Click="buttonScan_Click" ToolTip="Scan Document">
+                    <Button x:Name="buttonScan" VerticalAlignment="Top" Click="buttonScan_Click" ToolTip="{x:Static resx:Gui.toolStripBtnScan_ToolTipText}">
                         <Image x:Name="image2" Source="Icons/fatcow/scan.png" Width="36" Height="36" />
                     </Button>
-                    <Button x:Name="buttonPasteImage" VerticalAlignment="Top" Command="ApplicationCommands.Paste" ToolTip="Image from Clipboard">
+                    <Button x:Name="buttonPasteImage" VerticalAlignment="Top" Command="ApplicationCommands.Paste" ToolTip="{x:Static resx:Gui.toolStripButtonPasteImage_ToolTipText}" ToolTipService.ShowOnDisabled="True">
                         <Image x:Name="image1"  Source="Icons/fatcow/image_paste.png" Width="36" Height="36" />
                     </Button>
-                    <Button x:Name="buttonSave" Command="ApplicationCommands.Save" VerticalAlignment="Top" ToolTip="Save Text File">
+                    <Button x:Name="buttonSave" Command="ApplicationCommands.Save" VerticalAlignment="Top" ToolTip="{x:Static resx:Gui.toolStripBtnSave_ToolTipText}" ToolTipService.ShowOnDisabled="True">
                         <Image x:Name="image6" Source="Icons/fatcow/save.png" Width="36" Height="36" />
                     </Button>
                     <Separator/>
-                    <Button x:Name="buttonPrev" VerticalAlignment="Top" IsEnabled="False" Click="buttonPrev_Click" ToolTip="Previous Page">
+                    <Button x:Name="buttonPrev" VerticalAlignment="Top" IsEnabled="False" Click="buttonPrev_Click" ToolTip="{x:Static resx:Gui.toolStripBtnPrev_ToolTipText}" ToolTipService.ShowOnDisabled="True">
                         <Image x:Name="image7" Source="Icons/fatcow/document_page_previous.png" Width="36" Height="36" />
                     </Button>
-                    <Button x:Name="buttonNext" VerticalAlignment="Top" IsEnabled="False" Click="buttonNext_Click" ToolTip="Next Page">
+                    <Button x:Name="buttonNext" VerticalAlignment="Top" IsEnabled="False" Click="buttonNext_Click" ToolTip="{x:Static resx:Gui.toolStripBtnNext_ToolTipText}" ToolTipService.ShowOnDisabled="True">
                         <Image x:Name="image8" Source="Icons/fatcow/document_page_next.png" Width="36" Height="36" />
                     </Button>
                     <ComboBox x:Name="comboBoxPageNum" Margin="0" Width="45" IsEnabled="False" SelectionChanged="comboBoxPageNum_SelectionChanged">
@@ -268,24 +268,24 @@
                     </ComboBox>
                     <Label x:Name="labelTotalPages" Content="/ 0" VerticalAlignment="Center"/>
                     <Separator/>
-                    <Button x:Name="buttonFitImage" VerticalAlignment="Top" IsEnabled="False" Click="buttonFitImage_Click" ToolTip="Fit Image">
+                    <Button x:Name="buttonFitImage" VerticalAlignment="Top" IsEnabled="False" Click="buttonFitImage_Click" ToolTip="{x:Static resx:Gui.toolStripBtnFitImage_ToolTipText}" ToolTipService.ShowOnDisabled="True">
                         <Image x:Name="image10" Source="Icons/fatcow/zoom_fit.png" Width="36" Height="36" />
                     </Button>
-                    <Button x:Name="buttonActualSize" VerticalAlignment="Top" IsEnabled="False" Click="buttonActualSize_Click" ToolTip="Actual Size">
+                    <Button x:Name="buttonActualSize" VerticalAlignment="Top" IsEnabled="False" Click="buttonActualSize_Click" ToolTip="{x:Static resx:Gui.toolStripBtnActualSize_ToolTipText}" ToolTipService.ShowOnDisabled="True">
                         <Image x:Name="image12" Source="Icons/fatcow/zoom_actual.png" Width="36" Height="36" />
                     </Button>
                     <Separator/>
-                    <Button x:Name="buttonZoomIn"  VerticalAlignment="Top"  IsEnabled="False" Click="buttonZoomIn_Click" ToolTip="Zoom In">
+                    <Button x:Name="buttonZoomIn"  VerticalAlignment="Top"  IsEnabled="False" Click="buttonZoomIn_Click" ToolTip="{x:Static resx:Gui.toolStripBtnZoomIn_ToolTipText}" ToolTipService.ShowOnDisabled="True">
                         <Image x:Name="image11" Source="Icons/fatcow/zoom_in.png" Width="36" Height="36" />
                     </Button>
-                    <Button x:Name="buttonZoomOut" VerticalAlignment="Top"  IsEnabled="False" Click="buttonZoomOut_Click" ToolTip="Zoom Out">
+                    <Button x:Name="buttonZoomOut" VerticalAlignment="Top"  IsEnabled="False" Click="buttonZoomOut_Click" ToolTip="{x:Static resx:Gui.toolStripBtnZoomOut_ToolTipText}" ToolTipService.ShowOnDisabled="True">
                         <Image x:Name="image13" Source="Icons/fatcow/zoom_out.png" Width="36" Height="36" />
                     </Button>
                     <Separator/>
-                    <Button x:Name="buttonRotateCCW"  VerticalAlignment="Top"  IsEnabled="False" Click="buttonRotateCCW_Click" ToolTip="Rotate Counterclockwise">
+                    <Button x:Name="buttonRotateCCW"  VerticalAlignment="Top"  IsEnabled="False" Click="buttonRotateCCW_Click" ToolTip="{x:Static resx:Gui.toolStripBtnRotateCCW_ToolTipText}" ToolTipService.ShowOnDisabled="True">
                         <Image x:Name="image14" Source="Icons/fatcow/rotate_ccw.png" Width="36" Height="36" />
                     </Button>
-                    <Button x:Name="buttonRotateCW"   VerticalAlignment="Top" IsEnabled="False" Click="buttonRotateCW_Click" ToolTip="Rotate Clockwise">
+                    <Button x:Name="buttonRotateCW"   VerticalAlignment="Top" IsEnabled="False" Click="buttonRotateCW_Click" ToolTip="{x:Static resx:Gui.toolStripBtnRotateCW_ToolTipText}" ToolTipService.ShowOnDisabled="True">
                         <Image x:Name="image15" Source="Icons/fatcow/rotate_cw.png" Width="36" Height="36" />
                     </Button>
                     <Separator/>
@@ -327,28 +327,28 @@
             <GridSplitter x:Name="gridSplitter" Width="5" Grid.Column="1"/>
             <DockPanel LastChildFill="True" Grid.Column="2" >
                 <ToolBar x:Name="toolBar2" DockPanel.Dock="Top" HorizontalAlignment="Stretch">
-                    <Button x:Name="buttonOCR" VerticalAlignment="Top" Click="buttonOCR_Click" ToolTip="Perform OCR">
+                    <Button x:Name="buttonOCR" VerticalAlignment="Top" Click="buttonOCR_Click" ToolTip="{x:Static resx:Gui.toolStripBtnOCR_ToolTipText}">
                         <Image x:Name="image3" Source="Icons/fatcow/ocr.png"  Width="36" Height="36" />
                     </Button>
-                    <Button x:Name="buttonCancelOCR" VerticalAlignment="Top" Visibility="Collapsed" Click="buttonCancelOCR_Click" ToolTip="Cancel OCR">
+                    <Button x:Name="buttonCancelOCR" VerticalAlignment="Top" Visibility="Collapsed" Click="buttonCancelOCR_Click" ToolTip="{x:Static resx:Gui.toolStripButtonCancelOCR_Text}">
                         <Image x:Name="image16" Source="Icons/fatcow/cancel.png"  Width="36" Height="36" />
                     </Button>
-                    <Button x:Name="buttonClear" VerticalAlignment="Top" Click="buttonClear_Click" ToolTip="Clear Textbox" >
+                    <Button x:Name="buttonClear" VerticalAlignment="Top" Click="buttonClear_Click" ToolTip="{x:Static resx:Gui.toolStripBtnClear_ToolTipText}" >
                         <Image x:Name="image4"  Source="Icons/fatcow/draw_eraser.png" Width="36" Height="36" />
                     </Button>
                     <Separator/>
-                    <ToggleButton x:Name="buttonSpellcheck"  VerticalAlignment="Top" Click="buttonSpellcheck_Click" ToolTip="Spell Check">
+                    <ToggleButton x:Name="buttonSpellcheck"  VerticalAlignment="Top" Click="buttonSpellcheck_Click" ToolTip="{x:Static resx:Gui.toolStripButtonSpellCheck_ToolTipText}">
                         <Image x:Name="image5"  Source="Icons/fatcow/inline_spellcheck.png" Width="36" Height="36" />
                     </ToggleButton>
-                    <Button x:Name="buttonPostProcess"  VerticalAlignment="Top" Click="buttonPostProcess_Click" ToolTip="Post-process">
+                    <Button x:Name="buttonPostProcess"  VerticalAlignment="Top" Click="buttonPostProcess_Click" ToolTip="{x:Static resx:Gui.toolStripButtonPostProcess_ToolTipText}">
                         <Image x:Name="image" Source="Icons/fatcow/gear_in.png" Width="36" Height="36" />
                     </Button>
-                    <Button x:Name="buttonRemoveLineBreaks"  VerticalAlignment="Top" Click="buttonRemoveLineBreaks_Click" ToolTip="Remove Line Breaks">
+                    <Button x:Name="buttonRemoveLineBreaks"  VerticalAlignment="Top" Click="buttonRemoveLineBreaks_Click" ToolTip="{x:Static resx:Gui.toolStripButtonRemoveLineBreaks_ToolTipText}">
                         <Image x:Name="image9"  Source="Icons/fatcow/pilcrow_delete.png" Width="36" Height="36" />
                     </Button>
                     <Separator />
                     <Separator x:Name="separatorLang" Opacity="0" Width="150" />
-                    <Label x:Name="toolStripLabelLanguage" Content="{x:Static resx:Gui.toolStripLabelLanguage_Text}" VerticalAlignment="Center"/>
+                    <Label x:Name="toolStripLabelLanguage" Content="{x:Static resx:Gui.toolStripLabelLanguage_Text}" VerticalAlignment="Center" ToolTip="{x:Static resx:Gui.toolStripLabelLanguage_ToolTipText}"/>
                     <ComboBox x:Name="comboBoxLang" Margin="0" Width="120" SelectionChanged="comboBoxLang_SelectionChanged" />
                 </ToolBar>
                 <TextBox x:Name="textBox1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" AcceptsReturn="True" TextWrapping="Wrap"  PreviewDragOver="Window_DragOver" PreviewDrop="Window_Drop" MouseWheel="textBox1_MouseWheel" ContextMenuOpening="textBox1_ContextMenuOpening" >

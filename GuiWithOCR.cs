@@ -77,7 +77,7 @@ namespace VietOCR
                 return;
             }
 
-            this.buttonOCR.Visibility = Visibility.Hidden;
+            this.buttonOCR.Visibility = Visibility.Collapsed;
             this.buttonCancelOCR.Visibility = Visibility.Visible;
             this.buttonCancelOCR.IsEnabled = true;
             performOCR(imageList, inputfilename , -1, Rectangle.Empty);

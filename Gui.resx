@@ -1239,4 +1239,7 @@
   <data name="toolStripStatusLabelOEM.Text" xml:space="preserve">
     <value>OEM:</value>
   </data>
+  <data name="toolStripStatusLabelOEM.ToolTipText" xml:space="preserve">
+    <value>OCR Engine Mode</value>
+  </data>
 </root>
