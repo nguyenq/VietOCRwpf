@@ -61,7 +61,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _of_.
+        ///   Looks up a localized string similar to  of .
         /// </summary>
         internal static string _of_ {
             get {
@@ -70,7 +70,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to About_VietOCR.
+        ///   Looks up a localized string similar to About VietOCR.NET.
         /// </summary>
         internal static string About_VietOCR {
             get {
@@ -79,7 +79,8 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Access_denied.
+        ///   Looks up a localized string similar to You have no write access to &quot;{0}&quot; folder.
+        ///Please run the program as administrator..
         /// </summary>
         internal static string Access_denied {
             get {
@@ -88,7 +89,16 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BatchProcessStatus.
+        ///   Looks up a localized string similar to Add to Dictionary.
+        /// </summary>
+        internal static string Add_to_Dictionary {
+            get {
+                return ResourceManager.GetString("Add_to_Dictionary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Batch Process Status.
         /// </summary>
         internal static string BatchProcessStatus {
             get {
@@ -97,7 +107,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Beginning_of_task.
+        ///   Looks up a localized string similar to Beginning of task.
         /// </summary>
         internal static string Beginning_of_task {
             get {
@@ -133,7 +143,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bulk_OCR.
+        ///   Looks up a localized string similar to Bulk OCR.
         /// </summary>
         internal static string Bulk_OCR {
             get {
@@ -142,7 +152,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BulkProcessStatus.
+        ///   Looks up a localized string similar to Bulk Process Status.
         /// </summary>
         internal static string BulkProcessStatus {
             get {
@@ -151,7 +161,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to CancelBulkOCR.
+        ///   Looks up a localized string similar to Cancel Bulk OCR.
         /// </summary>
         internal static string CancelBulkOCR {
             get {
@@ -160,7 +170,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to canceled.
+        ///   Looks up a localized string similar to canceled..
         /// </summary>
         internal static string canceled {
             get {
@@ -169,7 +179,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannotloadimage.
+        ///   Looks up a localized string similar to Cannot load image..
         /// </summary>
         internal static string Cannotloadimage {
             get {
@@ -178,7 +188,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannotprocess.
+        ///   Looks up a localized string similar to Cannot process .
         /// </summary>
         internal static string Cannotprocess {
             get {
@@ -187,7 +197,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to check_output_in.
+        ///   Looks up a localized string similar to Please check output file(s) in .
         /// </summary>
         internal static string check_output_in {
             get {
@@ -196,7 +206,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Clear Recent Files.
+        ///   Looks up a localized string similar to _Clear Recent Files.
         /// </summary>
         internal static string Clear_Recent_Files {
             get {
@@ -214,7 +224,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Correcting_completed.
+        ///   Looks up a localized string similar to Correction completed..
         /// </summary>
         internal static string Correcting_completed {
             get {
@@ -223,7 +233,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Correcting_errors.
+        ///   Looks up a localized string similar to Correcting recognition errors....
         /// </summary>
         internal static string Correcting_errors {
             get {
@@ -232,7 +242,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to created.
+        ///   Looks up a localized string similar to  has been created..
         /// </summary>
         internal static string created {
             get {
@@ -241,7 +251,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Do_you_want_to_save_the_changes_to_.
+        ///   Looks up a localized string similar to Do you want to save the changes to .
         /// </summary>
         internal static string Do_you_want_to_save_the_changes_to_ {
             get {
@@ -250,7 +260,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Downloadcanceled.
+        ///   Looks up a localized string similar to Download canceled..
         /// </summary>
         internal static string Downloadcanceled {
             get {
@@ -259,7 +269,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Downloadcompleted.
+        ///   Looks up a localized string similar to Download completed..
         /// </summary>
         internal static string Downloadcompleted {
             get {
@@ -268,7 +278,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Downloaderror.
+        ///   Looks up a localized string similar to Download error..
         /// </summary>
         internal static string Downloaderror {
             get {
@@ -277,7 +287,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Downloading.
+        ///   Looks up a localized string similar to Downloading....
         /// </summary>
         internal static string Downloading {
             get {
@@ -286,7 +296,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Elapsed_time.
+        ///   Looks up a localized string similar to Elapsed time.
         /// </summary>
         internal static string Elapsed_time {
             get {
@@ -295,7 +305,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to End_of_task.
+        ///   Looks up a localized string similar to End of task.
         /// </summary>
         internal static string End_of_task {
             get {
@@ -322,7 +332,16 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Inputincomplete.
+        ///   Looks up a localized string similar to Ignore All.
+        /// </summary>
+        internal static string Ignore_All {
+            get {
+                return ResourceManager.GetString("Ignore_All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input incomplete..
         /// </summary>
         internal static string Inputincomplete {
             get {
@@ -331,7 +350,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Inputinvalid.
+        ///   Looks up a localized string similar to Input invalid..
         /// </summary>
         internal static string Inputinvalid {
             get {
@@ -340,7 +359,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to InvalidPageMessage.
+        ///   Looks up a localized string similar to There is no page numbered &apos;{0}&apos; in this image..
         /// </summary>
         internal static string InvalidPageMessage {
             get {
@@ -349,7 +368,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Load_image.
+        ///   Looks up a localized string similar to Load Image.
         /// </summary>
         internal static string Load_image {
             get {
@@ -358,7 +377,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to LoadImage.
+        ///   Looks up a localized string similar to Please load an image..
         /// </summary>
         internal static string LoadImage {
             get {
@@ -367,7 +386,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Loading_completed.
+        ///   Looks up a localized string similar to Loading completed..
         /// </summary>
         internal static string Loading_completed {
             get {
@@ -376,7 +395,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Loading_image.
+        ///   Looks up a localized string similar to Loading image....
         /// </summary>
         internal static string Loading_image {
             get {
@@ -385,7 +404,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MergePDF_running.
+        ///   Looks up a localized string similar to Merge PDF running....
         /// </summary>
         internal static string MergePDF_running {
             get {
@@ -394,7 +413,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MergePDFcompleted.
+        ///   Looks up a localized string similar to Merge PDF completed. .
         /// </summary>
         internal static string MergePDFcompleted {
             get {
@@ -403,7 +422,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MergeTIFF_running.
+        ///   Looks up a localized string similar to Merge TIFF running....
         /// </summary>
         internal static string MergeTIFF_running {
             get {
@@ -412,7 +431,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MergeTIFFcompleted.
+        ///   Looks up a localized string similar to Merge TIFF completed. .
         /// </summary>
         internal static string MergeTIFFcompleted {
             get {
@@ -430,7 +449,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to OCRcompleted.
+        ///   Looks up a localized string similar to OCR completed..
         /// </summary>
         internal static string OCRcompleted {
             get {
@@ -439,7 +458,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to OCROperation.
+        ///   Looks up a localized string similar to OCR Operation.
         /// </summary>
         internal static string OCROperation {
             get {
@@ -448,7 +467,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to OCRrunning.
+        ///   Looks up a localized string similar to OCR running....
         /// </summary>
         internal static string OCRrunning {
             get {
@@ -466,7 +485,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to OpenImageFile.
+        ///   Looks up a localized string similar to Open Image File.
         /// </summary>
         internal static string OpenImageFile {
             get {
@@ -475,7 +494,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Page_.
+        ///   Looks up a localized string similar to Page .
         /// </summary>
         internal static string Page_ {
             get {
@@ -484,7 +503,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please_restart.
+        ///   Looks up a localized string similar to Please restart the program so that it could register the new language pack(s)..
         /// </summary>
         internal static string Please_restart {
             get {
@@ -511,7 +530,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Require_grayscale.
+        ///   Looks up a localized string similar to Image may require conversion to grayscale..
         /// </summary>
         internal static string Require_grayscale {
             get {
@@ -520,7 +539,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Resource_not_exist.
+        ///   Looks up a localized string similar to Resource does not exist..
         /// </summary>
         internal static string Resource_not_exist {
             get {
@@ -538,7 +557,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Save_As.
+        ///   Looks up a localized string similar to Save As.
         /// </summary>
         internal static string Save_As {
             get {
@@ -547,7 +566,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Save_Merged_PDF.
+        ///   Looks up a localized string similar to Save Merged PDF.
         /// </summary>
         internal static string Save_Merged_PDF {
             get {
@@ -556,7 +575,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Save_Multipage_TIFF_Image.
+        ///   Looks up a localized string similar to Save Multi-page TIFF Image.
         /// </summary>
         internal static string Save_Multipage_TIFF_Image {
             get {
@@ -565,7 +584,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Scancompleted.
+        ///   Looks up a localized string similar to Scan completed..
         /// </summary>
         internal static string Scancompleted {
             get {
@@ -574,7 +593,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Scanning.
+        ///   Looks up a localized string similar to Scanning....
         /// </summary>
         internal static string Scanning {
             get {
@@ -583,7 +602,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ScanningOperation.
+        ///   Looks up a localized string similar to Scanning Operation.
         /// </summary>
         internal static string ScanningOperation {
             get {
@@ -601,7 +620,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select_Input_Images.
+        ///   Looks up a localized string similar to Select Input Images.
         /// </summary>
         internal static string Select_Input_Images {
             get {
@@ -610,7 +629,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select_Input_PDFs.
+        ///   Looks up a localized string similar to Select Input PDFs.
         /// </summary>
         internal static string Select_Input_PDFs {
             get {
@@ -619,7 +638,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select_Input_TIFF.
+        ///   Looks up a localized string similar to Select Input Multi-page TIFF.
         /// </summary>
         internal static string Select_Input_TIFF {
             get {
@@ -628,7 +647,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to selectLanguage.
+        ///   Looks up a localized string similar to Please select a language..
         /// </summary>
         internal static string selectLanguage {
             get {
@@ -637,7 +656,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SplitPDF_completed.
+        ///   Looks up a localized string similar to Split PDF completed..
         /// </summary>
         internal static string SplitPDF_completed {
             get {
@@ -646,7 +665,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SplitPDF_running.
+        ///   Looks up a localized string similar to Split PDF running....
         /// </summary>
         internal static string SplitPDF_running {
             get {
@@ -655,7 +674,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SplitTIFF_running.
+        ///   Looks up a localized string similar to Split TIFF running....
         /// </summary>
         internal static string SplitTIFF_running {
             get {
@@ -664,7 +683,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SplitTIFFcompleted.
+        ///   Looks up a localized string similar to Split TIFF completed..
         /// </summary>
         internal static string SplitTIFFcompleted {
             get {
@@ -673,7 +692,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to suggest_split.
+        ///   Looks up a localized string similar to You may need to split the PDF file into smaller files before proceed..
         /// </summary>
         internal static string suggest_split {
             get {
@@ -682,7 +701,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Task_canceled.
+        ///   Looks up a localized string similar to Task canceled.
         /// </summary>
         internal static string Task_canceled {
             get {
@@ -709,7 +728,7 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to VietOCR_Help.
+        ///   Looks up a localized string similar to VietOCR.NET Help.
         /// </summary>
         internal static string VietOCR_Help {
             get {
