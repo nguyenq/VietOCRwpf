@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VietOCR", "VietOCR.csproj", "{1DDD5F42-D710-4AB7-BAA9-5A8C2A83EFCF}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{76C0F1BE-1BA1-4096-8A4E-8E35A5E361C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,14 @@ Global
 		{1DDD5F42-D710-4AB7-BAA9-5A8C2A83EFCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DDD5F42-D710-4AB7-BAA9-5A8C2A83EFCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DDD5F42-D710-4AB7-BAA9-5A8C2A83EFCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76C0F1BE-1BA1-4096-8A4E-8E35A5E361C9}.Debug|Any CPU.ActiveCfg = Debug
+		{76C0F1BE-1BA1-4096-8A4E-8E35A5E361C9}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		RESX_SortFileContentOnSave = True
+		RESX_ResXSortingComparison = CurrentCulture
 	EndGlobalSection
 EndGlobal

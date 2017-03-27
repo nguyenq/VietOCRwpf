@@ -34,8 +34,8 @@ namespace VietOCR
         {
             Dictionary<string, string> oemDict = new Dictionary<string, string>();
             oemDict.Add("TesseractOnly", "0 - Tesseract only");
-            oemDict.Add("CubeOnly", "1 - Cube only");
-            oemDict.Add("TesseractAndCube", "2 - Tesseract & Cube");
+            oemDict.Add("LstmOnly", "1 - LSTM only");
+            oemDict.Add("TesseractAndLstm", "2 - Tesseract & LSTM");
             oemDict.Add("Default", "3 - Default");
 
             //
