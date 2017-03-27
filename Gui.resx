@@ -953,6 +953,9 @@
   <data name="toolStripDropDownButtonSegmentedRegions.Text" xml:space="preserve">
     <value>Segmented Regions</value>
   </data>
+  <data name="toolStripDropDownButtonSegmentedRegions.ToolTipText" xml:space="preserve">
+    <value>Segmented Regions</value>
+  </data>
   <data name="toolStripStatusLabelSM.Text" xml:space="preserve">
     <value>Screenshot Mode:</value>
   </data>

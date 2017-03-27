@@ -27,7 +27,7 @@ namespace VietOCR {
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+              
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -1008,6 +1008,15 @@ namespace VietOCR {
         public static string toolStripDropDownButtonSegmentedRegions_Text {
             get {
                 return ResourceManager.GetString("toolStripDropDownButtonSegmentedRegions.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Segmented Regions.
+        /// </summary>
+        public static string toolStripDropDownButtonSegmentedRegions_ToolTipText {
+            get {
+                return ResourceManager.GetString("toolStripDropDownButtonSegmentedRegions.ToolTipText", resourceCulture);
             }
         }
         
