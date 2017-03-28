@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Windows;
 using System.Windows.Controls;
@@ -70,27 +71,21 @@ namespace VietOCR
 
             string[] available = new string[availableLanguageCodes.Count];
             availableLanguageCodes.Keys.CopyTo(available, 0);
-            List<String> names = new List<String>();
-            foreach (String key in available)
+            List<string> names = new List<string>();
+            foreach (string key in available)
             {
                 names.Add(this.lookupISO639[key]);
             }
             names.Sort();
 
             this.listBox.Items.Clear();
-            this.listBox.ItemsSource = names.ToArray();
-
-            foreach (string installed in installedLanguages)
+            this.listBox.ItemsSource = names.ConvertAll(x => new ListBoxItem()
             {
-                for (int i = 0; i < names.Count; ++i)
-                {
-                    if (installed == names[i])
-                    {
-                        //this.listBox.DisableItem(i);
-                        break;
-                    }
-                }
-            }
+                Content = x
+            });
+
+            List<ListBoxItem> installed = this.listBox.Items.Cast<ListBoxItem>().Where(x => installedLanguages.Contains(x.Content)).ToList();
+            installed.ForEach(x => x.IsEnabled = false);
         }
 
         protected override void OnClosing(CancelEventArgs e)
