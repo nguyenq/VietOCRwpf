@@ -8,9 +8,9 @@
         mc:Ignorable="d"
         Title="{x:Static resx:DownloadDialog.this_Title}" Height="245.6" Width="328.8" Loaded="Window_Loaded">
     <DockPanel>
-        <StatusBar DockPanel.Dock="Bottom" Height="20">
+        <StatusBar DockPanel.Dock="Bottom" Height="24">
             <StatusBarItem>
-                <Label x:Name="toolStripStatusLabel1" Content=""/>
+                <Label x:Name="toolStripStatusLabel1" Padding="0"/>
             </StatusBarItem>
             <StatusBarItem>
                 <ProgressBar x:Name="toolStripProgressBar1" Height="14" Width="150" Visibility="Hidden"/>
