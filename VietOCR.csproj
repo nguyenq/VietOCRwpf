@@ -44,6 +44,9 @@
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>Library\ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
+    <Reference Include="MultiComboBox">
+      <HintPath>Library\MultiComboBox.dll</HintPath>
+    </Reference>
     <Reference Include="NHunspell, Version=1.2.5554.16953, Culture=neutral, PublicKeyToken=1ac793ea843b4366, processorArchitecture=MSIL">
       <HintPath>packages\NHunspell.1.2.5554.16953\lib\net\NHunspell.dll</HintPath>
       <Private>True</Private>
@@ -100,6 +103,7 @@
     <Compile Include="Controls\MoveThumb.cs" />
     <Compile Include="Controls\RedUnderlineAdorner.cs" />
     <Compile Include="Controls\ResizeThumb.cs" />
+    <Compile Include="DataSource.cs" />
     <Compile Include="DownloadDialog.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

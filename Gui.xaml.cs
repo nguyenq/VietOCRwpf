@@ -3,6 +3,7 @@ using Net.SourceForge.Vietpad.InputMethod;
 using Net.SourceForge.Vietpad.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Globalization;
 using System.IO;
@@ -62,9 +63,9 @@ namespace VietOCR
         private int filterIndex;
         protected string curLangCode = "vie";
         private string[] installedLanguageCodes;
-        private string[] installedLanguages;
+        private ObservableCollection<string> installedLanguages;
 
-        public string[] InstalledLanguages
+        public ObservableCollection<string> InstalledLanguages
         {
             get { return installedLanguages; }
             set { installedLanguages = value; }
@@ -118,26 +119,21 @@ namespace VietOCR
             }
             finally
             {
-                if (installedLanguageCodes == null)
+                installedLanguages = new ObservableCollection<string>();
+                if (installedLanguageCodes != null)
                 {
-                    installedLanguages = new String[0];
-                }
-                else
-                {
-                    installedLanguages = new String[installedLanguageCodes.Length];
-                }
-
-                for (int i = 0; i < installedLanguages.Length; i++)
-                {
-                    installedLanguageCodes[i] = Path.GetFileNameWithoutExtension(installedLanguageCodes[i]);
-                    // translate ISO codes to full English names for user-friendliness
-                    if (lookupISO639.ContainsKey(installedLanguageCodes[i]))
+                    for (int i = 0; i < installedLanguageCodes.Length; i++)
                     {
-                        installedLanguages[i] = lookupISO639[installedLanguageCodes[i]];
-                    }
-                    else
-                    {
-                        installedLanguages[i] = installedLanguageCodes[i];
+                        installedLanguageCodes[i] = Path.GetFileNameWithoutExtension(installedLanguageCodes[i]);
+                        // translate ISO codes to full English names for user-friendliness
+                        if (lookupISO639.ContainsKey(installedLanguageCodes[i]))
+                        {
+                            installedLanguages.Add(lookupISO639[installedLanguageCodes[i]]);
+                        }
+                        else
+                        {
+                            installedLanguages.Add(installedLanguageCodes[i]);
+                        }
                     }
                 }
             }
@@ -153,7 +149,7 @@ namespace VietOCR
 
         protected virtual void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
+
         }
 
         protected virtual void Window_Closing(object sender, CancelEventArgs e)
@@ -918,7 +914,7 @@ namespace VietOCR
 
         private void textBox1_MouseWheel(object sender, MouseWheelEventArgs e)
         {
-            if ((Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control) 
+            if ((Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
             {
                 double newSize = this.textBox1.FontSize + e.Delta / 120;
                 if (newSize > FONT_MIN_SIZE && newSize < FONT_MAX_SIZE)
