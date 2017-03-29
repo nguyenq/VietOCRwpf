@@ -89,7 +89,7 @@ namespace VietOCR
 
                 if (e.Error.GetBaseException() is NotSupportedException)
                 {
-                    why = string.Format("Post-processing not supported for {0} language.\nYou can provide one via a \"{1}.DangAmbigs.txt\" file.", this.comboBoxLang.Text, curLangCode);
+                    why = string.Format("Post-processing not supported for {0} language.\nYou can provide one via a \"{1}.DangAmbigs.txt\" file.", this.dataSource.SelectedLanguagesText, curLangCode);
                 }
                 else
                 {

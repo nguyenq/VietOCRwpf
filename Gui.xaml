@@ -7,6 +7,7 @@
         xmlns:local="clr-namespace:VietOCR"
         xmlns:localcon="clr-namespace:VietOCR.Controls"
         xmlns:resx="clr-namespace:VietOCR"
+        xmlns:mcb="clr-namespace:CustomControls;assembly=MultiComboBox"
         Icon="./Resources/VietOCR.ico"
         Title="VietOCR.NET" Height="350" Width="1260" Loaded="Window_Loaded" Closed="Window_Closed" SizeChanged="Window_SizeChanged" LocationChanged="Window_LocationChanged" Closing="Window_Closing" >
     <Window.CommandBindings>
@@ -347,9 +348,16 @@
                         <Image x:Name="image9"  Source="Icons/fatcow/pilcrow_delete.png" Width="36" Height="36" />
                     </Button>
                     <Separator />
-                    <Separator x:Name="separatorLang" Opacity="0" Width="150" />
+                    <Separator x:Name="separatorLang" Opacity="0" Width="120" />
                     <Label x:Name="toolStripLabelLanguage" Content="{x:Static resx:Gui.toolStripLabelLanguage_Text}" VerticalAlignment="Center" ToolTip="{x:Static resx:Gui.toolStripLabelLanguage_ToolTipText}"/>
-                    <ComboBox x:Name="comboBoxLang" Margin="0" Width="120" ItemsSource="{Binding InstalledLanguages}" SelectionChanged="comboBoxLang_SelectionChanged" />
+                    <mcb:MultiComboBox x:Name="mcomboBoxLang" SelectionMode="Multiple" 
+                                 VerticalAlignment="Top"
+                                 DisplaySeparator="+"
+                                 ItemsSource="{Binding InstalledLanguages}"
+                                 SelectedItems="{Binding SelectedLanguages}"
+                                 Margin="0,11,0,0">
+                    </mcb:MultiComboBox>
+                    <TextBox x:Name="textBoxOCRLang" Text="{Binding Path=SelectedLanguagesText, Mode=OneWay}" TextChanged="TextBox_TextChanged" Visibility="Hidden"/>
                 </ToolBar>
                 <TextBox x:Name="textBox1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" AcceptsReturn="True" TextWrapping="Wrap"  PreviewDragOver="Window_DragOver" PreviewDrop="Window_Drop" MouseWheel="textBox1_MouseWheel" ContextMenuOpening="textBox1_ContextMenuOpening" >
                     <TextBox.ContextMenu>

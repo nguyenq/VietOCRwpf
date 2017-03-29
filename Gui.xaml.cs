@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Windows;
@@ -62,14 +63,10 @@ namespace VietOCR
         protected string selectedUILanguage;
         private int filterIndex;
         protected string curLangCode = "vie";
-        private string[] installedLanguageCodes;
-        private ObservableCollection<string> installedLanguages;
 
-        public ObservableCollection<string> InstalledLanguages
-        {
-            get { return installedLanguages; }
-            set { installedLanguages = value; }
-        }
+        protected DataSource dataSource;
+
+        private string[] installedLanguageCodes;
 
         private Dictionary<string, string> lookupISO639;
 
@@ -89,17 +86,19 @@ namespace VietOCR
         {
             InitializeComponent();
 
-            GetInstalledLanguagePacks();
-            PopulateOCRLanguageBox();
+            dataSource = new DataSource();
+            dataSource.InstalledLanguages = GetInstalledLanguagePacks();
+            this.DataContext = dataSource;
         }
 
         /// <summary>
         /// Gets Tesseract's installed language data packs.
         /// </summary>
-        void GetInstalledLanguagePacks()
+        ObservableCollection<string> GetInstalledLanguagePacks()
         {
             lookupISO639 = new Dictionary<string, string>();
             lookupISO_3_1_Codes = new Dictionary<string, string>();
+            ObservableCollection<string> installedLanguages = new ObservableCollection<string>();
 
             try
             {
@@ -119,7 +118,6 @@ namespace VietOCR
             }
             finally
             {
-                installedLanguages = new ObservableCollection<string>();
                 if (installedLanguageCodes != null)
                 {
                     for (int i = 0; i < installedLanguageCodes.Length; i++)
@@ -137,14 +135,7 @@ namespace VietOCR
                     }
                 }
             }
-        }
-
-        /// <summary>
-        /// Populates OCR Language box.
-        /// </summary>
-        void PopulateOCRLanguageBox()
-        {
-            this.comboBoxLang.ItemsSource = installedLanguages;
+            return installedLanguages;
         }
 
         protected virtual void Window_Loaded(object sender, RoutedEventArgs e)
@@ -584,11 +575,10 @@ namespace VietOCR
 
         protected virtual void LoadRegistryInfo(RegistryKey regkey)
         {
-            this.comboBoxLang.Text = (string)regkey.GetValue(strOcrLanguage, String.Empty);
-            if (curLangCode == null)
-            {
-                curLangCode = this.comboBoxLang.Text;
-            }
+            string selectedLanguagesText = (string)regkey.GetValue(strOcrLanguage, String.Empty);
+            dataSource.SelectedLanguages = new ObservableCollection<string>(selectedLanguagesText.Split(',').Select(p => p.Trim()).ToList());
+            curLangCode = GetLangCodes(selectedLanguagesText);
+
             this.textBox1.TextWrapping = (TextWrapping)regkey.GetValue(strWordWrap, TextWrapping.NoWrap);
             this.textBox1.FontFamily = new System.Windows.Media.FontFamily(regkey.GetValue(strFontFace, "Microsoft Sans Serif").ToString());
             this.textBox1.FontSize = double.Parse((string)regkey.GetValue(strFontSize, "10"));
@@ -611,7 +601,12 @@ namespace VietOCR
 
         protected virtual void SaveRegistryInfo(RegistryKey regkey)
         {
-            regkey.SetValue(strOcrLanguage, this.comboBoxLang.Text);
+            //string selectedLanguages = string.Empty;
+            //foreach (string lang in dataSource.SelectedLanguages)
+            //{
+            //    selectedLanguages += lang + "+";
+            //}
+            regkey.SetValue(strOcrLanguage, dataSource.SelectedLanguagesText);
 
             regkey.SetValue(strWordWrap, Convert.ToInt32(this.textBox1.TextWrapping));
             regkey.SetValue(strFontFace, this.textBox1.FontFamily);
@@ -892,26 +887,6 @@ namespace VietOCR
             this.wordWrapToolStripMenuItem.IsChecked = this.textBox1.TextWrapping == TextWrapping.Wrap;
         }
 
-        private void comboBoxLang_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            curLangCode = installedLanguageCodes[this.comboBoxLang.SelectedIndex];
-
-            // Hide Viet Input Method submenu if selected OCR Language is not Vietnamese
-            bool vie = curLangCode.Contains("vie");
-            VietKeyHandler.VietModeEnabled = vie;
-            this.vietInputMethodToolStripMenuItem.Visibility = vie ? Visibility.Visible : Visibility.Collapsed;
-
-            if (this.buttonSpellcheck.IsChecked.Value)
-            {
-                ToggleButtonAutomationPeer peer = new ToggleButtonAutomationPeer(buttonSpellcheck);
-                System.Windows.Automation.Provider.IToggleProvider toggleProvider = peer.GetPattern(PatternInterface.Toggle) as System.Windows.Automation.Provider.IToggleProvider;
-                toggleProvider.Toggle(); // disable spellcheck
-                buttonSpellcheck.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                toggleProvider.Toggle(); // re-enable spellcheck
-                buttonSpellcheck.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-            }
-        }
-
         private void textBox1_MouseWheel(object sender, MouseWheelEventArgs e)
         {
             if ((Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
@@ -958,6 +933,55 @@ namespace VietOCR
         protected virtual void textBox1_ContextMenuOpening(object sender, ContextMenuEventArgs e)
         {
 
+        }
+
+        /// <summary>
+        /// OCR language selection change.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            curLangCode = GetLangCodes(textBoxOCRLang.Text);
+            System.Diagnostics.Debug.WriteLine(curLangCode);
+
+            // Hide Viet Input Method submenu if selected OCR Language is not Vietnamese
+            bool vie = curLangCode.Contains("vie");
+            VietKeyHandler.VietModeEnabled = vie;
+            this.vietInputMethodToolStripMenuItem.Visibility = vie ? Visibility.Visible : Visibility.Collapsed;
+
+            // Spellcheck
+            if (this.buttonSpellcheck.IsChecked.Value)
+            {
+                ToggleButtonAutomationPeer peer = new ToggleButtonAutomationPeer(buttonSpellcheck);
+                System.Windows.Automation.Provider.IToggleProvider toggleProvider = peer.GetPattern(PatternInterface.Toggle) as System.Windows.Automation.Provider.IToggleProvider;
+                toggleProvider.Toggle(); // disable spellcheck
+                buttonSpellcheck.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                toggleProvider.Toggle(); // re-enable spellcheck
+                buttonSpellcheck.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+            }
+        }
+
+        /// <summary>
+        /// Gets language codes based on language names.
+        /// </summary>
+        /// <param name="languages"></param>
+        /// <returns></returns>
+        string GetLangCodes(string languages)
+        {
+            char[] delimiterChars = { ',', '+' };
+            string langCode = string.Empty;
+
+            foreach (var lang in languages.Replace(" ", string.Empty).Split(delimiterChars))
+            {
+                if (string.IsNullOrWhiteSpace(lang))
+                {
+                    continue;
+                }
+                langCode += installedLanguageCodes[dataSource.InstalledLanguages.IndexOf(lang)] + "+";
+            }
+
+            return langCode.TrimEnd('+');
         }
     }
 }

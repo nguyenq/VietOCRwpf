@@ -1,4 +1,6 @@
-﻿using System;
+﻿/// https://www.codeproject.com/Articles/45782/A-WPF-Combo-Box-with-Multiple-Selection
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +24,6 @@ namespace VietOCR
         }
         
         #endregion
-
        
         public ObservableCollection<string> InstalledLanguages
         {
@@ -48,7 +49,7 @@ namespace VietOCR
             {
                 if (_selectedLanguages == null)
                 {
-                    _selectedLanguages = new ObservableCollection<string> { "English", "Vietnamese" };
+                    _selectedLanguages = new ObservableCollection<string> { "English" };
                     SelectedLanguagesText = WriteSelectedLanguagesString(_selectedLanguages);
                     _selectedLanguages.CollectionChanged +=
                         (s, e) =>
@@ -61,7 +62,11 @@ namespace VietOCR
             }
             set
             {
-                _selectedLanguages = value;
+                _selectedLanguages.Clear();
+                foreach (string lang in value)
+                {
+                    _selectedLanguages.Add(lang);
+                }
             }
         }
 
