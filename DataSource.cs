@@ -65,7 +65,10 @@ namespace VietOCR
                 _selectedLanguages.Clear();
                 foreach (string lang in value)
                 {
-                    _selectedLanguages.Add(lang);
+                    if (InstalledLanguages.Contains(lang))
+                    {
+                        _selectedLanguages.Add(lang);
+                    }
                 }
             }
         }

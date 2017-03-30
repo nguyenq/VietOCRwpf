@@ -89,7 +89,6 @@ namespace VietOCR
             InitializeComponent();
 
             dataSource = new DataSource();
-            installedLanguageCodes = new Dictionary<string, string>();
             dataSource.InstalledLanguages = GetInstalledLanguagePacks();
             dataSource.PropertyChanged += DataSource_PropertyChanged;
             this.DataContext = dataSource;
@@ -102,13 +101,14 @@ namespace VietOCR
         {
             lookupISO639 = new Dictionary<string, string>();
             lookupISO_3_1_Codes = new Dictionary<string, string>();
+            installedLanguageCodes = new Dictionary<string, string>();
             ObservableCollection<string> installedLanguages = new ObservableCollection<string>();
 
             try
             {
                 string tessdataDir = Path.Combine(baseDir, "tessdata");
                 string[] installedLanguagePacks = Directory.GetFiles(tessdataDir, "*.traineddata");
-                installedLanguagePacks = installedLanguagePacks.Where(x => x != "osd.traineddata").ToArray();
+                installedLanguagePacks = installedLanguagePacks.Where(x => !x.EndsWith("osd.traineddata")).ToArray();
 
                 string xmlFilePath = Path.Combine(baseDir, "Data/ISO639-3.xml");
                 VietOCR.NET.Utilities.Utilities.LoadFromXML(lookupISO639, xmlFilePath);
@@ -584,7 +584,7 @@ namespace VietOCR
         protected virtual void LoadRegistryInfo(RegistryKey regkey)
         {
             string selectedLanguagesText = (string)regkey.GetValue(strOcrLanguage, String.Empty);
-            dataSource.SelectedLanguages = new ObservableCollection<string>(selectedLanguagesText.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(p => p.Trim()).ToList());
+            dataSource.SelectedLanguages = new ObservableCollection<string>(selectedLanguagesText.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(p => p.Trim()).Distinct().ToList());
             curLangCode = GetLangCodes(selectedLanguagesText);
 
             this.textBox1.TextWrapping = (TextWrapping)regkey.GetValue(strWordWrap, TextWrapping.NoWrap);
