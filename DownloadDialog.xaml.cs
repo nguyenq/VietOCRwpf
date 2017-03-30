@@ -57,7 +57,7 @@ namespace VietOCR
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            String xmlFilePath = Path.Combine(baseDir, "Data/Tess3DataURL.xml");
+            String xmlFilePath = Path.Combine(baseDir, "Data/TessLangDataURL.xml");
             availableLanguageCodes = new Dictionary<string, string>();
             VietOCR.NET.Utilities.Utilities.LoadFromXML(availableLanguageCodes, xmlFilePath);
 
