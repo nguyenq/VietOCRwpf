@@ -272,6 +272,9 @@
     <Content Include="Data\TessLangDataURL.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="versionchanges_cs.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="x86\libtesseract400.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
