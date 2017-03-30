@@ -4,12 +4,8 @@
 
 /bin
 /obj
-/.vs/VietOCR/v14/.suo
 /packages/NHunspell.1.2.5554.16953
 *.suo
-*.suo
-/.vs/VietOCR/v15
 /Setup/Debug
 /Setup/Release
-/.vs/config
-/.vs/config
+/.vs

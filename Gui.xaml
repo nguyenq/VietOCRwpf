@@ -348,7 +348,7 @@
                         <Image x:Name="image9"  Source="Icons/fatcow/pilcrow_delete.png" Width="36" Height="36" />
                     </Button>
                     <Separator />
-                    <Separator x:Name="separatorLang" Opacity="0" Width="120" />
+                    <Separator x:Name="separatorLang" Opacity="0" Width="100" />
                     <Label x:Name="toolStripLabelLanguage" Content="{x:Static resx:Gui.toolStripLabelLanguage_Text}" VerticalAlignment="Center" ToolTip="{x:Static resx:Gui.toolStripLabelLanguage_ToolTipText}"/>
                     <mcb:MultiComboBox x:Name="mcomboBoxLang" SelectionMode="Multiple" 
                                  VerticalAlignment="Top"
@@ -357,7 +357,6 @@
                                  SelectedItems="{Binding SelectedLanguages}"
                                  Margin="0,11,0,0">
                     </mcb:MultiComboBox>
-                    <TextBox x:Name="textBoxOCRLang" Text="{Binding Path=SelectedLanguagesText, Mode=OneWay}" TextChanged="TextBox_TextChanged" Visibility="Hidden"/>
                 </ToolBar>
                 <TextBox x:Name="textBox1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" AcceptsReturn="True" TextWrapping="Wrap"  PreviewDragOver="Window_DragOver" PreviewDrop="Window_Drop" MouseWheel="textBox1_MouseWheel" ContextMenuOpening="textBox1_ContextMenuOpening" >
                     <TextBox.ContextMenu>

@@ -1,6 +1,4 @@
-﻿using Microsoft.Win32;
-using Net.SourceForge.Vietpad.InputMethod;
-using Net.SourceForge.Vietpad.Utilities;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -16,7 +14,11 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using Microsoft.Win32;
+
 using Tesseract;
+using Net.SourceForge.Vietpad.InputMethod;
+using Net.SourceForge.Vietpad.Utilities;
 using VietOCR.NET.Utilities;
 
 namespace VietOCR
@@ -66,7 +68,7 @@ namespace VietOCR
 
         protected DataSource dataSource;
 
-        private string[] installedLanguageCodes;
+        private Dictionary<string, string> installedLanguageCodes;
 
         private Dictionary<string, string> lookupISO639;
 
@@ -87,7 +89,9 @@ namespace VietOCR
             InitializeComponent();
 
             dataSource = new DataSource();
+            installedLanguageCodes = new Dictionary<string, string>();
             dataSource.InstalledLanguages = GetInstalledLanguagePacks();
+            dataSource.PropertyChanged += DataSource_PropertyChanged;
             this.DataContext = dataSource;
         }
 
@@ -103,12 +107,34 @@ namespace VietOCR
             try
             {
                 string tessdataDir = Path.Combine(baseDir, "tessdata");
-                installedLanguageCodes = Directory.GetFiles(tessdataDir, "*.traineddata");
-                //installedLanguageCodes = installedLanguageCodes.Where(val => val != "osd.traineddata").ToArray(); // LINQ
+                string[] installedLanguagePacks = Directory.GetFiles(tessdataDir, "*.traineddata");
+                installedLanguagePacks = installedLanguagePacks.Where(x => x != "osd.traineddata").ToArray();
+
                 string xmlFilePath = Path.Combine(baseDir, "Data/ISO639-3.xml");
                 VietOCR.NET.Utilities.Utilities.LoadFromXML(lookupISO639, xmlFilePath);
                 xmlFilePath = Path.Combine(baseDir, "Data/ISO639-1.xml");
                 VietOCR.NET.Utilities.Utilities.LoadFromXML(lookupISO_3_1_Codes, xmlFilePath);
+
+                if (installedLanguagePacks != null)
+                {
+                    foreach (string langPack in installedLanguagePacks)
+                    {
+                        string langCode = Path.GetFileNameWithoutExtension(langPack);
+                        // translate ISO codes to full English names for user-friendliness
+                        if (lookupISO639.ContainsKey(langCode))
+                        {
+                            installedLanguageCodes.Add(langCode, lookupISO639[langCode]);
+                        }
+                        else
+                        {
+                            installedLanguageCodes.Add(langCode, langCode);
+                        }
+                    }
+
+                    List<string> lst = installedLanguageCodes.Values.ToList();
+                    lst.Sort();
+                    installedLanguages = new ObservableCollection<string>(lst);
+                }
             }
             catch (Exception e)
             {
@@ -116,25 +142,7 @@ namespace VietOCR
                 // this also applies to missing language data files in tessdata directory
                 Console.WriteLine(e.StackTrace);
             }
-            finally
-            {
-                if (installedLanguageCodes != null)
-                {
-                    for (int i = 0; i < installedLanguageCodes.Length; i++)
-                    {
-                        installedLanguageCodes[i] = Path.GetFileNameWithoutExtension(installedLanguageCodes[i]);
-                        // translate ISO codes to full English names for user-friendliness
-                        if (lookupISO639.ContainsKey(installedLanguageCodes[i]))
-                        {
-                            installedLanguages.Add(lookupISO639[installedLanguageCodes[i]]);
-                        }
-                        else
-                        {
-                            installedLanguages.Add(installedLanguageCodes[i]);
-                        }
-                    }
-                }
-            }
+
             return installedLanguages;
         }
 
@@ -576,7 +584,7 @@ namespace VietOCR
         protected virtual void LoadRegistryInfo(RegistryKey regkey)
         {
             string selectedLanguagesText = (string)regkey.GetValue(strOcrLanguage, String.Empty);
-            dataSource.SelectedLanguages = new ObservableCollection<string>(selectedLanguagesText.Split(',').Select(p => p.Trim()).ToList());
+            dataSource.SelectedLanguages = new ObservableCollection<string>(selectedLanguagesText.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(p => p.Trim()).ToList());
             curLangCode = GetLangCodes(selectedLanguagesText);
 
             this.textBox1.TextWrapping = (TextWrapping)regkey.GetValue(strWordWrap, TextWrapping.NoWrap);
@@ -601,11 +609,6 @@ namespace VietOCR
 
         protected virtual void SaveRegistryInfo(RegistryKey regkey)
         {
-            //string selectedLanguages = string.Empty;
-            //foreach (string lang in dataSource.SelectedLanguages)
-            //{
-            //    selectedLanguages += lang + "+";
-            //}
             regkey.SetValue(strOcrLanguage, dataSource.SelectedLanguagesText);
 
             regkey.SetValue(strWordWrap, Convert.ToInt32(this.textBox1.TextWrapping));
@@ -940,25 +943,27 @@ namespace VietOCR
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void DataSource_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            curLangCode = GetLangCodes(textBoxOCRLang.Text);
-            System.Diagnostics.Debug.WriteLine(curLangCode);
-
-            // Hide Viet Input Method submenu if selected OCR Language is not Vietnamese
-            bool vie = curLangCode.Contains("vie");
-            VietKeyHandler.VietModeEnabled = vie;
-            this.vietInputMethodToolStripMenuItem.Visibility = vie ? Visibility.Visible : Visibility.Collapsed;
-
-            // Spellcheck
-            if (this.buttonSpellcheck.IsChecked.Value)
+            if (e.PropertyName == "SelectedLanguagesText")
             {
-                ToggleButtonAutomationPeer peer = new ToggleButtonAutomationPeer(buttonSpellcheck);
-                System.Windows.Automation.Provider.IToggleProvider toggleProvider = peer.GetPattern(PatternInterface.Toggle) as System.Windows.Automation.Provider.IToggleProvider;
-                toggleProvider.Toggle(); // disable spellcheck
-                buttonSpellcheck.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-                toggleProvider.Toggle(); // re-enable spellcheck
-                buttonSpellcheck.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                curLangCode = GetLangCodes(dataSource.SelectedLanguagesText);
+
+                // Hide Viet Input Method submenu if selected OCR Language is not Vietnamese
+                bool vie = curLangCode.Contains("vie");
+                VietKeyHandler.VietModeEnabled = vie;
+                this.vietInputMethodToolStripMenuItem.Visibility = vie ? Visibility.Visible : Visibility.Collapsed;
+
+                // Spellcheck
+                if (this.buttonSpellcheck.IsChecked.Value)
+                {
+                    ToggleButtonAutomationPeer peer = new ToggleButtonAutomationPeer(buttonSpellcheck);
+                    System.Windows.Automation.Provider.IToggleProvider toggleProvider = peer.GetPattern(PatternInterface.Toggle) as System.Windows.Automation.Provider.IToggleProvider;
+                    toggleProvider.Toggle(); // disable spellcheck
+                    buttonSpellcheck.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                    toggleProvider.Toggle(); // re-enable spellcheck
+                    buttonSpellcheck.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+                }
             }
         }
 
@@ -978,7 +983,7 @@ namespace VietOCR
                 {
                     continue;
                 }
-                langCode += installedLanguageCodes[dataSource.InstalledLanguages.IndexOf(lang)] + "+";
+                langCode += installedLanguageCodes.FirstOrDefault(x => x.Value == lang).Key + "+";
             }
 
             return langCode.TrimEnd('+');
