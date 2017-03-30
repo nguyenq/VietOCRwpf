@@ -64,7 +64,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -267,69 +266,69 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Data\ces.DangAmbigs.txt">
+    <Content Include="Data\ces.DangAmbigs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Data\TessLangDataURL.xml">
+    </Content>
+    <Content Include="Data\TessLangDataURL.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="x86\libtesseract400.dll">
+    </Content>
+    <Content Include="x86\libtesseract400.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="dict\en_US.aff">
+    </Content>
+    <Content Include="dict\en_US.aff">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="dict\en_US.dic">
+    </Content>
+    <Content Include="dict\en_US.dic">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="dict\user.dic">
+    </Content>
+    <Content Include="dict\user.dic">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="dict\vi_VN.aff">
+    </Content>
+    <Content Include="dict\vi_VN.aff">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="dict\vi_VN.dic">
+    </Content>
+    <Content Include="dict\vi_VN.dic">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
     <None Include="Hunspellx64.dll" />
-    <None Include="Hunspellx86.dll">
+    <Content Include="Hunspellx86.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="tessdata\configs\bazaar">
+    </Content>
+    <Content Include="tessdata\configs\bazaar">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="tessdata\configs\digits">
+    </Content>
+    <Content Include="tessdata\configs\digits">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="tessdata\configs\pdf">
+    </Content>
+    <Content Include="tessdata\configs\pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="tessdata\configs\quiet">
+    </Content>
+    <Content Include="tessdata\configs\quiet">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="tessdata\configs\tsv">
+    </Content>
+    <Content Include="tessdata\configs\tsv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="tessdata\configs\txt">
+    </Content>
+    <Content Include="tessdata\configs\txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="tessdata\configs\unlv">
+    </Content>
+    <Content Include="tessdata\configs\unlv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="tessdata\osd.traineddata">
+    </Content>
+    <Content Include="tessdata\osd.traineddata">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="tessdata\pdf.ttf">
+    </Content>
+    <Content Include="tessdata\pdf.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
     <Resource Include="readme_cs_ne.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <None Include="x64\liblept174.dll" />
     <None Include="x64\libtesseract400.dll" />
-    <None Include="x86\liblept174.dll">
+    <Content Include="x86\liblept174.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
     <EmbeddedResource Include="BulkDialog.bn-IN.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
@@ -780,22 +779,24 @@
     </None>
     <AppDesigner Include="Properties\" />
     <None Include="README.md" />
-    <None Include="samples\vietsample1.pdf" />
-    <None Include="tessdata\configs\hocr">
+    <Content Include="samples\vietsample1.pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="tessdata\configs\tess_configs">
+    </Content>
+    <Content Include="tessdata\configs\hocr">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="tessdata\configs\tess_configvars">
+    </Content>
+    <Content Include="tessdata\configs\tess_configs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
+    <Content Include="tessdata\configs\tess_configvars">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Resource Include="readme_cs.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <None Include="gsdll32.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <Content Include="gsdll32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="gsdll64.dll" />
     <Resource Include="readme_cs_bn.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -845,12 +846,12 @@
     <Content Include="Resources\VietOCR.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="tessdata\eng.traineddata">
+    <Content Include="tessdata\eng.traineddata">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="tessdata\vie.traineddata">
+    </Content>
+    <Content Include="tessdata\vie.traineddata">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -879,31 +880,39 @@
     <Resource Include="Icons\fatcow\zoom_out.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Data\eng.DangAmbigs.txt">
+    <Content Include="Data\eng.DangAmbigs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Data\ISO639-1.xml">
+    </Content>
+    <Content Include="Data\ISO639-1.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Data\ISO639-3.xml">
+    </Content>
+    <Content Include="Data\ISO639-3.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Data\OO-SpellDictionaries.xml">
+    </Content>
+    <Content Include="Data\OO-SpellDictionaries.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Data\san.DangAmbigs.txt">
+    </Content>
+    <Content Include="Data\san.DangAmbigs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Data\slk.DangAmbigs.txt">
+    </Content>
+    <Content Include="Data\slk.DangAmbigs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Data\vie.DangAmbigs.txt">
+    </Content>
+    <Content Include="Data\vie.DangAmbigs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <Resource Include="samples\vietsample.tif" />
-    <Resource Include="samples\vietsample1.tif" />
-    <Resource Include="samples\vietsample2.png" />
-    <Resource Include="samples\vietsample2.tif" />
+    </Content>
+    <Content Include="samples\vietsample.tif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="samples\vietsample1.tif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="samples\vietsample2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="samples\vietsample2.tif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="WIA">
