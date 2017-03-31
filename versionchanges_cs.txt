@@ -83,5 +83,5 @@ Version 4.3 (14 January 2017)
 Version 5.0alpha (31 March 2017)
 - Rewrite using Windows Presentation Foundation (WPF)
 - Upgrade Tesseract.NET (Tesseract 4.00alpha 362b68e)
-- Upgrade to .NET Framework 4.6.1
+- Upgrade to .NET Framework 4.6.2
 - Upgrade Tesseract 4.00 language packs
