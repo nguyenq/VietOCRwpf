@@ -80,7 +80,7 @@ Version 4.3 (14 January 2017)
   * Expand support to include Regex text replacements from DangAmbigs.txt file
   * Hyphen replacements
 
-Version 5.0alpha (30 March 2017)
+Version 5.0alpha (31 March 2017)
 - Rewrite using Windows Presentation Foundation (WPF)
 - Upgrade Tesseract.NET (Tesseract 4.00alpha 362b68e)
 - Upgrade to .NET Framework 4.6.1
