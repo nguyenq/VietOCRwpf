@@ -1,7 +1,7 @@
 ﻿<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>VietOCR.NET - .NET GUI Frontend cho Tesseract OCR</title>
+    <title>VietOCR.NET - .NET WPF GUI Frontend cho Tesseract OCR</title>
     <style type="text/css">
         .style1
         {
@@ -17,7 +17,7 @@
             MÔ TẢ</h3>
         <p>
             <a href="http://vietocr.sourceforge.net/">VietOCR.NET</a>
-            là một .NET GUI frontend cho <a href="https://github.com/tesseract-ocr">Tesseract
+            là một .NET WPF GUI frontend cho <a href="https://github.com/tesseract-ocr">Tesseract
                 OCR engine</a>, cung cấp hỗ trợ nhận dạng ký tự cho các dạng ảnh phổ thông,
             và ảnh chứa nhiều trang. Chương trình có phần hậu xử lý giúp sửa chữa các lỗi thường
             gặp trong quy trình OCR, tăng độ chính xác trên kết quả. Chương trình còn có khả
@@ -29,9 +29,7 @@
         <h3>
             ĐÒI HỎI HỆ THỐNG</h3>
         <p>
-            <a href="https://www.microsoft.com/en-us/download/details.aspx?id=53344">
-                Microsoft .NET Framework 4.6.2
-            </a>.</p>
+            <a href="https://www.microsoft.com/en-us/download/details.aspx?id=53344">Microsoft .NET Framework 4.6.2</a>.</p>
         <p>
             Nếu bạn gặp lỗi biệt lệ &quot;<i>Exception has been thrown by the target of an invocation</i>&quot;, xin hãy cài đặt <a href="https://www.microsoft.com/en-us/download/details.aspx?id=53587">Microsoft Visual C++ 2015 Redistributable Package</a>.</p>
         <h3>
@@ -40,19 +38,11 @@
             Nếu bạn không có quyền cài đặt (install) dưới <code>C:\Program Files</code> folder,
             bạn hãy chỉ định một folder khác trong Install Installation Folder dialog.</p>
         <p>
-            Hỗ trợ quét văn bản được cung cấp qua Windows Image Acquisition Library v2.0, thư
-            viện này đã được tích hợp sẵn trong Vista and 7.</p>
+            Hỗ trợ quét văn bản được cung cấp qua Windows Image Acquisition 
+			Library v2.0.</p>
         <p>
             Hỗ trợ cho PDF được khả thi qua <a href="http://www.ghostscript.com/">
-                GPL Ghostscript</a>. Sau khi cài đặt thư viện, hãy bảo đảm dynamic load library
-            <code>gsdll32.dll</code> nằm trong search path bằng cách chỉnh biến môi trường <code>Path</code>,
-            có thể truy cập được qua Windows&#39; Control Panel &gt; System &gt; Advanced tab
-            &gt; Environment Variables. Ví dụ, tiếp đuôi (append) đoạn sau đây vào giá trị hiện
-            tại của biến <code>Path</code> cho GS version 9.21:</p>
-        <blockquote>
-            <p>
-                <code>;C:\Program Files\gs\gs9.21\bin</code></p>
-        </blockquote>
+                GPL Ghostscript</a>.</p>
         <p>
             Tính năng Duyệt chính tả (spellcheck) có được qua Hunspell, mà các <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">
                 dictionary</a> files trực thuộc (<code>.aff</code>, <code>.dic</code>) nên được đặt
@@ -90,9 +80,8 @@
             300 DPI.</p>
         <p>
             Ngoài thuật toán hậu xử lý xây trong chương trình, bạn có thể thêm cách thức thay
-            thế từ ngữ đặc riêng của bạn qua một tập tin text có tên <code>x.DangAmbigs.txt</code>,
-            mà x là ISO639-3 language code. File này, được mã hóa trong UTF-8, chứa các cặp
-            <code>giáTrịCũ=giáTrịMới</code> phân cách bởi dấu bằng.</p>
+            thế từ ngữ đặc riêng của bạn qua một tập tin text UTF-8-encoded tab-delimited có tên <code>x.DangAmbigs.txt</code>,
+            mà x là ISO639-3 language code. Cả hai cách thay thế text đơn giản và Regex đều được hỗ trợ.</p>
         <p>
             Bạn có thể đặt control parameters init-only và non-init trong các file <code>tessdata/configs/tess_configs</code>
             và <code>tess_configvars</code> để biến đổi hành vi của Tesseract engine.</p>

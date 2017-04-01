@@ -125,7 +125,7 @@
     <value>189, 24</value>
   </data>
   <data name="checkBoxRemoveHyphens.Text" xml:space="preserve">
-    <value>Remove soft hyphens</value>
+    <value>सफ्ट हाइफनहरू हटाउनुहोस्</value>
   </data>
   <data name="checkBoxReplaceHyphens.Location" type="System.Drawing.Point, System.Drawing">
     <value>71, 37</value>
@@ -134,7 +134,7 @@
     <value>285, 24</value>
   </data>
   <data name="checkBoxReplaceHyphens.Text" xml:space="preserve">
-    <value>Replace hyphens with soft hyphens</value>
+    <value>हाइफनहरूलाई सफ्ट हाइफनहरूले प्रतिस्थापन गर्नुहोस्</value>
   </data>
   <data name="checkBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
     <value>302, 114</value>
@@ -167,7 +167,7 @@
     <value>113, 20</value>
   </data>
   <data name="labelOutputFormat.Text" xml:space="preserve">
-    <value>आउटपुट ढाँचा</value>
+    <value>आउटपुट प्रारूप</value>
   </data>
   <data name="labelPath.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 28</value>
@@ -185,7 +185,7 @@
     <value>108, 20</value>
   </data>
   <data name="labelWatch.Text" xml:space="preserve">
-    <value>दृश्य फोल्डर</value>
+    <value>दृश्य फोल्डर:</value>
   </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -218,7 +218,7 @@
     <value>460, 165</value>
   </data>
   <data name="tabPage3.Text" xml:space="preserve">
-    <value>Hyphens</value>
+    <value>हाइफनहरू</value>
   </data>
   <data name="textBoxDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
     <value>117, 22</value>

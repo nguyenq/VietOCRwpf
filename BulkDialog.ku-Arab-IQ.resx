@@ -61,8 +61,8 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>423, 155</value>
   </data>
-  <data name="this.Title" xml:space="preserve">
-    <value>Пакетное распознавание</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Bulk OCR</value>
   </data>
   <data name="btnInput.Location" type="System.Drawing.Point, System.Drawing">
     <value>365, 23</value>
@@ -89,7 +89,7 @@
     <value>100, 28</value>
   </data>
   <data name="buttonCancel.Text" xml:space="preserve">
-    <value>Отмена</value>
+    <value>پاشگەزبوونەوە</value>
   </data>
   <data name="buttonRun.Location" type="System.Drawing.Point, System.Drawing">
     <value>197, 105</value>
@@ -98,7 +98,7 @@
     <value>100, 28</value>
   </data>
   <data name="buttonRun.Text" xml:space="preserve">
-    <value>Запустить</value>
+    <value>Run</value>
   </data>
   <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
     <value>115, 105</value>
@@ -113,7 +113,7 @@
     <value>87, 17</value>
   </data>
   <data name="labelInput.Text" xml:space="preserve">
-    <value>Папка ввода:</value>
+    <value>Input Folder:</value>
   </data>
   <data name="labelOutput.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 62</value>
@@ -122,7 +122,7 @@
     <value>99, 17</value>
   </data>
   <data name="labelOutput.Text" xml:space="preserve">
-    <value>Папка вывода:</value>
+    <value>Output Folder:</value>
   </data>
   <data name="labelOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 108</value>
@@ -131,7 +131,7 @@
     <value>99, 17</value>
   </data>
   <data name="labelOutputFormat.Text" xml:space="preserve">
-    <value>Формат вывода</value>
+    <value>Output Format</value>
   </data>
   <data name="textBoxInput.Location" type="System.Drawing.Point, System.Drawing">
     <value>115, 26</value>

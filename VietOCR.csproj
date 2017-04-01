@@ -272,6 +272,9 @@
     <Content Include="Data\TessLangDataURL.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="readme_cs_ku.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Content Include="versionchanges_cs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -356,6 +359,9 @@
     <EmbeddedResource Include="BulkDialog.ja-JP.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BulkDialog.ku-Arab-IQ.resx">
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.lt-LT.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
@@ -376,6 +382,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.ru-RU.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.sk-SK.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
@@ -408,6 +415,9 @@
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.ja-JP.resx">
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.ku-Arab-IQ.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.lt-LT.resx">
@@ -463,6 +473,9 @@
     <EmbeddedResource Include="DownloadDialog.ja-JP.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DownloadDialog.ku-Arab-IQ.resx">
+      <DependentUpon>DownloadDialog.xaml</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.lt-LT.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
@@ -510,11 +523,16 @@
     <EmbeddedResource Include="Gui.ja-JP.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI.ku-Arab-IQ.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gui.lt-LT.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.ne-NP.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.nl-NL.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
@@ -530,6 +548,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.ru-RU.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.sk-SK.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
@@ -562,6 +581,9 @@
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImageInfoDialog.ja-JP.resx">
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.ku-Arab-IQ.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImageInfoDialog.lt-LT.resx">
@@ -617,6 +639,9 @@
     <EmbeddedResource Include="OptionsDialog.ja-JP.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.ku-Arab-IQ.resx">
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.lt-LT.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
@@ -654,6 +679,7 @@
     <EmbeddedResource Include="Properties\Resources.hi-IN.resx" />
     <EmbeddedResource Include="Properties\Resources.it-IT.resx" />
     <EmbeddedResource Include="Properties\Resources.ja-JP.resx" />
+    <EmbeddedResource Include="Properties\Resources.ku-Arab-IQ.resx" />
     <EmbeddedResource Include="Properties\Resources.lt-LT.resx" />
     <EmbeddedResource Include="Properties\Resources.ne-NP.resx" />
     <EmbeddedResource Include="Properties\Resources.nl-NL.resx" />
@@ -692,6 +718,9 @@
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SliderDialog.ja-JP.resx">
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SliderDialog.ku-Arab-IQ.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SliderDialog.lt-LT.resx">
@@ -742,6 +771,9 @@
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.ja-JP.resx">
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.ku-Arab-IQ.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.lt-LT.resx">

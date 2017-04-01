@@ -45,6 +45,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_275FE037B39049BFA8B795EF50203404"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_37C22D5D221EFFD4CD6BBB88B5CA5854"
         "OwnerKey" = "8:_E6D93875DFE84F2394DF8922F6D448CC"
         "MsmSig" = "8:_UNDEFINED"
@@ -388,6 +394,26 @@
             {
             "SourcePath" = "8:..\\readme_cs_cs.html"
             "TargetName" = "8:readme_cs_cs.html"
+            "Tag" = "8:"
+            "Folder" = "8:_2ADB5FD5B87C4D4C97B718374331A546"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_275FE037B39049BFA8B795EF50203404"
+            {
+            "SourcePath" = "8:..\\readme_cs_ku.html"
+            "TargetName" = "8:readme_cs_ku.html"
             "Tag" = "8:"
             "Folder" = "8:_2ADB5FD5B87C4D4C97B718374331A546"
             "Condition" = "8:"
@@ -1495,7 +1521,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E6D93875DFE84F2394DF8922F6D448CC"
             {
-            "SourcePath" = "8:..\\obj\\Release\\VietOCR.exe"
+            "SourcePath" = "8:..\\obj\\Debug\\VietOCR.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_2ADB5FD5B87C4D4C97B718374331A546"

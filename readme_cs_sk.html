@@ -1,7 +1,7 @@
 ﻿<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>VietOCR.NET - .NET GUI Frontend for Tesseract OCR</title>
+<title>VietOCR.NET - .NET WPF GUI Frontend for Tesseract OCR</title>
 </head>
 <body>
     <div>
@@ -25,17 +25,9 @@
         <h3>INŠTALÁCIA</h3>
         <p>If you do not have authority to install under <code>C:\Program Files</code> folder,
             you can specify another folder in Install Installation Folder dialog.</p>
-        <p>Scanning support is provided via the Windows Image Acquisition Library v2.0, which
-            is included in Vista and 7.</p>
+        <p>Scanning support is provided via the Windows Image Acquisition Library v2.0.</p>
         <p>PDF support is possible via <a href="http://www.ghostscript.com/">GPL
-                Ghostscript</a>. After installation of the library, please ensure the dynamic
-            load library <code>gsdll32.dll</code> is in the search path by setting the <code>Path</code>
-            environment variable, which is accessible through Windows&#39; Control Panel &gt;
-            System &gt; Advanced tab &gt; Environment Variables. For instance, append the following
-            to <code>Path</code> variable value for GS version 9.21:</p>
-        <blockquote>
-            <p><code>;C:\Program Files\gs\gs9.21\bin</code></p>
-        </blockquote>
+                Ghostscript</a>.</p>
         <p>Spellcheck functionality is available through Hunspell, whose <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">
                 dictionary</a> files (<code>.aff</code>, <code>.dic</code>) should be placed in <code>dict</code>
             folder of VietOCR.</p>
@@ -63,12 +55,10 @@
             per pixel) black&amp;white or 8 bpp grayscale uncompressed TIFF or PNG format.</p>
         <p>Okrem vstavaného algoritmu pre post-spracovania textu, môžete si pridať vlastnú
             schému nahradzovania textu textový súbor s názvom <tt>x.DangAmbigs.txt</tt>, kde
-            x je ISO639-3 kód jazyka. Tento súbor v UTF-8 kódovaní by mal obsahovať páry oddelené
-            znakom „rovná sa“ v tvare <tt>staráHodnota=nováHodnota</tt>.</p>
+            x je ISO639-3 kód jazyka.</p>
         <p>In addition to the built-in text postprocessing algorithm, you can add your own
             custom text replacement scheme via a text file named <code>x.DangAmbigs.txt</code>,
-            where x is the ISO639-3 language code. The UTF-8-encoded file should contain equal
-            sign-delimited <code>oldValue=newValue</code> pairs.</p>
+            where x is the ISO639-3 language code. Both plain and Regex text replacements are supported.</p>
         <p>You can put init-only and non-init control parameters in <code>tessdata/configs/tess_configs</code>
             and <code>tess_configvars</code> files, respectively, to modify Tesseract&#39;s
             behaviour.</p>

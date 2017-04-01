@@ -1,14 +1,14 @@
 ﻿<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>VietOCR.NET - .NET GUI Frontend für Tesseract OCR</title>
+<title>VietOCR.NET - .NET WPF GUI Frontend für Tesseract OCR</title>
 </head>
 <body>
     <div>
         <h2 align="center">VietOCR.NET</h2>
         <h3>BESCHREIBUNG</h3>
         <p><a href="http://vietocr.sourceforge.net/">VietOCR.NET</a>
-            is a .NET GUI frontend for <a href="https://github.com/tesseract-ocr">Tesseract
+            is a .NET WPF GUI frontend for <a href="https://github.com/tesseract-ocr">Tesseract
                 OCR engine</a>, providing character recognition support for common image formats,
             and multi-page images. The program has postprocessing which helps correct errors
             regularly encountered in the OCR process, boosting the accuracy rate on the result.
@@ -24,20 +24,11 @@
         <h3>INSTALLATION</h3>
         <p>If you do not have authority to install under <code>C:\Program Files</code> folder,
             you can specify another folder in Install Installation Folder dialog.</p>
-        <p>Scanning support is provided via the Windows Image Acquisition Library v2.0, which
-            is included in Vista and 7.</p>
-        <p>Die PDF Unterstützung ist möglich via <a href="http://www.ghostscript.com/">GPL
-Ghostscript</a>. Stellen Sie sicher, dass nach der Installation, die Datei
-<code>gsdll32.dll</code> sich in dem Suchpfad <code>Path</code> der
-Umgebungsvariable befindet, welches auch erreichbar ist durch Windows&#39; Systemsteuerung &gt; System &gt; Erweiterte Systemeinstellungen &gt; Umgebungsvariablen.
-Fügen Sie folgenden Wert ein zu der
-<code>Path</code> Variable für die GS version 9.21:</p>
-        <blockquote>
-            <p><code>;C:\Program Files\gs\gs9.21\bin</code></p>
-        </blockquote>
+        <p>Scanning support is provided via the Windows Image Acquisition Library v2.0.</p>
+        <p>Die PDF Unterstützung ist möglich via <a href="http://www.ghostscript.com/">GPL Ghostscript</a>.</p>
         <p>Die Rechtschreibprüfung ist wird mit Hunspell umgesetzt <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">
-Wörterbücher-Dateien</a> (<code>.aff</code>, <code>.dic</code>) sollten in dem Ordner <code>dict</code>
-aus dem VietOCR abgelegt werden.</p>
+            Wörterbücher-Dateien</a> (<code>.aff</code>, <code>.dic</code>) sollten in dem Ordner <code>dict</code>
+            aus dem VietOCR abgelegt werden.</p>
         <h3>ANWEISUNGEN</h3>
         <p><a href="https://github.com/tesseract-ocr/tessdata">Language data packs</a>
             for Tesseract should be decompressed into <code>tesseract</code> installation folder;
@@ -64,9 +55,8 @@ aus dem VietOCR abgelegt werden.</p>
         <p>The <em>Screenshot Mode</em> offers better recognition rates for low-resolution
             images, such as screen prints, by rescaling them to 300 DPI.</p>
         <p>In addition to the built-in text postprocessing algorithm, you can add your own
-            custom text replacement scheme via a text file named <code>x.DangAmbigs.txt</code>,
-            where x is the ISO639-3 language code. The UTF-8-encoded file should contain equal
-            sign-delimited <code>oldValue=newValue</code> pairs.</p>
+            custom text replacement scheme via a UTF-8-encoded tab-delimited text file named <code>x.DangAmbigs.txt</code>,
+            where x is the ISO639-3 language code. Both plain and Regex text replacements are supported.</p>
         <p>You can put init-only and non-init control parameters in <code>tessdata/configs/tess_configs</code>
             and <code>tess_configvars</code> files, respectively, to modify Tesseract&#39;s
             behaviour.</p>
