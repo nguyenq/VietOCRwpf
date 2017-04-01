@@ -726,6 +726,9 @@
     <EmbeddedResource Include="SliderDialog.lt-LT.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SliderDialog.ne-NP.resx">
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SliderDialog.nl-NL.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
