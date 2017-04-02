@@ -40,7 +40,6 @@ namespace VietOCR
 
         private System.ComponentModel.BackgroundWorker backgroundWorkerBulk;
 
-        private BulkDialog bulkDialog;
         private StatusForm statusForm;
 
         Stopwatch stopWatch = new Stopwatch();
@@ -69,11 +68,6 @@ namespace VietOCR
             base.ChangeUILanguage(locale);
 
             statusForm.Title = Properties.Resources.BulkProcessStatus;
-            
-            if (bulkDialog != null)
-            {
-                bulkDialog.ChangeUILanguage(locale);
-            }
         }
 
         protected override void bulkOCRToolStripMenuItem_Click(object sender, RoutedEventArgs e)
@@ -83,11 +77,8 @@ namespace VietOCR
                 backgroundWorkerBulk.CancelAsync();
                 return;
             }
-            if (bulkDialog == null)
-            {
-                bulkDialog = new BulkDialog();
-            }
 
+            BulkDialog bulkDialog = new BulkDialog();
             bulkDialog.InputFolder = inputFolder;
             bulkDialog.OutputFolder = outputFolder;
             bulkDialog.OutputFormat = outputFormat;

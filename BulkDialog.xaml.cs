@@ -61,22 +61,6 @@ namespace VietOCR
             this.textBoxOutput.Text = outputFolder;
         }
 
-        protected override void OnClosing(CancelEventArgs e)
-        {
-            base.OnClosing(e);
-
-            e.Cancel = true;
-            this.Visibility = Visibility.Hidden;
-        }
-
-        protected override void OnClosed(EventArgs ea)
-        {
-            base.OnClosed(ea);
-
-            inputFolder = this.textBoxInput.Text;
-            outputFolder = this.textBoxOutput.Text;
-        }
-
         /// <summary>
         /// Changes localized text and messages
         /// </summary>
@@ -90,11 +74,6 @@ namespace VietOCR
         private void buttonRun_Click(object sender, RoutedEventArgs e)
         {
             this.DialogResult = true;
-        }
-
-        private void buttonCancel_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
 
         private void btnInput_Click(object sender, RoutedEventArgs e)

@@ -119,22 +119,11 @@ namespace VietOCR
             //this.toolTip1.SetToolTip(this.btnDangAmbigs, Properties.Resources.Browse);
         }
 
-        protected override void OnClosing(CancelEventArgs e)
-        {
-            base.OnClosing(e);
-
-            e.Cancel = true;
-            this.Visibility = Visibility.Hidden;
-        }
-
         protected override void OnClosed(EventArgs ea)
         {
             base.OnClosed(ea);
 
-            watchFolder = this.textBoxWatch.Text;
-            outputFolder = this.textBoxOutput.Text;
             watchEnabled = this.checkBoxWatch.IsChecked.Value;
-            dangAmbigsPath = this.textBoxDangAmbigs.Text;
             dangAmbigsEnabled = this.checkBoxDangAmbigs.IsChecked.Value;
             replaceHyphensEnabled = this.checkBoxReplaceHyphens.IsChecked.Value;
             removeHyphensEnabled = this.checkBoxRemoveHyphens.IsChecked.Value;
@@ -187,11 +176,6 @@ namespace VietOCR
         private void buttonOK_Click(object sender, RoutedEventArgs e)
         {
             this.DialogResult = true;
-        }
-
-        private void buttonCancel_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
 
         private void comboBoxOutputFormat_MouseEnter(object sender, MouseEventArgs e)

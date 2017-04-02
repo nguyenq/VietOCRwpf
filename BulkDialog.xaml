@@ -41,7 +41,7 @@
             </StackPanel.Resources>
             <ComboBox x:Name="comboBoxOutputFormat" Width="60" VerticalAlignment="Center"  MouseEnter="comboBoxOutputFormat_MouseEnter" ItemsSource="{StaticResource outputFormats}" />
             <Button x:Name="buttonRun" Content="{x:Static resx:BulkDialog.buttonRun_Text}" VerticalAlignment="Center" Width="70" Margin="20,0,5,0" Click="buttonRun_Click" IsDefault="True" />
-            <Button x:Name="buttonCancel" Content="{x:Static resx:BulkDialog.buttonCancel_Text}" VerticalAlignment="Center" Width="70" Click="buttonCancel_Click" IsCancel="True" />
+            <Button x:Name="buttonCancel" Content="{x:Static resx:BulkDialog.buttonCancel_Text}" VerticalAlignment="Center" Width="70" IsCancel="True" />
         </StackPanel>
     </Grid>
 </Window>

@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="{x:Static resx:OptionsDialog.this_Title}" Height="220" Width="360" Loaded="Window_Loaded">
     <Window.Resources>
-        <x:Array x:Key="outputFormats" Type="sys:String" 
+        <x:Array x:Key="outputFormats" Type="sys:String"
             xmlns:sys="clr-namespace:System;assembly=mscorlib">
             <sys:String>text</sys:String>
             <sys:String>text+</sys:String>
@@ -68,7 +68,7 @@
         </TabControl>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="20 20">
             <Button x:Name="buttonOK" Content="{x:Static resx:OptionsDialog.buttonOK_Text}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75" Click="buttonOK_Click" IsDefault="True"/>
-            <Button x:Name="buttonCancel" Content="{x:Static resx:OptionsDialog.buttonCancel_Text}" HorizontalAlignment="Left" Margin="10,0,0,00" VerticalAlignment="Bottom" Width="75" Click="buttonCancel_Click" IsCancel="True"/>
+            <Button x:Name="buttonCancel" Content="{x:Static resx:OptionsDialog.buttonCancel_Text}" HorizontalAlignment="Left" Margin="10,0,0,00" VerticalAlignment="Bottom" Width="75" IsCancel="True"/>
         </StackPanel>
     </Grid>
 </Window>

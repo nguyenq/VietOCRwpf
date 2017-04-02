@@ -38,8 +38,6 @@ namespace VietOCR
         protected bool watchEnabled;
         protected string outputFormat;
 
-        private OptionsDialog optionsDialog;
- 
         public GuiWithSettings()
         {
 
@@ -47,11 +45,7 @@ namespace VietOCR
         
         protected override void optionsToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (optionsDialog == null)
-            {
-                optionsDialog = new OptionsDialog();
-            }
-
+            OptionsDialog optionsDialog = new OptionsDialog();
             optionsDialog.WatchFolder = watchFolder;
             optionsDialog.OutputFolder = outputFolder;
             optionsDialog.WatchEnabled = watchEnabled;
@@ -91,21 +85,6 @@ namespace VietOCR
             downloadDialog.LookupISO_3_1_Codes = LookupISO_3_1_Codes;
             downloadDialog.InstalledLanguages = dataSource.InstalledLanguages;
             downloadDialog.ShowDialog();
-        }
-
-        /// <summary>
-        /// Changes localized text and messages
-        /// </summary>
-        /// <param name="locale"></param>
-        /// <param name="firstTime"></param>
-        protected override void ChangeUILanguage(string locale)
-        {
-            base.ChangeUILanguage(locale);
-
-            if (optionsDialog != null)
-            {
-                optionsDialog.ChangeUILanguage(locale);
-            }
         }
 
         protected override void LoadRegistryInfo(RegistryKey regkey)
