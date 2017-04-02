@@ -98,11 +98,6 @@ namespace VietOCR
                 this.toolStripProgressBar1.Visibility = Visibility.Visible;
                 this.bulkOCRToolStripMenuItem.Header = Properties.Resources.CancelBulkOCR;
 
-                if (!this.statusForm.IsLoaded)
-                {
-                    this.statusForm = new StatusForm();
-                    statusForm.Title = Properties.Resources.BulkProcessStatus;
-                }
                 if (!this.statusForm.IsVisible)
                 {
                     this.statusForm.Show();
@@ -167,17 +162,17 @@ namespace VietOCR
 
         private void backgroundWorkerBulk_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            if (!this.statusForm.IsLoaded)
-            {
-                this.statusForm = new StatusForm();
-                statusForm.Title = Properties.Resources.BulkProcessStatus;
-            }
             if (!this.statusForm.IsVisible)
             {
                 this.statusForm.Show();
             }
+            else if (this.statusForm.WindowState == WindowState.Minimized)
+            {
+                this.statusForm.WindowState = WindowState.Normal;
+            }
 
             this.statusForm.TextBox.AppendText((string)e.UserState + Environment.NewLine);
+            this.statusForm.TextBox.ScrollToEnd();
         }
 
         private void backgroundWorkerBulk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -218,6 +213,7 @@ namespace VietOCR
             // Format and display the TimeSpan value. 
             string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
             this.statusForm.TextBox.AppendText("\t" + Properties.Resources.Elapsed_time + ": " + elapsedTime + Environment.NewLine);
+            this.statusForm.TextBox.ScrollToEnd();
         }
 
         protected override void LoadRegistryInfo(RegistryKey regkey)
