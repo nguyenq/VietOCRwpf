@@ -66,14 +66,13 @@ namespace VietOCR
         {
             if (queue.Count > 0)
             {
-                if (this.statusForm.IsInitialized)
-                {
-                    this.statusForm = new StatusForm();
-                    statusForm.Title = Properties.Resources.BatchProcessStatus;
-                }
                 if (!this.statusForm.IsVisible)
                 {
                     this.statusForm.Show();
+                }
+                else if (this.statusForm.WindowState == WindowState.Minimized)
+                {
+                    this.statusForm.WindowState = WindowState.Normal;
                 }
 
                 Thread t = new Thread(new ThreadStart(AutoOCR));
@@ -97,11 +96,11 @@ namespace VietOCR
                 return;
             }
 
-            //this.statusForm.TextBox.BeginInvoke(new UpdateStatusEvent(this.WorkerUpdate), new Object[] { imageFile.FullName });
+            Dispatcher.BeginInvoke(new Action<string>(WorkerUpdate), DispatcherPriority.Normal, imageFile.FullName);
 
             if (curLangCode == null)
             {
-                //this.statusForm.TextBox.BeginInvoke(new UpdateStatusEvent(this.WorkerUpdate), new Object[] { "\t** " + Properties.Resources.selectLanguage + " **" });
+                Dispatcher.BeginInvoke(new Action<string>(WorkerUpdate), DispatcherPriority.Normal, "\t** " + Properties.Resources.selectLanguage + " **");
                 //queue.Clear();
                 return;
             }
@@ -114,8 +113,7 @@ namespace VietOCR
             {
                 // Sets the UI culture to the selected language.
                 Thread.CurrentThread.CurrentUICulture = new CultureInfo(selectedUILanguage);
-
-                //this.statusForm.TextBox.BeginInvoke(new UpdateStatusEvent(this.WorkerUpdate), new Object[] { "\t** " + Properties.Resources.Cannotprocess + imageFile.Name + " **" });
+                Dispatcher.BeginInvoke(new Action<string>(WorkerUpdate), DispatcherPriority.Normal, "\t** " + Properties.Resources.Cannotprocess + imageFile.Name + " **");
             }
         }
 
