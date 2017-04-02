@@ -97,6 +97,7 @@ namespace VietOCR
                     (this.radioButtonFiles.IsChecked.Value && regexNums.IsMatch(args.NumOfPages)))
                 {
                     this.args = args;
+                    this.DialogResult = true;
                 }
                 else
                 {
@@ -107,11 +108,6 @@ namespace VietOCR
             {
                 MessageBox.Show(this, "Input incomplete.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-        }
-
-        private void buttonCancel_Click(object sender, RoutedEventArgs e)
-        {
-            this.DialogResult = false;
         }
 
         void disableBoxes(bool enabled)

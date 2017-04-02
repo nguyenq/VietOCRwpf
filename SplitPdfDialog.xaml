@@ -41,7 +41,7 @@
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Right">
             <Button x:Name="buttonSplit" Content="{x:Static resx:SplitPdfDialog.buttonSplit_Text}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75" IsDefault="True" Click="buttonSplit_Click" />
-            <Button x:Name="buttonCancel" Content="{x:Static resx:SplitPdfDialog.buttonCancel_Text}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75" Margin="10, 0, 20, 0" IsCancel="True" Click="buttonCancel_Click" />
+            <Button x:Name="buttonCancel" Content="{x:Static resx:SplitPdfDialog.buttonCancel_Text}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="75" Margin="10, 0, 20, 0" IsCancel="True" />
         </StackPanel>
     </Grid>
 </Window>
