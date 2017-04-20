@@ -24,5 +24,5 @@ VietOCRwpf is released and distributed under the [Apache License, v2.0](http://w
 * Support for downloading and installing language data packs and appropriate spell dictionaries
 
 ## Dependencies
-* [Microsoft .NET Framework 4.5.2 Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=42642)
+* [Microsoft .NET Framework 4.6.2 Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=53344)
 * [Microsoft Visual C++ 2015 Redistributable Package](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
