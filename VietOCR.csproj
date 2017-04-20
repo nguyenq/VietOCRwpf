@@ -330,6 +330,9 @@
     <Resource Include="readme_cs_ne.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <None Include="Library\pdfpagecount.ps">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="x64\liblept174.dll" />
     <None Include="x64\libtesseract400.dll" />
     <Content Include="x86\liblept174.dll">
