@@ -280,7 +280,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:.NETFramework,Version=v4.6.1"
+                "FrameworkVersion" = "8:.NETFramework,Version=v4.6.2"
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=671728"
                 }
@@ -1521,7 +1521,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E6D93875DFE84F2394DF8922F6D448CC"
             {
-            "SourcePath" = "8:..\\obj\\Debug\\VietOCR.exe"
+            "SourcePath" = "8:..\\obj\\Release\\VietOCR.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_2ADB5FD5B87C4D4C97B718374331A546"
