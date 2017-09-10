@@ -108,7 +108,7 @@ Prosím spustite program ako administrátor.</value>
     <value>Skontrolujte prosím výstupný súbor v </value>
   </data>
   <data name="Clear_Recent_Files" xml:space="preserve">
-    <value>&amp;Vyčistiť Nedávne súbory</value>
+    <value>_Vyčistiť Nedávne súbory</value>
   </data>
   <data name="Contrast" xml:space="preserve">
     <value>Kontrast</value>

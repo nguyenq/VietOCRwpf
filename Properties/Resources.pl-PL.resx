@@ -105,7 +105,7 @@ Proszę uruchomić program jako administrator.</value>
     <value>Proszę sprawdzić plik (i) wyjściowe w  </value>
   </data>
   <data name="Clear_Recent_Files" xml:space="preserve">
-    <value>&amp;Wyczyść najnowsze pliki</value>
+    <value>_Wyczyść najnowsze pliki</value>
   </data>
   <data name="Contrast" xml:space="preserve">
     <value>Kontrast</value>

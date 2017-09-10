@@ -105,7 +105,7 @@ Please run the program as administrator.</value>
     <value>Comproveu els fitxers generats a</value>
   </data>
   <data name="Clear_Recent_Files" xml:space="preserve">
-    <value>&amp;Neteja els fitxers recents</value>
+    <value>_Neteja els fitxers recents</value>
   </data>
   <data name="Contrast" xml:space="preserve">
     <value>Contrast</value>

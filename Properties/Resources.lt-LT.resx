@@ -108,7 +108,7 @@ Paleiskite šią programą administratoriaus teisėmis.</value>
     <value>Patikrinkite išvesties failus, esančius aplanke </value>
   </data>
   <data name="Clear_Recent_Files" xml:space="preserve">
-    <value>Išvalyti paskiausių &amp;failų sąrašą</value>
+    <value>Išvalyti paskiausių _failų sąrašą</value>
   </data>
   <data name="Contrast" xml:space="preserve">
     <value>Kontrastas</value>

@@ -107,7 +107,7 @@
     <value>कृपया  आउटपुट फाइल(s) को चेक करें </value>
   </data>
   <data name="Clear_Recent_Files" xml:space="preserve">
-    <value>&amp;C हाल की फालियें हटायें </value>
+    <value>_C हाल की फालियें हटायें </value>
   </data>
   <data name="Contrast" xml:space="preserve">
     <value>कन्ट्रास्ट</value>
