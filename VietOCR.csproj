@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VietOCR</RootNamespace>
     <AssemblyName>VietOCR</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -508,6 +508,12 @@
     <EmbeddedResource Include="DownloadDialog.vi-VN.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gui.bn-IN.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui.ca-ES.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gui.cs-CZ.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
     </EmbeddedResource>
@@ -519,6 +525,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.hi-IN.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.it-IT.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
@@ -532,6 +539,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.lt-LT.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.ne-NP.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
@@ -539,9 +547,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.nl-NL.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.pl-PL.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.resx">
       <SubType>Designer</SubType>
@@ -555,9 +565,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.sk-SK.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.tr-TR.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.vi-VN.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
@@ -635,6 +647,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.hi-IN.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.it-IT.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
@@ -647,6 +660,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.lt-LT.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.ne-NP.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
@@ -670,9 +684,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.tr-TR.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.vi-VN.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.bn-IN.resx" />
     <EmbeddedResource Include="Properties\Resources.ca-ES.resx" />

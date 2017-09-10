@@ -61,8 +61,8 @@
             </TabItem>
             <TabItem Header="Hyphens">
                 <Grid Background="#FFE5E5E5">
-                    <CheckBox x:Name="checkBoxReplaceHyphens" Content="Replace hyphens with soft hyphens" HorizontalAlignment="Left" Margin="30,23,0,0" VerticalAlignment="Top" ToolTip="Replace hyphens at the end of lines with soft hyphens using spellcheck dictionary"/>
-                    <CheckBox x:Name="checkBoxRemoveHyphens" Content="Remove soft hyphens" HorizontalAlignment="Left" Margin="30,53,0,0" VerticalAlignment="Top" ToolTip="Remove soft hyphens after removing line breaks"/>
+                    <CheckBox x:Name="checkBoxReplaceHyphens" Content="{x:Static resx:OptionsDialog.checkBoxReplaceHyphens_Text}" HorizontalAlignment="Left" Margin="30,23,0,0" VerticalAlignment="Top" ToolTip="Replace hyphens at the end of lines with soft hyphens using spellcheck dictionary"/>
+                    <CheckBox x:Name="checkBoxRemoveHyphens" Content="{x:Static resx:OptionsDialog.checkBoxRemoveHyphens_Text}" HorizontalAlignment="Left" Margin="30,53,0,0" VerticalAlignment="Top" ToolTip="Remove soft hyphens after removing line breaks"/>
                 </Grid>
             </TabItem>
         </TabControl>

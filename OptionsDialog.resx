@@ -519,4 +519,16 @@
   <data name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>17, 17</value>
   </data>
+  <data name="checkBoxRemoveHyphens.Text" xml:space="preserve">
+    <value>Remove soft hyphens</value>
+  </data>
+  <data name="checkBoxReplaceHyphens.Text" xml:space="preserve">
+    <value>Replace hyphens with soft hyphens</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Hyphens</value>
+  </data>
+  <data name="tabPage3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
 </root>

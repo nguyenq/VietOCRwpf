@@ -456,6 +456,24 @@ namespace VietOCR {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Remove soft hyphens.
+        /// </summary>
+        public static string checkBoxRemoveHyphens_Text {
+            get {
+                return ResourceManager.GetString("checkBoxRemoveHyphens.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Replace hyphens with soft hyphens.
+        /// </summary>
+        public static string checkBoxReplaceHyphens_Text {
+            get {
+                return ResourceManager.GetString("checkBoxReplaceHyphens.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Boolean similar to True.
         /// </summary>
         public static bool checkBoxWatch_AutoSize {
@@ -1132,6 +1150,24 @@ namespace VietOCR {
         public static string tabPage2_ToolTip {
             get {
                 return ResourceManager.GetString("tabPage2.ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hyphens.
+        /// </summary>
+        public static string tabPage3_Text {
+            get {
+                return ResourceManager.GetString("tabPage3.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string tabPage3_ToolTip {
+            get {
+                return ResourceManager.GetString("tabPage3.ToolTip", resourceCulture);
             }
         }
         

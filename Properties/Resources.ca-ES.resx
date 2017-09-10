@@ -105,7 +105,7 @@ Please run the program as administrator.</value>
     <value>Comproveu els fitxers generats a</value>
   </data>
   <data name="Clear_Recent_Files" xml:space="preserve">
-    <value>_Neteja els fitxers recents</value>
+    <value>&amp;Neteja els fitxers recents</value>
   </data>
   <data name="Contrast" xml:space="preserve">
     <value>Contrast</value>
@@ -208,6 +208,9 @@ Please run the program as administrator.</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_ca.html</value>
+  </data>
+  <data name="Require_grayscale" xml:space="preserve">
+    <value>Potser cal convertir la imatge a escala de grisos.</value>
   </data>
   <data name="Resource_not_exist" xml:space="preserve">
     <value>El recurs no existeix.</value>
