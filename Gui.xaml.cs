@@ -383,17 +383,17 @@ namespace VietOCR
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }
 
-        protected virtual void bilateralFilterMenuItem_Click(object sender, RoutedEventArgs e)
+        protected virtual void bilateralToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }
 
-        protected virtual void gammaMenuItem_Click(object sender, RoutedEventArgs e)
+        protected virtual void gammaToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }
 
-        protected virtual void thresholdMenuItem_Click(object sender, RoutedEventArgs e)
+        protected virtual void thresholdToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }

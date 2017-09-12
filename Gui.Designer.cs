@@ -77,9 +77,9 @@ namespace VietOCR {
         /// <summary>
         ///   Looks up a localized string similar to Bilate_ral.
         /// </summary>
-        public static string bilateralFilterMenuItem_Text {
+        public static string bilateralToolStripMenuItem_Text {
             get {
-                return ResourceManager.GetString("bilateralFilterMenuItem.Text", resourceCulture);
+                return ResourceManager.GetString("bilateralToolStripMenuItem.Text", resourceCulture);
             }
         }
         
@@ -212,9 +212,9 @@ namespace VietOCR {
         /// <summary>
         ///   Looks up a localized string similar to Gamm_a....
         /// </summary>
-        public static string gammaMenuItem_Text {
+        public static string gammaToolStripMenuItem_Text {
             get {
-                return ResourceManager.GetString("gammaMenuItem.Text", resourceCulture);
+                return ResourceManager.GetString("gammaToolStripMenuItem.Text", resourceCulture);
             }
         }
         
@@ -509,9 +509,9 @@ namespace VietOCR {
         /// <summary>
         ///   Looks up a localized string similar to _Threshold....
         /// </summary>
-        public static string thresholdMenuItem_Text {
+        public static string thresholdToolStripMenuItem_Text {
             get {
-                return ResourceManager.GetString("thresholdMenuItem.Text", resourceCulture);
+                return ResourceManager.GetString("thresholdToolStripMenuItem.Text", resourceCulture);
             }
         }
         

@@ -1227,13 +1227,13 @@
         AAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAA=
 </value>
   </data>
-  <data name="bilateralFilterMenuItem.Text" xml:space="preserve">
+  <data name="bilateralToolStripMenuItem.Text" xml:space="preserve">
     <value>Bilate_ral</value>
   </data>
-  <data name="gammaMenuItem.Text" xml:space="preserve">
+  <data name="gammaToolStripMenuItem.Text" xml:space="preserve">
     <value>Gamm_a...</value>
   </data>
-  <data name="thresholdMenuItem.Text" xml:space="preserve">
+  <data name="thresholdToolStripMenuItem.Text" xml:space="preserve">
     <value>_Threshold...</value>
   </data>
   <data name="oemToolStripMenuItem.Text" xml:space="preserve">

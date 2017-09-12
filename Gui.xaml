@@ -99,14 +99,14 @@
                 <MenuItem x:Name="filterToolStripMenuItem" Header="{x:Static resx:Gui.filterToolStripMenuItem_Text}" >
                     <MenuItem x:Name="brightenToolStripMenuItem" Header="{x:Static resx:Gui.brightenToolStripMenuItem_Text}" InputGestureText="Ctrl+Shift+B" Click="brightenToolStripMenuItem_Click" />
                     <MenuItem x:Name="contrastToolStripMenuItem" Header="{x:Static resx:Gui.contrastToolStripMenuItem_Text}" InputGestureText="Ctrl+Shift+C" Click="contrastToolStripMenuItem_Click" />
-                    <MenuItem x:Name="gammaMenuItem" Header="{x:Static resx:Gui.gammaMenuItem_Text}" InputGestureText="Ctrl+Shift+A" Click="gammaMenuItem_Click"/>
-                    <MenuItem x:Name="thresholdMenuItem" Header="{x:Static resx:Gui.thresholdMenuItem_Text}" InputGestureText="Ctrl+Shift+T" Click="thresholdMenuItem_Click"/>
+                    <MenuItem x:Name="gammaToolStripMenuItem" Header="{x:Static resx:Gui.gammaToolStripMenuItem_Text}" InputGestureText="Ctrl+Shift+A" Click="gammaToolStripMenuItem_Click"/>
+                    <MenuItem x:Name="thresholdToolStripMenuItem" Header="{x:Static resx:Gui.thresholdToolStripMenuItem_Text}" InputGestureText="Ctrl+Shift+T" Click="thresholdToolStripMenuItem_Click"/>
                     <MenuItem x:Name="grayscaleToolStripMenuItem" Header="{x:Static resx:Gui.grayscaleToolStripMenuItem_Text}" InputGestureText="Ctrl+Shift+G" Click="grayscaleToolStripMenuItem_Click" />
                     <MenuItem x:Name="monochromeToolStripMenuItem" Header="{x:Static resx:Gui.monochromeToolStripMenuItem_Text}" InputGestureText="Ctrl+Shift+M" Click="monochromeToolStripMenuItem_Click" />
                     <MenuItem x:Name="invertToolStripMenuItem" Header="{x:Static resx:Gui.invertToolStripMenuItem_Text}" InputGestureText="Ctrl+Shift+I" Click="invertToolStripMenuItem_Click" />
                     <MenuItem x:Name="sharpenToolStripMenuItem" Header="{x:Static resx:Gui.sharpenToolStripMenuItem_Text}" InputGestureText="Ctrl+Shift+N" Click="sharpenToolStripMenuItem_Click" />
                     <MenuItem x:Name="smoothToolStripMenuItem" Header="{x:Static resx:Gui.smoothToolStripMenuItem_Text}" InputGestureText="Ctrl+Shift+O" Click="smoothToolStripMenuItem_Click" />
-                    <MenuItem x:Name="bilateralFilterMenuItem" Header="{x:Static resx:Gui.bilateralFilterMenuItem_Text}" InputGestureText="Ctrl+Shift+R" Click="bilateralFilterMenuItem_Click"/>
+                    <MenuItem x:Name="bilateralToolStripMenuItem" Header="{x:Static resx:Gui.bilateralToolStripMenuItem_Text}" InputGestureText="Ctrl+Shift+R" Click="bilateralToolStripMenuItem_Click"/>
                 </MenuItem>
                 <MenuItem x:Name="deskewToolStripMenuItem" Header="{x:Static resx:Gui.deskewToolStripMenuItem_Text}"  InputGestureText="Ctrl+Shift+D" Click="deskewToolStripMenuItem_Click"/>
                 <MenuItem x:Name="autocropToolStripMenuItem" Header="{x:Static resx:Gui.autocropToolStripMenuItem_Text}"  InputGestureText="Ctrl+Shift+X" Click="autocropToolStripMenuItem_Click"/>

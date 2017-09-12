@@ -253,7 +253,7 @@ namespace VietOCR
             displayImage();
         }
 
-        protected override void gammaMenuItem_Click(object sender, RoutedEventArgs e)
+        protected override void gammaToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
             if (imageList == null)
             {
@@ -286,7 +286,7 @@ namespace VietOCR
             }
         }
 
-        protected override void thresholdMenuItem_Click(object sender, RoutedEventArgs e)
+        protected override void thresholdToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
             if (imageList == null)
             {
@@ -319,7 +319,7 @@ namespace VietOCR
             }
         }
 
-        protected override void bilateralFilterMenuItem_Click(object sender, RoutedEventArgs e)
+        protected override void bilateralToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
             if (imageList == null)
             {
