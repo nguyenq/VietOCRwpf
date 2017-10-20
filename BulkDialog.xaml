@@ -13,6 +13,7 @@
             <sys:String>text</sys:String>
             <sys:String>text+</sys:String>
             <sys:String>hocr</sys:String>
+            <sys:String>pdf</sys:String>
         </x:Array>
     </Window.Resources>
     <Grid Margin="10,10,10,20">

@@ -34,7 +34,7 @@ namespace VietOCR
         /// <param name="index"></param>
         /// <param name="lang"></param>
         /// <returns></returns>
-        //[System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public override string RecognizeText(IList<Image> images, string inputName)
         {
             IEnumerable<string> configs_file = new List<string>() { CONFIGS_FILE };
@@ -105,6 +105,100 @@ namespace VietOCR
                 }
             }
         }
+
+        public override void ProcessFile(string filename)
+        {
+            List<IResultRenderer> resultRenderers = new List<IResultRenderer>();
+
+            switch (OutputFormat)
+            {
+                case "text":
+                    resultRenderers.Add(ResultRenderer.CreateTextRenderer(OutputFile));
+                    break;
+                case "hocr":
+                    resultRenderers.Add(ResultRenderer.CreateHOcrRenderer(OutputFile));
+                    break;
+                case "pdf":
+                    resultRenderers.Add(ResultRenderer.CreatePdfRenderer(OutputFile, Datapath + "\\tessdata"));
+                    break;
+            }
+
+            using (IResultRenderer renderer = new AggregateResultRenderer(resultRenderers))
+            {
+                if (filename.EndsWith(".tif"))
+                {
+                    ProcessTiffFile(renderer, filename);
+                }
+                else
+                {
+                    ProcessFile(renderer, filename);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Processes a file using ResultRenderers.
+        /// </summary>
+        /// <param name="renderer"></param>
+        /// <param name="filename"></param>
+        private void ProcessTiffFile(IResultRenderer renderer, string filename)
+        {
+            IEnumerable<string> configs_file = new List<string>() { CONFIGS_FILE };
+
+            using (TesseractEngine engine = new TesseractEngine(Datapath, Language, EngineMode, configs_file))
+            {
+                var imageName = Path.GetFileNameWithoutExtension(filename);
+
+                using (var pixA = PixArray.LoadMultiPageTiffFromFile(filename))
+                {
+                    using (renderer.BeginDocument(imageName))
+                    {
+                        foreach (var pix in pixA)
+                        {
+                            using (var page = engine.Process(pix, imageName))
+                            {
+                                var addedPage = renderer.AddPage(page);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void ProcessFile(IResultRenderer renderer, string filename)
+        {
+            IEnumerable<string> configs_file = new List<string>() { CONFIGS_FILE };
+
+            using (TesseractEngine engine = new TesseractEngine(Datapath, Language, EngineMode, configs_file))
+            {
+                var imageName = Path.GetFileNameWithoutExtension(filename);
+                using (var pix = Pix.LoadFromFile(filename))
+                {
+                    using (renderer.BeginDocument(imageName))
+                    {
+                        using (var page = engine.Process(pix, imageName))
+                        {
+                            var addedPage = renderer.AddPage(page);
+                        }
+                    }
+                }
+            }
+        }
+
+        //private PixArray LoadPixArray(string filename)
+        //{
+        //    if (filename.EndsWith(".tif"))
+        //    {
+        //        return PixArray.LoadMultiPageTiffFromFile(filename);
+        //    }
+        //    else
+        //    {
+        //        var pix = Pix.LoadFromFile(filename);
+        //        PixArray pixA = PixArray.Create(0);
+        //        pixA.Add(pix, 0); // this will crash; so don't use!
+        //        return pixA;
+        //    }
+        //}
 
         /// <summary>
         /// Converts .NET Bitmap to Leptonica Pix.
