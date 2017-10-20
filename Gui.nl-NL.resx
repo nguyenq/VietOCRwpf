@@ -121,9 +121,6 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1184, 561</value>
   </data>
-  <data name="this.Title" xml:space="preserve">
-    <value>VietOCR.NET</value>
-  </data>
   <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 22</value>
   </data>
@@ -441,6 +438,9 @@
   </data>
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>588, 474</value>
+  </data>
+  <data name="this.Title" xml:space="preserve">
+    <value>VietOCR.NET</value>
   </data>
   <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 20</value>

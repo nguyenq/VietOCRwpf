@@ -1,45 +1,45 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <root>
   <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string"/>
-              <xsd:attribute name="type" type="xsd:string"/>
-              <xsd:attribute name="mimetype" type="xsd:string"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string"/>
-              <xsd:attribute name="name" type="xsd:string"/>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -470,7 +470,7 @@
     <value>Obre</value>
   </data>
   <data name="toolStripBtnOpen.ToolTipText" xml:space="preserve">
-    <value>Obre el fitxer d&apos;imatge</value>
+    <value>Obre el fitxer d'imatge</value>
   </data>
   <data name="toolStripBtnPrev.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
@@ -524,7 +524,7 @@
     <value>(+)</value>
   </data>
   <data name="toolStripBtnZoomIn.ToolTipText" xml:space="preserve">
-    <value>Apropa&apos;t</value>
+    <value>Apropa't</value>
   </data>
   <data name="toolStripBtnZoomOut.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
@@ -533,13 +533,13 @@
     <value>(-)</value>
   </data>
   <data name="toolStripBtnZoomOut.ToolTipText" xml:space="preserve">
-    <value>Allunya&apos;t</value>
+    <value>Allunya't</value>
   </data>
   <data name="toolStripButtonCancelOCR.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
   </data>
   <data name="toolStripButtonCancelOCR.Text" xml:space="preserve">
-    <value>Cancel·la l&apos;OCR</value>
+    <value>Cancel·la l'OCR</value>
   </data>
   <data name="toolStripButtonPasteImage.Size" type="System.Drawing.Size, System.Drawing">
     <value>36, 36</value>
@@ -578,10 +578,10 @@
     <value>86, 36</value>
   </data>
   <data name="toolStripLabelLanguage.Text" xml:space="preserve">
-    <value>Llengua de l&apos;OCR</value>
+    <value>Llengua de l'OCR</value>
   </data>
   <data name="toolStripLabelLanguage.ToolTipText" xml:space="preserve">
-    <value>Llengua de l&apos;OCR</value>
+    <value>Llengua de l'OCR</value>
   </data>
   <data name="toolStripLabelPageNum.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 36</value>
@@ -725,7 +725,7 @@
     <value>219, 22</value>
   </data>
   <data name="uiLanguageToolStripMenuItem.Text" xml:space="preserve">
-    <value>Llengua d&apos;interfícies de l&apos;_usuari</value>
+    <value>Llengua d'interfícies de l'_usuari</value>
   </data>
   <data name="undoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>166, 22</value>
@@ -737,7 +737,7 @@
     <value>219, 22</value>
   </data>
   <data name="vietInputMethodToolStripMenuItem.Text" xml:space="preserve">
-    <value>_Mètode d&apos;entrada vietnamita</value>
+    <value>_Mètode d'entrada vietnamita</value>
   </data>
   <data name="wordWrapToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 22</value>

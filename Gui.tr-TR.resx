@@ -1,45 +1,45 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <root>
   <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string"/>
-              <xsd:attribute name="type" type="xsd:string"/>
-              <xsd:attribute name="mimetype" type="xsd:string"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string"/>
-              <xsd:attribute name="name" type="xsd:string"/>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -60,9 +60,6 @@
   </resheader>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1184, 561</value>
-  </data>
-  <data name="this.Title" xml:space="preserve">
-    <value>VietOCR.NET</value>
   </data>
   <data name="aboutToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>179, 22</value>
@@ -169,11 +166,11 @@
   <data name="formatToolStripMenuItem.Text" xml:space="preserve">
     <value>_Biçim</value>
   </data>
-  <data name="grayscaleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>147, 22</value>
-  </data>
   <data name="gammaToolStripMenuItem.Text" xml:space="preserve">
     <value>K_ontrast...</value>
+  </data>
+  <data name="grayscaleToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 22</value>
   </data>
   <data name="grayscaleToolStripMenuItem.Text" xml:space="preserve">
     <value>_Grayscale</value>
@@ -394,6 +391,9 @@
   <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>588, 474</value>
   </data>
+  <data name="this.Title" xml:space="preserve">
+    <value>VietOCR.NET</value>
+  </data>
   <data name="thresholdToolStripMenuItem.Text" xml:space="preserve">
     <value>_Eşik...</value>
   </data>
@@ -589,21 +589,6 @@
   <data name="toolStripLabelPageNum.Text" xml:space="preserve">
     <value> / 0</value>
   </data>
-  <data name="toolStripMenuItemBlock.Text" xml:space="preserve">
-    <value>Blok</value>
-  </data>
-  <data name="toolStripMenuItemPara.Text" xml:space="preserve">
-    <value>Paragraf</value>
-  </data>
-  <data name="toolStripMenuItemSymbol.Text" xml:space="preserve">
-    <value>Karakter</value>
-  </data>
-  <data name="toolStripMenuItemTextLine.Text" xml:space="preserve">
-    <value>Metin Satırı</value>
-  </data>
-  <data name="toolStripMenuItemWord.Text" xml:space="preserve">
-    <value>Kelime</value>
-  </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 6</value>
   </data>
@@ -643,8 +628,23 @@
   <data name="toolStripMenuItem9.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
   </data>
+  <data name="toolStripMenuItemBlock.Text" xml:space="preserve">
+    <value>Blok</value>
+  </data>
   <data name="toolStripMenuItemInputMethod.Size" type="System.Drawing.Size, System.Drawing">
     <value>216, 6</value>
+  </data>
+  <data name="toolStripMenuItemPara.Text" xml:space="preserve">
+    <value>Paragraf</value>
+  </data>
+  <data name="toolStripMenuItemSymbol.Text" xml:space="preserve">
+    <value>Karakter</value>
+  </data>
+  <data name="toolStripMenuItemTextLine.Text" xml:space="preserve">
+    <value>Metin Satırı</value>
+  </data>
+  <data name="toolStripMenuItemWord.Text" xml:space="preserve">
+    <value>Kelime</value>
   </data>
   <data name="toolStripProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 18</value>
