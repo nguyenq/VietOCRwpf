@@ -70,7 +70,14 @@ namespace VietOCR
             List<string> names = new List<string>();
             foreach (string key in available)
             {
-                names.Add(LookupISO639[key]);
+                if (LookupISO639.ContainsKey(key))
+                {
+                    names.Add(LookupISO639[key]);
+                } else
+                {
+                    names.Add(key);
+                }
+                
             }
             names.Sort();
 
