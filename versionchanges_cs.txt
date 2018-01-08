@@ -85,8 +85,8 @@ Version 4.4 (16 October 2017)
 - Update GhostScript to 9.22
 - Add PDF output support for batch process
 
-Version 5.0alpha (20 October 2017)
+Version 5.0alpha (8 January 2018)
 - Rewrite using Windows Presentation Foundation (WPF)
-- Upgrade Tesseract.NET (Tesseract 4.00alpha 362b68e)
+- Upgrade Tesseract.NET (Tesseract 4.00alpha c4d8f27)
 - Upgrade to .NET Framework 4.7.1
 - Upgrade Tesseract 4.00 language packs
