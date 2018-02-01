@@ -18,7 +18,7 @@ namespace VietOCR
         /// <param name="langCode">language code</param>
         /// <param name="pageSegMode">page segmentation mode</param>
         /// <param name="outputFormat">format of output file. Possible values: <code>text</code>, <code>text+</code> (with post-corrections), <code>hocr</code></param>
-        public static void PerformOCR(string imageFile, string outputFile, string langCode, string pageSegMode, string outputFormat)
+        public static void PerformOCR(string imageFile, string outputFile, string langCode, string pageSegMode, string outputFormat, bool deskew)
         {
             DirectoryInfo dir = Directory.GetParent(outputFile);
             if (dir != null && !dir.Exists)
@@ -33,6 +33,7 @@ namespace VietOCR
             ocrEngine.Language = langCode;
             ocrEngine.OutputFormat = outputFormat.Replace("+", string.Empty);
             ocrEngine.OutputFile = outputFile;
+            ocrEngine.Deskew = deskew;
 
             // convert PDF to TIFF
             if (imageFile.ToLower().EndsWith(".pdf"))

@@ -144,7 +144,7 @@ namespace VietOCR
             try
             {
                 string outputFilename = imageFile.FullName.Substring(inputFolder.Length + 1);
-                OCRHelper.PerformOCR(imageFile.FullName, Path.Combine(outputFolder, outputFilename), curLangCode, selectedPSM, outputFormat);
+                OCRHelper.PerformOCR(imageFile.FullName, Path.Combine(outputFolder, outputFilename), curLangCode, selectedPSM, outputFormat, false);
             }
             catch
             {

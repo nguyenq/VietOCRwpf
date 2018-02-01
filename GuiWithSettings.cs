@@ -29,6 +29,7 @@ namespace VietOCR
     public class GuiWithSettings : GuiWithUILanguage
     {
         const string strWatchEnable = "WatchEnable";
+        const string strWatchDeskewEnable = "WatchDeskewEnable";
         const string strWatchFolder = "WatchFolder";
         const string strOutputFolder = "OutputFolder";
         const string strBatchOutputFormat = "BatchOutputFormat";
@@ -36,6 +37,7 @@ namespace VietOCR
         protected string watchFolder;
         protected string outputFolder;
         protected bool watchEnabled;
+        protected bool watchDeskewEnabled;
         protected string outputFormat;
 
         public GuiWithSettings()
@@ -49,6 +51,7 @@ namespace VietOCR
             optionsDialog.WatchFolder = watchFolder;
             optionsDialog.OutputFolder = outputFolder;
             optionsDialog.WatchEnabled = watchEnabled;
+            optionsDialog.WatchDeskewEnabled = watchDeskewEnabled;
             optionsDialog.DangAmbigsPath = dangAmbigsPath;
             optionsDialog.DangAmbigsEnabled = dangAmbigsOn;
             optionsDialog.CurLangCode = curLangCode;
@@ -62,6 +65,7 @@ namespace VietOCR
                 watchFolder = optionsDialog.WatchFolder;
                 outputFolder = optionsDialog.OutputFolder;
                 watchEnabled = optionsDialog.WatchEnabled;
+                watchDeskewEnabled = optionsDialog.WatchDeskewEnabled;
                 dangAmbigsPath = optionsDialog.DangAmbigsPath;
                 dangAmbigsOn = optionsDialog.DangAmbigsEnabled;
                 curLangCode = optionsDialog.CurLangCode;
@@ -91,6 +95,7 @@ namespace VietOCR
         {
             base.LoadRegistryInfo(regkey);
             watchEnabled = Convert.ToBoolean((int)regkey.GetValue(strWatchEnable, Convert.ToInt32(false)));
+            watchDeskewEnabled = Convert.ToBoolean((int)regkey.GetValue(strWatchDeskewEnable, Convert.ToInt32(false)));
             watchFolder = (string)regkey.GetValue(strWatchFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
             outputFolder = (string)regkey.GetValue(strOutputFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
             outputFormat = (string)regkey.GetValue(strBatchOutputFormat, "text");
@@ -100,6 +105,7 @@ namespace VietOCR
         {
             base.SaveRegistryInfo(regkey);
             regkey.SetValue(strWatchEnable, Convert.ToInt32(watchEnabled));
+            regkey.SetValue(strWatchDeskewEnable, Convert.ToInt32(watchDeskewEnabled));
             regkey.SetValue(strWatchFolder, watchFolder);
             regkey.SetValue(strOutputFolder, outputFolder);
             regkey.SetValue(strBatchOutputFormat, outputFormat);

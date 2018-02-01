@@ -531,4 +531,7 @@
   <data name="tabPage3.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="checkBoxDeskew.Text" xml:space="preserve">
+    <value>Deskew</value>
+  </data>
 </root>

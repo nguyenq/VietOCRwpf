@@ -26,64 +26,58 @@ namespace VietOCR
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private OpenFileDialog openFileDialog1;
 
-        private string watchFolder;
-
         public string WatchFolder
         {
-            get { return watchFolder; }
-            set { watchFolder = value; }
+            get;
+            set;
         }
-        private string outputFolder;
 
         public string OutputFolder
         {
-            get { return outputFolder; }
-            set { outputFolder = value; }
+            get;
+            set;
         }
-        private bool watchEnabled;
 
         public bool WatchEnabled
         {
-            get { return watchEnabled; }
-            set { watchEnabled = value; }
+            get;
+            set;
         }
 
-        private string dangAmbigsPath;
+        public bool WatchDeskewEnabled
+        {
+            get;
+            set;
+        }
 
         public string DangAmbigsPath
         {
-            get { return dangAmbigsPath; }
-            set { dangAmbigsPath = value; }
+            get;
+            set;
         }
-
-        private string curLangCode;
 
         public string CurLangCode
         {
-            get { return curLangCode; }
-            set { curLangCode = value; }
+            get;
+            set;
         }
-
-        private bool dangAmbigsEnabled;
 
         public bool DangAmbigsEnabled
         {
-            get { return dangAmbigsEnabled; }
-            set { dangAmbigsEnabled = value; }
+            get;
+            set;
         }
 
-        private bool replaceHyphensEnabled;
         public bool ReplaceHyphensEnabled
         {
-            get { return replaceHyphensEnabled; }
-            set { replaceHyphensEnabled = value; }
+            get;
+            set;
         }
 
-        private bool removeHyphensEnabled;
         public bool RemoveHyphensEnabled
         {
-            get { return removeHyphensEnabled; }
-            set { removeHyphensEnabled = value; }
+            get;
+            set;
         }
 
         public string OutputFormat
@@ -106,13 +100,14 @@ namespace VietOCR
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.textBoxWatch.Text = watchFolder;
-            this.textBoxOutput.Text = outputFolder;
-            this.checkBoxWatch.IsChecked = watchEnabled;
-            this.textBoxDangAmbigs.Text = dangAmbigsPath;
-            this.checkBoxDangAmbigs.IsChecked = dangAmbigsEnabled;
-            this.checkBoxReplaceHyphens.IsChecked = replaceHyphensEnabled;
-            this.checkBoxRemoveHyphens.IsChecked = removeHyphensEnabled;
+            this.textBoxWatch.Text = WatchFolder;
+            this.textBoxOutput.Text = OutputFolder;
+            this.checkBoxWatch.IsChecked = WatchEnabled;
+            this.textBoxDangAmbigs.Text = DangAmbigsPath;
+            this.checkBoxDangAmbigs.IsChecked = DangAmbigsEnabled;
+            this.checkBoxReplaceHyphens.IsChecked = ReplaceHyphensEnabled;
+            this.checkBoxRemoveHyphens.IsChecked = RemoveHyphensEnabled;
+            this.checkBoxDeskew.IsChecked = WatchDeskewEnabled;
 
             //this.toolTip1.SetToolTip(this.btnWatch, Properties.Resources.Browse);
             //this.toolTip1.SetToolTip(this.btnOutput, Properties.Resources.Browse);
@@ -123,10 +118,11 @@ namespace VietOCR
         {
             base.OnClosed(ea);
 
-            watchEnabled = this.checkBoxWatch.IsChecked.Value;
-            dangAmbigsEnabled = this.checkBoxDangAmbigs.IsChecked.Value;
-            replaceHyphensEnabled = this.checkBoxReplaceHyphens.IsChecked.Value;
-            removeHyphensEnabled = this.checkBoxRemoveHyphens.IsChecked.Value;
+            WatchEnabled = this.checkBoxWatch.IsChecked.Value;
+            DangAmbigsEnabled = this.checkBoxDangAmbigs.IsChecked.Value;
+            ReplaceHyphensEnabled = this.checkBoxReplaceHyphens.IsChecked.Value;
+            RemoveHyphensEnabled = this.checkBoxRemoveHyphens.IsChecked.Value;
+            WatchDeskewEnabled = this.checkBoxDeskew.IsChecked.Value;
         }
 
         public virtual void ChangeUILanguage(string locale)
@@ -138,38 +134,38 @@ namespace VietOCR
         private void btnWatch_Click(object sender, RoutedEventArgs e)
         {
             this.folderBrowserDialog1.Description = "Set Watch Folder.";
-            this.folderBrowserDialog1.SelectedPath = watchFolder;
+            this.folderBrowserDialog1.SelectedPath = WatchFolder;
 
             if (this.folderBrowserDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                watchFolder = this.folderBrowserDialog1.SelectedPath;
-                this.textBoxWatch.Text = watchFolder;
+                WatchFolder = this.folderBrowserDialog1.SelectedPath;
+                this.textBoxWatch.Text = WatchFolder;
             }
         }
 
         private void btnOutput_Click(object sender, RoutedEventArgs e)
         {
             this.folderBrowserDialog1.Description = "Set Output Folder.";
-            this.folderBrowserDialog1.SelectedPath = outputFolder;
+            this.folderBrowserDialog1.SelectedPath = OutputFolder;
 
             if (this.folderBrowserDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                outputFolder = this.folderBrowserDialog1.SelectedPath;
-                this.textBoxOutput.Text = outputFolder;
+                OutputFolder = this.folderBrowserDialog1.SelectedPath;
+                this.textBoxOutput.Text = OutputFolder;
             }
         }
 
         private void btnDangAmbigs_Click(object sender, RoutedEventArgs e)
         {
-            this.openFileDialog1.Title = String.Format("Set Path to {0}.DangAmbigs.txt", curLangCode);
-            this.openFileDialog1.InitialDirectory = dangAmbigsPath;
+            this.openFileDialog1.Title = String.Format("Set Path to {0}.DangAmbigs.txt", CurLangCode);
+            this.openFileDialog1.InitialDirectory = DangAmbigsPath;
 
             Nullable<bool> result = openFileDialog1.ShowDialog();
 
             if (result.HasValue && result.Value)
             {
-                dangAmbigsPath = System.IO.Path.GetDirectoryName(this.openFileDialog1.FileName);
-                this.textBoxDangAmbigs.Text = dangAmbigsPath;
+                DangAmbigsPath = System.IO.Path.GetDirectoryName(this.openFileDialog1.FileName);
+                this.textBoxDangAmbigs.Text = DangAmbigsPath;
             }
         }
 

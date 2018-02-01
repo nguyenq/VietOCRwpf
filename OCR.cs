@@ -91,6 +91,12 @@ namespace VietOCR
             set;
         }
 
+        public bool Deskew
+        {
+            get;
+            set;
+        }
+
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public string RecognizeText(IList<T> imageEntities, string inputName, Rectangle selection)
         {
