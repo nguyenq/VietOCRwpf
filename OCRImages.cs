@@ -17,10 +17,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
+
 using Tesseract;
-using System.Runtime.InteropServices;
+using VietOCR.NET.Utilities;
 
 namespace VietOCR
 {
@@ -183,7 +183,12 @@ namespace VietOCR
             else
             {
                 PixArray pixA = PixArray.Create(0);
-                pixA.Add(Pix.LoadFromFile(filename));
+                IList<Image> imageList = ImageIOHelper.GetImageList(new FileInfo(filename));
+                foreach (Image image in imageList)
+                {
+                    pixA.Add(ConvertBitmapToPix(image));
+                }
+
                 return pixA;
             }
         }

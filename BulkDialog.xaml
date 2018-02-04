@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:VietOCR"
         xmlns:resx="clr-namespace:VietOCR"
         mc:Ignorable="d"
-        Title="{x:Static resx:BulkDialog.this_Title}" Height="166" Width="375" Loaded="Window_Loaded" ResizeMode="NoResize">
+        Title="{x:Static resx:BulkDialog.this_Title}" Height="180" Width="375" Loaded="Window_Loaded" ResizeMode="NoResize">
     <Window.Resources>
         <x:Array x:Key="outputFormats" Type="sys:String" 
             xmlns:sys="clr-namespace:System;assembly=mscorlib">
@@ -16,11 +16,12 @@
             <sys:String>pdf</sys:String>
         </x:Array>
     </Window.Resources>
-    <Grid Margin="10,10,10,20">
+    <Grid Margin="10,10,10,10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="7*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="105*"/>
@@ -35,13 +36,16 @@
         <Button x:Name="btnOutput" Content="..." HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Click="btnOutput_Click" ToolTip="Browse" Grid.Column="2" Grid.Row="1"/>
         <Label x:Name="labelOutputFormat" Content="{x:Static resx:BulkDialog.labelOutputFormat_Text}" HorizontalAlignment="Left"  VerticalAlignment="Center" Grid.ColumnSpan="2" Grid.Row="2"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2">
+            <ComboBox x:Name="comboBoxOutputFormat" Width="60" VerticalAlignment="Center"  MouseEnter="comboBoxOutputFormat_MouseEnter" ItemsSource="{StaticResource outputFormats}" />
+            <CheckBox x:Name="checkBoxDeskew" Content="{x:Static resx:BulkDialog.checkBoxDeskew_Text}" VerticalAlignment="Center" Margin="40,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3" >
             <StackPanel.Resources>
                 <Style TargetType="{x:Type Button}">
-                    <Setter Property="Margin" Value="5,0,5,0"/>
+                    <Setter Property="Margin" Value="5,0,10,0"/>
                 </Style>
             </StackPanel.Resources>
-            <ComboBox x:Name="comboBoxOutputFormat" Width="60" VerticalAlignment="Center"  MouseEnter="comboBoxOutputFormat_MouseEnter" ItemsSource="{StaticResource outputFormats}" />
-            <Button x:Name="buttonRun" Content="{x:Static resx:BulkDialog.buttonRun_Text}" VerticalAlignment="Center" Width="70" Margin="20,0,5,0" Click="buttonRun_Click" IsDefault="True" />
+            <Button x:Name="buttonRun" Content="{x:Static resx:BulkDialog.buttonRun_Text}" VerticalAlignment="Center" Width="70"  Click="buttonRun_Click" IsDefault="True" />
             <Button x:Name="buttonCancel" Content="{x:Static resx:BulkDialog.buttonCancel_Text}" VerticalAlignment="Center" Width="70" IsCancel="True" />
         </StackPanel>
     </Grid>

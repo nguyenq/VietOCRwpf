@@ -19,7 +19,7 @@ namespace VietOCR {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public partial class BulkDialog {
@@ -28,7 +28,7 @@ namespace VietOCR {
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
-     
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -326,6 +326,15 @@ namespace VietOCR {
         public static string buttonRun_ToolTip {
             get {
                 return ResourceManager.GetString("buttonRun.ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deskew.
+        /// </summary>
+        public static string checkBoxDeskew_Text {
+            get {
+                return ResourceManager.GetString("checkBoxDeskew.Text", resourceCulture);
             }
         }
         

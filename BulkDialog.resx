@@ -351,4 +351,7 @@
   <data name="folderBrowserDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>17, 17</value>
   </data>
+  <data name="checkBoxDeskew.Text" xml:space="preserve">
+    <value>Deskew</value>
+  </data>
 </root>

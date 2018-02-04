@@ -33,10 +33,12 @@ namespace VietOCR
         const string strInputFolder = "InputFolder";
         const string strBulkOutputFolder = "BulkOutputFolder";
         const string strBulkOutputFormat = "BulkOutputFormat";
+        const string strBulkDeskewEnable = "BulkDeskewEnable";
 
         private string inputFolder;
         private string outputFolder;
         private string outputFormat;
+        protected bool bulkDeskewEnabled;
 
         private System.ComponentModel.BackgroundWorker backgroundWorkerBulk;
 
@@ -82,6 +84,7 @@ namespace VietOCR
             bulkDialog.InputFolder = inputFolder;
             bulkDialog.OutputFolder = outputFolder;
             bulkDialog.OutputFormat = outputFormat;
+            bulkDialog.DeskewEnabled = bulkDeskewEnabled;
 
             Nullable<bool> dialogResult = bulkDialog.ShowDialog();
             if (dialogResult.HasValue && dialogResult.Value)
@@ -89,6 +92,7 @@ namespace VietOCR
                 inputFolder = bulkDialog.InputFolder;
                 outputFolder = bulkDialog.OutputFolder;
                 outputFormat = bulkDialog.OutputFormat;
+                bulkDeskewEnabled = bulkDialog.DeskewEnabled;
 
                 this.statusLabel.Content = Properties.Resources.OCRrunning;
                 Mouse.OverrideCursor = Cursors.Wait;
@@ -119,7 +123,7 @@ namespace VietOCR
         {
             // Get the BackgroundWorker that raised this event.
             BackgroundWorker worker = sender as BackgroundWorker;
-            string imageFilters = "*.tif|*.tiff|*.jpg|*.jpeg|*.gif|*.png|*.bmp|*.pdf";
+            string imageFilters = "*.tif|*.jpg|*.jpeg|*.gif|*.png|*.bmp|*.pdf";
             List<string> files = new List<string>();
             foreach (string filter in imageFilters.Split('|'))
             {
@@ -144,7 +148,7 @@ namespace VietOCR
             try
             {
                 string outputFilename = imageFile.FullName.Substring(inputFolder.Length + 1);
-                OCRHelper.PerformOCR(imageFile.FullName, Path.Combine(outputFolder, outputFilename), curLangCode, selectedPSM, outputFormat, false);
+                OCRHelper.PerformOCR(imageFile.FullName, Path.Combine(outputFolder, outputFilename), curLangCode, selectedPSM, outputFormat, bulkDeskewEnabled);
             }
             catch
             {
@@ -222,6 +226,7 @@ namespace VietOCR
             inputFolder = (string)regkey.GetValue(strInputFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
             outputFolder = (string)regkey.GetValue(strBulkOutputFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
             outputFormat = (string)regkey.GetValue(strBulkOutputFormat, "text");
+            bulkDeskewEnabled = Convert.ToBoolean((int)regkey.GetValue(strBulkDeskewEnable, Convert.ToInt32(false)));
         }
 
         protected override void SaveRegistryInfo(RegistryKey regkey)
@@ -230,6 +235,7 @@ namespace VietOCR
             regkey.SetValue(strInputFolder, inputFolder);
             regkey.SetValue(strBulkOutputFolder, outputFolder);
             regkey.SetValue(strBulkOutputFormat, outputFormat);
+            regkey.SetValue(strBulkDeskewEnable, Convert.ToInt32(bulkDeskewEnabled));
         }
     }
 }

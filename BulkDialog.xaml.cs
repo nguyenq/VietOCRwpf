@@ -23,19 +23,17 @@ namespace VietOCR
     public partial class BulkDialog : Window
     {
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private string inputFolder;
 
         public string InputFolder
         {
-            get { return inputFolder; }
-            set { inputFolder = value; }
+            get;
+            set;
         }
-        private string outputFolder;
 
         public string OutputFolder
         {
-            get { return outputFolder; }
-            set { outputFolder = value; }
+            get;
+            set;
         }
 
         public string OutputFormat
@@ -48,6 +46,18 @@ namespace VietOCR
             }
         }
 
+        public bool DeskewEnabled
+        {
+            get
+            {
+                return this.checkBoxDeskew.IsChecked.Value;
+            }
+            set
+            {
+                this.checkBoxDeskew.IsChecked = value;
+            }
+        }
+
         public BulkDialog()
         {
             InitializeComponent();
@@ -57,8 +67,9 @@ namespace VietOCR
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.textBoxInput.Text = inputFolder;
-            this.textBoxOutput.Text = outputFolder;
+            this.textBoxInput.Text = InputFolder;
+            this.textBoxOutput.Text = OutputFolder;
+            
         }
 
         /// <summary>
@@ -79,24 +90,24 @@ namespace VietOCR
         private void btnInput_Click(object sender, RoutedEventArgs e)
         {
             this.folderBrowserDialog1.Description = "Set Input Image Folder.";
-            this.folderBrowserDialog1.SelectedPath = inputFolder;
+            this.folderBrowserDialog1.SelectedPath = InputFolder;
 
             if (this.folderBrowserDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                inputFolder = this.folderBrowserDialog1.SelectedPath;
-                this.textBoxInput.Text = inputFolder;
+                InputFolder = this.folderBrowserDialog1.SelectedPath;
+                this.textBoxInput.Text = InputFolder;
             }
         }
 
         private void btnOutput_Click(object sender, RoutedEventArgs e)
         {
             this.folderBrowserDialog1.Description = "Set Output Folder.";
-            this.folderBrowserDialog1.SelectedPath = outputFolder;
+            this.folderBrowserDialog1.SelectedPath = OutputFolder;
 
             if (this.folderBrowserDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                outputFolder = this.folderBrowserDialog1.SelectedPath;
-                this.textBoxOutput.Text = outputFolder;
+                OutputFolder = this.folderBrowserDialog1.SelectedPath;
+                this.textBoxOutput.Text = OutputFolder;
             }
         }
 
