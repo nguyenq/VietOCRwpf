@@ -18,6 +18,7 @@ namespace VietOCR
         /// <param name="langCode">language code</param>
         /// <param name="pageSegMode">page segmentation mode</param>
         /// <param name="outputFormat">format of output file. Possible values: <code>text</code>, <code>text+</code> (with post-corrections), <code>hocr</code></param>
+        /// <param name="deskew">deskew</param>
         public static void PerformOCR(string imageFile, string outputFile, string langCode, string pageSegMode, string outputFormat, bool deskew)
         {
             DirectoryInfo dir = Directory.GetParent(outputFile);
