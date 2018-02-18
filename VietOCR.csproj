@@ -272,7 +272,7 @@
     <Content Include="Data\TessLangDataURL.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="x86\liblept1751.dll" />
+    <None Include="x86\liblept1753.dll" />
     <Resource Include="readme_cs_ku.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -332,7 +332,7 @@
     <Content Include="Library\pdfpagecount.ps">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="x64\liblept1751.dll">
+    <Content Include="x64\liblept1753.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="x64\libtesseract400.dll">
