@@ -33,9 +33,9 @@ namespace VietOCR
         public GuiWithOEM()
         {
             Dictionary<string, string> oemDict = new Dictionary<string, string>();
-            oemDict.Add("LegacyOnly", "0 - Legacy Engine Only");
+            oemDict.Add("TesseractOnly", "0 - Legacy Engine Only");
             oemDict.Add("LstmOnly", "1 - LSTM Engine Only");
-            oemDict.Add("LegacyAndLstm", "2 - Legacy & LSTM Engines");
+            oemDict.Add("TesseractAndLstm", "2 - Legacy & LSTM Engines");
             oemDict.Add("Default", "3 - Default");
 
             //
