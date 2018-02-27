@@ -1245,4 +1245,13 @@
   <data name="wordWrapToolStripMenuItem.Text" xml:space="preserve">
     <value>_Word Wrap</value>
   </data>
+  <data name="despeckleToolStripMenuItem.Text" xml:space="preserve">
+    <value>Remove Speckles</value>
+  </data>
+  <data name="upto2x2ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Up to 2x2</value>
+  </data>
+  <data name="upto3x3ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Up to 3x3</value>
+  </data>
 </root>

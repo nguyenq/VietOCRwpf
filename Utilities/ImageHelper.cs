@@ -937,5 +937,32 @@ namespace VietOCR.NET.Utilities
             }
         }
 
+        /// <summary>
+        /// Remove speckles using Leptonica library.
+        /// </summary>
+        /// <param name="image"></param>
+        /// <param name="selStr"></param>
+        /// <param name="selSize"></param>
+        /// <returns></returns>
+        public static Bitmap RemoveSpeckles(Bitmap image, string selStr, int selSize)
+        {
+            //var sourcePixFilename = @"processing\w91frag.jpg";
+            using (Pix pix = PixConverter.ToPix(image))
+            {
+                 PixColormap map = pix.Colormap;
+                 pix.Colormap = null; // work around NPE during despeckle
+
+                // remove speckles
+                using (Pix result = pix.Despeckle(selStr, selSize))
+                {
+                    if (result == null)
+                    {
+                        return image;
+                    }
+
+                    return InvertColor(PixConverter.ToBitmap(result)); // somehow, invert is needed
+                }
+            }
+        }
     }
 }

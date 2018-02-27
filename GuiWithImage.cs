@@ -20,11 +20,12 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using Microsoft.Win32;
-using VietOCR.NET.Utilities;
 using System.Drawing.Imaging;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Controls;
+
+using VietOCR.NET.Utilities;
 
 namespace VietOCR
 {
@@ -224,7 +225,48 @@ namespace VietOCR
             {
                 MessageBox.Show(this, Properties.Resources.Require_grayscale, strProgName, MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
 
+        protected override void despeckle2x2ToolStripMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (imageList == null)
+            {
+                MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
+                return;
+            }
+
+            try
+            {
+                originalImage = imageList[imageIndex];
+                imageList[imageIndex] = ImageHelper.RemoveSpeckles((Bitmap)originalImage, Tesseract.Pix.SEL_STR2, 2);
+                this.imageMain.Source = ImageConverter.BitmapToImageSource(imageList[imageIndex]);
+                stack.Push(originalImage);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, ex.Message, strProgName, MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        protected override void despeckle3x3ToolStripMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (imageList == null)
+            {
+                MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
+                return;
+            }
+
+            try
+            {
+                originalImage = imageList[imageIndex];
+                imageList[imageIndex] = ImageHelper.RemoveSpeckles((Bitmap)originalImage, Tesseract.Pix.SEL_STR3, 3);
+                this.imageMain.Source = ImageConverter.BitmapToImageSource(imageList[imageIndex]);
+                stack.Push(originalImage);
+            }
+            catch
+            {
+                MessageBox.Show(this, Properties.Resources.Require_grayscale, strProgName, MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         protected override void grayscaleToolStripMenuItem_Click(object sender, RoutedEventArgs e)

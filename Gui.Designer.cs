@@ -19,7 +19,7 @@ namespace VietOCR {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public partial class Gui {
@@ -28,7 +28,6 @@ namespace VietOCR {
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
-       
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -162,6 +161,15 @@ namespace VietOCR {
         public static string deskewToolStripMenuItem_Text {
             get {
                 return ResourceManager.GetString("deskewToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove Speckles.
+        /// </summary>
+        public static string despeckleToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("despeckleToolStripMenuItem.Text", resourceCulture);
             }
         }
         
@@ -1189,6 +1197,24 @@ namespace VietOCR {
         public static string undoToolStripMenuItem_Text {
             get {
                 return ResourceManager.GetString("undoToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Up to 2x2.
+        /// </summary>
+        public static string upto2x2ToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("upto2x2ToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Up to 3x3.
+        /// </summary>
+        public static string upto3x3ToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("upto3x3ToolStripMenuItem.Text", resourceCulture);
             }
         }
         
