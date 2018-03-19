@@ -329,9 +329,6 @@
     <Resource Include="readme_cs_ne.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Content Include="Library\pdfpagecount.ps">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="x64\liblept1753.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -983,6 +980,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Library\" />
     <Folder Include="Themes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
