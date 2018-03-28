@@ -4,8 +4,9 @@
 
 /bin
 /obj
-/packages/NHunspell.1.2.5554.16953
 *.suo
 /Setup/Debug
 /Setup/Release
 /.vs
+/packages
+/TestResults

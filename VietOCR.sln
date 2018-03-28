@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VietOCR", "VietOCR.csproj",
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{76C0F1BE-1BA1-4096-8A4E-8E35A5E361C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VietOCRTests", "..\VietOCRTests\VietOCRTests.csproj", "{7A494EEB-25AF-4A72-BF0C-C133310F74C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,12 +21,17 @@ Global
 		{1DDD5F42-D710-4AB7-BAA9-5A8C2A83EFCF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{76C0F1BE-1BA1-4096-8A4E-8E35A5E361C9}.Debug|Any CPU.ActiveCfg = Debug
 		{76C0F1BE-1BA1-4096-8A4E-8E35A5E361C9}.Release|Any CPU.ActiveCfg = Release
+		{7A494EEB-25AF-4A72-BF0C-C133310F74C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A494EEB-25AF-4A72-BF0C-C133310F74C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A494EEB-25AF-4A72-BF0C-C133310F74C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A494EEB-25AF-4A72-BF0C-C133310F74C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_SortFileContentOnSave = True
 		RESX_ResXSortingComparison = CurrentCulture
+		RESX_SortFileContentOnSave = True
+		SolutionGuid = {631CDFDA-3AEA-40F5-8FD9-F9827F80034C}
 	EndGlobalSection
 EndGlobal
