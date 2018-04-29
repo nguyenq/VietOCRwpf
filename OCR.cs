@@ -29,7 +29,7 @@ namespace VietOCR
         protected const string CONFIGS_FILE = "tess_configs";
         protected const string CONFIGVARS_FILE = "tess_configvars";
 
-        protected readonly string Datapath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\tessdata\";
+        protected readonly string Datapath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\tessdata";
 
         protected Rectangle rect = Rectangle.Empty;
         BackgroundWorker worker;
