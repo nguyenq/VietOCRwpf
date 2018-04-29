@@ -117,7 +117,7 @@
                     <MenuItem x:Name="upto3x3ToolStripMenuItem" Header="{x:Static resx:Gui.upto3x3ToolStripMenuItem_Text}" InputGestureText="Ctrl+Shift+3" Click="despeckle3x3ToolStripMenuItem_Click" />
                 </MenuItem>
                 <Separator />
-                <MenuItem x:Name="undoToolStripMenuItem" Header="{x:Static resx:Gui.undoToolStripMenuItem_Text}"  InputGestureText="Ctrl+Shift+Z" Command="ApplicationCommands.Undo" />
+                <MenuItem x:Name="undoToolStripMenuItem" Header="{x:Static resx:Gui.undoToolStripMenuItem_Text}"  InputGestureText="Ctrl+Shift+Z" Click="undoToolStripMenuItem_Click" />
                 <Separator />
                 <MenuItem x:Name="screenshotModeToolStripMenuItem" Header="{x:Static resx:Gui.screenshotModeToolStripMenuItem_Text}" Click="screenshotModeToolStripMenuItem_Click"  />
                 <Separator />

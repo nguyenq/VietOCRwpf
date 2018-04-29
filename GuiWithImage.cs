@@ -269,6 +269,17 @@ namespace VietOCR
             }
         }
 
+        protected override void undoToolStripMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (stack.Count == 0)
+            {
+                return;
+            }
+
+            imageList[imageIndex] = stack.Pop();
+            displayImage();
+        }
+
         protected override void grayscaleToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
             if (imageList == null)

@@ -244,6 +244,11 @@ namespace VietOCR
 
         }
 
+        protected virtual void undoToolStripMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         protected virtual void screenshotModeToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
             this.screenshotModeToolStripMenuItem.IsChecked ^= true;
