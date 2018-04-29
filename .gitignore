@@ -9,3 +9,5 @@
 /Setup/Debug
 /Setup/Release
 /.vs
+/packages
+/TestResults
