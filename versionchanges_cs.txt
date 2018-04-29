@@ -88,7 +88,7 @@ Version 4.4 (16 October 2017)
 Version 4.5 (2 December 2017)
 - Update Tesseract.NET library (Leptonica 1.74.4)
 
-Version 5.0alpha (28 February 2018)
+Version 5.0alpha (28 March 2018)
 - Rewrite using Windows Presentation Foundation (WPF)
 - Upgrade Tesseract.NET (Tesseract 4.00alpha c6e8916)
 - Upgrade Leptonica 1.75.3
@@ -96,3 +96,4 @@ Version 5.0alpha (28 February 2018)
 - Upgrade Tesseract 4.00 fast language packs
 - Autodeskew for batch and bulk processes
 - Implement despeckle function
+- Remove GS DLL due to license incompatibility

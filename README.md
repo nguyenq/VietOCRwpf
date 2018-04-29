@@ -26,3 +26,4 @@ VietOCRwpf is released and distributed under the [Apache License, v2.0](http://w
 ## Dependencies
 * [Microsoft .NET Framework 4.7.1 Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=56116)
 * [Microsoft Visual C++ 2015 Redistributable Package](https://www.microsoft.com/en-us/download/details.aspx?id=53587)
+* [GPL Ghostscript](http://www.ghostscript.com)
