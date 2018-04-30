@@ -225,10 +225,10 @@
                     "Name" = "8:Microsoft .NET Framework 4.7.1 (x86 and x64)"
                     "ProductCode" = "8:.NETFramework,Version=v4.7.1"
                     }
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Visual.C++.14.0.x86"
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Visual.C++.14.0.x64"
                     {
-                    "Name" = "8:Visual C++ \"14\" Runtime Libraries (x86)"
-                    "ProductCode" = "8:Microsoft.Visual.C++.14.0.x86"
+                    "Name" = "8:Visual C++ \"14\" Runtime Libraries (x64)"
+                    "ProductCode" = "8:Microsoft.Visual.C++.14.0.x64"
                     }
                 }
             }
@@ -786,7 +786,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Tesseract, Version=0.0.0.0, Culture=neutral, PublicKeyToken=ebeb3d86bef60cbe, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:Tesseract, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_F65291418B7D310C4CE9F0B362F96354"
@@ -870,7 +870,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:VietOCR.NET"
         "ProductCode" = "8:{3C7B2223-9B69-430A-A323-D05F7F24A4C9}"
-        "PackageCode" = "8:{CAB72523-8748-4483-A91E-F47E612E14B8}"
+        "PackageCode" = "8:{F8F134D0-31AB-45AD-8F90-DB9274D7C33B}"
         "UpgradeCode" = "8:{9DB2C555-29D0-4CEC-996E-E7FD9315AD50}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1531,7 +1531,7 @@
             }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E6D93875DFE84F2394DF8922F6D448CC"
             {
-            "SourcePath" = "8:..\\obj\\Release\\VietOCR.exe"
+            "SourcePath" = "8:..\\obj\\Debug\\VietOCR.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_2ADB5FD5B87C4D4C97B718374331A546"

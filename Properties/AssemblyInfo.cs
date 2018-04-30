@@ -12,7 +12,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("VietUnicode")]
 [assembly: AssemblyProduct("VietOCR.NET")]
-[assembly: AssemblyCopyright("Copyright © VietUnicode 2017")]
+[assembly: AssemblyCopyright("Copyright © VietUnicode 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
