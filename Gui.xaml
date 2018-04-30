@@ -17,7 +17,32 @@
         <CommandBinding Command="ApplicationCommands.Paste" Executed="Paste_Executed" CanExecute="Paste_CanExecute"/>
         <CommandBinding Command="ApplicationCommands.Undo" Executed="Undo_Executed" CanExecute="Undo_CanExecute"/>
         <CommandBinding Command="ApplicationCommands.Close" Executed="Exit_Executed" CanExecute="Exit_CanExecute"/>
+        <CommandBinding Command="local:Gui.Command" Executed="CommandBinding_Executed" />
     </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="saveAsToolStripMenuItem" Key="S" Modifiers="Ctrl+Shift"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="oCRToolStripMenuItem" Key="D" Modifiers="Ctrl"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="postprocessToolStripMenuItem" Key="P" Modifiers="Ctrl"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="brightenToolStripMenuItem" Key="B" Modifiers="Ctrl+Shift"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="contrastToolStripMenuItem" Key="C" Modifiers="Ctrl+Shift"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="gammaToolStripMenuItem" Key="A" Modifiers="Ctrl+Shift"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="thresholdToolStripMenuItem" Key="T" Modifiers="Ctrl+Shift"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="grayscaleToolStripMenuItem" Key="G" Modifiers="Ctrl+Shift"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="monochromeToolStripMenuItem" Key="M" Modifiers="Ctrl+Shift"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="invertToolStripMenuItem" Key="I" Modifiers="Ctrl+Shift"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="sharpenToolStripMenuItem" Key="N" Modifiers="Ctrl+Shift"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="smoothToolStripMenuItem" Key="O" Modifiers="Ctrl+Shift"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="bilateralToolStripMenuItem" Key="R" Modifiers="Ctrl+Shift"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="deskewToolStripMenuItem" Key="D" Modifiers="Ctrl+Shift"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="autocropToolStripMenuItem" Key="X" Modifiers="Ctrl+Shift"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="cropToolStripMenuItem" Key="P" Modifiers="Ctrl+Shift"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="removeLinesToolStripMenuItem" Key="L" Modifiers="Ctrl+Shift"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="upto2x2ToolStripMenuItem" Key="D2" Modifiers="Ctrl+Shift"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="upto3x3ToolStripMenuItem" Key="D3" Modifiers="Ctrl+Shift"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="undoToolStripMenuItem" Key="Z" Modifiers="Ctrl+Shift"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="fontToolStripMenuItem" Key="T" Modifiers="Ctrl"/>
+        <KeyBinding Command="local:Gui.Command" CommandParameter="removeLineBreaksToolStripMenuItem" Key="R" Modifiers="Ctrl"/>
+    </Window.InputBindings>
     <Window.Resources>
         <Style TargetType="Image">
             <Style.Triggers>

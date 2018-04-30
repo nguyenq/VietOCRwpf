@@ -84,6 +84,8 @@ namespace VietOCR
             get { return lookupISO_3_1_Codes; }
         }
 
+        public static readonly RoutedCommand Command = new RoutedCommand();
+
         public Gui()
         {
             InitializeComponent();
@@ -192,6 +194,7 @@ namespace VietOCR
 
         protected void saveAsToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
+            saveAction();
         }
 
         protected virtual void oCRToolStripMenuItem_Click(object sender, RoutedEventArgs e)
@@ -898,6 +901,19 @@ namespace VietOCR
         private void Exit_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
             e.CanExecute = true;
+        }
+
+        private void CommandBinding_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            if (e.Parameter != null)
+            {
+                // Parameter has MenuItem's name
+                MenuItem mi = this.FindName(e.Parameter.ToString()) as MenuItem;
+                if (mi != null)
+                {
+                    mi.RaiseEvent(new RoutedEventArgs(MenuItem.ClickEvent)); // simulate click
+                }
+            }
         }
 
         private void OnSubmenuOpened(object sender, RoutedEventArgs e)
