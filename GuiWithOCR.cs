@@ -186,7 +186,7 @@ namespace VietOCR
             {
                 // Finally, handle the case where the operation succeeded.
                 this.statusLabel.Content = Properties.Resources.OCRcompleted;
-                //this.textBox1.AppendText(e.Result.ToString());
+                this.textBox1.Focus();
             }
 
             Mouse.OverrideCursor = null;

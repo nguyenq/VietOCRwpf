@@ -20,7 +20,7 @@
         <CommandBinding Command="local:Gui.Command" Executed="CommandBinding_Executed" />
     </Window.CommandBindings>
     <Window.InputBindings>
-        <KeyBinding Command="local:Gui.Command" CommandParameter="saveAsToolStripMenuItem" Key="S" Modifiers="Ctrl+Shift"/>
+        <KeyBinding Command="ApplicationCommands.SaveAs" CommandParameter="saveAsToolStripMenuItem" Key="S" Modifiers="Ctrl+Shift"/>
         <KeyBinding Command="local:Gui.Command" CommandParameter="oCRToolStripMenuItem" Key="D" Modifiers="Ctrl"/>
         <KeyBinding Command="local:Gui.Command" CommandParameter="postprocessToolStripMenuItem" Key="P" Modifiers="Ctrl"/>
         <KeyBinding Command="local:Gui.Command" CommandParameter="brightenToolStripMenuItem" Key="B" Modifiers="Ctrl+Shift"/>
@@ -101,8 +101,8 @@
             <MenuItem x:Name="fileToolStripMenuItem" Header="{x:Static resx:Gui.fileToolStripMenuItem_Text}">
                 <MenuItem x:Name="openToolStripMenuItem" Header="{x:Static resx:Gui.openToolStripMenuItem_Text}" Command="ApplicationCommands.Open" />
                 <MenuItem x:Name="scanToolStripMenuItem" Header="{x:Static resx:Gui.scanToolStripMenuItem_Text}" Click="scanToolStripMenuItem_Click" />
-                <MenuItem x:Name="saveToolStripMenuItem" Header="{x:Static resx:Gui.saveToolStripMenuItem_Text}" Command="ApplicationCommands.Save" Click="saveToolStripMenuItem_Click" />
-                <MenuItem x:Name="saveAsToolStripMenuItem" Header="{x:Static resx:Gui.saveAsToolStripMenuItem_Text}" Command="ApplicationCommands.SaveAs" InputGestureText="Ctrl+Shift+S" Click="saveAsToolStripMenuItem_Click"/>
+                <MenuItem x:Name="saveToolStripMenuItem" Header="{x:Static resx:Gui.saveToolStripMenuItem_Text}" Command="ApplicationCommands.Save" />
+                <MenuItem x:Name="saveAsToolStripMenuItem" Header="{x:Static resx:Gui.saveAsToolStripMenuItem_Text}" Command="ApplicationCommands.SaveAs" InputGestureText="Ctrl+Shift+S" />
                 <Separator/>
                 <MenuItem x:Name="recentFilesToolStripMenuItem" Header="{x:Static resx:Gui.recentFilesToolStripMenuItem_Text}">
                     <MenuItem Header="Clear Recent Files"></MenuItem>
@@ -131,7 +131,7 @@
                     <MenuItem x:Name="invertToolStripMenuItem" Header="{x:Static resx:Gui.invertToolStripMenuItem_Text}" InputGestureText="Ctrl+Shift+I" Click="invertToolStripMenuItem_Click" />
                     <MenuItem x:Name="sharpenToolStripMenuItem" Header="{x:Static resx:Gui.sharpenToolStripMenuItem_Text}" InputGestureText="Ctrl+Shift+N" Click="sharpenToolStripMenuItem_Click" />
                     <MenuItem x:Name="smoothToolStripMenuItem" Header="{x:Static resx:Gui.smoothToolStripMenuItem_Text}" InputGestureText="Ctrl+Shift+O" Click="smoothToolStripMenuItem_Click" />
-                    <MenuItem x:Name="bilateralToolStripMenuItem" Header="{x:Static resx:Gui.bilateralToolStripMenuItem_Text}" InputGestureText="Ctrl+Shift+R" Click="bilateralToolStripMenuItem_Click"/>
+                    <MenuItem x:Name="bilateralToolStripMenuItem" Header="{x:Static resx:Gui.bilateralToolStripMenuItem_Text}" InputGestureText="Ctrl+Shift+R" Click="bilateralToolStripMenuItem_Click" Visibility="Collapsed"/>
                 </MenuItem>
                 <MenuItem x:Name="deskewToolStripMenuItem" Header="{x:Static resx:Gui.deskewToolStripMenuItem_Text}"  InputGestureText="Ctrl+Shift+D" Click="deskewToolStripMenuItem_Click"/>
                 <MenuItem x:Name="autocropToolStripMenuItem" Header="{x:Static resx:Gui.autocropToolStripMenuItem_Text}"  InputGestureText="Ctrl+Shift+X" Click="autocropToolStripMenuItem_Click"/>

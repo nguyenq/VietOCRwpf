@@ -119,7 +119,7 @@ namespace VietOCR
                     resultRenderers.Add(ResultRenderer.CreateHOcrRenderer(OutputFile));
                     break;
                 case "pdf":
-                    resultRenderers.Add(ResultRenderer.CreatePdfRenderer(OutputFile, Datapath + "\\tessdata", false));
+                    resultRenderers.Add(ResultRenderer.CreatePdfRenderer(OutputFile, Datapath, false));
                     break;
             }
 

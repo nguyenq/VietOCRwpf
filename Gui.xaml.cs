@@ -194,7 +194,6 @@ namespace VietOCR
 
         protected void saveAsToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            saveAction();
         }
 
         protected virtual void oCRToolStripMenuItem_Click(object sender, RoutedEventArgs e)
