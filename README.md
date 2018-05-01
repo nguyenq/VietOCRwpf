@@ -2,8 +2,6 @@
 
 A .NET GUI frontend for Tesseract OCR engine written using WPF. Supports optical character recognition for Vietnamese and other languages supported by Tesseract.
 
-The program is still in early beta development and expected to be executable soon.
-
 VietOCRwpf is released and distributed under the [Apache License, v2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 ## Features
