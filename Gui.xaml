@@ -336,8 +336,8 @@
                         </Grid>
                     </Expander.Content>
                 </Expander>
-                <ScrollViewer x:Name="scrollViewer" DockPanel.Dock="Right" HorizontalScrollBarVisibility="Auto" AllowDrop="True" DragOver="Window_DragOver" Drop="Window_Drop" PreviewMouseWheel="scrollViewer_PreviewMouseWheel" >
-                    <localcon:ImageCanvas x:Name="imageCanvas" VerticalAlignment="Top" Width="{Binding ActualWidth, ElementName=imageMain}" Height="{Binding ActualHeight, ElementName=imageMain}" >
+                <ScrollViewer x:Name="scrollViewer" DockPanel.Dock="Right" Background="{x:Static SystemColors.ControlBrush}" HorizontalScrollBarVisibility="Auto" AllowDrop="True" DragOver="Window_DragOver" Drop="Window_Drop" PreviewMouseWheel="scrollViewer_PreviewMouseWheel" >
+                    <localcon:ImageCanvas x:Name="imageCanvas" VerticalAlignment="Center" Width="{Binding ActualWidth, ElementName=imageMain}" Height="{Binding ActualHeight, ElementName=imageMain}" >
                         <ContentControl x:Name="canvasContent" Width="0" Height="0" 
                                 Canvas.Top="0" Canvas.Left="0"
                                 Template="{StaticResource DesignerItemTemplate}"
