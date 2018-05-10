@@ -980,7 +980,7 @@ namespace VietOCR
                 curLangCode = GetLangCodes(dataSource.SelectedLanguagesText);
 
                 // Hide Viet Input Method submenu if selected OCR Language is not Vietnamese
-                bool vie = curLangCode.Contains("vie");
+                bool vie = curLangCode.Contains("vie") || curLangCode.Contains("Vietnamese");
                 VietKeyHandler.VietModeEnabled = vie;
                 this.vietInputMethodToolStripMenuItem.Visibility = vie ? Visibility.Visible : Visibility.Collapsed;
 
@@ -1007,7 +1007,7 @@ namespace VietOCR
             char[] delimiterChars = { ',', '+' };
             string langCode = string.Empty;
 
-            foreach (var lang in languages.Replace(" ", string.Empty).Split(delimiterChars))
+            foreach (var lang in languages.Split(delimiterChars))
             {
                 if (string.IsNullOrWhiteSpace(lang))
                 {

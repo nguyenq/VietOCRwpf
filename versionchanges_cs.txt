@@ -99,3 +99,6 @@ Version 5.0 (30 April 2018)
 - Upgrade Tesseract 4.00 fast language packs
 - Autodeskew for batch and bulk processes
 - Implement despeckle function
+
+Version 5.0.1 (10 May 2018)
+- Update available language list to include scripts
