@@ -1254,4 +1254,7 @@
   <data name="upto3x3ToolStripMenuItem.Text" xml:space="preserve">
     <value>Up to 3x3</value>
   </data>
+  <data name="convertPdfToolStripMenuItem.Text" xml:space="preserve">
+    <value>_Convert PDF...</value>
+  </data>
 </root>

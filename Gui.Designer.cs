@@ -27,7 +27,7 @@ namespace VietOCR {
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+               
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -143,6 +143,15 @@ namespace VietOCR {
         public static string contrastToolStripMenuItem_Text {
             get {
                 return ResourceManager.GetString("contrastToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Convert PDF....
+        /// </summary>
+        public static string convertPdfToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("convertPdfToolStripMenuItem.Text", resourceCulture);
             }
         }
         

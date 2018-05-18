@@ -314,6 +314,11 @@ namespace VietOCR
 
         }
 
+        protected virtual void convertPdfToolStripMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void helpToolStripMenuItem1_Click(object sender, RoutedEventArgs e)
         {
             HtmlHelpDialog dlg = new HtmlHelpDialog(Properties.Resources.readme, "VietOCR");

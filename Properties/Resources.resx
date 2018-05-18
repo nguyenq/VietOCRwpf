@@ -343,4 +343,13 @@ Please run the program as administrator.</value>
   <data name="VietOCR_Help" xml:space="preserve">
     <value>VietOCR.NET Help</value>
   </data>
+  <data name="ConvertPDFcompleted" xml:space="preserve">
+    <value>Convert PDF completed. </value>
+  </data>
+  <data name="ConvertPDF_running" xml:space="preserve">
+    <value>Convert PDF running...</value>
+  </data>
+  <data name="Select_Input_PDF" xml:space="preserve">
+    <value>Select Input PDF</value>
+  </data>
 </root>

@@ -224,6 +224,24 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Convert PDF running....
+        /// </summary>
+        internal static string ConvertPDF_running {
+            get {
+                return ResourceManager.GetString("ConvertPDF_running", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Convert PDF completed. .
+        /// </summary>
+        internal static string ConvertPDFcompleted {
+            get {
+                return ResourceManager.GetString("ConvertPDFcompleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Correction completed..
         /// </summary>
         internal static string Correcting_completed {
@@ -625,6 +643,15 @@ namespace VietOCR.Properties {
         internal static string Select_Input_Images {
             get {
                 return ResourceManager.GetString("Select_Input_Images", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Input PDF.
+        /// </summary>
+        internal static string Select_Input_PDF {
+            get {
+                return ResourceManager.GetString("Select_Input_PDF", resourceCulture);
             }
         }
         

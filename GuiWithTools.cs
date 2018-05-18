@@ -40,6 +40,7 @@ namespace VietOCR
         private System.ComponentModel.BackgroundWorker backgroundWorkerMergeTiff;
         private System.ComponentModel.BackgroundWorker backgroundWorkerMergePdf;
         private System.ComponentModel.BackgroundWorker backgroundWorkerSplitTiff;
+        private System.ComponentModel.BackgroundWorker backgroundWorkerConvertPdf;
 
         public GuiWithTools()
         {
@@ -47,6 +48,7 @@ namespace VietOCR
             this.backgroundWorkerMergeTiff = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorkerMergePdf = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorkerSplitTiff = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorkerConvertPdf = new System.ComponentModel.BackgroundWorker();
             // 
             // backgroundWorkerSplitPdf
             // 
@@ -71,6 +73,12 @@ namespace VietOCR
             this.backgroundWorkerSplitTiff.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerSplitTiff_DoWork);
             this.backgroundWorkerSplitTiff.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorkerSplitTiff_ProgressChanged);
             this.backgroundWorkerSplitTiff.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerSplitTiff_RunWorkerCompleted);
+            // 
+            // backgroundWorkerConvertPdf
+            // 
+            this.backgroundWorkerConvertPdf.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerConvertPdf_DoWork);
+            this.backgroundWorkerConvertPdf.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorkerConvertPdf_ProgressChanged);
+            this.backgroundWorkerConvertPdf.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerConvertPdf_RunWorkerCompleted);
 
         }
 
@@ -420,8 +428,97 @@ namespace VietOCR
             this.statusLabel.Content = String.Empty;
             this.textBox1.Cursor = null;
             this.Cursor = null;
-        }        
-        
+        }
+
+        protected override void convertPdfToolStripMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.InitialDirectory = imageFolder;
+            openFileDialog1.Title = Properties.Resources.Select_Input_PDF;
+            openFileDialog1.Filter = "PDF Files (*.pdf)|*.pdf";
+            openFileDialog1.FilterIndex = filterIndex;
+            openFileDialog1.RestoreDirectory = true;
+
+            Nullable<bool> result = openFileDialog1.ShowDialog();
+
+            if (result.HasValue && result.Value)
+            {
+                filterIndex = openFileDialog1.FilterIndex;
+                imageFolder = Path.GetDirectoryName(openFileDialog1.FileName);
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.InitialDirectory = imageFolder;
+                saveFileDialog1.Title = Properties.Resources.Save_Multipage_TIFF_Image;
+                saveFileDialog1.Filter = "Image Files (*.tif;*.tiff)|*.tif;*.tiff";
+                saveFileDialog1.RestoreDirectory = true;
+
+                result = saveFileDialog1.ShowDialog();
+
+                if (result.HasValue && result.Value)
+                {
+                    ArrayList args = new ArrayList();
+                    args.Add(openFileDialog1.FileName);
+                    args.Add(saveFileDialog1.FileName);
+
+                    this.Cursor = Cursors.Wait;
+                    this.statusLabel.Content = Properties.Resources.ConvertPDF_running;
+
+                    this.textBox1.Cursor = Cursors.Wait;
+                    this.toolStripProgressBar1.IsEnabled = true;
+                    this.toolStripProgressBar1.Visibility = Visibility.Visible;
+                    //this.toolStripProgressBar1.Style = ProgressBarStyle.Marquee;
+
+                    // Start the asynchronous operation.
+                    backgroundWorkerConvertPdf.RunWorkerAsync(args);
+                }
+            }
+        }
+
+        private void backgroundWorkerConvertPdf_DoWork(object sender, DoWorkEventArgs e)
+        {
+            ArrayList args = (ArrayList)e.Argument;
+            string inputFile = (string)args[0];
+            string targetFile = (string)args[1];
+            string outputTiffFile = PdfUtilities.ConvertPdf2Tiff(inputFile);
+            File.Delete(targetFile);
+            File.Move(outputTiffFile, targetFile);
+            e.Result = targetFile;
+        }
+
+        private void backgroundWorkerConvertPdf_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+
+        }
+
+        private void backgroundWorkerConvertPdf_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            this.toolStripProgressBar1.IsEnabled = false;
+            this.toolStripProgressBar1.Visibility = Visibility.Hidden;
+
+            // First, handle the case where an exception was thrown.
+            if (e.Error != null)
+            {
+                this.statusLabel.Content = String.Empty;
+                MessageBox.Show(this, e.Error.Message, strProgName, MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+            else if (e.Cancelled)
+            {
+                // Next, handle the case where the user canceled the operation.
+                // Note that due to a race condition in the DoWork event handler, the Cancelled
+                // flag may not have been set, even though CancelAsync was called.
+                this.statusLabel.Content = Properties.Resources.canceled;
+            }
+            else
+            {
+                // Finally, handle the case where the operation succeeded.
+                this.statusLabel.Content = Properties.Resources.ConvertPDFcompleted;
+                MessageBox.Show(this, Properties.Resources.ConvertPDFcompleted + Path.GetFileName(e.Result.ToString()) + Properties.Resources.created, strProgName, MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            this.statusLabel.Content = String.Empty;
+            this.textBox1.Cursor = null;
+            this.Cursor = null;
+        }
+
         protected override void LoadRegistryInfo(RegistryKey regkey)
         {
             base.LoadRegistryInfo(regkey);

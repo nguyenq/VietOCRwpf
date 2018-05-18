@@ -173,6 +173,7 @@
                 <Separator/>
                 <MenuItem x:Name="mergePdfToolStripMenuItem" Header="{x:Static resx:Gui.mergePdfToolStripMenuItem_Text}" Click="mergePdfToolStripMenuItem_Click" />
                 <MenuItem x:Name="splitPdfToolStripMenuItem" Header="{x:Static resx:Gui.splitPdfToolStripMenuItem_Text}" Click="splitPdfToolStripMenuItem_Click" />
+                <MenuItem x:Name="convertPdfToolStripMenuItem" Header="{x:Static resx:Gui.convertPdfToolStripMenuItem_Text}" Click="convertPdfToolStripMenuItem_Click" />
             </MenuItem>
             <MenuItem x:Name="helpToolStripMenuItem" Header="{x:Static resx:Gui.helpToolStripMenuItem_Text}">
                 <MenuItem x:Name="helpToolStripMenuItem1" Header="{x:Static resx:Gui.helpToolStripMenuItem1_Text}" Click="helpToolStripMenuItem1_Click" />
