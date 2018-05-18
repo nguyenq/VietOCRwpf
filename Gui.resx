@@ -1255,6 +1255,6 @@
     <value>Up to 3x3</value>
   </data>
   <data name="convertPdfToolStripMenuItem.Text" xml:space="preserve">
-    <value>_Convert PDF...</value>
+    <value>_Convert PDF to TIFF...</value>
   </data>
 </root>

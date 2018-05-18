@@ -628,4 +628,7 @@
   <data name="wordWrapToolStripMenuItem.Text" xml:space="preserve">
     <value>_Xuống hàng</value>
   </data>
+  <data name="convertPdfToolStripMenuItem.Text" xml:space="preserve">
+    <value>Chuyển PDF _sang TIFF...</value>
+  </data>
 </root>
