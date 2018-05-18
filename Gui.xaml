@@ -320,7 +320,7 @@
                     </Button>
                     <Separator/>
                 </ToolBar>
-                <Expander ExpandDirection="Right" HorizontalAlignment="Center">
+                <Expander ExpandDirection="Right" HorizontalAlignment="Center" Background="{x:Static SystemColors.ControlBrush}" >
                     <Expander.Content>
                         <Grid>
                             <Grid.ColumnDefinitions>
