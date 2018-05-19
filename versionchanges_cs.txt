@@ -103,5 +103,5 @@ Version 5.0 (30 April 2018)
 Version 5.0.1 (10 May 2018)
 - Update available language list to include scripts
 
-Version 5.0.2 (18 May 2018)
+Version 5.0.2 (19 May 2018)
 - Add support for Convert PDF to TIFF

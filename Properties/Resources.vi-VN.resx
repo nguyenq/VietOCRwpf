@@ -334,4 +334,13 @@ Hãy chạy chương trình như administrator.</value>
   <data name="Require_grayscale" xml:space="preserve">
     <value>Ảnh có thể cần phải chuyển xám.</value>
   </data>
+  <data name="ConvertPDFcompleted" xml:space="preserve">
+    <value>Convert PDF hoàn tất. </value>
+  </data>
+  <data name="ConvertPDF_running" xml:space="preserve">
+    <value>Convert PDF đang chạy...</value>
+  </data>
+  <data name="Select_Input_PDF" xml:space="preserve">
+    <value>Chọn Input PDF</value>
+  </data>
 </root>
