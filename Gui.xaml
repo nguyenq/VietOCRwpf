@@ -355,7 +355,7 @@
                     </localcon:ImageCanvas>
                 </ScrollViewer>
             </DockPanel>
-            <GridSplitter x:Name="gridSplitter" Width="5" Grid.Column="1"/>
+            <GridSplitter x:Name="gridSplitter" Width="5" Grid.Column="1" HorizontalAlignment="Center" ResizeBehavior="PreviousAndNext"/>
             <DockPanel LastChildFill="True" Grid.Column="2" >
                 <ToolBar x:Name="toolBar2" DockPanel.Dock="Top" HorizontalAlignment="Stretch">
                     <Button x:Name="buttonOCR" VerticalAlignment="Top" Click="buttonOCR_Click" ToolTip="{x:Static resx:Gui.toolStripBtnOCR_ToolTipText}">
