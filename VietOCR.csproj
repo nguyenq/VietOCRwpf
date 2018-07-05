@@ -67,7 +67,7 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="Tesseract, Version=0.0.0.0, Culture=neutral, PublicKeyToken=ebeb3d86bef60cbe, processorArchitecture=MSIL">
+    <Reference Include="Tesseract, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Library\Tesseract.dll</HintPath>
     </Reference>
@@ -272,7 +272,7 @@
     <Content Include="Data\TessLangDataURL.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="x86\liblept1753.dll" />
+    <Content Include="x86\liblept1760.dll" />
     <Resource Include="readme_cs_ku.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -329,7 +329,7 @@
     <Resource Include="readme_cs_ne.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Content Include="x64\liblept1753.dll">
+    <Content Include="x64\liblept1760.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="x64\libtesseract400.dll">
