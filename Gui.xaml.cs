@@ -518,6 +518,11 @@ namespace VietOCR
             return true;
         }
 
+        protected virtual bool saveAsAction()
+        {
+            return true;
+        }
+
         protected bool OkToTrash()
         {
             if (!textModified)
@@ -865,7 +870,7 @@ namespace VietOCR
 
         protected virtual void SaveAs_Executed(object sender, ExecutedRoutedEventArgs e)
         {
-            saveAction();
+            saveAsAction();
         }
 
         private void SaveAs_CanExecute(object sender, CanExecuteRoutedEventArgs e)

@@ -310,7 +310,7 @@ namespace VietOCR
 
         protected override bool saveAction()
         {
-            if (textFilename == null || textFilename.Length == 0)
+            if (string.IsNullOrEmpty(textFilename))
             {
                 return SaveFileDlg();
             }
@@ -318,6 +318,11 @@ namespace VietOCR
             {
                 return SaveTextFile();
             }
+        }
+
+        protected override bool saveAsAction()
+        {
+            return SaveFileDlg();
         }
 
         bool SaveFileDlg()
@@ -328,7 +333,7 @@ namespace VietOCR
             dlg.Filter = "UTF-8 Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
             dlg.FilterIndex = 1;
             dlg.DefaultExt = ".txt";
-            if (textFilename != null && textFilename.Length > 1)
+            if (!string.IsNullOrEmpty(textFilename))
             {
                 dlg.InitialDirectory = Path.GetDirectoryName(textFilename);
                 dlg.FileName = Path.GetFileName(textFilename);
