@@ -216,20 +216,20 @@ namespace VietOCR
             this.imageMain.Height = CurrentImage.Height;
             this.statusLabelDimValue.Content = string.Format("{0} × {1}px  {2}bpp", CurrentImage.Width, CurrentImage.Height, System.Drawing.Bitmap.GetPixelFormatSize(CurrentImage.PixelFormat).ToString());
 
-            //if (this.isFitImageSelected)
-            //{
-            //    Size fitSize = fitImagetoContainer(this.pictureBox1.Image.Width, this.pictureBox1.Image.Height, this.splitContainerImage.Panel2.Width, this.splitContainerImage.Panel2.Height);
-            //    this.pictureBox1.Width = fitSize.Width;
-            //    this.pictureBox1.Height = fitSize.Height;
-            //    setScale();
-            //}
-            //else if (this.scaleX != 1f)
-            //{
-            //    this.pictureBox1.Width = Convert.ToInt32(this.pictureBox1.Width / scaleX);
-            //    this.pictureBox1.Height = Convert.ToInt32(this.pictureBox1.Height / scaleY);
-            //}
+            if (this.isFitImageSelected)
+            {
+                System.Drawing.Size fitSize = fitImagetoContainer((int)this.imageMain.Width, (int)this.imageMain.Height, (int)this.scrollViewer.ActualWidth, (int)this.scrollViewer.ActualHeight);
+                this.imageCanvas.Width = fitSize.Width;
+                this.imageCanvas.Height = fitSize.Height;
+                setScale();
+            }
+            else if (this.scaleX != 1f)
+            {
+                this.imageMain.Width = Convert.ToInt32(this.imageMain.Width / scaleX);
+                this.imageMain.Height = Convert.ToInt32(this.imageMain.Height / scaleY);
+            }
             //curScrollPos = Point.Empty;
-            //this.centerPicturebox();
+            this.centerPicturebox();
 
             this.imageCanvas.Deselect();
             this.imageCanvas.SegmentedRegions = null;

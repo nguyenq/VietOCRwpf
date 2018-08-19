@@ -76,11 +76,11 @@ namespace VietOCR
             this.imageCanvas.Deselect();
             setSegmentedRegions();
 
-            //this.imageMain.Dock = DockStyle.None;
-            //this.imageMain.SizeMode = PictureBoxSizeMode.Zoom;
-            System.Drawing.Size fitSize = fitImagetoContainer((int)this.imageMain.Width, (int)this.imageMain.Height, (int)this.scrollViewer.ViewportWidth, (int)this.scrollViewer.ViewportHeight);
-            this.imageMain.Width = fitSize.Width;
-            this.imageMain.Height = fitSize.Height;
+            //this.imageCanvas.Dock = DockStyle.None;
+            //this.imageCanvas.SizeMode = PictureBoxSizeMode.Zoom;
+            System.Drawing.Size fitSize = fitImagetoContainer((int)this.imageMain.Width, (int)this.imageMain.Height, (int)this.scrollViewer.ActualWidth, (int)this.scrollViewer.ActualHeight);
+            this.imageCanvas.Width = fitSize.Width;
+            this.imageCanvas.Height = fitSize.Height;
             setScale();
             this.centerPicturebox();
             isFitImageSelected = true;
@@ -95,10 +95,10 @@ namespace VietOCR
 
             this.imageCanvas.Deselect();
             setSegmentedRegions();
-            this.imageMain.Width = CurrentImage.Width;
-            this.imageMain.Height = CurrentImage.Height;
-            //this.imageMain.Dock = DockStyle.None;
-            //this.imageMain.SizeMode = PictureBoxSizeMode.Normal;
+            this.imageCanvas.Width = CurrentImage.Width;
+            this.imageCanvas.Height = CurrentImage.Height;
+            //this.imageCanvas.Dock = DockStyle.None;
+            //this.imageCanvas.SizeMode = PictureBoxSizeMode.Normal;
             scaleX = scaleY = 1f;
             this.centerPicturebox();
             //this.splitContainerImage.Panel2.AutoScrollPosition = new System.Drawing.Point(Math.Abs(curScrollPos.X), Math.Abs(curScrollPos.Y));
@@ -150,10 +150,10 @@ namespace VietOCR
             // Zoom works best if you first fit the image according to its true aspect ratio.
             Fit();
             // Make the PictureBox dimensions larger by 25% to effect the Zoom.
-            this.imageMain.Width = Convert.ToInt32(this.imageMain.Width * ZOOM_FACTOR);
-            this.imageMain.Height = Convert.ToInt32(this.imageMain.Height * ZOOM_FACTOR);
-            scaleX = (float)CurrentImage.Width / (float)this.imageMain.Width;
-            scaleY = (float)CurrentImage.Height / (float)this.imageMain.Height;
+            this.imageCanvas.Width = Convert.ToInt32(this.imageCanvas.Width * ZOOM_FACTOR);
+            this.imageCanvas.Height = Convert.ToInt32(this.imageCanvas.Height * ZOOM_FACTOR);
+            scaleX = (float)CurrentImage.Width / (float)this.imageCanvas.Width;
+            scaleY = (float)CurrentImage.Height / (float)this.imageCanvas.Height;
             this.centerPicturebox();
             isFitImageSelected = false;
         }
@@ -169,10 +169,10 @@ namespace VietOCR
             // Zoom works best if you first fit the image according to its true aspect ratio.
             Fit();
             // Make the PictureBox dimensions smaller by 25% to effect the Zoom.
-            this.imageMain.Width = Convert.ToInt32(this.imageMain.Width / ZOOM_FACTOR);
-            this.imageMain.Height = Convert.ToInt32(this.imageMain.Height / ZOOM_FACTOR);
-            scaleX = (float)CurrentImage.Width / (float)this.imageMain.Width;
-            scaleY = (float)CurrentImage.Height / (float)this.imageMain.Height;
+            this.imageCanvas.Width = Convert.ToInt32(this.imageCanvas.Width / ZOOM_FACTOR);
+            this.imageCanvas.Height = Convert.ToInt32(this.imageCanvas.Height / ZOOM_FACTOR);
+            scaleX = (float)CurrentImage.Width / (float)this.imageCanvas.Width;
+            scaleY = (float)CurrentImage.Height / (float)this.imageCanvas.Height;
             this.centerPicturebox();
             isFitImageSelected = false;
         }

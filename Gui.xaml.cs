@@ -575,8 +575,8 @@ namespace VietOCR
 
         protected void setScale()
         {
-            scaleX = (float)this.imageCanvas.Width / (float)this.imageMain.Width;
-            scaleY = (float)this.imageCanvas.Height / (float)this.imageMain.Height;
+            scaleX = (float)this.imageMain.Width / (float)this.imageCanvas.Width;
+            scaleY = (float)this.imageMain.Height / (float)this.imageCanvas.Height;
             if (scaleX > scaleY)
             {
                 scaleY = scaleX;
