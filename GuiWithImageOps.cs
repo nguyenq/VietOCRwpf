@@ -78,7 +78,7 @@ namespace VietOCR
 
             //this.imageCanvas.Dock = DockStyle.None;
             //this.imageCanvas.SizeMode = PictureBoxSizeMode.Zoom;
-            System.Drawing.Size fitSize = fitImagetoContainer((int)this.imageMain.Width, (int)this.imageMain.Height, (int)this.scrollViewer.ActualWidth, (int)this.scrollViewer.ActualHeight);
+            System.Drawing.Size fitSize = fitImagetoContainer((int)this.imageCanvas.Width, (int)this.imageCanvas.Height, (int)this.scrollViewer.ActualWidth, (int)this.scrollViewer.ActualHeight);
             this.imageCanvas.Width = fitSize.Width;
             this.imageCanvas.Height = fitSize.Height;
             setScale();
@@ -128,13 +128,12 @@ namespace VietOCR
 
         private void adjustPictureBoxAfterFlip()
         {
-            this.imageMain.Width = CurrentImage.Width / scaleX;
-            this.imageMain.Height = CurrentImage.Height / scaleY;
+            this.imageCanvas.Width = CurrentImage.Width / scaleX;
+            this.imageCanvas.Height = CurrentImage.Height / scaleY;
             // recalculate scale factors if in Fit Image mode
             if (this.isFitImageSelected)
             {
-                scaleX = (float)this.imageMain.Source.Width / (float)this.imageMain.Width;
-                scaleY = (float)this.imageMain.Source.Height / (float)this.imageMain.Height;
+                setScale();
             }
             this.centerPicturebox();
         }

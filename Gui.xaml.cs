@@ -573,20 +573,6 @@ namespace VietOCR
             //this.imageMain.Invalidate();
         }
 
-        protected void setScale()
-        {
-            scaleX = (float)this.imageMain.Width / (float)this.imageCanvas.Width;
-            scaleY = (float)this.imageMain.Height / (float)this.imageCanvas.Height;
-            if (scaleX > scaleY)
-            {
-                scaleY = scaleX;
-            }
-            else
-            {
-                scaleX = scaleY;
-            }
-        }
-
         protected System.Drawing.Size fitImagetoContainer(int w, int h, int maxWidth, int maxHeight)
         {
             float ratio = (float)w / h;
@@ -960,14 +946,17 @@ namespace VietOCR
                 }
 
                 this.imageCanvas.Deselect();
-                this.imageMain.Width += this.imageMain.Width * e.Delta / 1000;
-                this.imageMain.Height += this.imageMain.Height * e.Delta / 1000;
+                this.imageCanvas.Width += this.imageCanvas.Width * e.Delta / 1000;
+                this.imageCanvas.Height += this.imageCanvas.Height * e.Delta / 1000;
                 System.Drawing.Bitmap currentImage = (System.Drawing.Bitmap)imageList[imageIndex];
-                scaleX = (float)currentImage.Width / (float)this.imageMain.Width;
-                scaleY = (float)currentImage.Height / (float)this.imageMain.Height;
+                scaleX = (float)currentImage.Width / (float)this.imageCanvas.Width;
+                scaleY = (float)currentImage.Height / (float)this.imageCanvas.Height;
                 this.centerPicturebox();
                 isFitImageSelected = false;
+                this.buttonFitImage.IsEnabled = true;
                 this.buttonActualSize.IsEnabled = true;
+                this.buttonZoomIn.IsEnabled = true;
+                this.buttonZoomOut.IsEnabled = true;
 
                 e.Handled = true;
             }

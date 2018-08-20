@@ -212,21 +212,21 @@ namespace VietOCR
             //var bitmap = new BitmapImage(uri);
             //imageMain.Source = bitmap;
             this.imageMain.Source = ImageConverter.BitmapToImageSource(CurrentImage);
-            this.imageMain.Width = CurrentImage.Width;
-            this.imageMain.Height = CurrentImage.Height;
+            this.imageCanvas.Width = CurrentImage.Width;
+            this.imageCanvas.Height = CurrentImage.Height;
             this.statusLabelDimValue.Content = string.Format("{0} × {1}px  {2}bpp", CurrentImage.Width, CurrentImage.Height, System.Drawing.Bitmap.GetPixelFormatSize(CurrentImage.PixelFormat).ToString());
 
             if (this.isFitImageSelected)
             {
-                System.Drawing.Size fitSize = fitImagetoContainer((int)this.imageMain.Width, (int)this.imageMain.Height, (int)this.scrollViewer.ActualWidth, (int)this.scrollViewer.ActualHeight);
+                System.Drawing.Size fitSize = fitImagetoContainer((int)this.imageCanvas.Width, (int)this.imageCanvas.Height, (int)this.scrollViewer.ActualWidth, (int)this.scrollViewer.ActualHeight);
                 this.imageCanvas.Width = fitSize.Width;
                 this.imageCanvas.Height = fitSize.Height;
                 setScale();
             }
             else if (this.scaleX != 1f)
             {
-                this.imageMain.Width = Convert.ToInt32(this.imageMain.Width / scaleX);
-                this.imageMain.Height = Convert.ToInt32(this.imageMain.Height / scaleY);
+                this.imageCanvas.Width = Convert.ToInt32(CurrentImage.Width / scaleX);
+                this.imageCanvas.Height = Convert.ToInt32(CurrentImage.Height / scaleY);
             }
             //curScrollPos = Point.Empty;
             this.centerPicturebox();
@@ -234,6 +234,20 @@ namespace VietOCR
             this.imageCanvas.Deselect();
             this.imageCanvas.SegmentedRegions = null;
             setSegmentedRegions();
+        }
+
+        protected void setScale()
+        {
+            scaleX = (float)CurrentImage.Width / (float)this.imageCanvas.Width;
+            scaleY = (float)CurrentImage.Height / (float)this.imageCanvas.Height;
+            if (scaleX > scaleY)
+            {
+                scaleY = scaleX;
+            }
+            else
+            {
+                scaleX = scaleY;
+            }
         }
 
         protected void setButton()
