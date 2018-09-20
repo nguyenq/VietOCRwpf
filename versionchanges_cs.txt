@@ -116,3 +116,6 @@ Version 5.2 (19 August 2018)
 - Upgrade to Tesseract 4.0.0-beta.4 (fd49206)
 - Fix Save As function
 - Fix Fit Image & Zoom In/Out function
+
+Version 5.2.1 (19 September 2018)
+- Add Unicode filename/path support to Ghostscript .NET wrapper
