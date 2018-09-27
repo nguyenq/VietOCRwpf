@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VietOCR"
         mc:Ignorable="d"
-        Title="Find and Replace" Height="200" Width="400"
+        Title="Find and Replace" Height="200" Width="410"
         WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid.RowDefinitions>
@@ -13,11 +13,16 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
 
-        <Grid Margin="0,10,0,5"  Grid.Column="0" Grid.Row="0">
+        <Grid Margin="2,10,1,0"  Grid.Column="0" Grid.Row="0">
+            <Grid.Resources>
+                <Style TargetType="{x:Type ComboBox}">
+                    <Setter Property="Margin" Value="0,2,0,2" />
+                </Style>
+            </Grid.Resources>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -27,13 +32,21 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Label x:Name="labelSearchFor" Content="Search For:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="0"/>
-            <ComboBox x:Name="cbFind" HorizontalAlignment="Right" Width="200" Grid.Column="1" Grid.Row="0" IsEditable="True"/>
+            <ComboBox x:Name="cbFind" HorizontalAlignment="Right" Width="190" Grid.Column="1" Grid.Row="0" IsEditable="True"/>
             <Label x:Name="labelReplaceWith" Content="Replace With:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1"/>
-            <ComboBox x:Name="cbReplace" HorizontalAlignment="Right" Width="200" Grid.Column="1" Grid.Row="1" IsEditable="True"/>
+            <ComboBox x:Name="cbReplace" HorizontalAlignment="Right" Width="190" Grid.Column="1" Grid.Row="1" IsEditable="True"/>
         </Grid>
 
-        <GroupBox Header="Options" Grid.Column="0" Grid.Row="1" Padding="3">
-            <Grid>
+        <GroupBox Margin="2,0,0,0" Header="Options" Grid.Column="0" Grid.Row="1" Padding="3">
+            <Grid Margin="2,0,0,0">
+                <Grid.Resources>
+                    <Style TargetType="{x:Type CheckBox}">
+                        <Setter Property="Margin" Value="0,4,0,4" />
+                    </Style>
+                    <Style TargetType="{x:Type RadioButton}">
+                        <Setter Property="Margin" Value="0,4,0,4" />
+                    </Style>
+                </Grid.Resources>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
