@@ -368,6 +368,9 @@
                         <Image x:Name="image4"  Source="Icons/fatcow/draw_eraser.png" Width="36" Height="36" />
                     </Button>
                     <Separator/>
+                    <Button x:Name="buttonFind" VerticalAlignment="Top" Click="buttonFind_Click" ToolTip="{x:Static resx:Gui.toolStripBtnFind_ToolTipText}" >
+                        <Image x:Name="image17"  Source="Icons/fatcow/find.png" Width="36" Height="36" />
+                    </Button>
                     <ToggleButton x:Name="buttonSpellcheck"  VerticalAlignment="Top" Click="buttonSpellcheck_Click" ToolTip="{x:Static resx:Gui.toolStripButtonSpellCheck_ToolTipText}">
                         <Image x:Name="image5"  Source="Icons/fatcow/inline_spellcheck.png" Width="36" Height="36" />
                     </ToggleButton>

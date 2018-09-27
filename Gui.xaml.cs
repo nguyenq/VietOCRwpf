@@ -1017,5 +1017,10 @@ namespace VietOCR
 
             return langCode.TrimEnd('+');
         }
+
+        protected virtual void buttonFind_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -28,7 +28,7 @@ using System.Windows.Input;
 
 namespace VietOCR
 {
-    public class GuiWithBulkOCR : GuiWithPostprocess
+    public class GuiWithBulkOCR : GuiWithFindReplace
     {
         const string strInputFolder = "InputFolder";
         const string strBulkOutputFolder = "BulkOutputFolder";

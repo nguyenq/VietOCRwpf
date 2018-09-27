@@ -1257,4 +1257,10 @@
   <data name="convertPdfToolStripMenuItem.Text" xml:space="preserve">
     <value>_Convert PDF to TIFF...</value>
   </data>
+  <data name="toolStripBtnFind.Text" xml:space="preserve">
+    <value>Find and Replace</value>
+  </data>
+  <data name="toolStripBtnFind.ToolTipText" xml:space="preserve">
+    <value>Find and Replace</value>
+  </data>
 </root>

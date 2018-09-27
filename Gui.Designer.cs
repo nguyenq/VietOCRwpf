@@ -147,7 +147,7 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to _Convert PDF....
+        ///   Looks up a localized string similar to _Convert PDF to TIFF....
         /// </summary>
         public static string convertPdfToolStripMenuItem_Text {
             get {
@@ -604,6 +604,24 @@ namespace VietOCR {
         public static string toolStripBtnClear_ToolTipText {
             get {
                 return ResourceManager.GetString("toolStripBtnClear.ToolTipText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Find and Replace.
+        /// </summary>
+        public static string toolStripBtnFind_Text {
+            get {
+                return ResourceManager.GetString("toolStripBtnFind.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Find and Replace.
+        /// </summary>
+        public static string toolStripBtnFind_ToolTipText {
+            get {
+                return ResourceManager.GetString("toolStripBtnFind.ToolTipText", resourceCulture);
             }
         }
         

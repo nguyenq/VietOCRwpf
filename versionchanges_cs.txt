@@ -119,3 +119,6 @@ Version 5.2 (19 August 2018)
 
 Version 5.2.1 (19 September 2018)
 - Add Unicode filename/path support to Ghostscript .NET wrapper
+
+Version 5.3.0 (25 September 2018)
+- Implement Find & Replace functionality
