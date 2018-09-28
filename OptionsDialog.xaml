@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:VietOCR"
         xmlns:resx="clr-namespace:VietOCR"
         mc:Ignorable="d"
-        Title="{x:Static resx:OptionsDialog.this_Title}" Height="220" Width="360" Loaded="Window_Loaded">
+        Title="{x:Static resx:OptionsDialog.this_Title}" Height="220" Width="360" Loaded="Window_Loaded" ResizeMode="NoResize">
     <Window.Resources>
         <x:Array x:Key="outputFormats" Type="sys:String"
             xmlns:sys="clr-namespace:System;assembly=mscorlib">
