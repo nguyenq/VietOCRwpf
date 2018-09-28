@@ -389,7 +389,7 @@
                                  ItemsSource="{Binding InstalledLanguages}"
                                  SelectedItems="{Binding SelectedLanguages}" />
                 </ToolBar>
-                <TextBox x:Name="textBox1" IsInactiveSelectionHighlightEnabled="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" AcceptsReturn="True" TextWrapping="Wrap"  PreviewDragOver="Window_DragOver" PreviewDrop="Window_Drop" MouseWheel="textBox1_MouseWheel" ContextMenuOpening="textBox1_ContextMenuOpening" >
+                <TextBox x:Name="textBox1" SelectionBrush="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightTextBrush}}" IsInactiveSelectionHighlightEnabled="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" AcceptsReturn="True" TextWrapping="Wrap"  PreviewDragOver="Window_DragOver" PreviewDrop="Window_Drop" MouseWheel="textBox1_MouseWheel" ContextMenuOpening="textBox1_ContextMenuOpening" >
                     <TextBox.ContextMenu>
                         <ContextMenu>
                             <MenuItem Command="ApplicationCommands.Cut"/>

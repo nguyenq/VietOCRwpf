@@ -17,7 +17,7 @@ namespace VietOCR
         string textFind = String.Empty, textReplace = String.Empty;
         //ComboBox.ObjectCollection itemsFind, itemsReplace;
 
-        bool bMatchCase = false, bMatchWholeWord = false, bMatchDiacritics = false, bMatchRegex = false, bFindDown = true;
+        bool bMatchCase = false, bMatchWholeWord = false, bMatchDiacritics = false, bMatchRegex = false, bSearchDown = true;
 
         const string strMatchCase = "MatchCase";
         const string strMatchWholeWord = "MatchWholeWord";
@@ -62,7 +62,7 @@ namespace VietOCR
             frDlg.MatchWholeWord = bMatchWholeWord;
             frDlg.MatchDiacritics = bMatchDiacritics;
             frDlg.MatchRegex = bMatchRegex;
-            frDlg.SearchDown = bFindDown;
+            frDlg.SearchDown = bSearchDown;
             frDlg.FindNext += new RoutedEventHandler(FindDialogOnFindNext);
             frDlg.Replace += new RoutedEventHandler(ReplaceDialogOnReplace);
             frDlg.ReplaceAll += new RoutedEventHandler(ReplaceDialogOnReplaceAll);
@@ -78,9 +78,9 @@ namespace VietOCR
 
             bMatchCase = dlg.MatchCase;
             bMatchWholeWord = dlg.MatchWholeWord;
-            bFindDown = dlg.SearchDown;
             bMatchRegex = dlg.MatchRegex;
             bMatchDiacritics = dlg.MatchDiacritics;
+            bSearchDown = dlg.SearchDown;
 
             FindNext();
         }
@@ -97,7 +97,7 @@ namespace VietOCR
                 searchData = textBox1.Text;
             }
 
-            if (bFindDown)
+            if (bSearchDown)
             {
                 int iStart = textBox1.SelectionStart + textBox1.SelectionLength;
 
@@ -111,6 +111,7 @@ namespace VietOCR
                         {
                             textBox1.SelectionStart = m.Index;
                             textBox1.SelectionLength = m.Length;
+                            textBox1.Focus();
                             return true;
                         }
                     }
@@ -129,6 +130,7 @@ namespace VietOCR
                         {
                             textBox1.SelectionStart = iStart;
                             textBox1.SelectionLength = strFind.Length;
+                            textBox1.Focus();
                             return true;
                         }
                         iStart++;
@@ -157,6 +159,7 @@ namespace VietOCR
                         {
                             textBox1.SelectionStart = m.Index;
                             textBox1.SelectionLength = m.Length;
+                            textBox1.Focus();
                             return true;
                         }
                     }
@@ -177,6 +180,7 @@ namespace VietOCR
                         {
                             textBox1.SelectionStart = iStart;
                             textBox1.SelectionLength = strFind.Length;
+                            textBox1.Focus();
                             return true;
                         }
                         iStart--;
@@ -185,12 +189,12 @@ namespace VietOCR
             }
 
             MessageBoxResult result = MessageBox.Show(Properties.Resources.Cannot_find_ + "\"" + textFind + "\".\n" +
-                Properties.Resources.Continue_search_from_ + (bFindDown ? Properties.Resources.beginning : Properties.Resources.end) + "?",
+                Properties.Resources.Continue_search_from_ + (bSearchDown ? Properties.Resources.beginning : Properties.Resources.end) + "?",
                 strProgName, MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
 
             if (result == MessageBoxResult.Yes)
             {
-                if (bFindDown)
+                if (bSearchDown)
                 {
                     textBox1.SelectionStart = 0;
                 }
@@ -226,9 +230,9 @@ namespace VietOCR
 
             bMatchCase = dlg.MatchCase;
             bMatchWholeWord = dlg.MatchWholeWord;
-            bFindDown = dlg.SearchDown;
             bMatchDiacritics = dlg.MatchDiacritics;
             bMatchRegex = dlg.MatchRegex;
+            bSearchDown = dlg.SearchDown;
 
             if (!bMatchDiacritics)
             {
@@ -256,7 +260,7 @@ namespace VietOCR
                 textBox1.SelectedText = strReplace;
             }
 
-            if (!bFindDown)
+            if (!bSearchDown)
             {
                 textBox1.SelectionStart = start;
             }
@@ -366,7 +370,7 @@ namespace VietOCR
             base.LoadRegistryInfo(regkey);
 
             bMatchCase = Convert.ToBoolean((int)regkey.GetValue(strMatchCase, Convert.ToInt32(false)));
-            bMatchCase = Convert.ToBoolean((int)regkey.GetValue(strMatchCase, Convert.ToInt32(false)));
+            bMatchWholeWord = Convert.ToBoolean((int)regkey.GetValue(strMatchWholeWord, Convert.ToInt32(false)));
             bMatchDiacritics = Convert.ToBoolean((int)regkey.GetValue(strMatchDiacritics, Convert.ToInt32(false)));
             bMatchRegex = Convert.ToBoolean((int)regkey.GetValue(strMatchRegex, Convert.ToInt32(false)));
         }
@@ -376,7 +380,7 @@ namespace VietOCR
             base.SaveRegistryInfo(regkey);
 
             regkey.SetValue(strMatchCase, Convert.ToInt32(bMatchCase));
-            regkey.SetValue(strMatchCase, Convert.ToInt32(bMatchCase));
+            regkey.SetValue(strMatchWholeWord, Convert.ToInt32(bMatchWholeWord));
             regkey.SetValue(strMatchDiacritics, Convert.ToInt32(bMatchDiacritics));
             regkey.SetValue(strMatchRegex, Convert.ToInt32(bMatchRegex));
         }
