@@ -107,6 +107,15 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to beginning.
+        /// </summary>
+        internal static string beginning {
+            get {
+                return ResourceManager.GetString("beginning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Beginning of task.
         /// </summary>
         internal static string Beginning_of_task {
@@ -179,6 +188,15 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cannot find .
+        /// </summary>
+        internal static string Cannot_find_ {
+            get {
+                return ResourceManager.GetString("Cannot_find_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cannot load image..
         /// </summary>
         internal static string Cannotloadimage {
@@ -211,6 +229,15 @@ namespace VietOCR.Properties {
         internal static string Clear_Recent_Files {
             get {
                 return ResourceManager.GetString("Clear_Recent_Files", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Continue search from .
+        /// </summary>
+        internal static string Continue_search_from_ {
+            get {
+                return ResourceManager.GetString("Continue_search_from_", resourceCulture);
             }
         }
         
@@ -319,6 +346,15 @@ namespace VietOCR.Properties {
         internal static string Elapsed_time {
             get {
                 return ResourceManager.GetString("Elapsed_time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to end.
+        /// </summary>
+        internal static string end {
+            get {
+                return ResourceManager.GetString("end", resourceCulture);
             }
         }
         
@@ -544,6 +580,24 @@ namespace VietOCR.Properties {
         internal static string readme {
             get {
                 return ResourceManager.GetString("readme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Regex Error.
+        /// </summary>
+        internal static string Regex_Error {
+            get {
+                return ResourceManager.GetString("Regex_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Replaced {0} occurrence(s)..
+        /// </summary>
+        internal static string ReplacedOccurrence {
+            get {
+                return ResourceManager.GetString("ReplacedOccurrence", resourceCulture);
             }
         }
         

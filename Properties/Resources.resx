@@ -352,4 +352,22 @@ Please run the program as administrator.</value>
   <data name="Select_Input_PDF" xml:space="preserve">
     <value>Select Input PDF</value>
   </data>
+  <data name="beginning" xml:space="preserve">
+    <value>beginning</value>
+  </data>
+  <data name="Cannot_find_" xml:space="preserve">
+    <value>Cannot find </value>
+  </data>
+  <data name="Continue_search_from_" xml:space="preserve">
+    <value>Continue search from </value>
+  </data>
+  <data name="end" xml:space="preserve">
+    <value>end</value>
+  </data>
+  <data name="Regex_Error" xml:space="preserve">
+    <value>Regex Error</value>
+  </data>
+  <data name="ReplacedOccurrence" xml:space="preserve">
+    <value>Replaced {0} occurrence(s).</value>
+  </data>
 </root>

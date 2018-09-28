@@ -114,8 +114,8 @@
     <Compile Include="DownloadDialog.xaml.cs">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FindDialog.xaml.cs">
-      <DependentUpon>FindDialog.xaml</DependentUpon>
+    <Compile Include="FindReplaceDialog.xaml.cs">
+      <DependentUpon>FindReplaceDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="Gui.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -194,6 +194,7 @@
     <Compile Include="Utilities\PdfUtilities.cs" />
     <Compile Include="Utilities\TextUtilities.cs" />
     <Compile Include="Utilities\Utilities.cs" />
+    <Compile Include="Utilities\VietUtilities.cs" />
     <Compile Include="Utilities\Watcher.cs" />
     <Compile Include="WIA\WiaOperationException.cs" />
     <Compile Include="WIA\WiaScannerAdapter.cs" />
@@ -209,7 +210,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FindDialog.xaml">
+    <Page Include="FindReplaceDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -343,4 +343,22 @@ Hãy chạy chương trình như administrator.</value>
   <data name="Select_Input_PDF" xml:space="preserve">
     <value>Chọn Input PDF</value>
   </data>
+  <data name="beginning" xml:space="preserve">
+    <value>đầu</value>
+  </data>
+  <data name="Cannot_find_" xml:space="preserve">
+    <value>Không tìm được </value>
+  </data>
+  <data name="Continue_search_from_" xml:space="preserve">
+    <value>Tiếp tục từ </value>
+  </data>
+  <data name="end" xml:space="preserve">
+    <value>cuối</value>
+  </data>
+  <data name="Regex_Error" xml:space="preserve">
+    <value>Lỗi Regex</value>
+  </data>
+  <data name="ReplacedOccurrence" xml:space="preserve">
+    <value>Đã thay thế {0} lần.</value>
+  </data>
 </root>
