@@ -9,7 +9,7 @@
         xmlns:resx="clr-namespace:VietOCR"
         xmlns:mcb="clr-namespace:CustomControls;assembly=MultiComboBox"
         Icon="./Resources/VietOCR.ico"
-        Title="VietOCR.NET" Height="350" Width="1260" Loaded="Window_Loaded" Closed="Window_Closed" SizeChanged="Window_SizeChanged" LocationChanged="Window_LocationChanged" Closing="Window_Closing" >
+        Title="VietOCR.NET" Height="350" Width="1260" Loaded="Window_Loaded" Closed="Window_Closed" SizeChanged="Window_SizeChanged" LocationChanged="Window_LocationChanged" Closing="Window_Closing" KeyDown="Window_KeyDown" >
     <Window.CommandBindings>
         <CommandBinding Command="ApplicationCommands.Open" Executed="Open_Executed" CanExecute="Open_CanExecute"/>
         <CommandBinding Command="ApplicationCommands.Save" Executed="Save_Executed" CanExecute="Save_CanExecute"/>

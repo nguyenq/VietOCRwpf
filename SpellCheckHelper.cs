@@ -82,8 +82,11 @@ namespace VietOCR
         {
             spellingErrorRanges.Clear();
 
-            myAdornerLayer.Remove(myAdorner);
-            myAdorner.Dispose();
+            if (myAdorner != null)
+            {
+                myAdornerLayer.Remove(myAdorner);
+                myAdorner.Dispose();
+            }
 
             if (spellChecker != null)
             {

@@ -1022,5 +1022,41 @@ namespace VietOCR
         {
 
         }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.F7)
+            {
+                this.buttonSpellcheck.PerformClick();
+            }
+            else if (e.KeyboardDevice.Modifiers == (ModifierKeys.Control | ModifierKeys.Shift) && (e.Key == Key.OemPlus || e.Key == Key.Add))
+            {
+                this.buttonRotateCW.PerformClick();
+            }
+            else if (e.KeyboardDevice.Modifiers == (ModifierKeys.Control| ModifierKeys.Shift) && (e.Key == Key.OemMinus || e.Key == Key.Subtract))
+            {
+                this.buttonRotateCCW.PerformClick();
+            }
+            else if (e.KeyboardDevice.Modifiers == ModifierKeys.Control && (e.Key == Key.OemPlus || e.Key == Key.Add))
+            {
+                this.buttonZoomIn.PerformClick();
+            }
+            else if (e.KeyboardDevice.Modifiers == ModifierKeys.Control && (e.Key == Key.OemMinus || e.Key == Key.Subtract))
+            {
+                this.buttonZoomOut.PerformClick();
+            }
+            else if (e.KeyboardDevice.Modifiers == ModifierKeys.Control && (e.Key == Key.D1 || e.Key == Key.NumPad1))
+            {
+                this.buttonActualSize.PerformClick();
+            }
+            else if (e.KeyboardDevice.Modifiers == ModifierKeys.Control && (e.Key == Key.D2 || e.Key == Key.NumPad2))
+            {
+                this.buttonFitImage.PerformClick();
+            }
+            else if (e.KeyboardDevice.Modifiers == ModifierKeys.Control && e.Key == Key.F)
+            {
+                this.buttonFind.PerformClick();
+            }
+        }
     }
 }

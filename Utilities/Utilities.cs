@@ -16,11 +16,14 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Xml;
 
 namespace VietOCR.NET.Utilities
 {
-    class Utilities
+    static class Utilities
     {
         /// <summary>
         /// Populates a dictionary with entries from an XML document.
@@ -40,6 +43,25 @@ namespace VietOCR.NET.Utilities
                     table.Add(node.Attributes[0].Value, node.InnerText);
                 }
             }
+        }
+
+        /// <summary>
+        /// Simulates button click.
+        /// </summary>
+        /// <param name="btn"></param>
+        public static void PerformClick(this Button btn)
+        {
+            btn.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+        }
+
+        /// <summary>
+        /// Simulates togglebutton click.
+        /// </summary>
+        /// <param name="btn"></param>
+        public static void PerformClick(this ToggleButton btn)
+        {
+            btn.IsChecked ^= true;
+            btn.RaiseEvent(new RoutedEventArgs(ToggleButton.ClickEvent));
         }
     }
 }
