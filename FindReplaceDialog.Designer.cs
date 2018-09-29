@@ -27,7 +27,7 @@ namespace VietOCR {
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+                
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -57,7 +57,7 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Close.
+        ///   Looks up a localized string similar to _Close.
         /// </summary>
         public static string btnClose_Text {
             get {
@@ -93,7 +93,7 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Match _case.
+        ///   Looks up a localized string similar to Match Ca_se.
         /// </summary>
         public static string chkboxMatchCase_Text {
             get {
@@ -102,7 +102,7 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Match diacritics.
+        ///   Looks up a localized string similar to Match D_iacritics.
         /// </summary>
         public static string chkboxMatchDiacritics_Text {
             get {
@@ -111,7 +111,7 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Regular Expression.
+        ///   Looks up a localized string similar to Regular _Expression.
         /// </summary>
         public static string chkboxMatchRegex_Text {
             get {
@@ -120,7 +120,7 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Match whole word.
+        ///   Looks up a localized string similar to Match _Whole Word.
         /// </summary>
         public static string chkboxMatchWholeWord_Text {
             get {
@@ -138,7 +138,7 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Fi_nd what:.
+        ///   Looks up a localized string similar to Find W_hat:.
         /// </summary>
         public static string labelFind_Text {
             get {
@@ -147,7 +147,7 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Re_place with:.
+        ///   Looks up a localized string similar to Re_place With:.
         /// </summary>
         public static string labelReplace_Text {
             get {

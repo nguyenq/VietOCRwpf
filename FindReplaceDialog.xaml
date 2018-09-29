@@ -32,9 +32,9 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Label x:Name="labelFind" Content="{x:Static resx:FindReplaceDialog.labelFind_Text}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="0"/>
+            <Label x:Name="labelFind" Content="{x:Static resx:FindReplaceDialog.labelFind_Text}" Target="{Binding ElementName=cbFind}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="0"/>
             <ComboBox x:Name="cbFind" HorizontalAlignment="Right" Width="190" Grid.Column="1" Grid.Row="0" IsEditable="True" TextBoxBase.TextChanged="cbFind_TextChanged"/>
-            <Label x:Name="labelReplace" Content="{x:Static resx:FindReplaceDialog.labelReplace_Text}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1"/>
+            <Label x:Name="labelReplace" Content="{x:Static resx:FindReplaceDialog.labelReplace_Text}" Target="{Binding ElementName=cbReplace}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1"/>
             <ComboBox x:Name="cbReplace" HorizontalAlignment="Right" Width="190" Grid.Column="1" Grid.Row="1" IsEditable="True" />
         </Grid>
 

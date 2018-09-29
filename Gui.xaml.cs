@@ -1053,7 +1053,7 @@ namespace VietOCR
             {
                 this.buttonFitImage.PerformClick();
             }
-            else if (e.KeyboardDevice.Modifiers == ModifierKeys.Control && e.Key == Key.F)
+            else if (e.KeyboardDevice.Modifiers == ModifierKeys.Control && (e.Key == Key.F || e.Key == Key.H))
             {
                 this.buttonFind.PerformClick();
             }

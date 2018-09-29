@@ -20,8 +20,8 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label x:Name="labelInput" Content="{x:Static resx:SplitPdfDialog.labelInput_Text}"  VerticalAlignment="Center"/>
-        <Label x:Name="labelOutput" Content="{x:Static resx:SplitPdfDialog.labelOutput_Text}" VerticalAlignment="Center" Grid.Row="1"/>
+        <Label x:Name="labelInput" Content="{x:Static resx:SplitPdfDialog.labelInput_Text}" Target="{Binding ElementName=textBoxInput}" VerticalAlignment="Center"/>
+        <Label x:Name="labelOutput" Content="{x:Static resx:SplitPdfDialog.labelOutput_Text}" Target="{Binding ElementName=textBoxOutput}" VerticalAlignment="Center" Grid.Row="1"/>
         <TextBox x:Name="textBoxInput" Height="23" HorizontalAlignment="Stretch"  IsReadOnly="True" VerticalAlignment="Center"  VerticalContentAlignment="Center" Grid.Column="1"/>
         <TextBox x:Name="textBoxOutput" Height="23" HorizontalAlignment="Stretch"  IsReadOnly="True" VerticalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="1"/>
         <Button x:Name="buttonBrowseInput" Content="..." HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Click="buttonBrowseInput_Click" ToolTip="Browse" Grid.Column="2"/>
@@ -29,14 +29,14 @@
         <RadioButton x:Name="radioButtonPages" Content="{x:Static resx:SplitPdfDialog.radioButtonPages_Text}" Margin="10,0,0,0" VerticalAlignment="Center" Checked="radioButtonPages_Checked" Grid.Row="2"/>
         <RadioButton x:Name="radioButtonFiles" Content="{x:Static resx:SplitPdfDialog.radioButtonFiles_Text}" Margin="10,0,0,0" VerticalAlignment="Center" Checked="radioButtonFiles_Checked" Grid.Row="3"/>
         <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" >
-            <Label x:Name="labelFrom" Content="{x:Static resx:SplitPdfDialog.labelFrom_Text}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Label x:Name="labelFrom" Content="{x:Static resx:SplitPdfDialog.labelFrom_Text}" Target="{Binding ElementName=textBoxFrom}" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <TextBox x:Name="textBoxFrom" Height="23" HorizontalAlignment="Left" VerticalAlignment="Center" Width="29" VerticalContentAlignment="Center" />
             <Separator Opacity="0" Width="20" />
-            <Label x:Name="labelTo" Content="{x:Static resx:SplitPdfDialog.labelTo_Text}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Label x:Name="labelTo" Content="{x:Static resx:SplitPdfDialog.labelTo_Text}" Target="{Binding ElementName=textBoxTo}" HorizontalAlignment="Left" VerticalAlignment="Center" />
             <TextBox x:Name="textBoxTo" Height="23" HorizontalAlignment="Left" VerticalAlignment="Center" Width="29" VerticalContentAlignment="Center" />
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1"  Grid.ColumnSpan="2" >
-            <Label x:Name="labelNumOfPages" Content="{x:Static resx:SplitPdfDialog.labelNumOfPages_Text}" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Label x:Name="labelNumOfPages" Content="{x:Static resx:SplitPdfDialog.labelNumOfPages_Text}" Target="{Binding ElementName=textBoxNumOfPages}" HorizontalAlignment="Left" VerticalAlignment="Center" />
             <TextBox x:Name="textBoxNumOfPages" Height="23" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="29" VerticalContentAlignment="Center" />
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Right">
