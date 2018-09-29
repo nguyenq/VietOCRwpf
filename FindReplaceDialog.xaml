@@ -56,21 +56,22 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <CheckBox x:Name="chkboxMatchCase" Content="Match Case" Grid.Column="0" Grid.Row="0"/>
-                <CheckBox x:Name="chkboxMatchWholeWord" Content="Match Whole Word"  Grid.Column="0" Grid.Row="1"/>
-                <CheckBox x:Name="chkboxMatchDiacritics" Content="Match Diacritics"  Grid.Column="0" Grid.Row="2"/>
-                <RadioButton x:Name="radiobtnSearchUp" Content="Search Up"  Grid.Column="1" Grid.Row="0"/>
-                <RadioButton x:Name="radiobtnSearchDown"  Content="Search Down" Grid.Column="1" Grid.Row="1"/>
-                <CheckBox x:Name="chkboxRegEx" Content="Regular Expression" Grid.Column="1" Grid.Row="2"/>
+                <CheckBox x:Name="chkboxMatchCase" Content="Match Case" Grid.Column="0" Grid.Row="0" Checked="option_Changed" Unchecked="option_Changed"/>
+                <CheckBox x:Name="chkboxMatchWholeWord" Content="Match Whole Word"  Grid.Column="0" Grid.Row="1" Checked="option_Changed" Unchecked="option_Changed"/>
+                <CheckBox x:Name="chkboxMatchDiacritics" Content="Match Diacritics"  Grid.Column="0" Grid.Row="2" Checked="option_Changed" Unchecked="option_Changed"/>
+                <RadioButton x:Name="radiobtnSearchUp" Content="Search Up"  Grid.Column="1" Grid.Row="0" Checked="option_Changed" Unchecked="option_Changed"/>
+                <RadioButton x:Name="radiobtnSearchDown"  Content="Search Down" Grid.Column="1" Grid.Row="1" Checked="option_Changed" Unchecked="option_Changed"/>
+                <CheckBox x:Name="chkboxMatchRegex" Content="Regular Expression" Grid.Column="1" Grid.Row="2" Checked="option_Changed" Unchecked="option_Changed"/>
             </Grid>
         </GroupBox>
+        
         <StackPanel VerticalAlignment="Top" Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="5" >
             <StackPanel.Resources>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Margin" Value="5,5,5,0"/>
                 </Style>
             </StackPanel.Resources>
-            <Button x:Name="btnFindNext" Content="Find Next" Click="btnFindNext_Click"/>
+            <Button x:Name="btnFindNext" IsDefault="True" Content="Find Next" Click="btnFindNext_Click"/>
             <Button x:Name="btnReplace" Content="Replace" Click="btnReplace_Click"/>
             <Button x:Name="btnReplaceAll" Content="Replace All" Click="btnReplaceAll_Click"/>
             <Button x:Name="btnClose" Content="Close" Click="btnClose_Click"/>

@@ -25,6 +25,7 @@ namespace VietOCR
         public event RoutedEventHandler FindNext;
         public event RoutedEventHandler Replace;
         public event RoutedEventHandler ReplaceAll;
+        public event RoutedEventHandler CloseDlg;
 
         // Properties
         public string FindText
@@ -54,8 +55,8 @@ namespace VietOCR
         }
         public bool MatchRegex
         {
-            set { this.chkboxRegEx.IsChecked = value; }
-            get { return this.chkboxRegEx.IsChecked.Value; }
+            set { this.chkboxMatchRegex.IsChecked = value; }
+            get { return this.chkboxMatchRegex.IsChecked.Value; }
         }
         public bool SearchDown
         {
@@ -97,6 +98,7 @@ namespace VietOCR
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
+            CloseDlg?.Invoke(this, e);
         }
 
         /**
@@ -138,6 +140,19 @@ namespace VietOCR
             btnFindNext.IsEnabled =
                 btnReplace.IsEnabled = cbFind.Text.Length > 0;
             btnReplaceAll.IsEnabled = cbFind.Text.Length > 0 && !(MatchRegex && !MatchDiacritics);
+        }
+
+        private void option_Changed(object sender, RoutedEventArgs e)
+        {
+            if (sender == this.chkboxMatchDiacritics || sender == this.chkboxMatchRegex)
+            {
+                btnReplaceAll.IsEnabled = !this.chkboxMatchRegex.IsChecked.Value || this.chkboxMatchDiacritics.IsChecked.Value;
+            }
+            if (sender == this.chkboxMatchRegex)
+            {
+                this.chkboxMatchWholeWord.IsEnabled = !this.chkboxMatchRegex.IsChecked.Value;
+            }
+            this.btnFindNext.Focus();
         }
     }
 }

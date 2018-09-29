@@ -66,6 +66,8 @@ namespace VietOCR
             frDlg.FindNext += new RoutedEventHandler(FindDialogOnFindNext);
             frDlg.Replace += new RoutedEventHandler(ReplaceDialogOnReplace);
             frDlg.ReplaceAll += new RoutedEventHandler(ReplaceDialogOnReplaceAll);
+            frDlg.CloseDlg += new RoutedEventHandler(FindReplaceDialogOnCloseDlg);
+
             frDlg.Show();
         }
 
@@ -363,6 +365,11 @@ namespace VietOCR
         private string Unescape(string input)
         {
             return input.Replace(@"\n", "\n").Replace(@"\r", "\r").Replace(@"\t", "\t");
+        }
+
+        void FindReplaceDialogOnCloseDlg(object obj, RoutedEventArgs ea)
+        {
+            this.Focus();
         }
 
         protected override void LoadRegistryInfo(RegistryKey regkey)
