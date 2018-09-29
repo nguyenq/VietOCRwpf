@@ -43,10 +43,10 @@ namespace VietOCR
             set { chkboxMatchCase.IsChecked = value; }
             get { return chkboxMatchCase.IsChecked.Value; }
         }
-        public bool MatchWholeWord
+        public bool? MatchWholeWord
         {
             set { chkboxMatchWholeWord.IsChecked = value; }
-            get { return chkboxMatchWholeWord.IsChecked.Value; }
+            get { return chkboxMatchWholeWord.IsEnabled ? chkboxMatchWholeWord.IsChecked : null; }
         }
         public bool MatchDiacritics
         {

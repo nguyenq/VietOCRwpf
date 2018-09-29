@@ -17,7 +17,8 @@ namespace VietOCR
         string textFind = String.Empty, textReplace = String.Empty;
         //ComboBox.ObjectCollection itemsFind, itemsReplace;
 
-        bool bMatchCase = false, bMatchWholeWord = false, bMatchDiacritics = false, bMatchRegex = false, bSearchDown = true;
+        bool bMatchCase = false, bMatchDiacritics = false, bMatchRegex = false, bSearchDown = true;
+        bool? bMatchWholeWord = false;
 
         const string strMatchCase = "MatchCase";
         const string strMatchWholeWord = "MatchWholeWord";
@@ -103,10 +104,14 @@ namespace VietOCR
             {
                 int iStart = textBox1.SelectionStart + textBox1.SelectionLength;
 
-                if (bMatchRegex)
+                if (bMatchRegex || (bMatchWholeWord.HasValue && bMatchWholeWord.Value))
                 {
                     try
                     {
+                        if (bMatchWholeWord.HasValue && bMatchWholeWord.Value)
+                        {
+                            strFind = "\\b" + strFind + "\\b";
+                        }
                         Regex regex = new Regex((bMatchCase ? string.Empty : "(?i)") + strFind, RegexOptions.Multiline);
                         Match m = regex.Match(searchData, iStart);
                         if (m.Success)
@@ -141,7 +146,7 @@ namespace VietOCR
             }
             else
             {
-                if (bMatchRegex)
+                if (bMatchRegex || (bMatchWholeWord.HasValue && bMatchWholeWord.Value))
                 {
                     int iEnd = textBox1.SelectionStart;
                     try
@@ -155,6 +160,10 @@ namespace VietOCR
                         //    textBox1.SelectionLength = m.Length;
                         //    return true;
                         //}
+                        if (bMatchWholeWord.HasValue && bMatchWholeWord.Value)
+                        {
+                            strFind = "\\b" + strFind + "\\b";
+                        }
                         Regex regex = new Regex((bMatchCase ? string.Empty : "(?i)") + string.Format("{0}(?!.*{0})", strFind), RegexOptions.Multiline | RegexOptions.Singleline);
                         Match m = regex.Match(searchData, 0, iEnd);
                         if (m.Success)
@@ -222,19 +231,19 @@ namespace VietOCR
             //itemsReplace = dlg.ReplaceCollection; // memorize replace strings
             strReplace = textReplace;
 
+            bMatchCase = dlg.MatchCase;
+            bMatchWholeWord = dlg.MatchWholeWord;
+            bMatchRegex = dlg.MatchRegex;
+            bMatchDiacritics = dlg.MatchDiacritics;
+            bSearchDown = dlg.SearchDown;
+
             selectedText = textBox1.SelectedText;
 
-            if (selectedText == "")
+            if (selectedText == string.Empty)
             {
                 FindNext();
                 return;
             }
-
-            bMatchCase = dlg.MatchCase;
-            bMatchWholeWord = dlg.MatchWholeWord;
-            bMatchDiacritics = dlg.MatchDiacritics;
-            bMatchRegex = dlg.MatchRegex;
-            bSearchDown = dlg.SearchDown;
 
             if (!bMatchDiacritics)
             {
@@ -387,7 +396,7 @@ namespace VietOCR
             base.SaveRegistryInfo(regkey);
 
             regkey.SetValue(strMatchCase, Convert.ToInt32(bMatchCase));
-            regkey.SetValue(strMatchWholeWord, Convert.ToInt32(bMatchWholeWord));
+            if (bMatchWholeWord.HasValue) regkey.SetValue(strMatchWholeWord, Convert.ToInt32(bMatchWholeWord.Value));
             regkey.SetValue(strMatchDiacritics, Convert.ToInt32(bMatchDiacritics));
             regkey.SetValue(strMatchRegex, Convert.ToInt32(bMatchRegex));
         }
