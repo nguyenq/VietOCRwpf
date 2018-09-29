@@ -1,18 +1,17 @@
-﻿using Net.SourceForge.Vietpad.Utilities;
+﻿// Modified by Quan Nguyen for VietOCR.NET
+// Version: 2.0, 28 September 2018
+// See: http://vietocr.sourceforge.net
+// Change: - Fixed a bug on Search direction, 18 Feb 2003
+// 
+
+//------------------------------------------------
+// FindReplaceDialog.cs © 2001 by Charles Petzold
+//------------------------------------------------
+
+using Net.SourceForge.Vietpad.InputMethod;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace VietOCR
 {
@@ -129,16 +128,16 @@ namespace VietOCR
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            btnFindNext.IsEnabled =
-                btnReplace.IsEnabled = cbFind.Text.Length > 0;
-            btnReplaceAll.IsEnabled = cbFind.Text.Length > 0 && !(MatchRegex && !MatchDiacritics);
+            // integrate Viet Input Method
+            new VietKeyHandler(this.cbFind);
+            new VietKeyHandler(this.cbReplace);
+
             cbFind.Focus();
         }
 
         private void cbFind_TextChanged(object sender, TextChangedEventArgs e)
         {
-            btnFindNext.IsEnabled =
-                btnReplace.IsEnabled = cbFind.Text.Length > 0;
+            btnFindNext.IsEnabled = btnReplace.IsEnabled = cbFind.Text.Length > 0;
             btnReplaceAll.IsEnabled = cbFind.Text.Length > 0 && !(MatchRegex && !MatchDiacritics);
         }
 
@@ -146,11 +145,11 @@ namespace VietOCR
         {
             if (sender == this.chkboxMatchDiacritics || sender == this.chkboxMatchRegex)
             {
-                btnReplaceAll.IsEnabled = !this.chkboxMatchRegex.IsChecked.Value || this.chkboxMatchDiacritics.IsChecked.Value;
+                btnReplaceAll.IsEnabled = cbFind.Text.Length > 0 && (!MatchRegex || MatchDiacritics);
             }
             if (sender == this.chkboxMatchRegex)
             {
-                this.chkboxMatchWholeWord.IsEnabled = !this.chkboxMatchRegex.IsChecked.Value;
+                this.chkboxMatchWholeWord.IsEnabled = !MatchRegex;
             }
             this.btnFindNext.Focus();
         }

@@ -1,13 +1,10 @@
 ﻿using Microsoft.Win32;
-using Net.SourceForge.Vietpad.Utilities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
+
+using Net.SourceForge.Vietpad.Utilities;
 
 namespace VietOCR
 {
@@ -27,7 +24,6 @@ namespace VietOCR
 
         string searchData;
         string selectedText;
-
 
         public GuiWithFindReplace()
         {

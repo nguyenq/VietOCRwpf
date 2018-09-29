@@ -114,6 +114,11 @@
     <Compile Include="DownloadDialog.xaml.cs">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FindReplaceDialog.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindReplaceDialog.resx</DependentUpon>
+    </Compile>
     <Compile Include="FindReplaceDialog.xaml.cs">
       <DependentUpon>FindReplaceDialog.xaml</DependentUpon>
     </Compile>
@@ -515,6 +520,16 @@
     <EmbeddedResource Include="DownloadDialog.vi-VN.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FindReplaceDialog.resx">
+      <DependentUpon>FindReplaceDialog.xaml</DependentUpon>
+      <SubType>Designer</SubType>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FindReplaceDialog.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindReplaceDialog.vi.resx">
+      <DependentUpon>FindReplaceDialog.xaml</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gui.bn-IN.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
     </EmbeddedResource>
@@ -719,9 +734,6 @@
     <EmbeddedResource Include="Properties\Resources.sk-SK.resx" />
     <EmbeddedResource Include="Properties\Resources.tr-TR.resx" />
     <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
-    <EmbeddedResource Include="SlideDialog.ne-NP.resx">
-      <DependentUpon>SliderDialog.xaml</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SliderDialog.bn-IN.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>

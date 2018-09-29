@@ -4,8 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VietOCR"
+        xmlns:resx="clr-namespace:VietOCR"
         mc:Ignorable="d"
-        Title="Find and Replace" Height="200" Width="410"
+        Title="{x:Static resx:FindReplaceDialog.this_Title}" Height="200" Width="410"
         WindowStartupLocation="CenterOwner" ResizeMode="NoResize" Loaded="Window_Loaded">
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
         <Grid.RowDefinitions>
@@ -13,8 +14,8 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="5*" />
-            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="11*" />
+            <ColumnDefinition Width="4*" />
         </Grid.ColumnDefinitions>
 
         <Grid Margin="2,10,1,0"  Grid.Column="0" Grid.Row="0">
@@ -31,9 +32,9 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Label x:Name="labelSearchFor" Content="Search For:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="0"/>
+            <Label x:Name="labelFind" Content="{x:Static resx:FindReplaceDialog.labelFind_Text}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="0"/>
             <ComboBox x:Name="cbFind" HorizontalAlignment="Right" Width="190" Grid.Column="1" Grid.Row="0" IsEditable="True" TextBoxBase.TextChanged="cbFind_TextChanged"/>
-            <Label x:Name="labelReplaceWith" Content="Replace With:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1"/>
+            <Label x:Name="labelReplace" Content="{x:Static resx:FindReplaceDialog.labelReplace_Text}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1"/>
             <ComboBox x:Name="cbReplace" HorizontalAlignment="Right" Width="190" Grid.Column="1" Grid.Row="1" IsEditable="True" />
         </Grid>
 
@@ -54,14 +55,14 @@
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-                <CheckBox x:Name="chkboxMatchCase" Content="Match Case" Grid.Column="0" Grid.Row="0" Checked="option_Changed" Unchecked="option_Changed"/>
-                <CheckBox x:Name="chkboxMatchWholeWord" Content="Match Whole Word"  Grid.Column="0" Grid.Row="1" Checked="option_Changed" Unchecked="option_Changed"/>
-                <CheckBox x:Name="chkboxMatchDiacritics" Content="Match Diacritics"  Grid.Column="0" Grid.Row="2" Checked="option_Changed" Unchecked="option_Changed"/>
-                <RadioButton x:Name="radiobtnSearchUp" Content="Search Up"  Grid.Column="1" Grid.Row="0" Checked="option_Changed" Unchecked="option_Changed"/>
-                <RadioButton x:Name="radiobtnSearchDown"  Content="Search Down" Grid.Column="1" Grid.Row="1" Checked="option_Changed" Unchecked="option_Changed"/>
-                <CheckBox x:Name="chkboxMatchRegex" Content="Regular Expression" Grid.Column="1" Grid.Row="2" Checked="option_Changed" Unchecked="option_Changed"/>
+                <CheckBox x:Name="chkboxMatchCase" Content="{x:Static resx:FindReplaceDialog.chkboxMatchCase_Text}" Grid.Column="0" Grid.Row="0" Checked="option_Changed" Unchecked="option_Changed"/>
+                <CheckBox x:Name="chkboxMatchWholeWord" Content="{x:Static resx:FindReplaceDialog.chkboxMatchWholeWord_Text}"  Grid.Column="0" Grid.Row="1" Checked="option_Changed" Unchecked="option_Changed"/>
+                <CheckBox x:Name="chkboxMatchDiacritics" Content="{x:Static resx:FindReplaceDialog.chkboxMatchDiacritics_Text}"  Grid.Column="0" Grid.Row="2" Checked="option_Changed" Unchecked="option_Changed"/>
+                <RadioButton x:Name="radiobtnSearchUp" Content="{x:Static resx:FindReplaceDialog.radiobtnUp_Text}"  Grid.Column="1" Grid.Row="0" Checked="option_Changed" Unchecked="option_Changed"/>
+                <RadioButton x:Name="radiobtnSearchDown"  Content="{x:Static resx:FindReplaceDialog.radiobtnDown_Text}" Grid.Column="1" Grid.Row="1" Checked="option_Changed" Unchecked="option_Changed"/>
+                <CheckBox x:Name="chkboxMatchRegex" Content="{x:Static resx:FindReplaceDialog.chkboxMatchRegex_Text}" Grid.Column="1" Grid.Row="2" Checked="option_Changed" Unchecked="option_Changed"/>
             </Grid>
         </GroupBox>
         
@@ -71,10 +72,10 @@
                     <Setter Property="Margin" Value="5,5,5,0"/>
                 </Style>
             </StackPanel.Resources>
-            <Button x:Name="btnFindNext" IsDefault="True" Content="Find Next" Click="btnFindNext_Click"/>
-            <Button x:Name="btnReplace" Content="Replace" Click="btnReplace_Click"/>
-            <Button x:Name="btnReplaceAll" Content="Replace All" Click="btnReplaceAll_Click"/>
-            <Button x:Name="btnClose" Content="Close" Click="btnClose_Click"/>
+            <Button x:Name="btnFindNext" IsDefault="True" Content="{x:Static resx:FindReplaceDialog.btnFindNext_Text}" Click="btnFindNext_Click" IsEnabled="False"/>
+            <Button x:Name="btnReplace" Content="{x:Static resx:FindReplaceDialog.btnReplace_Text}" Click="btnReplace_Click" IsEnabled="False"/>
+            <Button x:Name="btnReplaceAll" Content="{x:Static resx:FindReplaceDialog.btnReplaceAll_Text}" Click="btnReplaceAll_Click" IsEnabled="False"/>
+            <Button x:Name="btnClose" Content="{x:Static resx:FindReplaceDialog.btnClose_Text}" Click="btnClose_Click"/>
         </StackPanel>
 
     </Grid>
