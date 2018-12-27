@@ -166,19 +166,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_37C22D5D221EFFD4CD6BBB88B5CA5854"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0F3E4877B418BAA2BD86D241CCBF9ACE"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_F65291418B7D310C4CE9F0B362F96354"
+        "OwnerKey" = "8:_E267E905866FC00CE74451BD8BBECC1E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -190,7 +178,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E267E905866FC00CE74451BD8BBECC1E"
+        "OwnerKey" = "8:_F65291418B7D310C4CE9F0B362F96354"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_0F3E4877B418BAA2BD86D241CCBF9ACE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_37C22D5D221EFFD4CD6BBB88B5CA5854"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -238,7 +238,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\VietOCR.NET-5.4.0_64\\Setup.msi"
+        "OutputFilename" = "8:Release\\VietOCR.NET-5.4.1_64\\Setup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -844,20 +844,20 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:VietOCR"
-        "ProductCode" = "8:{6CD8887F-70C6-4DF5-9149-812F5AF9D254}"
-        "PackageCode" = "8:{C44741B1-F643-4E7D-A55A-386B79A91D83}"
+        "ProductCode" = "8:{3B7E15A1-6E05-4C3A-AD1A-6B0FF06E7CA8}"
+        "PackageCode" = "8:{9D6EA489-416E-4D5A-9EB2-6F2DC4335D0A}"
         "UpgradeCode" = "8:{9DB2C555-29D0-4CEC-996E-E7FD9315AD50}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:5.4.0"
+        "ProductVersion" = "8:5.4.1"
         "Manufacturer" = "8:VietUnicode"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://sourceforge.net/projects/vietocr/support"
         "Title" = "8:Setup for VietOCR.NET"
-        "Subject" = "8:Installer for VietOCR.NET v5.4.0"
+        "Subject" = "8:Installer for VietOCR.NET v5.4.1"
         "ARPCONTACT" = "8:Quan Nguyen"
         "Keywords" = "8:Vietnamese OCR"
         "ARPCOMMENTS" = "8:http://vietocr.sf.net"
