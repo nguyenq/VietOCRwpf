@@ -117,10 +117,10 @@ namespace VietOCR
 
                     this.Cursor = Cursors.Wait;
                     this.statusLabel.Content = Properties.Resources.MergeTIFF_running;
-                    
+
                     this.textBox1.Cursor = Cursors.Wait;
                     this.toolStripProgressBar1.IsEnabled = true;
-                    this.toolStripProgressBar1.Visibility= Visibility.Visible;
+                    this.toolStripProgressBar1.Visibility = Visibility.Visible;
                     //this.toolStripProgressBar1.Style = ProgressBarStyle.Marquee;
 
                     // Start the asynchronous operation.
@@ -190,7 +190,7 @@ namespace VietOCR
 
                 this.Cursor = Cursors.Wait;
                 this.statusLabel.Content = Properties.Resources.SplitTIFF_running;
-                
+
                 this.textBox1.Cursor = Cursors.Wait;
                 this.toolStripProgressBar1.IsEnabled = true;
                 this.toolStripProgressBar1.Visibility = Visibility.Visible;
@@ -203,11 +203,11 @@ namespace VietOCR
 
         private void backgroundWorkerSplitTiff_DoWork(object sender, DoWorkEventArgs e)
         {
-            string infilename = (string) e.Argument;
+            string infilename = (string)e.Argument;
             string basefilename = Path.Combine(Path.GetDirectoryName(infilename), Path.GetFileNameWithoutExtension(infilename));
 
             IList<string> filenames = ImageIOHelper.SplitMultipageTiff(new FileInfo(infilename));
-            
+
             // move temp TIFF files to selected folder
             for (int i = 0; i < filenames.Count; i++)
             {
@@ -261,7 +261,7 @@ namespace VietOCR
             {
                 this.Cursor = Cursors.Wait;
                 this.statusLabel.Content = Properties.Resources.SplitPDF_running;
-                
+
                 this.textBox1.Cursor = Cursors.Wait;
                 this.toolStripProgressBar1.IsEnabled = true;
                 this.toolStripProgressBar1.Visibility = Visibility.Visible;
@@ -316,8 +316,8 @@ namespace VietOCR
         private void backgroundWorkerSplitPdf_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             this.toolStripProgressBar1.IsEnabled = false;
-            this.toolStripProgressBar1.Visibility= Visibility.Hidden;
-            
+            this.toolStripProgressBar1.Visibility = Visibility.Hidden;
+
             // First, handle the case where an exception was thrown.
             if (e.Error != null)
             {
@@ -375,7 +375,7 @@ namespace VietOCR
 
                     this.Cursor = Cursors.Wait;
                     this.statusLabel.Content = Properties.Resources.MergePDF_running;
-                    
+
                     this.textBox1.Cursor = Cursors.Wait;
                     this.toolStripProgressBar1.IsEnabled = true;
                     this.toolStripProgressBar1.Visibility = Visibility.Visible;
@@ -439,6 +439,7 @@ namespace VietOCR
             openFileDialog1.Filter = "PDF Files (*.pdf)|*.pdf";
             openFileDialog1.FilterIndex = filterIndex;
             openFileDialog1.RestoreDirectory = true;
+            openFileDialog1.Multiselect = true;
 
             Nullable<bool> result = openFileDialog1.ShowDialog();
 
@@ -446,43 +447,30 @@ namespace VietOCR
             {
                 filterIndex = openFileDialog1.FilterIndex;
                 imageFolder = Path.GetDirectoryName(openFileDialog1.FileName);
-                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-                saveFileDialog1.InitialDirectory = imageFolder;
-                saveFileDialog1.Title = Properties.Resources.Save_Multipage_TIFF_Image;
-                saveFileDialog1.Filter = "Image Files (*.tif;*.tiff)|*.tif;*.tiff";
-                saveFileDialog1.RestoreDirectory = true;
+                this.Cursor = Cursors.Wait;
+                this.statusLabel.Content = Properties.Resources.ConvertPDF_running;
 
-                result = saveFileDialog1.ShowDialog();
+                this.textBox1.Cursor = Cursors.Wait;
+                this.toolStripProgressBar1.IsEnabled = true;
+                this.toolStripProgressBar1.Visibility = Visibility.Visible;
+                //this.toolStripProgressBar1.Style = ProgressBarStyle.Marquee;
 
-                if (result.HasValue && result.Value)
-                {
-                    ArrayList args = new ArrayList();
-                    args.Add(openFileDialog1.FileName);
-                    args.Add(saveFileDialog1.FileName);
-
-                    this.Cursor = Cursors.Wait;
-                    this.statusLabel.Content = Properties.Resources.ConvertPDF_running;
-
-                    this.textBox1.Cursor = Cursors.Wait;
-                    this.toolStripProgressBar1.IsEnabled = true;
-                    this.toolStripProgressBar1.Visibility = Visibility.Visible;
-                    //this.toolStripProgressBar1.Style = ProgressBarStyle.Marquee;
-
-                    // Start the asynchronous operation.
-                    backgroundWorkerConvertPdf.RunWorkerAsync(args);
-                }
+                // Start the asynchronous operation.
+                backgroundWorkerConvertPdf.RunWorkerAsync(openFileDialog1.FileNames);
             }
         }
 
         private void backgroundWorkerConvertPdf_DoWork(object sender, DoWorkEventArgs e)
         {
-            ArrayList args = (ArrayList)e.Argument;
-            string inputFile = (string)args[0];
-            string targetFile = (string)args[1];
-            string outputTiffFile = PdfUtilities.ConvertPdf2Tiff(inputFile);
-            File.Delete(targetFile);
-            File.Move(outputTiffFile, targetFile);
-            e.Result = targetFile;
+            string[] inputFiles = (string[])e.Argument;
+            foreach (string inputFile in inputFiles)
+            {
+                string outputTiffFile = PdfUtilities.ConvertPdf2Tiff(inputFile);
+                string targetFile = Path.Combine(Path.GetDirectoryName(inputFile), Path.GetFileNameWithoutExtension(inputFile) + ".tif");
+                File.Delete(targetFile);
+                File.Move(outputTiffFile, targetFile);
+                e.Result = targetFile;
+            }
         }
 
         private void backgroundWorkerConvertPdf_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -512,7 +500,8 @@ namespace VietOCR
             {
                 // Finally, handle the case where the operation succeeded.
                 this.statusLabel.Content = Properties.Resources.ConvertPDFcompleted;
-                MessageBox.Show(this, Properties.Resources.ConvertPDFcompleted + Path.GetFileName(e.Result.ToString()) + Properties.Resources.created, strProgName, MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(this, Properties.Resources.ConvertPDFcompleted + "\n" + Properties.Resources.check_output_in + Path.GetDirectoryName(e.Result.ToString()), strProgName, MessageBoxButton.OK, MessageBoxImage.Information);
+
             }
             this.statusLabel.Content = String.Empty;
             this.textBox1.Cursor = null;
