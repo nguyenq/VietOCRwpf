@@ -370,4 +370,10 @@ Please run the program as administrator.</value>
   <data name="ReplacedOccurrence" xml:space="preserve">
     <value>Replaced {0} occurrence(s).</value>
   </data>
+  <data name="Double_sided" xml:space="preserve">
+    <value>Double-sided</value>
+  </data>
+  <data name="Single_sided" xml:space="preserve">
+    <value>Single-sided</value>
+  </data>
 </root>

@@ -251,6 +251,12 @@ namespace VietOCR
 
         }
 
+        protected virtual void doubleSidedPageToolStripMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            this.doubleSidedPageToolStripMenuItem.IsChecked ^= true;
+            this.statusLabelPageValue.Content = this.doubleSidedPageToolStripMenuItem.IsChecked ? Properties.Resources.Double_sided : Properties.Resources.Single_sided;
+        }
+
         protected virtual void screenshotModeToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
             this.screenshotModeToolStripMenuItem.IsChecked ^= true;

@@ -67,6 +67,11 @@ namespace VietOCR
             set { rect = value; }
         }
 
+        public bool doublesided
+        {
+            set; get;
+        }
+
         String lang;
 
         public String Language
@@ -80,12 +85,13 @@ namespace VietOCR
         /** Vertical Resolution */
         private int dpiY;
 
-        public OCRImageEntity(IList<Image> images, string inputfilename, int index, Rectangle rect, String lang)
+        public OCRImageEntity(IList<Image> images, string inputfilename, int index, Rectangle rect, bool doublesided, String lang)
         {
             this.images = images;
             this.inputfilename = inputfilename;
             this.index = index;
             this.rect = rect;
+            this.doublesided = doublesided;
             this.lang = lang;
         }
 
@@ -104,7 +110,19 @@ namespace VietOCR
                 {
                     if (rect == null || rect == Rectangle.Empty)
                     {
-                        clonedImages.Add(image);
+                        if (doublesided)
+                        {
+                            // split image in half
+                            rect = new Rectangle(0, 0, image.Width / 2, image.Height);
+                            clonedImages.Add(ImageHelper.Crop(image, rect));
+                            rect = new Rectangle(image.Width / 2, 0, image.Width / 2, image.Height);
+                            clonedImages.Add(ImageHelper.Crop(image, rect));
+                            rect = Rectangle.Empty;
+                        }
+                        else
+                        {
+                            clonedImages.Add(image);
+                        }
                     }
                     else
                     {
@@ -117,7 +135,19 @@ namespace VietOCR
                     // rescaling
                     if (rect == null || rect == Rectangle.Empty)
                     {
-                        clonedImages.Add(ImageHelper.Rescale(image, dpiX, dpiY));
+                        if (doublesided)
+                        {
+                            // split image in half
+                            rect = new Rectangle(0, 0, image.Width / 2, image.Height);
+                            clonedImages.Add(ImageHelper.Rescale(ImageHelper.Crop(image, rect), dpiX, dpiY));
+                            rect = new Rectangle(image.Width / 2, 0, image.Width / 2, image.Height);
+                            clonedImages.Add(ImageHelper.Rescale(ImageHelper.Crop(image, rect), dpiX, dpiY));
+                            rect = Rectangle.Empty;
+                        }
+                        else
+                        {
+                            clonedImages.Add(ImageHelper.Rescale(image, dpiX, dpiY));
+                        }
                     }
                     else
                     {

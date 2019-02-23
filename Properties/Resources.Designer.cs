@@ -305,6 +305,15 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Double-sided.
+        /// </summary>
+        internal static string Double_sided {
+            get {
+                return ResourceManager.GetString("Double_sided", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Download canceled..
         /// </summary>
         internal static string Downloadcanceled {
@@ -733,6 +742,15 @@ namespace VietOCR.Properties {
         internal static string selectLanguage {
             get {
                 return ResourceManager.GetString("selectLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Single-sided.
+        /// </summary>
+        internal static string Single_sided {
+            get {
+                return ResourceManager.GetString("Single_sided", resourceCulture);
             }
         }
         

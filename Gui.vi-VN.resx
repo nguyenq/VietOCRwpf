@@ -631,4 +631,13 @@
   <data name="convertPdfToolStripMenuItem.Text" xml:space="preserve">
     <value>Chuyển PDF _sang TIFF...</value>
   </data>
+  <data name="doubleSidedPageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Trang đôi</value>
+  </data>
+  <data name="toolStripStatusLabelPage.Text" xml:space="preserve">
+    <value>Trang:</value>
+  </data>
+  <data name="toolStripStatusLabelPage.ToolTipText" xml:space="preserve">
+    <value>Trang đôi/đơn</value>
+  </data>
 </root>

@@ -144,6 +144,8 @@
                 <Separator />
                 <MenuItem x:Name="undoToolStripMenuItem" Header="{x:Static resx:Gui.undoToolStripMenuItem_Text}"  InputGestureText="Ctrl+Shift+Z" Click="undoToolStripMenuItem_Click" />
                 <Separator />
+                <MenuItem x:Name="doubleSidedPageToolStripMenuItem" Header="{x:Static resx:Gui.doubleSidedPageToolStripMenuItem_Text}" Click="doubleSidedPageToolStripMenuItem_Click" />
+                <Separator />
                 <MenuItem x:Name="screenshotModeToolStripMenuItem" Header="{x:Static resx:Gui.screenshotModeToolStripMenuItem_Text}" Click="screenshotModeToolStripMenuItem_Click"  />
                 <Separator />
                 <MenuItem x:Name="segmentedRegionsToolStripMenuItem" Header="{x:Static resx:Gui.segmentedRegionsToolStripMenuItem_Text}" Click="segmentedRegionsToolStripMenuItem_Click" />
@@ -204,6 +206,8 @@
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
                     </Grid>
                 </ItemsPanelTemplate>
@@ -247,25 +251,32 @@
             <Separator  Grid.Column="6"/>
             <StatusBarItem Grid.Column="7">
                 <StackPanel Orientation="Horizontal">
-                    <Label x:Name="toolStripStatusLabelSM" Content="{x:Static resx:Gui.toolStripStatusLabelSM_Text}" ToolTip="{x:Static resx:Gui.toolStripStatusLabelSM_ToolTipText}"  />
-                    <Label x:Name="statusLabelSMvalue" Content="Off" />
+                    <Label x:Name="toolStripStatusLabelPage" Content="{x:Static resx:Gui.toolStripStatusLabelPage_Text}" ToolTip="{x:Static resx:Gui.toolStripStatusLabelPage_ToolTipText}"  />
+                    <Label x:Name="statusLabelPageValue" Content="Single-sided" />
                 </StackPanel>
             </StatusBarItem>
-            <Separator  Grid.Column="8" />
+            <Separator  Grid.Column="8"/>
             <StatusBarItem Grid.Column="9">
                 <StackPanel Orientation="Horizontal">
-                    <Label x:Name="toolStripStatusLabelPSM" Content="{x:Static resx:Gui.toolStripStatusLabelPSM_Text}" ToolTip="{x:Static resx:Gui.toolStripStatusLabelPSM_ToolTipText}" />
-                    <Label x:Name="statusLabelPSMvalue" Content="Auto"  />
+                    <Label x:Name="toolStripStatusLabelSM" Content="{x:Static resx:Gui.toolStripStatusLabelSM_Text}" ToolTip="{x:Static resx:Gui.toolStripStatusLabelSM_ToolTipText}"  />
+                    <Label x:Name="statusLabelSMvalue" Content="Off" />
                 </StackPanel>
             </StatusBarItem>
             <Separator  Grid.Column="10" />
             <StatusBarItem Grid.Column="11">
                 <StackPanel Orientation="Horizontal">
+                    <Label x:Name="toolStripStatusLabelPSM" Content="{x:Static resx:Gui.toolStripStatusLabelPSM_Text}" ToolTip="{x:Static resx:Gui.toolStripStatusLabelPSM_ToolTipText}" />
+                    <Label x:Name="statusLabelPSMvalue" Content="Auto"  />
+                </StackPanel>
+            </StatusBarItem>
+            <Separator  Grid.Column="12" />
+            <StatusBarItem Grid.Column="13">
+                <StackPanel Orientation="Horizontal">
                     <Label x:Name="toolStripStatusLabelOEM" Content="{x:Static resx:Gui.toolStripStatusLabelOEM_Text}" ToolTip="{x:Static resx:Gui.toolStripStatusLabelOEM_ToolTipText}"  />
                     <Label x:Name="statusLabelOEMvalue" Content="Default"  />
                 </StackPanel>
             </StatusBarItem>
-            <Separator Margin="1,2,18,2"  Grid.Column="12"/>
+            <Separator Margin="1,2,18,2"  Grid.Column="14"/>
         </StatusBar>
         <Grid DockPanel.Dock="Top" >
             <Grid.ColumnDefinitions>

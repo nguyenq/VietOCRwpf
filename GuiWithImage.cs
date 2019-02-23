@@ -32,6 +32,7 @@ namespace VietOCR
     public class GuiWithImage : GuiWithBulkOCR
     {
         const string strScreenshotMode = "ScreenshotMode";
+        const string strPageSide = "PageSide";
         const double MINIMUM_DESKEW_THRESHOLD = 0.05d;
         FixedSizeStack<System.Drawing.Image> stack = new FixedSizeStack<System.Drawing.Image>(10);
         System.Drawing.Image originalImage;
@@ -44,6 +45,7 @@ namespace VietOCR
         protected override void Window_Loaded(object sender, RoutedEventArgs e)
         {
             base.Window_Loaded(sender, e);
+            statusLabelPageValue.Content = this.doubleSidedPageToolStripMenuItem.IsChecked ? Properties.Resources.Double_sided : Properties.Resources.Single_sided;
             statusLabelSMvalue.Content = this.screenshotModeToolStripMenuItem.IsChecked ? "On" : "Off";
         }
 
@@ -459,6 +461,8 @@ namespace VietOCR
 
             this.screenshotModeToolStripMenuItem.IsChecked = Convert.ToBoolean(
                 (int)regkey.GetValue(strScreenshotMode, Convert.ToInt32(false)));
+            this.doubleSidedPageToolStripMenuItem.IsChecked = Convert.ToBoolean(
+                (int)regkey.GetValue(strPageSide, Convert.ToInt32(false)));
         }
 
         protected override void SaveRegistryInfo(RegistryKey regkey)
@@ -466,6 +470,7 @@ namespace VietOCR
             base.SaveRegistryInfo(regkey);
 
             regkey.SetValue(strScreenshotMode, Convert.ToInt32(this.screenshotModeToolStripMenuItem.IsChecked));
+            regkey.SetValue(strPageSide, Convert.ToInt32(this.doubleSidedPageToolStripMenuItem.IsChecked));
         }
     }
 }

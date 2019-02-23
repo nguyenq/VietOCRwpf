@@ -27,7 +27,7 @@ namespace VietOCR {
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
-               
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -179,6 +179,15 @@ namespace VietOCR {
         public static string despeckleToolStripMenuItem_Text {
             get {
                 return ResourceManager.GetString("despeckleToolStripMenuItem.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Double-sided Page.
+        /// </summary>
+        public static string doubleSidedPageToolStripMenuItem_Text {
+            get {
+                return ResourceManager.GetString("doubleSidedPageToolStripMenuItem.Text", resourceCulture);
             }
         }
         
@@ -1170,6 +1179,24 @@ namespace VietOCR {
         public static string toolStripStatusLabelOEM_ToolTipText {
             get {
                 return ResourceManager.GetString("toolStripStatusLabelOEM.ToolTipText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Page:.
+        /// </summary>
+        public static string toolStripStatusLabelPage_Text {
+            get {
+                return ResourceManager.GetString("toolStripStatusLabelPage.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sided Page.
+        /// </summary>
+        public static string toolStripStatusLabelPage_ToolTipText {
+            get {
+                return ResourceManager.GetString("toolStripStatusLabelPage.ToolTipText", resourceCulture);
             }
         }
         

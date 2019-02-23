@@ -110,7 +110,7 @@ namespace VietOCR
                 this.toolStripProgressBar1.Visibility = Visibility.Visible;
                 //this.toolStripProgressBar1.Style = ProgressBarStyle.Marquee;
 
-                OCRImageEntity entity = new OCRImageEntity(imageList, inputfilename, index, rect, curLangCode);
+                OCRImageEntity entity = new OCRImageEntity(imageList, inputfilename, index, rect, this.doubleSidedPageToolStripMenuItem.IsChecked, curLangCode);
                 entity.ScreenshotMode = this.screenshotModeToolStripMenuItem.IsChecked;
 
                 // Start the asynchronous operation.

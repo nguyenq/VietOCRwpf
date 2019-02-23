@@ -361,4 +361,10 @@ Hãy chạy chương trình như administrator.</value>
   <data name="ReplacedOccurrence" xml:space="preserve">
     <value>Đã thay thế {0} lần.</value>
   </data>
+  <data name="Double_sided" xml:space="preserve">
+    <value>Đôi</value>
+  </data>
+  <data name="Single_sided" xml:space="preserve">
+    <value>Đơn</value>
+  </data>
 </root>

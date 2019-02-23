@@ -1263,4 +1263,13 @@
   <data name="toolStripBtnFind.ToolTipText" xml:space="preserve">
     <value>Find and Replace</value>
   </data>
+  <data name="doubleSidedPageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Double-sided Page</value>
+  </data>
+  <data name="toolStripStatusLabelPage.Text" xml:space="preserve">
+    <value>Page:</value>
+  </data>
+  <data name="toolStripStatusLabelPage.ToolTipText" xml:space="preserve">
+    <value>Sided Page</value>
+  </data>
 </root>
