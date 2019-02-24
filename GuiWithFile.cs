@@ -65,6 +65,12 @@ namespace VietOCR
         /// <param name="selectedFile"></param>
         protected override void openFile(string selectedFile)
         {
+            if (!File.Exists(selectedFile))
+            {
+                MessageBox.Show(this, Properties.Resources.File_not_exist, strProgName, MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             // if text file, load it into textbox
             if (selectedFile.EndsWith(".txt"))
             {
@@ -298,6 +304,11 @@ namespace VietOCR
             else
             {
                 openFile(fileName);
+                if (!File.Exists(fileName))
+                {
+                    mruList.Remove(fileName);
+                    this.recentFilesToolStripMenuItem.Items.Remove(item);
+                }
             }
         }
 

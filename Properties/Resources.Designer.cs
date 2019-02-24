@@ -386,6 +386,15 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Input file does not exist..
+        /// </summary>
+        internal static string File_not_exist {
+            get {
+                return ResourceManager.GetString("File_not_exist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Gamma.
         /// </summary>
         internal static string Gamma {

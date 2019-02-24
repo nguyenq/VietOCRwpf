@@ -367,4 +367,7 @@ Hãy chạy chương trình như administrator.</value>
   <data name="Single_sided" xml:space="preserve">
     <value>Đơn</value>
   </data>
+  <data name="File_not_exist" xml:space="preserve">
+    <value>Input file không hiện hữu.</value>
+  </data>
 </root>

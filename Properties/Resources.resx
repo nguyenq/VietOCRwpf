@@ -376,4 +376,7 @@ Please run the program as administrator.</value>
   <data name="Single_sided" xml:space="preserve">
     <value>Single-sided</value>
   </data>
+  <data name="File_not_exist" xml:space="preserve">
+    <value>Input file does not exist.</value>
+  </data>
 </root>
