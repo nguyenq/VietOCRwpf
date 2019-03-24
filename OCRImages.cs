@@ -140,6 +140,9 @@ namespace VietOCR
 
             using (TesseractEngine engine = new TesseractEngine(Datapath, Language, EngineMode, configs_file))
             {
+                ControlParameters(engine);
+                Tesseract.PageSegMode psm = (PageSegMode)Enum.Parse(typeof(PageSegMode), PageSegMode);
+
                 var imageName = Path.GetFileNameWithoutExtension(filename);
 
                 using (var pixA = LoadPixArray(filename))
@@ -156,7 +159,7 @@ namespace VietOCR
                                 {
                                     pixd = pix.Deskew(new ScewSweep(range: 45), Pix.DefaultBinarySearchReduction, Pix.DefaultBinaryThreshold, out Scew scew);
                                 }
-                                using (var page = engine.Process(pixd ?? pix, imageName))
+                                using (var page = engine.Process(pixd ?? pix, imageName, psm))
                                 {
                                     var addedPage = renderer.AddPage(page);
                                 }

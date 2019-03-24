@@ -134,3 +134,6 @@ Version 5.4.2 (31 December 2018)
 
 Version 5.4.3 (23 February 2019)
 - Add support for double-sided pages
+
+Version 5.4.4 (24 March 2019)
+- Fix batch and bulk processes: PSM and other engine parameters were not used
