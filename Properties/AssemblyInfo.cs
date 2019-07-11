@@ -12,7 +12,7 @@ using System.Windows;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("VietUnicode")]
 [assembly: AssemblyProduct("VietOCR.NET")]
-[assembly: AssemblyCopyright("Copyright © VietUnicode 2018")]
+[assembly: AssemblyCopyright("Copyright © VietUnicode 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -52,4 +52,4 @@ using System.Windows;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("5.4.4.0")]
+[assembly: AssemblyFileVersion("5.5.0.0")]

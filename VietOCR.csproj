@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VietOCR</RootNamespace>
     <AssemblyName>VietOCR</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -67,7 +67,7 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="Tesseract, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Tesseract, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Library\Tesseract.dll</HintPath>
     </Reference>
@@ -286,7 +286,7 @@
     <Content Include="Data\TessLangDataURL.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="x86\liblept1760.dll" />
+    <None Include="x86\liblept1780.dll" />
     <Resource Include="readme_cs_ku.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -294,7 +294,7 @@
     <Content Include="versionchanges_cs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="x86\libtesseract400.dll" />
+    <None Include="x86\libtesseract410.dll" />
     <Content Include="dict\en_US.aff">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -344,10 +344,10 @@
     <Resource Include="readme_cs_ne.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Content Include="x64\liblept1760.dll">
+    <Content Include="x64\liblept1780.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="x64\libtesseract400.dll">
+    <Content Include="x64\libtesseract410.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <EmbeddedResource Include="BulkDialog.bn-IN.resx">
