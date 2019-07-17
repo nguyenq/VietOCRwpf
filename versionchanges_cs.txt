@@ -137,3 +137,6 @@ Version 5.4.3 (23 February 2019)
 
 Version 5.4.4 (24 March 2019)
 - Fix batch and bulk processes: PSM and other engine parameters were not used
+
+Version 5.5.0 (17 July 2019)
+- Upgrade to Tesseract 4.1.0 (5280bbc)
