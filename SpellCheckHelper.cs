@@ -29,6 +29,7 @@ namespace VietOCR
         static RedUnderlineAdorner myAdorner;
 
         static string baseDir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+        string strUserDictFile;
 
         public ObservableCollection<CharacterRange> GetSpellingErrorRanges
         {
@@ -39,6 +40,18 @@ namespace VietOCR
         {
             this.textbox = textbox;
             this.localeId = localeId;
+            string userAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            string appdataDir = Path.Combine(userAppData, "VietOCR");
+            if (!Directory.Exists(appdataDir))
+            {
+                Directory.CreateDirectory(appdataDir);
+            }
+
+            strUserDictFile = Path.Combine(appdataDir, "user.dic");
+            if (!File.Exists(strUserDictFile))
+            {
+                File.CreateText(strUserDictFile).Close();
+            }
         }
 
         public bool InitializeSpellCheck()
@@ -200,8 +213,6 @@ namespace VietOCR
             {
                 userWordList.Add(word.ToLower());
                 
-                string strUserDictFile = Path.Combine(baseDir, @"dict\user.dic");
-
                 using (StreamWriter sw = new StreamWriter(strUserDictFile, true, Encoding.UTF8))
                 {
                     sw.WriteLine(word);
@@ -213,7 +224,6 @@ namespace VietOCR
         {
             try
             {
-                string strUserDictFile = Path.Combine(baseDir, @"dict\user.dic");
                 FileInfo userDict = new FileInfo(strUserDictFile);
                 DateTime fileLastModified = userDict.LastWriteTime;
 

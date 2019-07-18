@@ -159,7 +159,14 @@ namespace VietOCR
             }
             else if (item.Tag.ToString() == "AddToDict")
             {
-                speller.AddWord(curWord);
+                try
+                {
+                    speller.AddWord(curWord);
+                }
+                catch
+                {
+                    MessageBox.Show("Unable to add to user dictionary.", Gui.strProgName, MessageBoxButton.OK, MessageBoxImage.Error);
+                }
             }
 
             speller.SpellCheck();
@@ -180,7 +187,7 @@ namespace VietOCR
 
             if (localeId == null)
             {
-                MessageBox.Show("Need to add an entry in Data/ISO639-1.xml file.");
+                MessageBox.Show("Need to add an entry in Data/ISO639-1.xml file.", Gui.strProgName, MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
 
@@ -194,7 +201,7 @@ namespace VietOCR
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show(ex.Message, Gui.strProgName, MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else
