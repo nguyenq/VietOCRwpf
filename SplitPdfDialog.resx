@@ -128,9 +128,6 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>274, 178</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterParent</value>
@@ -141,12 +138,6 @@
   <data name="this.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="buttonBrowseInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>222, 19</value>
-  </data>
-  <data name="buttonBrowseInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>27, 23</value>
-  </data>
   <data name="buttonBrowseInput.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
@@ -155,12 +146,6 @@
   </data>
   <data name="buttonBrowseInput.ToolTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="buttonBrowseOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>222, 45</value>
-  </data>
-  <data name="buttonBrowseOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>27, 23</value>
   </data>
   <data name="buttonBrowseOutput.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -171,12 +156,6 @@
   <data name="buttonBrowseOutput.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>174, 135</value>
-  </data>
-  <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
   <data name="buttonCancel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
@@ -185,12 +164,6 @@
   </data>
   <data name="buttonCancel.ToolTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="buttonSplit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 135</value>
-  </data>
-  <data name="buttonSplit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
   </data>
   <data name="buttonSplit.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -204,12 +177,6 @@
   <data name="labelFrom.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="labelFrom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>121, 82</value>
-  </data>
-  <data name="labelFrom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 13</value>
-  </data>
   <data name="labelFrom.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
@@ -221,12 +188,6 @@
   </data>
   <data name="labelInput.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="labelInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 24</value>
-  </data>
-  <data name="labelInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 13</value>
   </data>
   <data name="labelInput.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -240,12 +201,6 @@
   <data name="labelNumOfPages.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="labelNumOfPages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 105</value>
-  </data>
-  <data name="labelNumOfPages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 13</value>
-  </data>
   <data name="labelNumOfPages.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
@@ -257,12 +212,6 @@
   </data>
   <data name="labelOutput.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="labelOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 50</value>
-  </data>
-  <data name="labelOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 13</value>
   </data>
   <data name="labelOutput.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -276,12 +225,6 @@
   <data name="labelTo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="labelTo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>189, 82</value>
-  </data>
-  <data name="labelTo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>19, 13</value>
-  </data>
   <data name="labelTo.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
@@ -293,12 +236,6 @@
   </data>
   <data name="radioButtonFiles.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="radioButtonFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 103</value>
-  </data>
-  <data name="radioButtonFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 17</value>
   </data>
   <data name="radioButtonFiles.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -312,12 +249,6 @@
   <data name="radioButtonPages.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="radioButtonPages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>28, 80</value>
-  </data>
-  <data name="radioButtonPages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 17</value>
-  </data>
   <data name="radioButtonPages.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
@@ -327,35 +258,17 @@
   <data name="radioButtonPages.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="textBoxFrom.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 77</value>
-  </data>
-  <data name="textBoxFrom.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 20</value>
-  </data>
   <data name="textBoxFrom.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="textBoxFrom.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="textBoxInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 21</value>
-  </data>
-  <data name="textBoxInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 20</value>
-  </data>
   <data name="textBoxInput.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
   <data name="textBoxInput.ToolTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="textBoxNumOfPages.Location" type="System.Drawing.Point, System.Drawing">
-    <value>211, 100</value>
-  </data>
-  <data name="textBoxNumOfPages.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 20</value>
   </data>
   <data name="textBoxNumOfPages.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -366,23 +279,11 @@
   <data name="textBoxNumOfPages.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <data name="textBoxOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 47</value>
-  </data>
-  <data name="textBoxOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 20</value>
-  </data>
   <data name="textBoxOutput.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
   <data name="textBoxOutput.ToolTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="textBoxTo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>211, 77</value>
-  </data>
-  <data name="textBoxTo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 20</value>
   </data>
   <data name="textBoxTo.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
