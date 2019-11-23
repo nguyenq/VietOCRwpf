@@ -11,7 +11,7 @@
         <p>Przetwarzanie wsadowe jest już dostępne. Program przeszukuje obserwowany folder celem znalezienia nowych plików z obrazami i automatycznie przetwarza je przez silnik OCR, następnie wysyła wyniki procesu do folderu wyjściowego.</p>
         <h3>WYMAGANIA SYSTEMOWE</h3>
         <p>
-            <a href="https://dotnet.microsoft.com/download/dotnet-framework/net472">Microsoft .NET Framework 4.7.2</a>.
+            <a href="https://dotnet.microsoft.com/download/dotnet-framework/net48">Microsoft .NET Framework 4.8</a>.
         </p>
         <p>Jeśli pojawi się błąd &quot;<i>Exception has been thrown by the target of an invocation</i>&quot; proszę zainstaluj <a href="https://visualstudio.microsoft.com/downloads/">Microsoft Visual C++ 2019 Redistributable Package</a>.</p>
         <h3>INSTALACJA</h3>
@@ -19,9 +19,9 @@
         <p>
             Scanning support is provided via the Windows Image Acquisition Library v2.0.
         </p>
-        <p>Obsługa plików PDF jest możliwa dzięki <a href="http://www.ghostscript.com/">GPL Ghostscript</a>. Po zainstalowaniu bibliotek upewnij się, że udostępnione biblioteki (<code>gsdll64.dll</code> or <code>libgs.so</code>) &nbsp;są w ścieżce wyszukiwania poprzez ustawienie odpowiednich zmiennych systemowych. W Windows dla GS w wersji 9.27, dodaj poniższy wpis do&nbsp;zmiennej&nbsp;<code>Path</code> (dostępnej poprzez Panel Kontrolny &gt; System &gt; zakładka Zaawansowane &gt; Zmienne środowiskowe...) :</p>
+        <p>Obsługa plików PDF jest możliwa dzięki <a href="http://www.ghostscript.com/">GPL Ghostscript</a>. Po zainstalowaniu bibliotek upewnij się, że udostępnione biblioteki (<code>gsdll64.dll</code> or <code>libgs.so</code>) &nbsp;są w ścieżce wyszukiwania poprzez ustawienie odpowiednich zmiennych systemowych. W Windows dla GS w wersji 9.50, dodaj poniższy wpis do&nbsp;zmiennej&nbsp;<code>Path</code> (dostępnej poprzez Panel Kontrolny &gt; System &gt; zakładka Zaawansowane &gt; Zmienne środowiskowe...) :</p>
         <blockquote>
-            <p><code>;C:\Program Files\gs\gs9.27\bin</code></p>
+            <p><code>;C:\Program Files\gs\gs9.50\bin</code></p>
         </blockquote>
         <p>Funkcjonalność sprawdzania pisowni jest dostępna poprzez Hunspell, którego pliki <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">słownika</a> (<code>.aff</code> <code>.dic</code>) powinny być umieszczone w folderze <code>dict</code> programu VietOCR.</p>
         <h3>INSTRUKCJA</h3>

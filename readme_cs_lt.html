@@ -14,14 +14,14 @@
             tekstus įrašyti į rezultatams talpinti nurodytą aplanką.
         </p>
         <h3>REIKALAVIMAI SISTEMAI</h3>
-        <p><a href="https://dotnet.microsoft.com/download/dotnet-framework/net472">„Microsoft .NET Framework 4.7.2“ platforma</a>.</p>
+        <p><a href="https://dotnet.microsoft.com/download/dotnet-framework/net48">„Microsoft .NET Framework 4.8“ platforma</a>.</p>
         <p>Jeigu, bandydami paleisti šią programą, susiduriate su klaidos pranešimu „<i>Exception has been thrown by the target of an invocation</i>“, kompiuteryje turėtumėte įdiegti <a href="https://visualstudio.microsoft.com/downloads/">„Microsoft Visual C++ 2019 Redistributable Package“ platinamąjį paketą</a>.</p>
         <h3>PROGRAMOS ĮDIEGIMAS</h3>
         <p>Jeigu neturite teisių programos įdiegti kaip įprasta į <code>C:\Program Files</code> aplanką, diegimo metu galėsite nurodyti kitą paskirties aplanką.</p>
         <p>Skenerio programiniam palaikymui yra naudojama „Windows Image Acquisition Library 2.0“ biblioteka.</p>
-        <p>PDF failų palaikymui naudojama „<a href="http://www.ghostscript.com/">GPL Ghostscript</a>“ priemonė. Ją įdiegus, reikia užtikrinti, kad dinaminė biblioteka <code>gsdll64.dll</code> patektų į sisteminės failų paieškos kelią, papildant aplinkos kintamąjį <code>Path</code>, kurį galite redaguoti, atvėrę Valdymo skydą, jame spustelėję piktogramą „Sistema“, tada atverę kortelę „Išsamiau“ ir spustelėję mygtuką „Aplinkos kintamieji“. Pavyzdžiui, „GhostScript 9.27“ atveju, kintamąjį <code>Path</code> reikėtų papildyti tokia eilute:</p>
+        <p>PDF failų palaikymui naudojama „<a href="http://www.ghostscript.com/">GPL Ghostscript</a>“ priemonė. Ją įdiegus, reikia užtikrinti, kad dinaminė biblioteka <code>gsdll64.dll</code> patektų į sisteminės failų paieškos kelią, papildant aplinkos kintamąjį <code>Path</code>, kurį galite redaguoti, atvėrę Valdymo skydą, jame spustelėję piktogramą „Sistema“, tada atverę kortelę „Išsamiau“ ir spustelėję mygtuką „Aplinkos kintamieji“. Pavyzdžiui, „GhostScript 9.50“ atveju, kintamąjį <code>Path</code> reikėtų papildyti tokia eilute:</p>
         <blockquote>
-            <p><code>;C:\Program Files\gs\gs9.27\bin</code></p>
+            <p><code>;C:\Program Files\gs\gs9.50\bin</code></p>
         </blockquote>
         <p>Rašybos tikrinimo funkcija galima panaudojant „Hunspell“ tikrintuvę, kurios <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">žodynų</a> failai (<code>.aff</code>, <code>.dic</code>) turėtų būti patalpinti į aplanką <code>dict</code>, esantį „VietOCR“ programos aplanke.</p>
         <h3>INSTRUKCIJOS</h3>
