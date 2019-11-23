@@ -421,33 +421,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to text.
-        /// </summary>
-        public static string comboBoxOutputFormat_Items {
-            get {
-                return ResourceManager.GetString("comboBoxOutputFormat.Items", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to text+.
-        /// </summary>
-        public static string comboBoxOutputFormat_Items1 {
-            get {
-                return ResourceManager.GetString("comboBoxOutputFormat.Items1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to hocr.
-        /// </summary>
-        public static string comboBoxOutputFormat_Items2 {
-            get {
-                return ResourceManager.GetString("comboBoxOutputFormat.Items2", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
         /// </summary>
         public static System.Windows.Forms.Padding comboBoxOutputFormat_Margin {

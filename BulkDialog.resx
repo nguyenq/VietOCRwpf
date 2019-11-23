@@ -127,9 +127,6 @@
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="comboBoxOutputFormat.Items1" xml:space="preserve">
-    <value>text+</value>
-  </data>
   <data name="btnInput.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -149,9 +146,6 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>8, 16</value>
-  </data>
-  <data name="comboBoxOutputFormat.Items" xml:space="preserve">
-    <value>text</value>
   </data>
   <data name="comboBoxOutputFormat.ToolTip" xml:space="preserve">
     <value />
@@ -203,9 +197,6 @@
   </data>
   <data name="labelOutput.ToolTip" xml:space="preserve">
     <value />
-  </data>
-  <data name="comboBoxOutputFormat.Items2" xml:space="preserve">
-    <value>hocr</value>
   </data>
   <data name="btnOutput.Text" xml:space="preserve">
     <value>...</value>

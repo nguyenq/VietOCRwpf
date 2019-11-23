@@ -28,7 +28,7 @@ namespace VietOCR {
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
-        
+       
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -255,33 +255,6 @@ namespace VietOCR {
         public static string checkBoxDeskew_Text {
             get {
                 return ResourceManager.GetString("checkBoxDeskew.Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to text.
-        /// </summary>
-        public static string comboBoxOutputFormat_Items {
-            get {
-                return ResourceManager.GetString("comboBoxOutputFormat.Items", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to text+.
-        /// </summary>
-        public static string comboBoxOutputFormat_Items1 {
-            get {
-                return ResourceManager.GetString("comboBoxOutputFormat.Items1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to hocr.
-        /// </summary>
-        public static string comboBoxOutputFormat_Items2 {
-            get {
-                return ResourceManager.GetString("comboBoxOutputFormat.Items2", resourceCulture);
             }
         }
         
