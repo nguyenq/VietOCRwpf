@@ -117,28 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-  <data name="this.Title" xml:space="preserve">
-    <value>Raidžių registro keitimas</value>
+  <data name="labelFind.Text" xml:space="preserve">
+    <value>Ko _ieškoti:</value>
   </data>
-  <data name="buttonChange.Text" xml:space="preserve">
-    <value>_Keisti</value>
+  <data name="labelReplace.Text" xml:space="preserve">
+    <value>Kuo k_eisti:</value>
   </data>
-  <data name="buttonClose.Text" xml:space="preserve">
+  <data name="chkboxMatchCase.Text" xml:space="preserve">
+    <value>_Skirti didžiąsias ir mažąsias raides</value>
+  </data>
+  <data name="chkboxMatchDiacritics.Text" xml:space="preserve">
+    <value>Atsižvelgti į _diakritinius ženklus</value>
+  </data>
+  <data name="radiobtnUp.Text" xml:space="preserve">
+    <value>_Link pradžios</value>
+  </data>
+  <data name="radiobtnDown.Text" xml:space="preserve">
+    <value>Link p_abaigos</value>
+  </data>
+  <data name="grpboxDirection.Text" xml:space="preserve">
+    <value>Kryptis</value>
+  </data>
+  <data name="btnFindNext.Text" xml:space="preserve">
+    <value>Ieškoti _kito</value>
+  </data>
+  <data name="btnReplace.Text" xml:space="preserve">
+    <value>_Pakeisti</value>
+  </data>
+  <data name="btnReplaceAll.Text" xml:space="preserve">
+    <value>Pakeisti _visus</value>
+  </data>
+  <data name="btnClose.Text" xml:space="preserve">
     <value>_Užverti</value>
   </data>
-  <data name="radioButton1.Text" xml:space="preserve">
-    <value>_Sakinio stilius</value>
+  <data name="chkboxMatchRegex.Text" xml:space="preserve">
+    <value>_Reguliarieji reiškiniai</value>
   </data>
-  <data name="radioButton2.Text" xml:space="preserve">
-    <value>_mažosios raidės</value>
+  <data name="this.Title" xml:space="preserve">
+    <value>Ieškoti ir keisti</value>
   </data>
-  <data name="radioButton3.Text" xml:space="preserve">
-    <value>_DIDŽIOSIOS RAIDĖS</value>
-  </data>
-  <data name="radioButton4.Text" xml:space="preserve">
-    <value>_Visus Žodžius Pradėti Didžiąja</value>
+  <data name="chkboxMatchWholeWord.Text" xml:space="preserve">
+    <value>Tik ištisi _žodžiai</value>
   </data>
 </root>
