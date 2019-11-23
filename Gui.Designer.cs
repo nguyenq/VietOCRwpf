@@ -19,7 +19,7 @@ namespace VietOCR {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public partial class Gui {
@@ -570,31 +570,11 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap toolStripBtnActualSize_Image {
-            get {
-                object obj = ResourceManager.GetObject("toolStripBtnActualSize.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Actual Size.
         /// </summary>
         public static string toolStripBtnActualSize_ToolTipText {
             get {
                 return ResourceManager.GetString("toolStripBtnActualSize.ToolTipText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap toolStripBtnClear_Image {
-            get {
-                object obj = ResourceManager.GetObject("toolStripBtnClear.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -635,16 +615,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap toolStripBtnFitImage_Image {
-            get {
-                object obj = ResourceManager.GetObject("toolStripBtnFitImage.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to ┼.
         /// </summary>
         public static string toolStripBtnFitImage_Text {
@@ -659,16 +629,6 @@ namespace VietOCR {
         public static string toolStripBtnFitImage_ToolTipText {
             get {
                 return ResourceManager.GetString("toolStripBtnFitImage.ToolTipText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap toolStripBtnNext_Image {
-            get {
-                object obj = ResourceManager.GetObject("toolStripBtnNext.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -691,16 +651,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap toolStripBtnOCR_Image {
-            get {
-                object obj = ResourceManager.GetObject("toolStripBtnOCR.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to OCR.
         /// </summary>
         public static string toolStripBtnOCR_Text {
@@ -715,16 +665,6 @@ namespace VietOCR {
         public static string toolStripBtnOCR_ToolTipText {
             get {
                 return ResourceManager.GetString("toolStripBtnOCR.ToolTipText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap toolStripBtnOpen_Image {
-            get {
-                object obj = ResourceManager.GetObject("toolStripBtnOpen.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -747,16 +687,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap toolStripBtnPrev_Image {
-            get {
-                object obj = ResourceManager.GetObject("toolStripBtnPrev.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to &lt;.
         /// </summary>
         public static string toolStripBtnPrev_Text {
@@ -771,16 +701,6 @@ namespace VietOCR {
         public static string toolStripBtnPrev_ToolTipText {
             get {
                 return ResourceManager.GetString("toolStripBtnPrev.ToolTipText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap toolStripBtnRotateCCW_Image {
-            get {
-                object obj = ResourceManager.GetObject("toolStripBtnRotateCCW.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -803,16 +723,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap toolStripBtnRotateCW_Image {
-            get {
-                object obj = ResourceManager.GetObject("toolStripBtnRotateCW.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to RCW.
         /// </summary>
         public static string toolStripBtnRotateCW_Text {
@@ -827,16 +737,6 @@ namespace VietOCR {
         public static string toolStripBtnRotateCW_ToolTipText {
             get {
                 return ResourceManager.GetString("toolStripBtnRotateCW.ToolTipText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap toolStripBtnSave_Image {
-            get {
-                object obj = ResourceManager.GetObject("toolStripBtnSave.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -859,16 +759,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap toolStripBtnScan_Image {
-            get {
-                object obj = ResourceManager.GetObject("toolStripBtnScan.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Scan.
         /// </summary>
         public static string toolStripBtnScan_Text {
@@ -883,16 +773,6 @@ namespace VietOCR {
         public static string toolStripBtnScan_ToolTipText {
             get {
                 return ResourceManager.GetString("toolStripBtnScan.ToolTipText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap toolStripBtnZoomIn_Image {
-            get {
-                object obj = ResourceManager.GetObject("toolStripBtnZoomIn.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -915,16 +795,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap toolStripBtnZoomOut_Image {
-            get {
-                object obj = ResourceManager.GetObject("toolStripBtnZoomOut.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to (-).
         /// </summary>
         public static string toolStripBtnZoomOut_Text {
@@ -943,31 +813,11 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap toolStripButtonCancelOCR_Image {
-            get {
-                object obj = ResourceManager.GetObject("toolStripButtonCancelOCR.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Cancel OCR.
         /// </summary>
         public static string toolStripButtonCancelOCR_Text {
             get {
                 return ResourceManager.GetString("toolStripButtonCancelOCR.Text", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap toolStripButtonPasteImage_Image {
-            get {
-                object obj = ResourceManager.GetObject("toolStripButtonPasteImage.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -981,31 +831,11 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap toolStripButtonPostProcess_Image {
-            get {
-                object obj = ResourceManager.GetObject("toolStripButtonPostProcess.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Post-process.
         /// </summary>
         public static string toolStripButtonPostProcess_ToolTipText {
             get {
                 return ResourceManager.GetString("toolStripButtonPostProcess.ToolTipText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap toolStripButtonRemoveLineBreaks_Image {
-            get {
-                object obj = ResourceManager.GetObject("toolStripButtonRemoveLineBreaks.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -1019,31 +849,11 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap toolStripButtonSpellCheck_Image {
-            get {
-                object obj = ResourceManager.GetObject("toolStripButtonSpellCheck.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Spell Check.
         /// </summary>
         public static string toolStripButtonSpellCheck_ToolTipText {
             get {
                 return ResourceManager.GetString("toolStripButtonSpellCheck.ToolTipText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap toolStripDropDownButtonSegmentedRegions_Image {
-            get {
-                object obj = ResourceManager.GetObject("toolStripDropDownButtonSegmentedRegions.Image", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
