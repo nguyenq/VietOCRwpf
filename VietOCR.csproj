@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VietOCR</RootNamespace>
     <AssemblyName>VietOCR</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -407,6 +407,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.vi-VN.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.bn-IN.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
@@ -651,6 +652,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ImageInfoDialog.vi-VN.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.bn-IN.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
@@ -697,6 +699,7 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>OptionsDialog.Designer.cs</LastGenOutput>
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.ru-RU.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
@@ -845,6 +848,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.vi-VN.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config">
       <SubType>Designer</SubType>
