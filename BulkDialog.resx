@@ -121,7 +121,6 @@
   <data name="labelOutput.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="textBoxInput.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
@@ -147,6 +146,7 @@
   <data name="textBoxInput.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>8, 16</value>
   </data>
@@ -184,10 +184,10 @@
     <value>...</value>
   </data>
   <data name="btnOutput.ToolTip" xml:space="preserve">
-    <value />
+    <value>Browse</value>
   </data>
   <data name="btnInput.ToolTip" xml:space="preserve">
-    <value />
+    <value>Browse</value>
   </data>
   <data name="labelOutputFormat.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>

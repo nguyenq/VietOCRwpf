@@ -19,7 +19,7 @@ namespace VietOCR {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public partial class ImageInfoDialog {
@@ -27,8 +27,7 @@ namespace VietOCR {
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
-        
+               
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -54,26 +53,6 @@ namespace VietOCR {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=80,Y=160}.
-        /// </summary>
-        public static System.Drawing.Point buttonOK_Location {
-            get {
-                object obj = ResourceManager.GetObject("buttonOK.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=75, Height=23}.
-        /// </summary>
-        public static System.Drawing.Size buttonOK_Size {
-            get {
-                object obj = ResourceManager.GetObject("buttonOK.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -124,26 +103,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=147,Y=19}.
-        /// </summary>
-        public static System.Drawing.Point comboBox3_Location {
-            get {
-                object obj = ResourceManager.GetObject("comboBox3.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=60, Height=21}.
-        /// </summary>
-        public static System.Drawing.Size comboBox3_Size {
-            get {
-                object obj = ResourceManager.GetObject("comboBox3.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Int32 similar to 12.
         /// </summary>
         public static int comboBox3_TabIndex {
@@ -181,26 +140,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=147,Y=44}.
-        /// </summary>
-        public static System.Drawing.Point comboBox4_Location {
-            get {
-                object obj = ResourceManager.GetObject("comboBox4.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=60, Height=21}.
-        /// </summary>
-        public static System.Drawing.Size comboBox4_Size {
-            get {
-                object obj = ResourceManager.GetObject("comboBox4.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Int32 similar to 13.
         /// </summary>
         public static int comboBox4_TabIndex {
@@ -211,32 +150,30 @@ namespace VietOCR {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unit.
+        /// </summary>
+        public static string comboBoxUnitH_ToolTip {
+            get {
+                return ResourceManager.GetString("comboBoxUnitH.ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unit.
+        /// </summary>
+        public static string comboBoxUnitW_ToolTip {
+            get {
+                return ResourceManager.GetString("comboBoxUnitW.ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Boolean similar to True.
         /// </summary>
         public static bool label5_AutoSize {
             get {
                 object obj = ResourceManager.GetObject("label5.AutoSize", resourceCulture);
                 return ((bool)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=145,Y=74}.
-        /// </summary>
-        public static System.Drawing.Point label5_Location {
-            get {
-                object obj = ResourceManager.GetObject("label5.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=25, Height=13}.
-        /// </summary>
-        public static System.Drawing.Size label5_Size {
-            get {
-                object obj = ResourceManager.GetObject("label5.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -280,26 +217,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=145,Y=100}.
-        /// </summary>
-        public static System.Drawing.Point label6_Location {
-            get {
-                object obj = ResourceManager.GetObject("label6.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=25, Height=13}.
-        /// </summary>
-        public static System.Drawing.Size label6_Size {
-            get {
-                object obj = ResourceManager.GetObject("label6.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Int32 similar to 15.
         /// </summary>
         public static int label6_TabIndex {
@@ -339,26 +256,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=26,Y=126}.
-        /// </summary>
-        public static System.Drawing.Point labelBitDepth_Location {
-            get {
-                object obj = ResourceManager.GetObject("labelBitDepth.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=51, Height=13}.
-        /// </summary>
-        public static System.Drawing.Size labelBitDepth_Size {
-            get {
-                object obj = ResourceManager.GetObject("labelBitDepth.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Int32 similar to 16.
         /// </summary>
         public static int labelBitDepth_TabIndex {
@@ -384,26 +281,6 @@ namespace VietOCR {
             get {
                 object obj = ResourceManager.GetObject("labelHeight.AutoSize", resourceCulture);
                 return ((bool)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=26,Y=48}.
-        /// </summary>
-        public static System.Drawing.Point labelHeight_Location {
-            get {
-                object obj = ResourceManager.GetObject("labelHeight.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=38, Height=13}.
-        /// </summary>
-        public static System.Drawing.Size labelHeight_Size {
-            get {
-                object obj = ResourceManager.GetObject("labelHeight.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -437,26 +314,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=26,Y=22}.
-        /// </summary>
-        public static System.Drawing.Point labelWidth_Location {
-            get {
-                object obj = ResourceManager.GetObject("labelWidth.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=35, Height=13}.
-        /// </summary>
-        public static System.Drawing.Size labelWidth_Size {
-            get {
-                object obj = ResourceManager.GetObject("labelWidth.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Int32 similar to 5.
         /// </summary>
         public static int labelWidth_TabIndex {
@@ -482,26 +339,6 @@ namespace VietOCR {
             get {
                 object obj = ResourceManager.GetObject("labelXRes.AutoSize", resourceCulture);
                 return ((bool)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=26,Y=74}.
-        /// </summary>
-        public static System.Drawing.Point labelXRes_Location {
-            get {
-                object obj = ResourceManager.GetObject("labelXRes.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=67, Height=13}.
-        /// </summary>
-        public static System.Drawing.Size labelXRes_Size {
-            get {
-                object obj = ResourceManager.GetObject("labelXRes.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -535,26 +372,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=26,Y=100}.
-        /// </summary>
-        public static System.Drawing.Point labelYRes_Location {
-            get {
-                object obj = ResourceManager.GetObject("labelYRes.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=67, Height=13}.
-        /// </summary>
-        public static System.Drawing.Size labelYRes_Size {
-            get {
-                object obj = ResourceManager.GetObject("labelYRes.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Int32 similar to 3.
         /// </summary>
         public static int labelYRes_TabIndex {
@@ -574,52 +391,12 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=96,Y=123}.
-        /// </summary>
-        public static System.Drawing.Point textBoxBitDepth_Location {
-            get {
-                object obj = ResourceManager.GetObject("textBoxBitDepth.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=45, Height=20}.
-        /// </summary>
-        public static System.Drawing.Size textBoxBitDepth_Size {
-            get {
-                object obj = ResourceManager.GetObject("textBoxBitDepth.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Int32 similar to 17.
         /// </summary>
         public static int textBoxBitDepth_TabIndex {
             get {
                 object obj = ResourceManager.GetObject("textBoxBitDepth.TabIndex", resourceCulture);
                 return ((int)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=96,Y=45}.
-        /// </summary>
-        public static System.Drawing.Point textBoxHeight_Location {
-            get {
-                object obj = ResourceManager.GetObject("textBoxHeight.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=45, Height=20}.
-        /// </summary>
-        public static System.Drawing.Size textBoxHeight_Size {
-            get {
-                object obj = ResourceManager.GetObject("textBoxHeight.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -634,26 +411,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=96,Y=19}.
-        /// </summary>
-        public static System.Drawing.Point textBoxWidth_Location {
-            get {
-                object obj = ResourceManager.GetObject("textBoxWidth.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=45, Height=20}.
-        /// </summary>
-        public static System.Drawing.Size textBoxWidth_Size {
-            get {
-                object obj = ResourceManager.GetObject("textBoxWidth.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Int32 similar to 6.
         /// </summary>
         public static int textBoxWidth_TabIndex {
@@ -664,52 +421,12 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=96,Y=71}.
-        /// </summary>
-        public static System.Drawing.Point textBoxXRes_Location {
-            get {
-                object obj = ResourceManager.GetObject("textBoxXRes.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=45, Height=20}.
-        /// </summary>
-        public static System.Drawing.Size textBoxXRes_Size {
-            get {
-                object obj = ResourceManager.GetObject("textBoxXRes.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Int32 similar to 2.
         /// </summary>
         public static int textBoxXRes_TabIndex {
             get {
                 object obj = ResourceManager.GetObject("textBoxXRes.TabIndex", resourceCulture);
                 return ((int)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=96,Y=97}.
-        /// </summary>
-        public static System.Drawing.Point textBoxYRes_Location {
-            get {
-                object obj = ResourceManager.GetObject("textBoxYRes.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=45, Height=20}.
-        /// </summary>
-        public static System.Drawing.Size textBoxYRes_Size {
-            get {
-                object obj = ResourceManager.GetObject("textBoxYRes.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         

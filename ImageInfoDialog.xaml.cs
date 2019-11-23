@@ -67,28 +67,28 @@ namespace VietOCR
             this.textBoxWidth.Text = this.image.Width.ToString();
             this.textBoxHeight.Text = this.image.Height.ToString();
             this.textBoxBitDepth.Text = Bitmap.GetPixelFormatSize(this.image.PixelFormat).ToString();
-            this.comboBoxW.SelectedIndex = 0;
-            this.comboBoxH.SelectedIndex = 0;
+            this.comboBoxUnitW.SelectedIndex = 0;
+            this.comboBoxUnitH.SelectedIndex = 0;
         }
 
-        private void comboBoxW_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void comboBoxUnitW_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (!isProgrammatic)
             {
                 isProgrammatic = true;
-                this.comboBoxH.SelectedIndex = this.comboBoxW.SelectedIndex;
-                ConvertUnits(this.comboBoxW.SelectedIndex);
+                this.comboBoxUnitH.SelectedIndex = this.comboBoxUnitW.SelectedIndex;
+                ConvertUnits(this.comboBoxUnitW.SelectedIndex);
                 isProgrammatic = false;
             }
         }
 
-        private void comboBoxH_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void comboBoxUnitH_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (!isProgrammatic)
             {
                 isProgrammatic = true;
-                this.comboBoxW.SelectedIndex = this.comboBoxH.SelectedIndex;
-                ConvertUnits(this.comboBoxH.SelectedIndex);
+                this.comboBoxUnitW.SelectedIndex = this.comboBoxUnitH.SelectedIndex;
+                ConvertUnits(this.comboBoxUnitH.SelectedIndex);
                 isProgrammatic = false;
             }
         }

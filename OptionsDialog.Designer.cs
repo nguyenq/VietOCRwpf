@@ -19,7 +19,7 @@ namespace VietOCR {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public partial class OptionsDialog {
@@ -68,32 +68,12 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=355,Y=16}.
-        /// </summary>
-        public static System.Drawing.Point btnDangAmbigs_Location {
-            get {
-                object obj = ResourceManager.GetObject("btnDangAmbigs.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
         /// </summary>
         public static System.Windows.Forms.Padding btnDangAmbigs_Margin {
             get {
                 object obj = ResourceManager.GetObject("btnDangAmbigs.Margin", resourceCulture);
                 return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=40, Height=28}.
-        /// </summary>
-        public static System.Drawing.Size btnDangAmbigs_Size {
-            get {
-                object obj = ResourceManager.GetObject("btnDangAmbigs.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -117,7 +97,7 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Browse.
         /// </summary>
         public static string btnDangAmbigs_ToolTip {
             get {
@@ -136,32 +116,12 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=355,Y=46}.
-        /// </summary>
-        public static System.Drawing.Point btnOutput_Location {
-            get {
-                object obj = ResourceManager.GetObject("btnOutput.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
         /// </summary>
         public static System.Windows.Forms.Padding btnOutput_Margin {
             get {
                 object obj = ResourceManager.GetObject("btnOutput.Margin", resourceCulture);
                 return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=40, Height=28}.
-        /// </summary>
-        public static System.Drawing.Size btnOutput_Size {
-            get {
-                object obj = ResourceManager.GetObject("btnOutput.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -185,7 +145,7 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Browse.
         /// </summary>
         public static string btnOutput_ToolTip {
             get {
@@ -204,32 +164,12 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=355,Y=14}.
-        /// </summary>
-        public static System.Drawing.Point btnWatch_Location {
-            get {
-                object obj = ResourceManager.GetObject("btnWatch.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
         /// </summary>
         public static System.Windows.Forms.Padding btnWatch_Margin {
             get {
                 object obj = ResourceManager.GetObject("btnWatch.Margin", resourceCulture);
                 return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=40, Height=28}.
-        /// </summary>
-        public static System.Drawing.Size btnWatch_Size {
-            get {
-                object obj = ResourceManager.GetObject("btnWatch.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -253,21 +193,11 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Browse.
         /// </summary>
         public static string btnWatch_ToolTip {
             get {
                 return ResourceManager.GetString("btnWatch.ToolTip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=300,Y=167}.
-        /// </summary>
-        public static System.Drawing.Point buttonCancel_Location {
-            get {
-                object obj = ResourceManager.GetObject("buttonCancel.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
             }
         }
         
@@ -278,16 +208,6 @@ namespace VietOCR {
             get {
                 object obj = ResourceManager.GetObject("buttonCancel.Margin", resourceCulture);
                 return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=100, Height=28}.
-        /// </summary>
-        public static System.Drawing.Size buttonCancel_Size {
-            get {
-                object obj = ResourceManager.GetObject("buttonCancel.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -320,32 +240,12 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=192,Y=167}.
-        /// </summary>
-        public static System.Drawing.Point buttonOK_Location {
-            get {
-                object obj = ResourceManager.GetObject("buttonOK.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
         /// </summary>
         public static System.Windows.Forms.Padding buttonOK_Margin {
             get {
                 object obj = ResourceManager.GetObject("buttonOK.Margin", resourceCulture);
                 return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=100, Height=28}.
-        /// </summary>
-        public static System.Drawing.Size buttonOK_Size {
-            get {
-                object obj = ResourceManager.GetObject("buttonOK.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -398,32 +298,12 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=104,Y=63}.
-        /// </summary>
-        public static System.Drawing.Point checkBoxDangAmbigs_Location {
-            get {
-                object obj = ResourceManager.GetObject("checkBoxDangAmbigs.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
         /// </summary>
         public static System.Windows.Forms.Padding checkBoxDangAmbigs_Margin {
             get {
                 object obj = ResourceManager.GetObject("checkBoxDangAmbigs.Margin", resourceCulture);
                 return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=74, Height=21}.
-        /// </summary>
-        public static System.Drawing.Size checkBoxDangAmbigs_Size {
-            get {
-                object obj = ResourceManager.GetObject("checkBoxDangAmbigs.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -503,32 +383,12 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=268,Y=91}.
-        /// </summary>
-        public static System.Drawing.Point checkBoxWatch_Location {
-            get {
-                object obj = ResourceManager.GetObject("checkBoxWatch.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
         /// </summary>
         public static System.Windows.Forms.Padding checkBoxWatch_Margin {
             get {
                 object obj = ResourceManager.GetObject("checkBoxWatch.Margin", resourceCulture);
                 return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=74, Height=21}.
-        /// </summary>
-        public static System.Drawing.Size checkBoxWatch_Size {
-            get {
-                object obj = ResourceManager.GetObject("checkBoxWatch.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -588,32 +448,12 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=105,Y=86}.
-        /// </summary>
-        public static System.Drawing.Point comboBoxOutputFormat_Location {
-            get {
-                object obj = ResourceManager.GetObject("comboBoxOutputFormat.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
         /// </summary>
         public static System.Windows.Forms.Padding comboBoxOutputFormat_Margin {
             get {
                 object obj = ResourceManager.GetObject("comboBoxOutputFormat.Margin", resourceCulture);
                 return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=64, Height=24}.
-        /// </summary>
-        public static System.Drawing.Size comboBoxOutputFormat_Size {
-            get {
-                object obj = ResourceManager.GetObject("comboBoxOutputFormat.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -667,32 +507,12 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=4,Y=52}.
-        /// </summary>
-        public static System.Drawing.Point labelOutput_Location {
-            get {
-                object obj = ResourceManager.GetObject("labelOutput.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=0,Right=4,Bottom=0}.
         /// </summary>
         public static System.Windows.Forms.Padding labelOutput_Margin {
             get {
                 object obj = ResourceManager.GetObject("labelOutput.Margin", resourceCulture);
                 return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=99, Height=17}.
-        /// </summary>
-        public static System.Drawing.Size labelOutput_Size {
-            get {
-                object obj = ResourceManager.GetObject("labelOutput.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -735,32 +555,12 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=4,Y=92}.
-        /// </summary>
-        public static System.Drawing.Point labelOutputFormat_Location {
-            get {
-                object obj = ResourceManager.GetObject("labelOutputFormat.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=0,Right=4,Bottom=0}.
         /// </summary>
         public static System.Windows.Forms.Padding labelOutputFormat_Margin {
             get {
                 object obj = ResourceManager.GetObject("labelOutputFormat.Margin", resourceCulture);
                 return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=99, Height=17}.
-        /// </summary>
-        public static System.Drawing.Size labelOutputFormat_Size {
-            get {
-                object obj = ResourceManager.GetObject("labelOutputFormat.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -813,32 +613,12 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=4,Y=22}.
-        /// </summary>
-        public static System.Drawing.Point labelPath_Location {
-            get {
-                object obj = ResourceManager.GetObject("labelPath.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=0,Right=4,Bottom=0}.
         /// </summary>
         public static System.Windows.Forms.Padding labelPath_Margin {
             get {
                 object obj = ResourceManager.GetObject("labelPath.Margin", resourceCulture);
                 return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=41, Height=17}.
-        /// </summary>
-        public static System.Drawing.Size labelPath_Size {
-            get {
-                object obj = ResourceManager.GetObject("labelPath.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -891,32 +671,12 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=4,Y=20}.
-        /// </summary>
-        public static System.Drawing.Point labelWatch_Location {
-            get {
-                object obj = ResourceManager.GetObject("labelWatch.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=0,Right=4,Bottom=0}.
         /// </summary>
         public static System.Windows.Forms.Padding labelWatch_Margin {
             get {
                 object obj = ResourceManager.GetObject("labelWatch.Margin", resourceCulture);
                 return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=96, Height=17}.
-        /// </summary>
-        public static System.Drawing.Size labelWatch_Size {
-            get {
-                object obj = ResourceManager.GetObject("labelWatch.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -978,32 +738,12 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=0,Y=0}.
-        /// </summary>
-        public static System.Drawing.Point tabControl1_Location {
-            get {
-                object obj = ResourceManager.GetObject("tabControl1.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
         /// </summary>
         public static System.Windows.Forms.Padding tabControl1_Margin {
             get {
                 object obj = ResourceManager.GetObject("tabControl1.Margin", resourceCulture);
                 return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=416, Height=158}.
-        /// </summary>
-        public static System.Drawing.Size tabControl1_Size {
-            get {
-                object obj = ResourceManager.GetObject("tabControl1.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -1027,16 +767,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=4,Y=25}.
-        /// </summary>
-        public static System.Drawing.Point tabPage1_Location {
-            get {
-                object obj = ResourceManager.GetObject("tabPage1.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
         /// </summary>
         public static System.Windows.Forms.Padding tabPage1_Margin {
@@ -1053,16 +783,6 @@ namespace VietOCR {
             get {
                 object obj = ResourceManager.GetObject("tabPage1.Padding", resourceCulture);
                 return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=408, Height=129}.
-        /// </summary>
-        public static System.Drawing.Size tabPage1_Size {
-            get {
-                object obj = ResourceManager.GetObject("tabPage1.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -1095,16 +815,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=4,Y=25}.
-        /// </summary>
-        public static System.Drawing.Point tabPage2_Location {
-            get {
-                object obj = ResourceManager.GetObject("tabPage2.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
         /// </summary>
         public static System.Windows.Forms.Padding tabPage2_Margin {
@@ -1121,16 +831,6 @@ namespace VietOCR {
             get {
                 object obj = ResourceManager.GetObject("tabPage2.Padding", resourceCulture);
                 return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=408, Height=129}.
-        /// </summary>
-        public static System.Drawing.Size tabPage2_Size {
-            get {
-                object obj = ResourceManager.GetObject("tabPage2.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -1181,32 +881,12 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=104,Y=18}.
-        /// </summary>
-        public static System.Drawing.Point textBoxDangAmbigs_Location {
-            get {
-                object obj = ResourceManager.GetObject("textBoxDangAmbigs.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
         /// </summary>
         public static System.Windows.Forms.Padding textBoxDangAmbigs_Margin {
             get {
                 object obj = ResourceManager.GetObject("textBoxDangAmbigs.Margin", resourceCulture);
                 return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=241, Height=22}.
-        /// </summary>
-        public static System.Drawing.Size textBoxDangAmbigs_Size {
-            get {
-                object obj = ResourceManager.GetObject("textBoxDangAmbigs.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -1230,32 +910,12 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=104,Y=48}.
-        /// </summary>
-        public static System.Drawing.Point textBoxOutput_Location {
-            get {
-                object obj = ResourceManager.GetObject("textBoxOutput.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
         /// </summary>
         public static System.Windows.Forms.Padding textBoxOutput_Margin {
             get {
                 object obj = ResourceManager.GetObject("textBoxOutput.Margin", resourceCulture);
                 return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=241, Height=22}.
-        /// </summary>
-        public static System.Drawing.Size textBoxOutput_Size {
-            get {
-                object obj = ResourceManager.GetObject("textBoxOutput.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         
@@ -1279,32 +939,12 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=104,Y=16}.
-        /// </summary>
-        public static System.Drawing.Point textBoxWatch_Location {
-            get {
-                object obj = ResourceManager.GetObject("textBoxWatch.Location", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
         /// </summary>
         public static System.Windows.Forms.Padding textBoxWatch_Margin {
             get {
                 object obj = ResourceManager.GetObject("textBoxWatch.Margin", resourceCulture);
                 return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Size similar to {Width=241, Height=22}.
-        /// </summary>
-        public static System.Drawing.Size textBoxWatch_Size {
-            get {
-                object obj = ResourceManager.GetObject("textBoxWatch.Size", resourceCulture);
-                return ((System.Drawing.Size)(obj));
             }
         }
         

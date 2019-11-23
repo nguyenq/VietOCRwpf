@@ -246,4 +246,10 @@
   <data name="textBoxYRes.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
+  <data name="comboBoxUnitH.ToolTip" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="comboBoxUnitW.ToolTip" xml:space="preserve">
+    <value>Unit</value>
+  </data>
 </root>

@@ -24,8 +24,8 @@
         <Label x:Name="labelOutput" Content="{x:Static resx:SplitPdfDialog.labelOutput_Text}" Target="{Binding ElementName=textBoxOutput}" VerticalAlignment="Center" Grid.Row="1"/>
         <TextBox x:Name="textBoxInput" Height="23" HorizontalAlignment="Stretch"  IsReadOnly="True" VerticalAlignment="Center"  VerticalContentAlignment="Center" Grid.Column="1"/>
         <TextBox x:Name="textBoxOutput" Height="23" HorizontalAlignment="Stretch"  IsReadOnly="True" VerticalAlignment="Center" VerticalContentAlignment="Center" Grid.Row="1" Grid.Column="1"/>
-        <Button x:Name="buttonBrowseInput" Content="..." HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Click="buttonBrowseInput_Click" ToolTip="Browse" Grid.Column="2"/>
-        <Button x:Name="buttonBrowseOutput" Content="..." HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Click="buttonBrowseOutput_Click" ToolTip="Browse" Grid.Row="1" Grid.Column="2"/>
+        <Button x:Name="buttonBrowseInput" Content="..." HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Click="buttonBrowseInput_Click" ToolTip="{x:Static resx:SplitPdfDialog.buttonBrowseInput_ToolTip}" Grid.Column="2"/>
+        <Button x:Name="buttonBrowseOutput" Content="..." HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Click="buttonBrowseOutput_Click" ToolTip="{x:Static resx:SplitPdfDialog.buttonBrowseOutput_ToolTip}" Grid.Row="1" Grid.Column="2"/>
         <RadioButton x:Name="radioButtonPages" Content="{x:Static resx:SplitPdfDialog.radioButtonPages_Text}" Margin="10,0,0,0" VerticalAlignment="Center" Checked="radioButtonPages_Checked" Grid.Row="2"/>
         <RadioButton x:Name="radioButtonFiles" Content="{x:Static resx:SplitPdfDialog.radioButtonFiles_Text}" Margin="10,0,0,0" VerticalAlignment="Center" Checked="radioButtonFiles_Checked" Grid.Row="3"/>
         <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" >
