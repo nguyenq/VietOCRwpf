@@ -118,22 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.Localizable" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>CenterParent</value>
-  </data>
   <data name="this.Title" xml:space="preserve">
     <value>Image Properties</value>
-  </data>
-  <data name="buttonOK.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
   </data>
   <data name="buttonOK.Text" xml:space="preserve">
     <value>OK</value>
@@ -147,9 +135,6 @@
   <data name="comboBox3.Items2" xml:space="preserve">
     <value>cm</value>
   </data>
-  <data name="comboBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
   <data name="comboBox4.Items" xml:space="preserve">
     <value>pixels</value>
   </data>
@@ -159,92 +144,26 @@
   <data name="comboBox4.Items2" xml:space="preserve">
     <value>cm</value>
   </data>
-  <data name="comboBox4.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
   <data name="label5.Text" xml:space="preserve">
     <value>DPI</value>
-  </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>DPI</value>
   </data>
-  <data name="labelBitDepth.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelBitDepth.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelBitDepth.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
   <data name="labelBitDepth.Text" xml:space="preserve">
     <value>Bit Depth</value>
-  </data>
-  <data name="labelHeight.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelHeight.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
   </data>
   <data name="labelHeight.Text" xml:space="preserve">
     <value>Height</value>
   </data>
-  <data name="labelWidth.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelWidth.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
   <data name="labelWidth.Text" xml:space="preserve">
     <value>Width</value>
-  </data>
-  <data name="labelXRes.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelXRes.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
   </data>
   <data name="labelXRes.Text" xml:space="preserve">
     <value>X-Resolution</value>
   </data>
-  <data name="labelYRes.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelYRes.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
   <data name="labelYRes.Text" xml:space="preserve">
     <value>Y-Resolution</value>
-  </data>
-  <data name="textBoxBitDepth.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="textBoxHeight.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="textBoxWidth.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="textBoxXRes.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="textBoxYRes.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
   </data>
   <data name="comboBoxUnitH.ToolTip" xml:space="preserve">
     <value>Unit</value>
