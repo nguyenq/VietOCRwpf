@@ -19,7 +19,7 @@
     <Grid>
         <TabControl x:Name="tabControl" HorizontalAlignment="Stretch" Height="120" Margin="5,5,5,10" VerticalAlignment="Top">
             <TabItem Header="DangAmbigs.txt">
-                <Grid Background="#FFE5E5E5" >
+                <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
@@ -36,7 +36,7 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Watch">
-                <Grid Background="#FFE5E5E5" >
+                <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
@@ -62,7 +62,7 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Hyphens">
-                <Grid Background="#FFE5E5E5">
+                <Grid>
                     <CheckBox x:Name="checkBoxReplaceHyphens" Content="{x:Static resx:OptionsDialog.checkBoxReplaceHyphens_Text}" HorizontalAlignment="Left" Margin="30,23,0,0" VerticalAlignment="Top" ToolTip="Replace hyphens at the end of lines with soft hyphens using spellcheck dictionary"/>
                     <CheckBox x:Name="checkBoxRemoveHyphens" Content="{x:Static resx:OptionsDialog.checkBoxRemoveHyphens_Text}" HorizontalAlignment="Left" Margin="30,53,0,0" VerticalAlignment="Top" ToolTip="Remove soft hyphens after removing line breaks"/>
                 </Grid>
