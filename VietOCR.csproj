@@ -350,43 +350,43 @@
     <Content Include="x64\libtesseract410.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="BulkDialog.bn-IN.resx">
+    <EmbeddedResource Include="BulkDialog.bn.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.ca-ES.resx">
+    <EmbeddedResource Include="BulkDialog.ca.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.cs-CZ.resx">
+    <EmbeddedResource Include="BulkDialog.cs.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.de-DE.resx">
+    <EmbeddedResource Include="BulkDialog.de.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.fa-IR.resx">
+    <EmbeddedResource Include="BulkDialog.fa.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.hi-IN.resx">
+    <EmbeddedResource Include="BulkDialog.hi.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.it-IT.resx">
+    <EmbeddedResource Include="BulkDialog.it.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.ja-JP.resx">
+    <EmbeddedResource Include="BulkDialog.ja.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.ku-Arab-IQ.resx">
+    <EmbeddedResource Include="BulkDialog.ku.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.lt-LT.resx">
+    <EmbeddedResource Include="BulkDialog.lt.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.ne-NP.resx">
+    <EmbeddedResource Include="BulkDialog.ne.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.nl-NL.resx">
+    <EmbeddedResource Include="BulkDialog.nl.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.pl-PL.resx">
+    <EmbeddedResource Include="BulkDialog.pl.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.resx">
@@ -395,57 +395,57 @@
       <DependentUpon>BulkDialog.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.ru-RU.resx">
+    <EmbeddedResource Include="BulkDialog.ru.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.sk-SK.resx">
+    <EmbeddedResource Include="BulkDialog.sk.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.tr-TR.resx">
+    <EmbeddedResource Include="BulkDialog.tr.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.vi-VN.resx">
+    <EmbeddedResource Include="BulkDialog.vi.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.bn-IN.resx">
+    <EmbeddedResource Include="ChangeCaseDialog.bn.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.ca-ES.resx">
+    <EmbeddedResource Include="ChangeCaseDialog.ca.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.cs-CZ.resx">
+    <EmbeddedResource Include="ChangeCaseDialog.cs.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.de-DE.resx">
+    <EmbeddedResource Include="ChangeCaseDialog.de.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.fa-IR.resx">
+    <EmbeddedResource Include="ChangeCaseDialog.fa.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.hi-IN.resx">
+    <EmbeddedResource Include="ChangeCaseDialog.hi.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.it-IT.resx">
+    <EmbeddedResource Include="ChangeCaseDialog.it.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.ja-JP.resx">
+    <EmbeddedResource Include="ChangeCaseDialog.ja.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.ku-Arab-IQ.resx">
+    <EmbeddedResource Include="ChangeCaseDialog.ku.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.lt-LT.resx">
+    <EmbeddedResource Include="ChangeCaseDialog.lt.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.ne-NP.resx">
+    <EmbeddedResource Include="ChangeCaseDialog.ne.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.nl-NL.resx">
+    <EmbeddedResource Include="ChangeCaseDialog.nl.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.pl-PL.resx">
+    <EmbeddedResource Include="ChangeCaseDialog.pl.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.resx">
@@ -453,55 +453,55 @@
       <LastGenOutput>ChangeCaseDialog.Designer.cs</LastGenOutput>
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.ru-RU.resx">
+    <EmbeddedResource Include="ChangeCaseDialog.ru.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.sk-SK.resx">
+    <EmbeddedResource Include="ChangeCaseDialog.sk.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.tr-TR.resx">
+    <EmbeddedResource Include="ChangeCaseDialog.tr.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.vi-VN.resx">
+    <EmbeddedResource Include="ChangeCaseDialog.vi.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.bn-IN.resx">
+    <EmbeddedResource Include="DownloadDialog.bn.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.ca-ES.resx">
+    <EmbeddedResource Include="DownloadDialog.ca.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.cs-CZ.resx">
+    <EmbeddedResource Include="DownloadDialog.cs.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.de-DE.resx">
+    <EmbeddedResource Include="DownloadDialog.de.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.fa-IR.resx">
+    <EmbeddedResource Include="DownloadDialog.fa.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.hi-IN.resx">
+    <EmbeddedResource Include="DownloadDialog.hi.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.it-IT.resx">
+    <EmbeddedResource Include="DownloadDialog.it.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.ja-JP.resx">
+    <EmbeddedResource Include="DownloadDialog.ja.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.ku-Arab-IQ.resx">
+    <EmbeddedResource Include="DownloadDialog.ku.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.lt-LT.resx">
+    <EmbeddedResource Include="DownloadDialog.lt.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.ne-NP.resx">
+    <EmbeddedResource Include="DownloadDialog.ne.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.nl-NL.resx">
+    <EmbeddedResource Include="DownloadDialog.nl.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.pl-PL.resx">
+    <EmbeddedResource Include="DownloadDialog.pl.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.resx">
@@ -509,16 +509,16 @@
       <LastGenOutput>DownloadDialog.Designer.cs</LastGenOutput>
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.ru-RU.resx">
+    <EmbeddedResource Include="DownloadDialog.ru.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.sk-SK.resx">
+    <EmbeddedResource Include="DownloadDialog.sk.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.tr-TR.resx">
+    <EmbeddedResource Include="DownloadDialog.tr.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.vi-VN.resx">
+    <EmbeddedResource Include="DownloadDialog.vi.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindReplaceDialog.resx">
@@ -527,52 +527,52 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>FindReplaceDialog.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindReplaceDialog.vi-VN.resx">
+    <EmbeddedResource Include="FindReplaceDialog.vi.resx">
       <DependentUpon>FindReplaceDialog.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui.bn-IN.resx">
+    <EmbeddedResource Include="Gui.bn.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui.ca-ES.resx">
+    <EmbeddedResource Include="Gui.ca.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui.cs-CZ.resx">
+    <EmbeddedResource Include="Gui.cs.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui.de-DE.resx">
+    <EmbeddedResource Include="Gui.de.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui.fa-IR.resx">
+    <EmbeddedResource Include="Gui.fa.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui.hi-IN.resx">
-      <DependentUpon>Gui.xaml</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gui.it-IT.resx">
-      <DependentUpon>Gui.xaml</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gui.ja-JP.resx">
-      <DependentUpon>Gui.xaml</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI.ku-Arab-IQ.resx">
+    <EmbeddedResource Include="Gui.hi.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui.lt-LT.resx">
+    <EmbeddedResource Include="Gui.it.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui.ja.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI.ku.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui.ne-NP.resx">
+    <EmbeddedResource Include="Gui.lt.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui.nl-NL.resx">
+    <EmbeddedResource Include="Gui.ne.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui.pl-PL.resx">
+    <EmbeddedResource Include="Gui.nl.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui.pl.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -582,58 +582,58 @@
       <LastGenOutput>Gui.Designer.cs</LastGenOutput>
       <DependentUpon>Gui.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui.ru-RU.resx">
+    <EmbeddedResource Include="Gui.ru.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui.sk-SK.resx">
+    <EmbeddedResource Include="Gui.sk.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui.tr-TR.resx">
+    <EmbeddedResource Include="Gui.tr.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui.vi-VN.resx">
+    <EmbeddedResource Include="Gui.vi.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageInfoDialog.bn-IN.resx">
+    <EmbeddedResource Include="ImageInfoDialog.bn.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageInfoDialog.ca-ES.resx">
+    <EmbeddedResource Include="ImageInfoDialog.ca.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageInfoDialog.cs-CZ.resx">
+    <EmbeddedResource Include="ImageInfoDialog.cs.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageInfoDialog.de-DE.resx">
+    <EmbeddedResource Include="ImageInfoDialog.de.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageInfoDialog.fa-IR.resx">
+    <EmbeddedResource Include="ImageInfoDialog.fa.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageInfoDialog.hi-IN.resx">
+    <EmbeddedResource Include="ImageInfoDialog.hi.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageInfoDialog.it-IT.resx">
+    <EmbeddedResource Include="ImageInfoDialog.it.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageInfoDialog.ja-JP.resx">
+    <EmbeddedResource Include="ImageInfoDialog.ja.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageInfoDialog.ku-Arab-IQ.resx">
+    <EmbeddedResource Include="ImageInfoDialog.ku.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageInfoDialog.lt-LT.resx">
+    <EmbeddedResource Include="ImageInfoDialog.lt.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageInfoDialog.ne-NP.resx">
+    <EmbeddedResource Include="ImageInfoDialog.ne.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageInfoDialog.nl-NL.resx">
+    <EmbeddedResource Include="ImageInfoDialog.nl.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageInfoDialog.pl-PL.resx">
+    <EmbeddedResource Include="ImageInfoDialog.pl.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImageInfoDialog.resx">
@@ -641,58 +641,58 @@
       <LastGenOutput>ImageInfoDialog.Designer.cs</LastGenOutput>
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageInfoDialog.ru-RU.resx">
+    <EmbeddedResource Include="ImageInfoDialog.ru.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageInfoDialog.sk-SK.resx">
+    <EmbeddedResource Include="ImageInfoDialog.sk.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageInfoDialog.tr-TR.resx">
+    <EmbeddedResource Include="ImageInfoDialog.tr.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageInfoDialog.vi-VN.resx">
+    <EmbeddedResource Include="ImageInfoDialog.vi.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="OptionsDialog.bn-IN.resx">
+    <EmbeddedResource Include="OptionsDialog.bn.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OptionsDialog.ca-ES.resx">
+    <EmbeddedResource Include="OptionsDialog.ca.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OptionsDialog.cs-CZ.resx">
+    <EmbeddedResource Include="OptionsDialog.cs.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OptionsDialog.de-DE.resx">
+    <EmbeddedResource Include="OptionsDialog.de.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OptionsDialog.fa-IR.resx">
+    <EmbeddedResource Include="OptionsDialog.fa.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OptionsDialog.hi-IN.resx">
-      <DependentUpon>OptionsDialog.xaml</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OptionsDialog.it-IT.resx">
-      <DependentUpon>OptionsDialog.xaml</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OptionsDialog.ja-JP.resx">
-      <DependentUpon>OptionsDialog.xaml</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OptionsDialog.ku-Arab-IQ.resx">
-      <DependentUpon>OptionsDialog.xaml</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OptionsDialog.lt-LT.resx">
+    <EmbeddedResource Include="OptionsDialog.hi.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="OptionsDialog.ne-NP.resx">
+    <EmbeddedResource Include="OptionsDialog.it.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OptionsDialog.nl-NL.resx">
+    <EmbeddedResource Include="OptionsDialog.ja.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OptionsDialog.pl-PL.resx">
+    <EmbeddedResource Include="OptionsDialog.ku.resx">
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.lt.resx">
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.ne.resx">
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.nl.resx">
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.pl.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.resx">
@@ -701,79 +701,79 @@
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="OptionsDialog.ru-RU.resx">
+    <EmbeddedResource Include="OptionsDialog.ru.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OptionsDialog.sk-SK.resx">
+    <EmbeddedResource Include="OptionsDialog.sk.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OptionsDialog.tr-TR.resx">
-      <DependentUpon>OptionsDialog.xaml</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OptionsDialog.vi-VN.resx">
+    <EmbeddedResource Include="OptionsDialog.tr.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.bn-IN.resx" />
-    <EmbeddedResource Include="Properties\Resources.ca-ES.resx" />
-    <EmbeddedResource Include="Properties\Resources.cs-CZ.resx" />
-    <EmbeddedResource Include="Properties\Resources.de-DE.resx" />
-    <EmbeddedResource Include="Properties\Resources.fa-IR.resx" />
-    <EmbeddedResource Include="Properties\Resources.hi-IN.resx" />
-    <EmbeddedResource Include="Properties\Resources.it-IT.resx" />
-    <EmbeddedResource Include="Properties\Resources.ja-JP.resx" />
-    <EmbeddedResource Include="Properties\Resources.ku-Arab-IQ.resx" />
-    <EmbeddedResource Include="Properties\Resources.lt-LT.resx" />
-    <EmbeddedResource Include="Properties\Resources.ne-NP.resx" />
-    <EmbeddedResource Include="Properties\Resources.nl-NL.resx" />
-    <EmbeddedResource Include="Properties\Resources.pl-PL.resx" />
+    <EmbeddedResource Include="OptionsDialog.vi.resx">
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.bn.resx" />
+    <EmbeddedResource Include="Properties\Resources.ca.resx" />
+    <EmbeddedResource Include="Properties\Resources.cs.resx" />
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.fa.resx" />
+    <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.it.resx" />
+    <EmbeddedResource Include="Properties\Resources.ja.resx" />
+    <EmbeddedResource Include="Properties\Resources.ku.resx" />
+    <EmbeddedResource Include="Properties\Resources.lt.resx" />
+    <EmbeddedResource Include="Properties\Resources.ne.resx" />
+    <EmbeddedResource Include="Properties\Resources.nl.resx" />
+    <EmbeddedResource Include="Properties\Resources.pl.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.ru-RU.resx" />
-    <EmbeddedResource Include="Properties\Resources.sk-SK.resx" />
-    <EmbeddedResource Include="Properties\Resources.tr-TR.resx" />
-    <EmbeddedResource Include="Properties\Resources.vi-VN.resx" />
-    <EmbeddedResource Include="SliderDialog.bn-IN.resx">
+    <EmbeddedResource Include="Properties\Resources.ru.resx" />
+    <EmbeddedResource Include="Properties\Resources.sk.resx" />
+    <EmbeddedResource Include="Properties\Resources.tr.resx" />
+    <EmbeddedResource Include="Properties\Resources.vi.resx" />
+    <EmbeddedResource Include="SliderDialog.bn.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SliderDialog.ca-ES.resx">
+    <EmbeddedResource Include="SliderDialog.ca.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SliderDialog.cs-CZ.resx">
+    <EmbeddedResource Include="SliderDialog.cs.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SliderDialog.de-DE.resx">
+    <EmbeddedResource Include="SliderDialog.de.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SliderDialog.fa-IR.resx">
+    <EmbeddedResource Include="SliderDialog.fa.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SliderDialog.hi-IN.resx">
+    <EmbeddedResource Include="SliderDialog.hi.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SliderDialog.it-IT.resx">
+    <EmbeddedResource Include="SliderDialog.it.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SliderDialog.ja-JP.resx">
+    <EmbeddedResource Include="SliderDialog.ja.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SliderDialog.ku-Arab-IQ.resx">
+    <EmbeddedResource Include="SliderDialog.ku.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SliderDialog.lt-LT.resx">
+    <EmbeddedResource Include="SliderDialog.lt.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SliderDialog.ne-NP.resx">
+    <EmbeddedResource Include="SliderDialog.ne.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SliderDialog.nl-NL.resx">
+    <EmbeddedResource Include="SliderDialog.nl.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SliderDialog.pl-PL.resx">
+    <EmbeddedResource Include="SliderDialog.pl.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SliderDialog.resx">
@@ -781,55 +781,55 @@
       <LastGenOutput>SliderDialog.Designer.cs</LastGenOutput>
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SliderDialog.ru-RU.resx">
+    <EmbeddedResource Include="SliderDialog.ru.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SliderDialog.sk-SK.resx">
+    <EmbeddedResource Include="SliderDialog.sk.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SliderDialog.tr-TR.resx">
+    <EmbeddedResource Include="SliderDialog.tr.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SliderDialog.vi-VN.resx">
+    <EmbeddedResource Include="SliderDialog.vi.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.bn-IN.resx">
+    <EmbeddedResource Include="SplitPdfDialog.bn.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.ca-ES.resx">
+    <EmbeddedResource Include="SplitPdfDialog.ca.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.cs-CZ.resx">
+    <EmbeddedResource Include="SplitPdfDialog.cs.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.de-DE.resx">
+    <EmbeddedResource Include="SplitPdfDialog.de.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.fa-IR.resx">
+    <EmbeddedResource Include="SplitPdfDialog.fa.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.hi-IN.resx">
+    <EmbeddedResource Include="SplitPdfDialog.hi.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.it-IT.resx">
+    <EmbeddedResource Include="SplitPdfDialog.it.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.ja-JP.resx">
+    <EmbeddedResource Include="SplitPdfDialog.ja.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.ku-Arab-IQ.resx">
+    <EmbeddedResource Include="SplitPdfDialog.ku.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.lt-LT.resx">
+    <EmbeddedResource Include="SplitPdfDialog.lt.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.ne-NP.resx">
+    <EmbeddedResource Include="SplitPdfDialog.ne.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.nl-NL.resx">
+    <EmbeddedResource Include="SplitPdfDialog.nl.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.pl-PL.resx">
+    <EmbeddedResource Include="SplitPdfDialog.pl.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.resx">
@@ -837,16 +837,16 @@
       <LastGenOutput>SplitPdfDialog.Designer.cs</LastGenOutput>
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.ru-RU.resx">
+    <EmbeddedResource Include="SplitPdfDialog.ru.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.sk-SK.resx">
+    <EmbeddedResource Include="SplitPdfDialog.sk.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.tr-TR.resx">
+    <EmbeddedResource Include="SplitPdfDialog.tr.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.vi-VN.resx">
+    <EmbeddedResource Include="SplitPdfDialog.vi.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
