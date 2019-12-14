@@ -141,6 +141,6 @@ Version 5.4.4 (24 March 2019)
 Version 5.5.0 (17 July 2019)
 - Upgrade to Tesseract 4.1.0 (5280bbc)
 
-Version 5.5.1 (23 November 2019)
+Version 5.5.1 (14 December 2019)
 - Update translations
 - Target .NET 4.8
