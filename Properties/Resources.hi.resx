@@ -1,6 +1,65 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -53,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="_of_" xml:space="preserve">
     <value>ऑफ़</value>
@@ -65,7 +124,7 @@
     <value>विएतओसीआर.नेट के बारे में </value>
   </data>
   <data name="Access_denied" xml:space="preserve">
-    <value>आपको &quot;{0}&quot; फोल्डर में लिखने का अधिकार नहीं है . कृपया प्रोग्राम को एडमिनिस्ट्रेटर के रूप में चलायें .</value>
+    <value>आपको "{0}" फोल्डर में लिखने का अधिकार नहीं है . कृपया प्रोग्राम को एडमिनिस्ट्रेटर के रूप में चलायें .</value>
   </data>
   <data name="Add_to_Dictionary" xml:space="preserve">
     <value>शब्दकोश में जोड़ें</value>
@@ -107,7 +166,7 @@
     <value>कृपया  आउटपुट फाइल(s) को चेक करें </value>
   </data>
   <data name="Clear_Recent_Files" xml:space="preserve">
-    <value>_C हाल की फालियें हटायें </value>
+    <value>_Clear Recent Files</value>
   </data>
   <data name="Contrast" xml:space="preserve">
     <value>कन्ट्रास्ट</value>
@@ -158,7 +217,7 @@
     <value>गलत इनपुट </value>
   </data>
   <data name="InvalidPageMessage" xml:space="preserve">
-    <value>इस छवि में &apos;{0}&apos; नंबर का कोई पन्ना नहीं है </value>
+    <value>इस छवि में '{0}' नंबर का कोई पन्ना नहीं है </value>
   </data>
   <data name="Load_image" xml:space="preserve">
     <value>छवि लोड करें </value>
@@ -282,5 +341,41 @@
   </data>
   <data name="VietOCR_Help" xml:space="preserve">
     <value>विएतओसीआरडॉटनेट सहायता </value>
+  </data>
+  <data name="ConvertPDFcompleted" xml:space="preserve">
+    <value>पीडीऍफ़ बदलना पूरा हुआ</value>
+  </data>
+  <data name="ConvertPDF_running" xml:space="preserve">
+    <value>Convert PDF running...</value>
+  </data>
+  <data name="Select_Input_PDF" xml:space="preserve">
+    <value>इनपुट पीडीऍफ़ चुनें</value>
+  </data>
+  <data name="beginning" xml:space="preserve">
+    <value>beginning</value>
+  </data>
+  <data name="Cannot_find_" xml:space="preserve">
+    <value>Cannot find </value>
+  </data>
+  <data name="Continue_search_from_" xml:space="preserve">
+    <value>Continue search from </value>
+  </data>
+  <data name="end" xml:space="preserve">
+    <value>end</value>
+  </data>
+  <data name="Regex_Error" xml:space="preserve">
+    <value>Regex Error</value>
+  </data>
+  <data name="ReplacedOccurrence" xml:space="preserve">
+    <value>Replaced {0} occurrence(s).</value>
+  </data>
+  <data name="Double_sided" xml:space="preserve">
+    <value>दो तरफ़ा</value>
+  </data>
+  <data name="Single_sided" xml:space="preserve">
+    <value>एक तरफ़ा</value>
+  </data>
+  <data name="File_not_exist" xml:space="preserve">
+    <value>इनपुट फाइल मौजूद नहीं है </value>
   </data>
 </root>
