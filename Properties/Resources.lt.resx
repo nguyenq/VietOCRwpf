@@ -164,7 +164,7 @@ Paleiskite šią programą administratoriaus teisėmis.</value>
     <value>Apdoroti nepavyko</value>
   </data>
   <data name="check_output_in" xml:space="preserve">
-    <value>Patikrinkite išvesties failus, esančius aplanke </value>
+    <value>Išvesties failą (-us) rasite aplanke </value>
   </data>
   <data name="Clear_Recent_Files" xml:space="preserve">
     <value>Iš_valyti paskiausiųjų failų sąrašą</value>

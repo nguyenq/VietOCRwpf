@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -117,159 +117,107 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>342, 168</value>
+  <data name="tabPage1.ToolTip" xml:space="preserve">
+    <value/>
   </data>
-  <data name="this.Title" xml:space="preserve">
-    <value>Možnosti</value>
+  <data name="btnOutput.ToolTip" xml:space="preserve">
+    <value>Prezerať</value>
   </data>
-  <data name="btnDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>266, 13</value>
-  </data>
-  <data name="btnDangAmbigs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 23</value>
-  </data>
-  <data name="btnDangAmbigs.Text" xml:space="preserve">
-    <value>...</value>
-  </data>
-  <data name="btnOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>293, 37</value>
-  </data>
-  <data name="btnOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 23</value>
-  </data>
-  <data name="btnOutput.Text" xml:space="preserve">
-    <value>...</value>
-  </data>
-  <data name="btnWatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>293, 11</value>
-  </data>
-  <data name="btnWatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>30, 23</value>
-  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="btnWatch.Text" xml:space="preserve">
     <value>...</value>
   </data>
-  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 134</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="labelWatch.ToolTip" xml:space="preserve">
+    <value/>
   </data>
-  <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+  <data name="tabPage2.ToolTip" xml:space="preserve">
+    <value/>
   </data>
-  <data name="buttonCancel.Text" xml:space="preserve">
-    <value>Zrušiť</value>
-  </data>
-  <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 134</value>
-  </data>
-  <data name="buttonOK.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="buttonOK.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="checkBoxDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 51</value>
-  </data>
-  <data name="checkBoxDangAmbigs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 17</value>
-  </data>
-  <data name="checkBoxDangAmbigs.Text" xml:space="preserve">
-    <value>Povoliť</value>
-  </data>
-  <data name="checkBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 74</value>
-  </data>
-  <data name="checkBoxWatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 17</value>
-  </data>
-  <data name="checkBoxWatch.Text" xml:space="preserve">
-    <value>Povoliť</value>
-  </data>
-  <data name="comboBoxOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 70</value>
-  </data>
-  <data name="comboBoxOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 21</value>
-  </data>
-  <data name="labelOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 42</value>
-  </data>
-  <data name="labelOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 13</value>
+  <data name="tabControl1.ToolTip" xml:space="preserve">
+    <value/>
   </data>
   <data name="labelOutput.Text" xml:space="preserve">
     <value>Výstupný priečinok:</value>
   </data>
-  <data name="labelOutputFormat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 75</value>
+  <data name="this.Title" xml:space="preserve">
+    <value>Možnosti</value>
   </data>
-  <data name="labelOutputFormat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 13</value>
+  <data name="checkBoxDangAmbigs.Text" xml:space="preserve">
+    <value>Povoliť</value>
   </data>
-  <data name="labelOutputFormat.Text" xml:space="preserve">
-    <value>Výstupný formát</value>
+  <data name="labelOutputFormat.ToolTip" xml:space="preserve">
+    <value/>
   </data>
-  <data name="labelPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 18</value>
+  <data name="textBoxWatch.ToolTip" xml:space="preserve">
+    <value/>
   </data>
-  <data name="labelPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 13</value>
+  <data name="textBoxDangAmbigs.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="textBoxOutput.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="btnDangAmbigs.ToolTip" xml:space="preserve">
+    <value>Prezerať</value>
+  </data>
+  <data name="labelPath.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="checkBoxDangAmbigs.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="checkBoxWatch.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="openFileDialog1.Filter" xml:space="preserve">
+    <value>Text Files (*.txt)|*.txt</value>
+  </data>
+  <data name="buttonCancel.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="comboBoxOutputFormat.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="checkBoxWatch.Text" xml:space="preserve">
+    <value>Povoliť</value>
   </data>
   <data name="labelPath.Text" xml:space="preserve">
     <value>Cesta:</value>
   </data>
-  <data name="labelWatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 16</value>
+  <data name="labelOutputFormat.Text" xml:space="preserve">
+    <value>Výstupný formát</value>
   </data>
-  <data name="labelWatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 13</value>
+  <data name="btnDangAmbigs.Text" xml:space="preserve">
+    <value>...</value>
   </data>
-  <data name="labelWatch.Text" xml:space="preserve">
-    <value>Sledovať priečinok:</value>
-  </data>
-  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>342, 128</value>
-  </data>
-  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 102</value>
-  </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Sledovať</value>
-  </data>
-  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>334, 102</value>
+  <data name="btnWatch.ToolTip" xml:space="preserve">
+    <value>Prezerať</value>
   </data>
   <data name="tabPage2.Text" xml:space="preserve">
     <value>DangAmbigs.txt</value>
   </data>
-  <data name="textBoxDangAmbigs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 15</value>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Sledovať</value>
   </data>
-  <data name="textBoxDangAmbigs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 20</value>
+  <data name="labelOutput.ToolTip" xml:space="preserve">
+    <value/>
   </data>
-  <data name="textBoxOutput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 39</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
+  <data name="buttonCancel.Text" xml:space="preserve">
+    <value>Zrušiť</value>
   </data>
-  <data name="textBoxOutput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 20</value>
+  <data name="btnOutput.Text" xml:space="preserve">
+    <value>...</value>
   </data>
-  <data name="textBoxWatch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>105, 13</value>
+  <data name="labelWatch.Text" xml:space="preserve">
+    <value>Sledovať priečinok:</value>
   </data>
-  <data name="textBoxWatch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 20</value>
+  <data name="buttonOK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="buttonOK.ToolTip" xml:space="preserve">
+    <value/>
   </data>
   <data name="checkBoxRemoveHyphens.Text" xml:space="preserve">
     <value>Odstrániť mäkké spojovníky</value>
@@ -279,5 +227,11 @@
   </data>
   <data name="tabPage3.Text" xml:space="preserve">
     <value>Hyphens</value>
+  </data>
+  <data name="tabPage3.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="checkBoxDeskew.Text" xml:space="preserve">
+    <value>Vyrovnanie sklonu</value>
   </data>
 </root>
