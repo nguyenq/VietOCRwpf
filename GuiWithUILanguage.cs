@@ -40,7 +40,7 @@ namespace VietOCR
 
             List<MenuItem> ar = new List<MenuItem>();
 
-            String[] uiLangs = { "bn-IN", "ca-ES", "cs-CZ", "en-US", "es-ES", "de-DE", "fa-IR", "hi-IN", "it-IT", "ja-JP", "kn-In", "lt-LT", "ne-NP", "nl-NL", "pl-PL", "ru-RU", "sd-Deva", "sk-SK", "tr-TR", "vi-VN" }; // "bn-IN" caused exception on WinXP .NET 2.0
+            String[] uiLangs = { "bn-IN", "ca-ES", "cs-CZ", "de-DE", "en-US", "es-ES", "fa-IR", "hi-IN", "hu-HU", "it-IT", "ja-JP", "kn-In", "ku-Arab-IQ", "lt-LT", "ne-NP", "nl-NL", "pl-PL", "ru-RU", "sd-Deva", "sk-SK", "tr-TR", "vi-VN" }; // "bn-IN" caused exception on WinXP .NET 2.0
             foreach (string uiLang in uiLangs)
             {
                 MenuItem miuil = new MenuItem();
