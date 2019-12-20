@@ -33,14 +33,14 @@
             <Label x:Name="labelBitDepth" Content="{x:Static resx:ImageInfoDialog.labelBitDepth_Text}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="4" />
             <TextBox x:Name="textBoxBitDepth" Grid.Column="1" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" Width="56" Grid.Row="4" IsReadOnly="True" Height="23" />
             <ComboBox x:Name="comboBoxUnitW" Grid.Column="2" Margin="5,0,0,0" Width="60" VerticalAlignment="Center" ToolTip="{x:Static resx:ImageInfoDialog.comboBoxUnitW_ToolTip}" SelectionChanged="comboBoxUnitW_SelectionChanged" >
-                <ComboBoxItem Content="pixels"/>
-                <ComboBoxItem Content="inches"/>
-                <ComboBoxItem Content="cm"/>
+                <ComboBoxItem Content="{x:Static resx:ImageInfoDialog.comboBox3_Items}"/>
+                <ComboBoxItem Content="{x:Static resx:ImageInfoDialog.comboBox3_Items1}"/>
+                <ComboBoxItem Content="{x:Static resx:ImageInfoDialog.comboBox3_Items2}"/>
             </ComboBox>
             <ComboBox x:Name="comboBoxUnitH" Grid.Column="2" Margin="5,0,0,0" Width="60" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1" ToolTip="{x:Static resx:ImageInfoDialog.comboBoxUnitH_ToolTip}" SelectionChanged="comboBoxUnitH_SelectionChanged" >
-                <ComboBoxItem Content="pixels"/>
-                <ComboBoxItem Content="inches"/>
-                <ComboBoxItem Content="cm"/>
+                <ComboBoxItem Content="{x:Static resx:ImageInfoDialog.comboBox4_Items}"/>
+                <ComboBoxItem Content="{x:Static resx:ImageInfoDialog.comboBox4_Items1}"/>
+                <ComboBoxItem Content="{x:Static resx:ImageInfoDialog.comboBox4_Items2}"/>
             </ComboBox>
             <Label x:Name="label5" Content="{x:Static resx:ImageInfoDialog.label5_Text}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2" />
             <Label x:Name="label6" Content="{x:Static resx:ImageInfoDialog.label6_Text}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="3" Grid.Column="2" />
