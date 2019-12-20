@@ -24,9 +24,9 @@
             <RowDefinition Height="7*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="105*"/>
-            <ColumnDefinition Width="211*"/>
-            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="210*"/>
+            <ColumnDefinition Width="40*"/>
         </Grid.ColumnDefinitions>
         <Label x:Name="labelInput" Content="{x:Static resx:BulkDialog.labelInput_Text}" Target="{Binding ElementName=textBoxInput}" HorizontalAlignment="Left"  VerticalAlignment="Center" Grid.ColumnSpan="2"/>
         <Label x:Name="labelOutput" Content="{x:Static resx:BulkDialog.labelOutput_Text}" Target="{Binding ElementName=textBoxOutput}" HorizontalAlignment="Left"  VerticalAlignment="Center" Grid.Row="1"/>
@@ -37,7 +37,7 @@
         <Label x:Name="labelOutputFormat" Content="{x:Static resx:BulkDialog.labelOutputFormat_Text}" Target="{Binding ElementName=comboBoxOutputFormat}" HorizontalAlignment="Left"  VerticalAlignment="Center" Grid.ColumnSpan="2" Grid.Row="2"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2">
             <ComboBox x:Name="comboBoxOutputFormat" Width="60" VerticalAlignment="Center"  MouseEnter="comboBoxOutputFormat_MouseEnter" ItemsSource="{StaticResource outputFormats}" />
-            <CheckBox x:Name="checkBoxDeskew" Content="{x:Static resx:BulkDialog.checkBoxDeskew_Text}" VerticalAlignment="Center" Margin="40,0"/>
+            <CheckBox x:Name="checkBoxDeskew" Content="{x:Static resx:BulkDialog.checkBoxDeskew_Text}" VerticalAlignment="Center" Margin="20,0"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3" >
             <StackPanel.Resources>
