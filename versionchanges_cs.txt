@@ -144,3 +144,7 @@ Version 5.5.0 (17 July 2019)
 Version 5.5.1 (14 December 2019)
 - Update translations
 - Target .NET 4.8
+
+Version 5.5.2 (20 December 2019)
+- More localized strings
+- Adjust sizes

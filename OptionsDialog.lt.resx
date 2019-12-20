@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string"/>
-              <xsd:attribute name="type" type="xsd:string"/>
-              <xsd:attribute name="mimetype" type="xsd:string"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string"/>
-              <xsd:attribute name="name" type="xsd:string"/>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
-              <xsd:attribute ref="xml:space"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required"/>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -118,24 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="tabPage1.ToolTip" xml:space="preserve">
-    <value/>
+    <value />
   </data>
   <data name="btnOutput.ToolTip" xml:space="preserve">
     <value>Parinkti</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="btnWatch.Text" xml:space="preserve">
     <value>…</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="labelWatch.ToolTip" xml:space="preserve">
-    <value/>
+    <value />
   </data>
   <data name="tabPage2.ToolTip" xml:space="preserve">
-    <value/>
+    <value />
   </data>
   <data name="tabControl1.ToolTip" xml:space="preserve">
-    <value/>
+    <value />
   </data>
   <data name="labelOutput.Text" xml:space="preserve">
     <value>Išvesties aplankas:</value>
@@ -147,37 +145,37 @@
     <value>Įgali_nti</value>
   </data>
   <data name="labelOutputFormat.ToolTip" xml:space="preserve">
-    <value/>
+    <value />
   </data>
   <data name="textBoxWatch.ToolTip" xml:space="preserve">
-    <value/>
+    <value />
   </data>
   <data name="textBoxDangAmbigs.ToolTip" xml:space="preserve">
-    <value/>
+    <value />
   </data>
   <data name="textBoxOutput.ToolTip" xml:space="preserve">
-    <value/>
+    <value />
   </data>
   <data name="btnDangAmbigs.ToolTip" xml:space="preserve">
     <value>Parinkti</value>
   </data>
   <data name="labelPath.ToolTip" xml:space="preserve">
-    <value/>
+    <value />
   </data>
   <data name="checkBoxDangAmbigs.ToolTip" xml:space="preserve">
-    <value/>
+    <value />
   </data>
   <data name="checkBoxWatch.ToolTip" xml:space="preserve">
-    <value/>
+    <value />
   </data>
   <data name="openFileDialog1.Filter" xml:space="preserve">
     <value>Teksto failai (*.txt)|*.txt</value>
   </data>
   <data name="buttonCancel.ToolTip" xml:space="preserve">
-    <value/>
+    <value />
   </data>
   <data name="comboBoxOutputFormat.ToolTip" xml:space="preserve">
-    <value/>
+    <value />
   </data>
   <data name="checkBoxWatch.Text" xml:space="preserve">
     <value>Įgali_nti</value>
@@ -201,9 +199,8 @@
     <value>Stebimasis aplankas</value>
   </data>
   <data name="labelOutput.ToolTip" xml:space="preserve">
-    <value/>
+    <value />
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>_Atsisakyti</value>
   </data>
@@ -217,7 +214,7 @@
     <value>_Gerai</value>
   </data>
   <data name="buttonOK.ToolTip" xml:space="preserve">
-    <value/>
+    <value />
   </data>
   <data name="checkBoxRemoveHyphens.Text" xml:space="preserve">
     <value>Šalinti kėlimo brūkšnelius</value>
@@ -229,9 +226,18 @@
     <value>Brūkšneliai</value>
   </data>
   <data name="tabPage3.ToolTip" xml:space="preserve">
-    <value/>
+    <value />
   </data>
   <data name="checkBoxDeskew.Text" xml:space="preserve">
     <value>Tiesinti</value>
+  </data>
+  <data name="Watch" xml:space="preserve">
+    <value>Stebimasis aplankas</value>
+  </data>
+  <data name="checkBoxRemoveHyphens.ToolTip" xml:space="preserve">
+    <value>Pašalinus eilučių pabaigas, pašalinti ir kėlimo brūkšnelius</value>
+  </data>
+  <data name="checkBoxReplaceHyphens.ToolTip" xml:space="preserve">
+    <value>Brūkšnelius, esančius eilutės gale, keisti kėlimo brūkšneliais, naudojantis rašybos tikrinimo žodynu</value>
   </data>
 </root>

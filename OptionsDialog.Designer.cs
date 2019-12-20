@@ -58,36 +58,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.ImeMode similar to NoControl.
-        /// </summary>
-        public static System.Windows.Forms.ImeMode btnDangAmbigs_ImeMode {
-            get {
-                object obj = ResourceManager.GetObject("btnDangAmbigs.ImeMode", resourceCulture);
-                return ((System.Windows.Forms.ImeMode)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
-        /// </summary>
-        public static System.Windows.Forms.Padding btnDangAmbigs_Margin {
-            get {
-                object obj = ResourceManager.GetObject("btnDangAmbigs.Margin", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Int32 similar to 16.
-        /// </summary>
-        public static int btnDangAmbigs_TabIndex {
-            get {
-                object obj = ResourceManager.GetObject("btnDangAmbigs.TabIndex", resourceCulture);
-                return ((int)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to ....
         /// </summary>
         public static string btnDangAmbigs_Text {
@@ -102,36 +72,6 @@ namespace VietOCR {
         public static string btnDangAmbigs_ToolTip {
             get {
                 return ResourceManager.GetString("btnDangAmbigs.ToolTip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.ImeMode similar to NoControl.
-        /// </summary>
-        public static System.Windows.Forms.ImeMode btnOutput_ImeMode {
-            get {
-                object obj = ResourceManager.GetObject("btnOutput.ImeMode", resourceCulture);
-                return ((System.Windows.Forms.ImeMode)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
-        /// </summary>
-        public static System.Windows.Forms.Padding btnOutput_Margin {
-            get {
-                object obj = ResourceManager.GetObject("btnOutput.Margin", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Int32 similar to 11.
-        /// </summary>
-        public static int btnOutput_TabIndex {
-            get {
-                object obj = ResourceManager.GetObject("btnOutput.TabIndex", resourceCulture);
-                return ((int)(obj));
             }
         }
         
@@ -154,36 +94,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.ImeMode similar to NoControl.
-        /// </summary>
-        public static System.Windows.Forms.ImeMode btnWatch_ImeMode {
-            get {
-                object obj = ResourceManager.GetObject("btnWatch.ImeMode", resourceCulture);
-                return ((System.Windows.Forms.ImeMode)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
-        /// </summary>
-        public static System.Windows.Forms.Padding btnWatch_Margin {
-            get {
-                object obj = ResourceManager.GetObject("btnWatch.Margin", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Int32 similar to 10.
-        /// </summary>
-        public static int btnWatch_TabIndex {
-            get {
-                object obj = ResourceManager.GetObject("btnWatch.TabIndex", resourceCulture);
-                return ((int)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to ....
         /// </summary>
         public static string btnWatch_Text {
@@ -198,26 +108,6 @@ namespace VietOCR {
         public static string btnWatch_ToolTip {
             get {
                 return ResourceManager.GetString("btnWatch.ToolTip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
-        /// </summary>
-        public static System.Windows.Forms.Padding buttonCancel_Margin {
-            get {
-                object obj = ResourceManager.GetObject("buttonCancel.Margin", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Int32 similar to 2.
-        /// </summary>
-        public static int buttonCancel_TabIndex {
-            get {
-                object obj = ResourceManager.GetObject("buttonCancel.TabIndex", resourceCulture);
-                return ((int)(obj));
             }
         }
         
@@ -240,26 +130,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
-        /// </summary>
-        public static System.Windows.Forms.Padding buttonOK_Margin {
-            get {
-                object obj = ResourceManager.GetObject("buttonOK.Margin", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Int32 similar to 1.
-        /// </summary>
-        public static int buttonOK_TabIndex {
-            get {
-                object obj = ResourceManager.GetObject("buttonOK.TabIndex", resourceCulture);
-                return ((int)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to OK.
         /// </summary>
         public static string buttonOK_Text {
@@ -274,46 +144,6 @@ namespace VietOCR {
         public static string buttonOK_ToolTip {
             get {
                 return ResourceManager.GetString("buttonOK.ToolTip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Boolean similar to True.
-        /// </summary>
-        public static bool checkBoxDangAmbigs_AutoSize {
-            get {
-                object obj = ResourceManager.GetObject("checkBoxDangAmbigs.AutoSize", resourceCulture);
-                return ((bool)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.ImeMode similar to NoControl.
-        /// </summary>
-        public static System.Windows.Forms.ImeMode checkBoxDangAmbigs_ImeMode {
-            get {
-                object obj = ResourceManager.GetObject("checkBoxDangAmbigs.ImeMode", resourceCulture);
-                return ((System.Windows.Forms.ImeMode)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
-        /// </summary>
-        public static System.Windows.Forms.Padding checkBoxDangAmbigs_Margin {
-            get {
-                object obj = ResourceManager.GetObject("checkBoxDangAmbigs.Margin", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Int32 similar to 18.
-        /// </summary>
-        public static int checkBoxDangAmbigs_TabIndex {
-            get {
-                object obj = ResourceManager.GetObject("checkBoxDangAmbigs.TabIndex", resourceCulture);
-                return ((int)(obj));
             }
         }
         
@@ -354,6 +184,15 @@ namespace VietOCR {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Remove soft hyphens after removing line breaks.
+        /// </summary>
+        public static string checkBoxRemoveHyphens_ToolTip {
+            get {
+                return ResourceManager.GetString("checkBoxRemoveHyphens.ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Replace hyphens with soft hyphens.
         /// </summary>
         public static string checkBoxReplaceHyphens_Text {
@@ -363,42 +202,11 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Boolean similar to True.
+        ///   Looks up a localized string similar to Replace hyphens at the end of lines with soft hyphens using spellcheck dictionary.
         /// </summary>
-        public static bool checkBoxWatch_AutoSize {
+        public static string checkBoxReplaceHyphens_ToolTip {
             get {
-                object obj = ResourceManager.GetObject("checkBoxWatch.AutoSize", resourceCulture);
-                return ((bool)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.ImeMode similar to NoControl.
-        /// </summary>
-        public static System.Windows.Forms.ImeMode checkBoxWatch_ImeMode {
-            get {
-                object obj = ResourceManager.GetObject("checkBoxWatch.ImeMode", resourceCulture);
-                return ((System.Windows.Forms.ImeMode)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
-        /// </summary>
-        public static System.Windows.Forms.Padding checkBoxWatch_Margin {
-            get {
-                object obj = ResourceManager.GetObject("checkBoxWatch.Margin", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Int32 similar to 14.
-        /// </summary>
-        public static int checkBoxWatch_TabIndex {
-            get {
-                object obj = ResourceManager.GetObject("checkBoxWatch.TabIndex", resourceCulture);
-                return ((int)(obj));
+                return ResourceManager.GetString("checkBoxReplaceHyphens.ToolTip", resourceCulture);
             }
         }
         
@@ -421,81 +229,11 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
-        /// </summary>
-        public static System.Windows.Forms.Padding comboBoxOutputFormat_Margin {
-            get {
-                object obj = ResourceManager.GetObject("comboBoxOutputFormat.Margin", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Int32 similar to 15.
-        /// </summary>
-        public static int comboBoxOutputFormat_TabIndex {
-            get {
-                object obj = ResourceManager.GetObject("comboBoxOutputFormat.TabIndex", resourceCulture);
-                return ((int)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
         public static string comboBoxOutputFormat_ToolTip {
             get {
                 return ResourceManager.GetString("comboBoxOutputFormat.ToolTip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=17,Y=17}.
-        /// </summary>
-        public static System.Drawing.Point folderBrowserDialog1_TrayLocation {
-            get {
-                object obj = ResourceManager.GetObject("folderBrowserDialog1.TrayLocation", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Boolean similar to True.
-        /// </summary>
-        public static bool labelOutput_AutoSize {
-            get {
-                object obj = ResourceManager.GetObject("labelOutput.AutoSize", resourceCulture);
-                return ((bool)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.ImeMode similar to NoControl.
-        /// </summary>
-        public static System.Windows.Forms.ImeMode labelOutput_ImeMode {
-            get {
-                object obj = ResourceManager.GetObject("labelOutput.ImeMode", resourceCulture);
-                return ((System.Windows.Forms.ImeMode)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=0,Right=4,Bottom=0}.
-        /// </summary>
-        public static System.Windows.Forms.Padding labelOutput_Margin {
-            get {
-                object obj = ResourceManager.GetObject("labelOutput.Margin", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Int32 similar to 13.
-        /// </summary>
-        public static int labelOutput_TabIndex {
-            get {
-                object obj = ResourceManager.GetObject("labelOutput.TabIndex", resourceCulture);
-                return ((int)(obj));
             }
         }
         
@@ -518,36 +256,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Boolean similar to True.
-        /// </summary>
-        public static bool labelOutputFormat_AutoSize {
-            get {
-                object obj = ResourceManager.GetObject("labelOutputFormat.AutoSize", resourceCulture);
-                return ((bool)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=0,Right=4,Bottom=0}.
-        /// </summary>
-        public static System.Windows.Forms.Padding labelOutputFormat_Margin {
-            get {
-                object obj = ResourceManager.GetObject("labelOutputFormat.Margin", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Int32 similar to 16.
-        /// </summary>
-        public static int labelOutputFormat_TabIndex {
-            get {
-                object obj = ResourceManager.GetObject("labelOutputFormat.TabIndex", resourceCulture);
-                return ((int)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Output Format.
         /// </summary>
         public static string labelOutputFormat_Text {
@@ -566,46 +274,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Boolean similar to True.
-        /// </summary>
-        public static bool labelPath_AutoSize {
-            get {
-                object obj = ResourceManager.GetObject("labelPath.AutoSize", resourceCulture);
-                return ((bool)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.ImeMode similar to NoControl.
-        /// </summary>
-        public static System.Windows.Forms.ImeMode labelPath_ImeMode {
-            get {
-                object obj = ResourceManager.GetObject("labelPath.ImeMode", resourceCulture);
-                return ((System.Windows.Forms.ImeMode)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=0,Right=4,Bottom=0}.
-        /// </summary>
-        public static System.Windows.Forms.Padding labelPath_Margin {
-            get {
-                object obj = ResourceManager.GetObject("labelPath.Margin", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Int32 similar to 17.
-        /// </summary>
-        public static int labelPath_TabIndex {
-            get {
-                object obj = ResourceManager.GetObject("labelPath.TabIndex", resourceCulture);
-                return ((int)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Path:.
         /// </summary>
         public static string labelPath_Text {
@@ -620,46 +288,6 @@ namespace VietOCR {
         public static string labelPath_ToolTip {
             get {
                 return ResourceManager.GetString("labelPath.ToolTip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Boolean similar to True.
-        /// </summary>
-        public static bool labelWatch_AutoSize {
-            get {
-                object obj = ResourceManager.GetObject("labelWatch.AutoSize", resourceCulture);
-                return ((bool)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.ImeMode similar to NoControl.
-        /// </summary>
-        public static System.Windows.Forms.ImeMode labelWatch_ImeMode {
-            get {
-                object obj = ResourceManager.GetObject("labelWatch.ImeMode", resourceCulture);
-                return ((System.Windows.Forms.ImeMode)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=0,Right=4,Bottom=0}.
-        /// </summary>
-        public static System.Windows.Forms.Padding labelWatch_Margin {
-            get {
-                object obj = ResourceManager.GetObject("labelWatch.Margin", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Int32 similar to 12.
-        /// </summary>
-        public static int labelWatch_TabIndex {
-            get {
-                object obj = ResourceManager.GetObject("labelWatch.TabIndex", resourceCulture);
-                return ((int)(obj));
             }
         }
         
@@ -691,81 +319,11 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=186,Y=17}.
-        /// </summary>
-        public static System.Drawing.Point openFileDialog1_TrayLocation {
-            get {
-                object obj = ResourceManager.GetObject("openFileDialog1.TrayLocation", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.DockStyle similar to Top.
-        /// </summary>
-        public static System.Windows.Forms.DockStyle tabControl1_Dock {
-            get {
-                object obj = ResourceManager.GetObject("tabControl1.Dock", resourceCulture);
-                return ((System.Windows.Forms.DockStyle)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
-        /// </summary>
-        public static System.Windows.Forms.Padding tabControl1_Margin {
-            get {
-                object obj = ResourceManager.GetObject("tabControl1.Margin", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Int32 similar to 0.
-        /// </summary>
-        public static int tabControl1_TabIndex {
-            get {
-                object obj = ResourceManager.GetObject("tabControl1.TabIndex", resourceCulture);
-                return ((int)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
         public static string tabControl1_ToolTip {
             get {
                 return ResourceManager.GetString("tabControl1.ToolTip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
-        /// </summary>
-        public static System.Windows.Forms.Padding tabPage1_Margin {
-            get {
-                object obj = ResourceManager.GetObject("tabPage1.Margin", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
-        /// </summary>
-        public static System.Windows.Forms.Padding tabPage1_Padding {
-            get {
-                object obj = ResourceManager.GetObject("tabPage1.Padding", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Int32 similar to 0.
-        /// </summary>
-        public static int tabPage1_TabIndex {
-            get {
-                object obj = ResourceManager.GetObject("tabPage1.TabIndex", resourceCulture);
-                return ((int)(obj));
             }
         }
         
@@ -784,36 +342,6 @@ namespace VietOCR {
         public static string tabPage1_ToolTip {
             get {
                 return ResourceManager.GetString("tabPage1.ToolTip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
-        /// </summary>
-        public static System.Windows.Forms.Padding tabPage2_Margin {
-            get {
-                object obj = ResourceManager.GetObject("tabPage2.Margin", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
-        /// </summary>
-        public static System.Windows.Forms.Padding tabPage2_Padding {
-            get {
-                object obj = ResourceManager.GetObject("tabPage2.Padding", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Int32 similar to 1.
-        /// </summary>
-        public static int tabPage2_TabIndex {
-            get {
-                object obj = ResourceManager.GetObject("tabPage2.TabIndex", resourceCulture);
-                return ((int)(obj));
             }
         }
         
@@ -854,26 +382,6 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
-        /// </summary>
-        public static System.Windows.Forms.Padding textBoxDangAmbigs_Margin {
-            get {
-                object obj = ResourceManager.GetObject("textBoxDangAmbigs.Margin", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Int32 similar to 15.
-        /// </summary>
-        public static int textBoxDangAmbigs_TabIndex {
-            get {
-                object obj = ResourceManager.GetObject("textBoxDangAmbigs.TabIndex", resourceCulture);
-                return ((int)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
         public static string textBoxDangAmbigs_ToolTip {
@@ -883,51 +391,11 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
-        /// </summary>
-        public static System.Windows.Forms.Padding textBoxOutput_Margin {
-            get {
-                object obj = ResourceManager.GetObject("textBoxOutput.Margin", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Int32 similar to 9.
-        /// </summary>
-        public static int textBoxOutput_TabIndex {
-            get {
-                object obj = ResourceManager.GetObject("textBoxOutput.TabIndex", resourceCulture);
-                return ((int)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
         public static string textBoxOutput_ToolTip {
             get {
                 return ResourceManager.GetString("textBoxOutput.ToolTip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Windows.Forms.Padding similar to {Left=4,Top=4,Right=4,Bottom=4}.
-        /// </summary>
-        public static System.Windows.Forms.Padding textBoxWatch_Margin {
-            get {
-                object obj = ResourceManager.GetObject("textBoxWatch.Margin", resourceCulture);
-                return ((System.Windows.Forms.Padding)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Int32 similar to 8.
-        /// </summary>
-        public static int textBoxWatch_TabIndex {
-            get {
-                object obj = ResourceManager.GetObject("textBoxWatch.TabIndex", resourceCulture);
-                return ((int)(obj));
             }
         }
         
@@ -950,12 +418,11 @@ namespace VietOCR {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=326,Y=17}.
+        ///   Looks up a localized string similar to Watch.
         /// </summary>
-        public static System.Drawing.Point toolTip1_TrayLocation {
+        public static string Watch {
             get {
-                object obj = ResourceManager.GetObject("toolTip1.TrayLocation", resourceCulture);
-                return ((System.Drawing.Point)(obj));
+                return ResourceManager.GetString("Watch", resourceCulture);
             }
         }
     }

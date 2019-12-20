@@ -35,7 +35,7 @@
                     <CheckBox x:Name="checkBoxDangAmbigs" Content="{x:Static resx:OptionsDialog.checkBoxDangAmbigs_Text}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Watch">
+            <TabItem Header="{x:Static resx:OptionsDialog.Watch}">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -43,9 +43,9 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="105*"/>
-                        <ColumnDefinition Width="211*"/>
-                        <ColumnDefinition Width="50*"/>
+                        <ColumnDefinition Width="140*"/>
+                        <ColumnDefinition Width="210*"/>
+                        <ColumnDefinition Width="40*"/>
                     </Grid.ColumnDefinitions>
                     <Label x:Name="labelWatch" Content="{x:Static resx:OptionsDialog.labelWatch_Text}" Target="{Binding ElementName=textBoxWatch}" HorizontalAlignment="Left"  VerticalAlignment="Center" Grid.ColumnSpan="2"/>
                     <Label x:Name="labelOutput" Content="{x:Static resx:OptionsDialog.labelOutput_Text}" Target="{Binding ElementName=textBoxOutput}" HorizontalAlignment="Left"  VerticalAlignment="Center" Grid.Row="1"/>
@@ -63,8 +63,8 @@
             </TabItem>
             <TabItem Header="Hyphens">
                 <Grid>
-                    <CheckBox x:Name="checkBoxReplaceHyphens" Content="{x:Static resx:OptionsDialog.checkBoxReplaceHyphens_Text}" HorizontalAlignment="Left" Margin="30,23,0,0" VerticalAlignment="Top" ToolTip="Replace hyphens at the end of lines with soft hyphens using spellcheck dictionary"/>
-                    <CheckBox x:Name="checkBoxRemoveHyphens" Content="{x:Static resx:OptionsDialog.checkBoxRemoveHyphens_Text}" HorizontalAlignment="Left" Margin="30,53,0,0" VerticalAlignment="Top" ToolTip="Remove soft hyphens after removing line breaks"/>
+                    <CheckBox x:Name="checkBoxReplaceHyphens" Content="{x:Static resx:OptionsDialog.checkBoxReplaceHyphens_Text}" HorizontalAlignment="Left" Margin="30,23,0,0" VerticalAlignment="Top" ToolTip="{x:Static resx:OptionsDialog.checkBoxReplaceHyphens_ToolTip}"/>
+                    <CheckBox x:Name="checkBoxRemoveHyphens" Content="{x:Static resx:OptionsDialog.checkBoxRemoveHyphens_Text}" HorizontalAlignment="Left" Margin="30,53,0,0" VerticalAlignment="Top" ToolTip="{x:Static resx:OptionsDialog.checkBoxRemoveHyphens_ToolTip}"/>
                 </Grid>
             </TabItem>
         </TabControl>

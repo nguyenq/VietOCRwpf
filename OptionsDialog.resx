@@ -123,11 +123,9 @@
   <data name="btnOutput.ToolTip" xml:space="preserve">
     <value>Browse</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnWatch.Text" xml:space="preserve">
     <value>...</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="labelWatch.ToolTip" xml:space="preserve">
     <value />
   </data>
@@ -203,7 +201,6 @@
   <data name="labelOutput.ToolTip" xml:space="preserve">
     <value />
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>Cancel</value>
   </data>
@@ -233,5 +230,14 @@
   </data>
   <data name="checkBoxDeskew.Text" xml:space="preserve">
     <value>Deskew</value>
+  </data>
+  <data name="Watch" xml:space="preserve">
+    <value>Watch</value>
+  </data>
+  <data name="checkBoxRemoveHyphens.ToolTip" xml:space="preserve">
+    <value>Remove soft hyphens after removing line breaks</value>
+  </data>
+  <data name="checkBoxReplaceHyphens.ToolTip" xml:space="preserve">
+    <value>Replace hyphens at the end of lines with soft hyphens using spellcheck dictionary</value>
   </data>
 </root>
