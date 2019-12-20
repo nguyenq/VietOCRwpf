@@ -6,22 +6,20 @@
         xmlns:local="clr-namespace:VietOCR"
         xmlns:resx="clr-namespace:VietOCR"
         mc:Ignorable="d"
-        Title="{x:Static resx:ChangeCaseDialog.this_Title}" Height="220" Width="219.2" Loaded="Window_Loaded" ResizeMode="NoResize"
+        Title="{x:Static resx:ChangeCaseDialog.this_Title}" Height="194" Width="232" Loaded="Window_Loaded" ResizeMode="NoResize"
         WindowStartupLocation="CenterOwner">
     <Grid>
-        <GroupBox x:Name="groupBox" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="20,10,20,0" Padding="10"  >
-            <StackPanel x:Name="radioButtonPanel" >
-                <StackPanel.Resources>
-                    <Style TargetType="{x:Type RadioButton}">
-                        <Setter Property="Margin" Value="0,0,0,10"/>
-                    </Style>
-                </StackPanel.Resources>
-                <RadioButton x:Name="radioButton1" Content="{x:Static resx:ChangeCaseDialog.radioButton1_Text}" Tag="Sentence_case" />
-                <RadioButton x:Name="radioButton2" Content="{x:Static resx:ChangeCaseDialog.radioButton2_Text}" Tag="lowercase" />
-                <RadioButton x:Name="radioButton3" Content="{x:Static resx:ChangeCaseDialog.radioButton3_Text}" Tag="UPPERCASE" />
-                <RadioButton x:Name="radioButton4" Content="{x:Static resx:ChangeCaseDialog.radioButton4_Text}" Tag="Title_Case" Margin="0" />
-            </StackPanel>
-        </GroupBox>
+        <StackPanel x:Name="radioButtonPanel" Margin="20,10,20,0">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type RadioButton}">
+                    <Setter Property="Margin" Value="0,0,0,10"/>
+                </Style>
+            </StackPanel.Resources>
+            <RadioButton x:Name="radioButton1" Content="{x:Static resx:ChangeCaseDialog.radioButton1_Text}" Tag="Sentence_case" />
+            <RadioButton x:Name="radioButton2" Content="{x:Static resx:ChangeCaseDialog.radioButton2_Text}" Tag="lowercase" />
+            <RadioButton x:Name="radioButton3" Content="{x:Static resx:ChangeCaseDialog.radioButton3_Text}" Tag="UPPERCASE" />
+            <RadioButton x:Name="radioButton4" Content="{x:Static resx:ChangeCaseDialog.radioButton4_Text}" Tag="Title_Case" Margin="0" />
+        </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0 20">
             <Button x:Name="buttonChange" Content="{x:Static resx:ChangeCaseDialog.buttonChange_Text}" VerticalAlignment="Bottom" Width="75" Click="buttonChange_Click"/>
             <Button x:Name="buttonClose" Content="{x:Static resx:ChangeCaseDialog.buttonClose_Text}" Margin="10,0,0,0" VerticalAlignment="Bottom" Width="75" Click="buttonClose_Click"/>
