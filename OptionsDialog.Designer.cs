@@ -28,7 +28,7 @@ namespace VietOCR {
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
-        
+       
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -234,6 +234,15 @@ namespace VietOCR {
         public static string comboBoxOutputFormat_ToolTip {
             get {
                 return ResourceManager.GetString("comboBoxOutputFormat.ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hyphens.
+        /// </summary>
+        public static string Hyphens {
+            get {
+                return ResourceManager.GetString("Hyphens", resourceCulture);
             }
         }
         

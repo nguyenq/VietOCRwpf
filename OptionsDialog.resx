@@ -240,4 +240,7 @@
   <data name="checkBoxReplaceHyphens.ToolTip" xml:space="preserve">
     <value>Replace hyphens at the end of lines with soft hyphens using spellcheck dictionary</value>
   </data>
+  <data name="Hyphens" xml:space="preserve">
+    <value>Hyphens</value>
+  </data>
 </root>

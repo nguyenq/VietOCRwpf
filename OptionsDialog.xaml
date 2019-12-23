@@ -61,7 +61,7 @@
                     </StackPanel>
                 </Grid>
             </TabItem>
-            <TabItem Header="Hyphens">
+            <TabItem Header="{x:Static resx:OptionsDialog.Hyphens}">
                 <Grid>
                     <CheckBox x:Name="checkBoxReplaceHyphens" Content="{x:Static resx:OptionsDialog.checkBoxReplaceHyphens_Text}" HorizontalAlignment="Left" Margin="30,23,0,0" VerticalAlignment="Top" ToolTip="{x:Static resx:OptionsDialog.checkBoxReplaceHyphens_ToolTip}"/>
                     <CheckBox x:Name="checkBoxRemoveHyphens" Content="{x:Static resx:OptionsDialog.checkBoxRemoveHyphens_Text}" HorizontalAlignment="Left" Margin="30,53,0,0" VerticalAlignment="Top" ToolTip="{x:Static resx:OptionsDialog.checkBoxRemoveHyphens_ToolTip}"/>
