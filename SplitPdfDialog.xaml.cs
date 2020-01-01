@@ -34,6 +34,8 @@ namespace VietOCR
             InitializeComponent();
 
             disableBoxes(!this.radioButtonPages.IsChecked.Value);
+            this.textBoxNumOfPages.IsEnabled = false;
+            this.textBoxNumOfPages.Text = "20";
             //this.toolTip1.SetToolTip(this.buttonBrowseInput, Properties.Resources.Browse);
             //this.toolTip1.SetToolTip(this.buttonBrowseOutput, Properties.Resources.Browse);
         }
