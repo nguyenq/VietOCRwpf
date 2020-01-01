@@ -135,6 +135,7 @@ namespace VietOCR.NET.Utilities
         /// <returns></returns>
         public static int GetPdfPageCount(string inputPdfFile)
         {
+            string inputFile = inputPdfFile.Replace('\\', '/');
             PDFConvert converter = new PDFConvert();
             converter.RedirectIO = true;
             converter.ThrowOnlyException = true; // rethrow exceptions
@@ -146,8 +147,9 @@ namespace VietOCR.NET.Utilities
             gsArgs.Add("-dQUIET");
             gsArgs.Add("-dNODISPLAY");
             gsArgs.Add("-dBATCH");
+            gsArgs.Add("--permit-file-read=" + inputFile);
             gsArgs.Add("-c");
-            string cValue = string.Format("({0}) (r) file runpdfbegin pdfpagecount = quit", inputPdfFile.Replace('\\', '/'));
+            string cValue = string.Format("({0}) (r) file runpdfbegin pdfpagecount = quit", inputFile);
             gsArgs.Add(cValue);
 
             int pageCount = 0;
