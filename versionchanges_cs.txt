@@ -148,3 +148,7 @@ Version 5.5.1 (14 December 2019)
 Version 5.5.2 (23 December 2019)
 - More localized strings
 - Adjust sizes
+
+Version 5.6.0 (4 January 2020)
+- Upgrade to Tesseract 4.1.1 & Leptonica 1.79.0
+- Fix Permission denied issue with GS 9.50

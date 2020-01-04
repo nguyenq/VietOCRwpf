@@ -17,7 +17,7 @@
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -28,7 +28,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>x64</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -286,7 +286,11 @@
     <Content Include="Data\TessLangDataURL.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="x86\liblept1780.dll" />
+    <Content Include="x64\libtesseract411.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="x86\liblept1790.dll" />
+    <None Include="x86\libtesseract411.dll" />
     <Resource Include="readme_cs_ku.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -300,7 +304,6 @@
     <Content Include="versionchanges_cs.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="x86\libtesseract410.dll" />
     <Content Include="dict\en_US.aff">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -350,10 +353,7 @@
     <Resource Include="readme_cs_ne.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Content Include="x64\liblept1780.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="x64\libtesseract410.dll">
+    <Content Include="x64\liblept1790.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <EmbeddedResource Include="BulkDialog.bn.resx">
@@ -368,10 +368,10 @@
     <EmbeddedResource Include="BulkDialog.de.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.es.resx" >
+    <EmbeddedResource Include="BulkDialog.es.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.et.resx" >
+    <EmbeddedResource Include="BulkDialog.et.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.fa.resx">
@@ -380,7 +380,7 @@
     <EmbeddedResource Include="BulkDialog.hi.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.hu.resx" >
+    <EmbeddedResource Include="BulkDialog.hu.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.it.resx">
@@ -389,7 +389,7 @@
     <EmbeddedResource Include="BulkDialog.ja.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.kn.resx" >
+    <EmbeddedResource Include="BulkDialog.kn.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.ku.resx">
@@ -417,7 +417,7 @@
       <DependentUpon>BulkDialog.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="BulkDialog.sd.resx" >
+    <EmbeddedResource Include="BulkDialog.sd.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.sk.resx">
@@ -442,7 +442,7 @@
     <EmbeddedResource Include="ChangeCaseDialog.de.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.es.resx" >
+    <EmbeddedResource Include="ChangeCaseDialog.es.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.fa.resx">
@@ -451,7 +451,7 @@
     <EmbeddedResource Include="ChangeCaseDialog.hi.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.hu.resx" >
+    <EmbeddedResource Include="ChangeCaseDialog.hu.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.it.resx">
@@ -460,7 +460,7 @@
     <EmbeddedResource Include="ChangeCaseDialog.ja.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.kn.resx" >
+    <EmbeddedResource Include="ChangeCaseDialog.kn.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.ku.resx">
@@ -486,7 +486,7 @@
     <EmbeddedResource Include="ChangeCaseDialog.ru.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangeCaseDialog.sd.resx" >
+    <EmbeddedResource Include="ChangeCaseDialog.sd.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.sk.resx">
@@ -510,10 +510,10 @@
     <EmbeddedResource Include="DownloadDialog.de.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.es.resx" >
+    <EmbeddedResource Include="DownloadDialog.es.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.et.resx" >
+    <EmbeddedResource Include="DownloadDialog.et.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.fa.resx">
@@ -522,7 +522,7 @@
     <EmbeddedResource Include="DownloadDialog.hi.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.hu.resx" >
+    <EmbeddedResource Include="DownloadDialog.hu.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.it.resx">
@@ -531,7 +531,7 @@
     <EmbeddedResource Include="DownloadDialog.ja.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.kn.resx" >
+    <EmbeddedResource Include="DownloadDialog.kn.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.ku.resx">
@@ -557,7 +557,7 @@
     <EmbeddedResource Include="DownloadDialog.ru.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DownloadDialog.sd.resx" >
+    <EmbeddedResource Include="DownloadDialog.sd.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DownloadDialog.sk.resx">
@@ -569,13 +569,13 @@
     <EmbeddedResource Include="DownloadDialog.vi.resx">
       <DependentUpon>DownloadDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindReplaceDialog.es.resx" >
+    <EmbeddedResource Include="FindReplaceDialog.es.resx">
       <DependentUpon>FindReplaceDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindReplaceDialog.kn.resx" >
+    <EmbeddedResource Include="FindReplaceDialog.kn.resx">
       <DependentUpon>FindReplaceDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindReplaceDialog.lt.resx" >
+    <EmbeddedResource Include="FindReplaceDialog.lt.resx">
       <DependentUpon>FindReplaceDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindReplaceDialog.resx">
@@ -584,7 +584,7 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>FindReplaceDialog.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindReplaceDialog.sd.resx" >
+    <EmbeddedResource Include="FindReplaceDialog.sd.resx">
       <DependentUpon>FindReplaceDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindReplaceDialog.vi.resx">
@@ -603,7 +603,7 @@
     <EmbeddedResource Include="Gui.de.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui.es.resx" >
+    <EmbeddedResource Include="Gui.es.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.fa.resx">
@@ -619,7 +619,7 @@
     <EmbeddedResource Include="Gui.ja.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui.kn.resx" >
+    <EmbeddedResource Include="Gui.kn.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.ku.resx">
@@ -652,7 +652,7 @@
       <DependentUpon>Gui.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui.sd.resx" >
+    <EmbeddedResource Include="Gui.sd.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.sk.resx">
@@ -693,7 +693,7 @@
     <EmbeddedResource Include="ImageInfoDialog.ja.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageInfoDialog.kn.resx" >
+    <EmbeddedResource Include="ImageInfoDialog.kn.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImageInfoDialog.ku.resx">
@@ -719,7 +719,7 @@
     <EmbeddedResource Include="ImageInfoDialog.ru.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageInfoDialog.sd.resx" >
+    <EmbeddedResource Include="ImageInfoDialog.sd.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImageInfoDialog.sk.resx">
@@ -760,7 +760,7 @@
     <EmbeddedResource Include="OptionsDialog.ja.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OptionsDialog.kn.resx" >
+    <EmbeddedResource Include="OptionsDialog.kn.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.ku.resx">
@@ -788,7 +788,7 @@
     <EmbeddedResource Include="OptionsDialog.ru.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OptionsDialog.sd.resx" >
+    <EmbeddedResource Include="OptionsDialog.sd.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.sk.resx">
@@ -836,7 +836,7 @@
     <EmbeddedResource Include="SliderDialog.de.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SliderDialog.es.resx" >
+    <EmbeddedResource Include="SliderDialog.es.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SliderDialog.fa.resx">
@@ -851,7 +851,7 @@
     <EmbeddedResource Include="SliderDialog.ja.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SliderDialog.kn.resx" >
+    <EmbeddedResource Include="SliderDialog.kn.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SliderDialog.ku.resx">
@@ -877,7 +877,7 @@
     <EmbeddedResource Include="SliderDialog.ru.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SliderDialog.sd.resx" >
+    <EmbeddedResource Include="SliderDialog.sd.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SliderDialog.sk.resx">
@@ -901,10 +901,10 @@
     <EmbeddedResource Include="SplitPdfDialog.de.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.es.resx" >
+    <EmbeddedResource Include="SplitPdfDialog.es.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.et.resx" >
+    <EmbeddedResource Include="SplitPdfDialog.et.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.fa.resx">
@@ -919,7 +919,7 @@
     <EmbeddedResource Include="SplitPdfDialog.ja.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.kn.resx" >
+    <EmbeddedResource Include="SplitPdfDialog.kn.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.ku.resx">
@@ -945,7 +945,7 @@
     <EmbeddedResource Include="SplitPdfDialog.ru.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplitPdfDialog.sd.resx" >
+    <EmbeddedResource Include="SplitPdfDialog.sd.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.sk.resx">
