@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace VietOCR.NET.Utilities
 {
@@ -61,6 +62,12 @@ namespace VietOCR.NET.Utilities
             {
                 if (filters.IsMatch(e.Name))
                 {
+                    // Wait if file is still being written
+                    FileInfo fileInfo = new FileInfo(e.FullPath);
+                    while (IsFileLocked(fileInfo))
+                    {
+                        Thread.Sleep(1000);
+                    }
                     Console.WriteLine("New file: " + e.FullPath);
                     queue.Enqueue(e.FullPath);
                 }
@@ -71,6 +78,34 @@ namespace VietOCR.NET.Utilities
         {
             // Specify what is done when a file is renamed.
             Console.WriteLine("File: {0} renamed to {1}", e.OldFullPath, e.FullPath);
+        }
+
+        /// <summary>
+        /// Check if file is locked as in being used or written by another process.
+        /// https://stackoverflow.com/questions/876473/is-there-a-way-to-check-if-a-file-is-in-use/
+        /// </summary>
+        /// <param name="file"></param>
+        /// <returns></returns>
+        protected virtual bool IsFileLocked(FileInfo file)
+        {
+            try
+            {
+                using (FileStream stream = file.Open(FileMode.Open, FileAccess.Read, FileShare.None))
+                {
+                    //stream.Close();
+                }
+            }
+            catch (IOException)
+            {
+                //the file is unavailable because it is:
+                //still being written to
+                //or being processed by another thread
+                //or does not exist (has already been processed)
+                return true;
+            }
+
+            //file is not locked
+            return false;
         }
     }
 }
