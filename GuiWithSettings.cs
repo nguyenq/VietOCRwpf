@@ -23,6 +23,7 @@ using System.Text;
 using Microsoft.Win32;
 using System.Globalization;
 using System.Windows;
+using System.IO;
 
 namespace VietOCR
 {
@@ -97,7 +98,9 @@ namespace VietOCR
             watchEnabled = Convert.ToBoolean((int)regkey.GetValue(strWatchEnable, Convert.ToInt32(false)));
             watchDeskewEnabled = Convert.ToBoolean((int)regkey.GetValue(strWatchDeskewEnable, Convert.ToInt32(false)));
             watchFolder = (string)regkey.GetValue(strWatchFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+            if (!Directory.Exists(watchFolder)) watchFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             outputFolder = (string)regkey.GetValue(strOutputFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+            if (!Directory.Exists(outputFolder)) outputFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             outputFormat = (string)regkey.GetValue(strBatchOutputFormat, "text");
         }
 

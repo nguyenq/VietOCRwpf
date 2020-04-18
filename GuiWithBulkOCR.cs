@@ -224,7 +224,9 @@ namespace VietOCR
         {
             base.LoadRegistryInfo(regkey);
             inputFolder = (string)regkey.GetValue(strInputFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+            if (!Directory.Exists(inputFolder)) inputFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             outputFolder = (string)regkey.GetValue(strBulkOutputFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+            if (!Directory.Exists(outputFolder)) outputFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             outputFormat = (string)regkey.GetValue(strBulkOutputFormat, "text");
             bulkDeskewEnabled = Convert.ToBoolean((int)regkey.GetValue(strBulkDeskewEnable, Convert.ToInt32(false)));
         }
