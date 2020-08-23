@@ -359,7 +359,9 @@
     <Content Include="x64\liblept1790.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="BulkDialog.ar.resx" />
+    <EmbeddedResource Include="BulkDialog.ar.resx">
+      <DependentUpon>BulkDialog.xaml</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.bn.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
@@ -444,7 +446,7 @@
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.ar.resx">
-      <DependentUpon>BulkDialog.xaml</DependentUpon>
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.bn.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
@@ -791,7 +793,7 @@
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.ar.resx">
-      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.bn.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
