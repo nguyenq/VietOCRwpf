@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_of_" xml:space="preserve">
+    <value>属于</value>
+  </data>
+  <data name="About_VietOCR" xml:space="preserve">
+    <value>关于 VietOCR.NET</value>
+  </data>
+  <data name="Access_denied" xml:space="preserve">
+    <value>无法写入数据到 "{0}" 目录。
+请以管理员身份重新运行。</value>
+  </data>
+  <data name="Add_to_Dictionary" xml:space="preserve">
+    <value>添加到词典</value>
+  </data>
+  <data name="BatchProcessStatus" xml:space="preserve">
+    <value>批处理状态</value>
+  </data>
+  <data name="Beginning_of_task" xml:space="preserve">
+    <value>开始任务</value>
+  </data>
+  <data name="Bilateral" xml:space="preserve">
+    <value>双面</value>
+  </data>
+  <data name="Brightness" xml:space="preserve">
+    <value>亮度</value>
+  </data>
+  <data name="Browse" xml:space="preserve">
+    <value>浏览</value>
+  </data>
+  <data name="Bulk_OCR" xml:space="preserve">
+    <value>批量扫描</value>
+  </data>
+  <data name="BulkProcessStatus" xml:space="preserve">
+    <value>批处理状态</value>
+  </data>
+  <data name="CancelBulkOCR" xml:space="preserve">
+    <value>取消 OCR 识别</value>
+  </data>
+  <data name="canceled" xml:space="preserve">
+    <value>已取消.</value>
+  </data>
+  <data name="Cannotloadimage" xml:space="preserve">
+    <value>无法加载图像</value>
+  </data>
+  <data name="Cannotprocess" xml:space="preserve">
+    <value>无法处理</value>
+  </data>
+  <data name="check_output_in" xml:space="preserve">
+    <value>请检查输出的文件</value>
+  </data>
+  <data name="Clear_Recent_Files" xml:space="preserve">
+    <value>清除最近打开的文件</value>
+  </data>
+  <data name="Contrast" xml:space="preserve">
+    <value>对比度</value>
+  </data>
+  <data name="Correcting_completed" xml:space="preserve">
+    <value>更正完成。</value>
+  </data>
+  <data name="Correcting_errors" xml:space="preserve">
+    <value>正在更正识别错误...</value>
+  </data>
+  <data name="created" xml:space="preserve">
+    <value>已经创建。</value>
+  </data>
+  <data name="Do_you_want_to_save_the_changes_to_" xml:space="preserve">
+    <value>是否将更改保存到</value>
+  </data>
+  <data name="Downloadcanceled" xml:space="preserve">
+    <value>下载已取消.</value>
+  </data>
+  <data name="Downloadcompleted" xml:space="preserve">
+    <value>下载完成.</value>
+  </data>
+  <data name="Downloaderror" xml:space="preserve">
+    <value>下载错误.</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>正在下载中...</value>
+  </data>
+  <data name="Elapsed_time" xml:space="preserve">
+    <value>消耗时间</value>
+  </data>
+  <data name="End_of_task" xml:space="preserve">
+    <value>任务结束</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="Gamma" xml:space="preserve">
+    <value>伽马值</value>
+  </data>
+  <data name="Ignore_All" xml:space="preserve">
+    <value>忽略全部</value>
+  </data>
+  <data name="Inputincomplete" xml:space="preserve">
+    <value>输入不完整</value>
+  </data>
+  <data name="Inputinvalid" xml:space="preserve">
+    <value>文件无效.</value>
+  </data>
+  <data name="InvalidPageMessage" xml:space="preserve">
+    <value>此图像中没有页码为'{0}'的页。</value>
+  </data>
+  <data name="Load_image" xml:space="preserve">
+    <value>加载图像</value>
+  </data>
+  <data name="LoadImage" xml:space="preserve">
+    <value>请加载图像。</value>
+  </data>
+  <data name="Loading_completed" xml:space="preserve">
+    <value>加载完成。</value>
+  </data>
+  <data name="Loading_image" xml:space="preserve">
+    <value>正在加载图像...</value>
+  </data>
+  <data name="MergePDF_running" xml:space="preserve">
+    <value>正在合并 PDF ...</value>
+  </data>
+  <data name="MergePDFcompleted" xml:space="preserve">
+    <value>合并 PDF 完成。</value>
+  </data>
+  <data name="MergeTIFF_running" xml:space="preserve">
+    <value>正在合并 TIFF ...</value>
+  </data>
+  <data name="MergeTIFFcompleted" xml:space="preserve">
+    <value>合并 TIFF 完成。</value>
+  </data>
+  <data name="No_Recent_Files" xml:space="preserve">
+    <value>没有最近打开的文件</value>
+  </data>
+  <data name="OCRcompleted" xml:space="preserve">
+    <value>识别完成。</value>
+  </data>
+  <data name="OCROperation" xml:space="preserve">
+    <value>OCR 操作</value>
+  </data>
+  <data name="OCRrunning" xml:space="preserve">
+    <value>OCR 运行中...</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>打开</value>
+  </data>
+  <data name="OpenImageFile" xml:space="preserve">
+    <value>打开图像文件</value>
+  </data>
+  <data name="Page_" xml:space="preserve">
+    <value>页</value>
+  </data>
+  <data name="Please_restart" xml:space="preserve">
+    <value>新语言包将在重启后生效。</value>
+  </data>
+  <data name="Program_desc" xml:space="preserve">
+    <value>用于Tesseract {0} OCR引擎的.NET图形用户界面前端</value>
+  </data>
+  <data name="readme" xml:space="preserve">
+    <value>readme_cs.html</value>
+  </data>
+  <data name="Require_grayscale" xml:space="preserve">
+    <value>图像可能需要转换为灰度。</value>
+  </data>
+  <data name="Resource_not_exist" xml:space="preserve">
+    <value>资源不存在</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Save_As" xml:space="preserve">
+    <value>另存为...</value>
+  </data>
+  <data name="Save_Merged_PDF" xml:space="preserve">
+    <value>保存已合并 PDF</value>
+  </data>
+  <data name="Save_Multipage_TIFF_Image" xml:space="preserve">
+    <value>保存多页TIFF图像</value>
+  </data>
+  <data name="Scancompleted" xml:space="preserve">
+    <value>扫描完成</value>
+  </data>
+  <data name="Scanning" xml:space="preserve">
+    <value>扫描中</value>
+  </data>
+  <data name="ScanningOperation" xml:space="preserve">
+    <value>扫描操作</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="Select_Input_Images" xml:space="preserve">
+    <value>选择输入图像</value>
+  </data>
+  <data name="Select_Input_PDFs" xml:space="preserve">
+    <value>选择输入PDF</value>
+  </data>
+  <data name="Select_Input_TIFF" xml:space="preserve">
+    <value>选择输入多页TIFF</value>
+  </data>
+  <data name="selectLanguage" xml:space="preserve">
+    <value>请选择一个语言</value>
+  </data>
+  <data name="SplitPDF_completed" xml:space="preserve">
+    <value>分割PDF完成</value>
+  </data>
+  <data name="SplitPDF_running" xml:space="preserve">
+    <value>分割PDF中</value>
+  </data>
+  <data name="SplitTIFF_running" xml:space="preserve">
+    <value>分割TIFF中</value>
+  </data>
+  <data name="SplitTIFFcompleted" xml:space="preserve">
+    <value>分割 TIFF 完成。</value>
+  </data>
+  <data name="suggest_split" xml:space="preserve">
+    <value>在继续之前，可能需要将PDF文件拆分为较小的文件。</value>
+  </data>
+  <data name="Task_canceled" xml:space="preserve">
+    <value>任务已取消</value>
+  </data>
+  <data name="Threshold" xml:space="preserve">
+    <value>起始点</value>
+  </data>
+  <data name="Untitled" xml:space="preserve">
+    <value>无标题</value>
+  </data>
+  <data name="VietOCR_Help" xml:space="preserve">
+    <value>VietOCR.NET 帮助</value>
+  </data>
+  <data name="ConvertPDFcompleted" xml:space="preserve">
+    <value>转换成 PDF 成功。</value>
+  </data>
+  <data name="ConvertPDF_running" xml:space="preserve">
+    <value>转换 PDF 中...</value>
+  </data>
+  <data name="Select_Input_PDF" xml:space="preserve">
+    <value>选择源PDF</value>
+  </data>
+  <data name="beginning" xml:space="preserve">
+    <value>开始</value>
+  </data>
+  <data name="Cannot_find_" xml:space="preserve">
+    <value>找不到</value>
+  </data>
+  <data name="Continue_search_from_" xml:space="preserve">
+    <value>继续搜索</value>
+  </data>
+  <data name="end" xml:space="preserve">
+    <value>结束</value>
+  </data>
+  <data name="Regex_Error" xml:space="preserve">
+    <value>正则表达式错误</value>
+  </data>
+  <data name="ReplacedOccurrence" xml:space="preserve">
+    <value>替换了 {0} 个事件。</value>
+  </data>
+  <data name="Double_sided" xml:space="preserve">
+    <value>双面</value>
+  </data>
+  <data name="Single_sided" xml:space="preserve">
+    <value>单面</value>
+  </data>
+  <data name="File_not_exist" xml:space="preserve">
+    <value>输入文件不存在。</value>
+  </data>
+</root>

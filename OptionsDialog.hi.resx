@@ -123,12 +123,10 @@
   <data name="btnOutput.ToolTip" xml:space="preserve">
     <value>ब्राउज़</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="btnWatch.Text" xml:space="preserve">
     <value>...
 </value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="labelWatch.ToolTip" xml:space="preserve">
     <value/>
   </data>
@@ -204,7 +202,6 @@
   <data name="labelOutput.ToolTip" xml:space="preserve">
     <value/>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>रद्द करें</value>
   </data>
@@ -235,5 +232,17 @@
   </data>
   <data name="checkBoxDeskew.Text" xml:space="preserve">
     <value>सीधा करें</value>
+  </data>
+  <data name="Watch" xml:space="preserve">
+    <value>वाच</value>
+  </data>
+  <data name="checkBoxRemoveHyphens.ToolTip" xml:space="preserve">
+    <value>लाइन ब्रेक हटाने के बाद सॉफ्ट हायफ़न हटायें.</value>
+  </data>
+  <data name="checkBoxReplaceHyphens.ToolTip" xml:space="preserve">
+    <value>स्पेलचेक शब्दकोष का प्रयोग कर लाइन के अंत के हायफ़न को सॉफ्ट हायफ़न में बदलें .</value>
+  </data>
+  <data name="Hyphens" xml:space="preserve">
+    <value>हायफ़न</value>
   </data>
 </root>

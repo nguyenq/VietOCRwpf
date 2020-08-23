@@ -123,11 +123,9 @@
   <data name="btnOutput.ToolTip" xml:space="preserve">
     <value>ब्राउज</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="btnWatch.Text" xml:space="preserve">
     <value>...</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="labelWatch.ToolTip" xml:space="preserve">
     <value/>
   </data>
@@ -171,7 +169,7 @@
     <value/>
   </data>
   <data name="openFileDialog1.Filter" xml:space="preserve">
-    <value>Text Files (*.txt)|*.txt</value>
+    <value>पाठ फाइलहरू (*.txt)|*.txt</value>
   </data>
   <data name="buttonCancel.ToolTip" xml:space="preserve">
     <value/>
@@ -203,7 +201,6 @@
   <data name="labelOutput.ToolTip" xml:space="preserve">
     <value/>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>रद्द</value>
   </data>
@@ -233,5 +230,17 @@
   </data>
   <data name="checkBoxDeskew.Text" xml:space="preserve">
     <value>सीधा पार्नुहोस्</value>
+  </data>
+  <data name="Watch" xml:space="preserve">
+    <value>दृश्य</value>
+  </data>
+  <data name="checkBoxRemoveHyphens.ToolTip" xml:space="preserve">
+    <value>लाइन विश्रामहरू हटाइसके पछि सफ्ट हाइफनहरू हटाउनुहोस्</value>
+  </data>
+  <data name="checkBoxReplaceHyphens.ToolTip" xml:space="preserve">
+    <value>हिज्जेजाँच शब्दकोषको प्रयोग गरी पङ्किको अन्यमा रहेका हाइफनहरूलाई सफ्ट हाइफनद्वारा प्रतिस्थापन गर्नुहोस्</value>
+  </data>
+  <data name="Hyphens" xml:space="preserve">
+    <value>हाइफनहरू</value>
   </data>
 </root>
