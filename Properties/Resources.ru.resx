@@ -1,6 +1,65 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -65,7 +124,7 @@
     <value>О программе VietOCR.NET</value>
   </data>
   <data name="Access_denied" xml:space="preserve">
-    <value>У вас нет прав для записи в папку &quot;{0}&quot;.
+    <value>У вас нет прав для записи в папку "{0}".
 Пожалуйста, запустите программу от имени Администратора.</value>
   </data>
   <data name="Add_to_Dictionary" xml:space="preserve">
@@ -108,7 +167,7 @@
     <value>Пожалуйста, проверьте выходной(ые) файл(ы) в</value>
   </data>
   <data name="Clear_Recent_Files" xml:space="preserve">
-    <value>Очистить список</value>
+    <value>_Clear Recent Files</value>
   </data>
   <data name="Contrast" xml:space="preserve">
     <value>Контраст</value>
@@ -159,7 +218,7 @@
     <value>Некорректный ввод.</value>
   </data>
   <data name="InvalidPageMessage" xml:space="preserve">
-    <value>Там нет пронумерованных страниц &apos;{0}&apos; в изображении.</value>
+    <value>Там нет пронумерованных страниц '{0}' в изображении.</value>
   </data>
   <data name="Load_image" xml:space="preserve">
     <value>Загрузить изображение</value>
@@ -283,5 +342,41 @@
   </data>
   <data name="VietOCR_Help" xml:space="preserve">
     <value>Справка</value>
+  </data>
+  <data name="ConvertPDFcompleted" xml:space="preserve">
+    <value>Convert PDF completed. </value>
+  </data>
+  <data name="ConvertPDF_running" xml:space="preserve">
+    <value>Convert PDF running...</value>
+  </data>
+  <data name="Select_Input_PDF" xml:space="preserve">
+    <value>Select Input PDF</value>
+  </data>
+  <data name="beginning" xml:space="preserve">
+    <value>beginning</value>
+  </data>
+  <data name="Cannot_find_" xml:space="preserve">
+    <value>Cannot find </value>
+  </data>
+  <data name="Continue_search_from_" xml:space="preserve">
+    <value>Continue search from </value>
+  </data>
+  <data name="end" xml:space="preserve">
+    <value>end</value>
+  </data>
+  <data name="Regex_Error" xml:space="preserve">
+    <value>Regex Error</value>
+  </data>
+  <data name="ReplacedOccurrence" xml:space="preserve">
+    <value>Replaced {0} occurrence(s).</value>
+  </data>
+  <data name="Double_sided" xml:space="preserve">
+    <value>Double-sided</value>
+  </data>
+  <data name="Single_sided" xml:space="preserve">
+    <value>Single-sided</value>
+  </data>
+  <data name="File_not_exist" xml:space="preserve">
+    <value>Входной файл не существует.</value>
   </data>
 </root>

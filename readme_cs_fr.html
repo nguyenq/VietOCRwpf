@@ -1,0 +1,58 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>VietOCR.NET - Interface Graphique Utilisateur sous .NET WPF développée pour le logiciel de reconnaissance optique de caractères Tesseract</title>
+</head>
+<body>
+    <div>
+        <h2 align="center">VietOCR.NET</h2>
+        <h3>DESCRIPTION</h3>
+        <p><a href="http://vietocr.sourceforge.net/">VietOCR.NET</a>
+est une interface graphique utilisateur .NET WPF pour <a href="https://github.com/tesseract-ocr">Tesseract OCR engine</a> qui permet la reconnaissance optique de caractères à partir de formats d'image courants,
+ et d'images multi-pages. Le programme dispose d'un post-traitement qui corrige les erreurs
+ habituellement produites par le processus de reconnaissance optique. Le taux de reconnaissance s'en trouve augmenté.
+ Le programme peut aussi fonctionner en console, en utilisant la ligne de commande. </p>
+        <p>Le traitement par lot est maintenant possible. Le programme surveille l'ajout d'images dans un dossier déterminé, les traite automatiquement par OCR et envoie le texte reconnu dans un dossier de destination. </p>
+        <h3>CONFIGURATION REQUISE</h3>
+        <p><a href="https://dotnet.microsoft.com/download/dotnet-framework/net48">Microsoft .NET Framework 4.8</a>.</p>
+        <p>Si ce message d'erreur apparaît: &quot;<i>Exception has been thrown by the target of an invocation</i>&quot; veuillez installer
+<a href="https://visualstudio.microsoft.com/downloads/">Microsoft Visual C++ 2019 Redistributable Package</a>.</p>
+        <h3>INSTALLATION</h3>
+        <p>Si vous n'avez pas les autorisations pour installer dans le dossier <code>C:\Program Files</code>,
+vous poouvez indiquer une autre dossier dans la fenêtre de saisie Dossier d'installation. </p>
+        <p>L'outil de numérisation est fourni par la bibliothèque d'acquisition d'image Windows v2.0.</p>
+        <p>Les PDF sont pris en charge par <a href="http://www.ghostscript.com/">GPL Ghostscript</a>. Après installation de la bibliothèque, veuillez vérifier que la bibliothèque dynamique <code>gsdll64.dll</code>se trouve dans le chemin de recherche en définissant la variable d'environnement <code>Path</code>, qui est accessible dans le Panneau de configuration de Windows, menu Propriétés système, onglet Paramètres système avancés, bouton Variables d'environnement. 
+Par exemple, pour GS version 9.50, attribuez la valeur suivante à <code>Path</code>:</p>
+        <blockquote>
+            <p><code>;C:\Program Files\gs\gs9.50\bin</code></p>
+        </blockquote>
+        <p>La correction orthographique est assurée par Hunspell, dont les fichiers <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">
+dictionary</a> (<code>.aff</code>, <code>.dic</code>) devraient être placés 
+dans le dossier <code>dict</code> de VietOCR. </p>
+        <h3>INSTRUCTIONS</h3>
+        <p>Les <a href="https://github.com/tesseract-ocr/tessdata">Language data packs</a> pour Tesseract doivent être décompressés dans le dossier d'installation <code>tesseract2</code>; les fichiers de données, dont les noms commencent par des codes ISO639-3, seront placés dans le sous-dossier <code>tessdata</code>.
+VietOCR permet aussi le téléchargement et l'installation d'autres langues par le menu <em>Download Language Data</em>. Selon l'emplacement du 
+dossier<code>tessdata</code>, vous devrez peut-être lancer le programme en administrateur
+ pour pouvoir installer les données téléchargées si leur destination  se trouve dans un dossier système, comme <code>C:\Program Files</code>.</p>
+        <p>Les données concernant la langue vietnamienne ont été créées pour les polices Times New Roman, Arial, Verdana et Courier New. De ce fait, la reconnaissance aura un meilleur taux de réussite pour les images de fontes aux caractéristiques visuelles semblables. Dans le cas de caractères d'apparence différente des polices supportées, l'utilisation de <a href="https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract">training</a> Tesseract pour créer de nouvelles données de langue spécifiques donnera de meilleurs résultats. Des données pour quelques polices VNI et TCVN3 (ABC) ont été ajoutées aux versions les plus récentes. </p>
+        <p>Pour l'OCR, les images doivent être numérisées avec une résolution comprise entre 200 DPI (dot per inch) et 400 DPI en monochrome (noir et blanc) ou niveaux de gris. Numériser à des résolutions plus élevées n'améliorera pas forcément le taux de reconnaissance, qui atteint déjà 97¨% pour le Vietnamien, et sera sans doute amélioré par la prochaine version de Tesseract. 
+Même ainsi, le taux réel dépend grandement de la qualité de l'image numérisée. Le réglage typique est de 300 DPI et 1 bpp (bit per pixel) en noir et blanc, ou 8 bpp en niveaux de gris, pour les formats TIFF ou PNG non compressés. </p>
+        <p>Le mode <em>Screenshot Mode</em> offre un meilleur taux de reconnaissance pour les images à basse résolution, telles que des captures d'écran, en les rééchantillonnant jusqu'à 300 DPI.</p>
+        <p>En complément à l'algorithme de post-traitement incorporé, vous pouvez ajouter votre schéma de remplacement de texte personnalisé, grâce à un fichier de texte séparé par tabulations et encodé en UTF-8. Son nom est <code>x.DangAmbigs.txt</code>, ou x représente le code ISO639-3 de la langue. Texte ordinaire et Regex sont supportés. </p>
+        <p>Vous pouvez définir des paramètres de démarrage ou autres dans les fichiers <code>tessdata/configs/tess_configs</code> et <code>tess_configvars</code> respectivement, pour modifier le comportement de Tesseract.</p>
+        <p>Des outils ont été incorporés pour fusionner plusieurs images ou PDF en un seul fichier, ce qui rend les opérations d'OCR plus pratiques, ou pour fractionner un PDF en fichiers plus petit si sa taille initiale risque de poser des problèmes de mémoire insuffisante. </p>
+        <h3>POST-TRAITEMENT</h3>
+        <p>Les erreurs de reconnaissance peuvent être classées en trois catégories. La plupart concernent la casse - par exemple hOa, nhắC - et sont facilement corrigées par les éditeurs de texte Unicode courants. Beaucoup d'autres erreurs réultent du processus d'OCR, comme le manque de signes diacritiques, la confusion de lettres de formes proches, etc. - huu - huư, mang - marg, h0a - hoa, la - 1a, uhìu - nhìn. Elles peuvent être aussi facilement corrigées par des programmes de vérification orthographique. Le programme intégré de post-traitement peut corriger beaucoup d'erreurs de ces deux catégories. </p>
+        <p>La dernière catégorie d'erreurs est la plus difficile à détecter, car elles sont sémantiques, ce quiveut dire que les mots existent bien dans le dictionnaire, mais sont erronés dans leur contexte - ainsi tinh - tình, vân - vấn. Ces erreurs demandent une relecture et une correction manuelle en conformité avec l'image d'origine. </p>
+        <p>Les instructions suivantes expliquent comment corriger les deux premières catégories d'erreurs en utilisant les fonctionnalités intégrées:</p>
+        <ol style="margin-top: 0in" start="1" type="1">
+<li>Groupement des lignes. Le processus d'OCR transforme chaque ligne individuelle en paragraphe. Il faut donc reconstituer les paragraphes d'origine en utilisant la fonction <i>Remove Line Breaks</i>dans le menu <i>Format</i>. Cette opération n'est pas forcément nécessaire dans le cas de poèmes. </li>
+            <li>Sélectionnez <i>Change Case</i>, toujours dans le menu <i>Format</i>, et choisissez <i>Sentence Case</i> pour corriger la plupart des erreurs de casse. Repérez et corrigez les erreurs de casse restantes. </li>
+            <li>Corrigez les fautes d'orthographe en utilisant le correcteur intégré <i>Spell Check</i>.</li>
+        </ol>
+<p>Les étapes précédentes permettent d'éliminer la plupart des erreurs. Les erreurs sémantiques restantes sont peu nombreuses, mais elles nécessitent une relecture humaine et des corrections manuelles pour rendre le texte conforme au document numérisé. </p>
+        <p>S'il vous reste des questions, vous pouvez les poster sur la page <a href="http://sourceforge.net/projects/vietocr/forums">VietOCR Forum</a>.</p>
+        <hr>
+</div>
+</body>
+</html>

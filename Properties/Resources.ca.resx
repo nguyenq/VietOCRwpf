@@ -1,6 +1,65 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -53,10 +112,10 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="_of_" xml:space="preserve">
     <value>de</value>
@@ -65,7 +124,7 @@
     <value>Quant al VietOCR.NET</value>
   </data>
   <data name="Access_denied" xml:space="preserve">
-    <value>You have no write access to &quot;{0}&quot; folder.
+    <value>You have no write access to "{0}" folder.
 Please run the program as administrator.</value>
   </data>
   <data name="Add_to_Dictionary" xml:space="preserve">
@@ -75,7 +134,10 @@ Please run the program as administrator.</value>
     <value>Batch Process Status</value>
   </data>
   <data name="Beginning_of_task" xml:space="preserve">
-    <value>Inici d&apos;un tasca</value>
+    <value>Inici d'un tasca</value>
+  </data>
+  <data name="Bilateral" xml:space="preserve">
+    <value>Bilateral</value>
   </data>
   <data name="Brightness" xml:space="preserve">
     <value>Brillantor</value>
@@ -105,7 +167,7 @@ Please run the program as administrator.</value>
     <value>Comproveu els fitxers generats a</value>
   </data>
   <data name="Clear_Recent_Files" xml:space="preserve">
-    <value>_Neteja els fitxers recents</value>
+    <value>_Clear Recent Files</value>
   </data>
   <data name="Contrast" xml:space="preserve">
     <value>Contrast</value>
@@ -114,25 +176,25 @@ Please run the program as administrator.</value>
     <value>La correcció ha finalitzat</value>
   </data>
   <data name="Correcting_errors" xml:space="preserve">
-    <value>S&apos;estan corregint els errors de reconeixement...</value>
+    <value>S'estan corregint els errors de reconeixement...</value>
   </data>
   <data name="created" xml:space="preserve">
-    <value>s&apos;ha creat.</value>
+    <value>s'ha creat.</value>
   </data>
   <data name="Do_you_want_to_save_the_changes_to_" xml:space="preserve">
     <value>Voleu desar els canvis a</value>
   </data>
   <data name="Downloadcanceled" xml:space="preserve">
-    <value>La baixada s&apos;ha cancel·lat.</value>
+    <value>La baixada s'ha cancel·lat.</value>
   </data>
   <data name="Downloadcompleted" xml:space="preserve">
     <value>La baixada ha finalitzat.</value>
   </data>
   <data name="Downloaderror" xml:space="preserve">
-    <value>S&apos;ha produït un error durant la baixada.</value>
+    <value>S'ha produït un error durant la baixada.</value>
   </data>
   <data name="Downloading" xml:space="preserve">
-    <value>S&apos;està baixant...</value>
+    <value>S'està baixant...</value>
   </data>
   <data name="Elapsed_time" xml:space="preserve">
     <value>Elapsed time</value>
@@ -141,19 +203,22 @@ Please run the program as administrator.</value>
     <value>Final de la tasca</value>
   </data>
   <data name="Error" xml:space="preserve">
-    <value>S&apos;ha produït un error</value>
+    <value>S'ha produït un error</value>
+  </data>
+  <data name="Gamma" xml:space="preserve">
+    <value>Gamma</value>
   </data>
   <data name="Ignore_All" xml:space="preserve">
     <value>Ignora-ho tot</value>
   </data>
   <data name="Inputincomplete" xml:space="preserve">
-    <value>L&apos;entrada no és completa.</value>
+    <value>L'entrada no és completa.</value>
   </data>
   <data name="Inputinvalid" xml:space="preserve">
     <value>La entrada no és vàlida.</value>
   </data>
   <data name="InvalidPageMessage" xml:space="preserve">
-    <value>No hi ha pàgina numerada &apos;{0}&apos; en aquesta imatge.</value>
+    <value>No hi ha pàgina numerada '{0}' en aquesta imatge.</value>
   </data>
   <data name="Load_image" xml:space="preserve">
     <value>Carrega una imatge</value>
@@ -165,7 +230,7 @@ Please run the program as administrator.</value>
     <value>La càrrega ha finalitzat.</value>
   </data>
   <data name="Loading_image" xml:space="preserve">
-    <value>S&apos;està carregant la imatge...</value>
+    <value>S'està carregant la imatge...</value>
   </data>
   <data name="MergePDF_running" xml:space="preserve">
     <value>Merge PDF running...</value>
@@ -183,19 +248,19 @@ Please run the program as administrator.</value>
     <value>No hi ha fitxers recents</value>
   </data>
   <data name="OCRcompleted" xml:space="preserve">
-    <value>L&apos;OCR ha finalizat.</value>
+    <value>L'OCR ha finalizat.</value>
   </data>
   <data name="OCROperation" xml:space="preserve">
     <value>Operació OCR</value>
   </data>
   <data name="OCRrunning" xml:space="preserve">
-    <value>S&apos;està executant l&apos;OCR...</value>
+    <value>S'està executant l'OCR...</value>
   </data>
   <data name="Open" xml:space="preserve">
     <value>Obre</value>
   </data>
   <data name="OpenImageFile" xml:space="preserve">
-    <value>Obre el fitxer d&apos;imatge</value>
+    <value>Obre el fitxer d'imatge</value>
   </data>
   <data name="Page_" xml:space="preserve">
     <value>Pàgina</value>
@@ -204,7 +269,7 @@ Please run the program as administrator.</value>
     <value>Torneu a iniciar el programa per a poder registrar els nou paquet de llengua.</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>Interfície Gràfica d&apos;usuari en .NET per al motor d&apos;OCR Tesseract {0}</value>
+    <value>.NET GUI Frontend for Tesseract {0} OCR Engine</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_ca.html</value>
@@ -228,25 +293,25 @@ Please run the program as administrator.</value>
     <value>Save Multi-page TIFF Image</value>
   </data>
   <data name="Scancompleted" xml:space="preserve">
-    <value>L&apos;escaneig ha finalitzat.</value>
+    <value>L'escaneig ha finalitzat.</value>
   </data>
   <data name="Scanning" xml:space="preserve">
-    <value>S&apos;està escanejant...</value>
+    <value>S'està escanejant...</value>
   </data>
   <data name="ScanningOperation" xml:space="preserve">
-    <value>Operació d&apos;escaneig</value>
+    <value>Operació d'escaneig</value>
   </data>
   <data name="Select" xml:space="preserve">
     <value>Seleccioneu</value>
   </data>
   <data name="Select_Input_Images" xml:space="preserve">
-    <value>Seleccioneu imatges d&apos;entrada</value>
+    <value>Seleccioneu imatges d'entrada</value>
   </data>
   <data name="Select_Input_PDFs" xml:space="preserve">
-    <value>Seleccioneu fitxers PDF d&apos;entrada</value>
+    <value>Seleccioneu fitxers PDF d'entrada</value>
   </data>
   <data name="Select_Input_TIFF" xml:space="preserve">
-    <value>Seleccioneu fitxers TIFF multipàgina d&apos;entrada</value>
+    <value>Seleccioneu fitxers TIFF multipàgina d'entrada</value>
   </data>
   <data name="selectLanguage" xml:space="preserve">
     <value>Seleccioneu una llengua.</value>
@@ -258,7 +323,7 @@ Please run the program as administrator.</value>
     <value>Split PDF running...</value>
   </data>
   <data name="SplitTIFF_running" xml:space="preserve">
-    <value>S&apos;està dividint el TIFF...</value>
+    <value>S'està dividint el TIFF...</value>
   </data>
   <data name="SplitTIFFcompleted" xml:space="preserve">
     <value>La divisió del TIFF ha finalitzat.</value>
@@ -267,12 +332,51 @@ Please run the program as administrator.</value>
     <value>You may need to split the PDF file into smaller files before proceed.</value>
   </data>
   <data name="Task_canceled" xml:space="preserve">
-    <value>S&apos;ha cancel·lat la tasca</value>
+    <value>S'ha cancel·lat la tasca</value>
+  </data>
+  <data name="Threshold" xml:space="preserve">
+    <value>Threshold</value>
   </data>
   <data name="Untitled" xml:space="preserve">
     <value>Sense títol</value>
   </data>
   <data name="VietOCR_Help" xml:space="preserve">
     <value>Ajuda del VietOCR.NET</value>
+  </data>
+  <data name="ConvertPDFcompleted" xml:space="preserve">
+    <value>Convert PDF completed. </value>
+  </data>
+  <data name="ConvertPDF_running" xml:space="preserve">
+    <value>Convert PDF running...</value>
+  </data>
+  <data name="Select_Input_PDF" xml:space="preserve">
+    <value>Select Input PDF</value>
+  </data>
+  <data name="beginning" xml:space="preserve">
+    <value>beginning</value>
+  </data>
+  <data name="Cannot_find_" xml:space="preserve">
+    <value>Cannot find </value>
+  </data>
+  <data name="Continue_search_from_" xml:space="preserve">
+    <value>Continue search from </value>
+  </data>
+  <data name="end" xml:space="preserve">
+    <value>end</value>
+  </data>
+  <data name="Regex_Error" xml:space="preserve">
+    <value>Regex Error</value>
+  </data>
+  <data name="ReplacedOccurrence" xml:space="preserve">
+    <value>Replaced {0} occurrence(s).</value>
+  </data>
+  <data name="Double_sided" xml:space="preserve">
+    <value>Double-sided</value>
+  </data>
+  <data name="Single_sided" xml:space="preserve">
+    <value>Single-sided</value>
+  </data>
+  <data name="File_not_exist" xml:space="preserve">
+    <value>El fitxer d'entrada no existeix.</value>
   </data>
 </root>

@@ -123,11 +123,9 @@
   <data name="btnOutput.ToolTip" xml:space="preserve">
     <value>Prezerať</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="btnWatch.Text" xml:space="preserve">
     <value>...</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="labelWatch.ToolTip" xml:space="preserve">
     <value/>
   </data>
@@ -203,7 +201,6 @@
   <data name="labelOutput.ToolTip" xml:space="preserve">
     <value/>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>Zrušiť</value>
   </data>
@@ -233,5 +230,17 @@
   </data>
   <data name="checkBoxDeskew.Text" xml:space="preserve">
     <value>Vyrovnanie sklonu</value>
+  </data>
+  <data name="Watch" xml:space="preserve">
+    <value>Sledovať</value>
+  </data>
+  <data name="checkBoxRemoveHyphens.ToolTip" xml:space="preserve">
+    <value>Odstrániť mäkké spojovníky po odstránení zalomení riadkov</value>
+  </data>
+  <data name="checkBoxReplaceHyphens.ToolTip" xml:space="preserve">
+    <value>Nahradiť spojovníky na konci riadkov s mäkkými spojovníky s použitím kontroly preklepov</value>
+  </data>
+  <data name="Hyphens" xml:space="preserve">
+    <value>Hyphens</value>
   </data>
 </root>
