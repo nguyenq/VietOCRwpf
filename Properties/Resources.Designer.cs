@@ -584,6 +584,15 @@ namespace VietOCR.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please select an output format..
+        /// </summary>
+        internal static string Please_select_output_format {
+            get {
+                return ResourceManager.GetString("Please_select_output_format", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to .NET GUI Frontend for Tesseract {0} OCR Engine.
         /// </summary>
         internal static string Program_desc {

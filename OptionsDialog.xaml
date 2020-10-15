@@ -54,7 +54,7 @@
                                 </DockPanel>
                             </Button.Content>
                             <Button.ContextMenu>
-                                <ContextMenu x:Name="menuOutputFormat" Closed="ContextMenu_Closed" >
+                                <ContextMenu x:Name="menuOutputFormat" Opened="ContextMenu_Opened" Closed="ContextMenu_Closed" >
                                 </ContextMenu>
                             </Button.ContextMenu>
                         </Button>

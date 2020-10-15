@@ -656,8 +656,12 @@ namespace VietOCR
             btn.ContextMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
             btn.ContextMenu.IsOpen = !srClicked;
             srClicked ^= true;
-            BtnArrowDown.Visibility = srClicked ? Visibility.Collapsed : Visibility.Visible;
-            BtnArrowUp.Visibility = srClicked ? Visibility.Visible : Visibility.Collapsed;
+        }
+
+        private void ContextMenu_Opened(object sender, RoutedEventArgs e)
+        {
+            BtnArrowDown.Visibility = Visibility.Collapsed;
+            BtnArrowUp.Visibility = Visibility.Visible;
         }
 
         private void ContextMenu_Closed(object sender, RoutedEventArgs e)
@@ -670,8 +674,6 @@ namespace VietOCR
 
         private void srMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            srClicked = false;
-            Keyboard.ClearFocus();
             setSegmentedRegions();
         }
 

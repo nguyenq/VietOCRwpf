@@ -236,12 +236,12 @@
                         </DockPanel>
                     </Button.Content>
                     <Button.ContextMenu>
-                        <ContextMenu Closed="ContextMenu_Closed" >
-                            <MenuItem x:Name="toolStripMenuItemSymbol" Header="{x:Static resx:Gui.toolStripMenuItemSymbol_Text}" IsCheckable="True" Click="srMenuItem_Click"/>
-                            <MenuItem x:Name="toolStripMenuItemWord" Header="{x:Static resx:Gui.toolStripMenuItemWord_Text}" IsCheckable="True" Click="srMenuItem_Click"/>
-                            <MenuItem x:Name="toolStripMenuItemTextLine" Header="{x:Static resx:Gui.toolStripMenuItemTextLine_Text}" IsCheckable="True" Click="srMenuItem_Click"/>
-                            <MenuItem x:Name="toolStripMenuItemPara" Header="{x:Static resx:Gui.toolStripMenuItemPara_Text}" IsCheckable="True" Click="srMenuItem_Click"/>
-                            <MenuItem x:Name="toolStripMenuItemBlock" Header="{x:Static resx:Gui.toolStripMenuItemBlock_Text}" IsCheckable="True" Click="srMenuItem_Click"/>
+                        <ContextMenu Closed="ContextMenu_Closed" Opened="ContextMenu_Opened" >
+                            <MenuItem x:Name="toolStripMenuItemSymbol" Header="{x:Static resx:Gui.toolStripMenuItemSymbol_Text}" IsCheckable="True" Click="srMenuItem_Click" StaysOpenOnClick="True"/>
+                            <MenuItem x:Name="toolStripMenuItemWord" Header="{x:Static resx:Gui.toolStripMenuItemWord_Text}" IsCheckable="True" Click="srMenuItem_Click" StaysOpenOnClick="True"/>
+                            <MenuItem x:Name="toolStripMenuItemTextLine" Header="{x:Static resx:Gui.toolStripMenuItemTextLine_Text}" IsCheckable="True" Click="srMenuItem_Click" StaysOpenOnClick="True"/>
+                            <MenuItem x:Name="toolStripMenuItemPara" Header="{x:Static resx:Gui.toolStripMenuItemPara_Text}" IsCheckable="True" Click="srMenuItem_Click" StaysOpenOnClick="True"/>
+                            <MenuItem x:Name="toolStripMenuItemBlock" Header="{x:Static resx:Gui.toolStripMenuItemBlock_Text}" IsCheckable="True" Click="srMenuItem_Click" StaysOpenOnClick="True"/>
                         </ContextMenu>
                     </Button.ContextMenu>
                 </Button>
