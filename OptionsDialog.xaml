@@ -7,15 +7,6 @@
         xmlns:resx="clr-namespace:VietOCR"
         mc:Ignorable="d"
         Title="{x:Static resx:OptionsDialog.this_Title}" Height="220" Width="360" Loaded="Window_Loaded" ResizeMode="NoResize">
-    <Window.Resources>
-        <x:Array x:Key="outputFormats" Type="sys:String"
-            xmlns:sys="clr-namespace:System;assembly=mscorlib">
-            <sys:String>text</sys:String>
-            <sys:String>text+</sys:String>
-            <sys:String>hocr</sys:String>
-            <sys:String>pdf</sys:String>
-        </x:Array>
-    </Window.Resources>
     <Grid>
         <TabControl x:Name="tabControl" HorizontalAlignment="Stretch" Height="120" Margin="5,5,5,10" VerticalAlignment="Top">
             <TabItem Header="DangAmbigs.txt">
@@ -35,7 +26,7 @@
                     <CheckBox x:Name="checkBoxDangAmbigs" Content="{x:Static resx:OptionsDialog.checkBoxDangAmbigs_Text}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="{x:Static resx:OptionsDialog.Watch}">
+            <TabItem Header="{x:Static resx:OptionsDialog.Batch}">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -53,12 +44,40 @@
                     <TextBox x:Name="textBoxOutput" HorizontalAlignment="Stretch"  VerticalAlignment="Center" VerticalContentAlignment="Center" Height="23" IsReadOnly="True" Grid.Column="1" Grid.Row="1"/>
                     <Button x:Name="btnWatch" Content="..." HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Click="btnWatch_Click" ToolTip="{x:Static resx:OptionsDialog.btnWatch_ToolTip}" Grid.Column="2"/>
                     <Button x:Name="btnOutput" Content="..." HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Click="btnOutput_Click" ToolTip="{x:Static resx:OptionsDialog.btnOutput_ToolTip}" Grid.Column="2" Grid.Row="1"/>
-                    <Label x:Name="labelOutputFormat" Content="{x:Static resx:OptionsDialog.labelOutputFormat_Text}" Target="{Binding ElementName=comboBoxOutputFormat}" HorizontalAlignment="Left"  VerticalAlignment="Center" Grid.ColumnSpan="2" Grid.Row="2"/>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2">
-                        <ComboBox x:Name="comboBoxOutputFormat" Width="60" VerticalAlignment="Center"  MouseEnter="comboBoxOutputFormat_MouseEnter" ItemsSource="{StaticResource outputFormats}" />
+                        <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Name="buttonOutputFormat" ContextMenuService.IsEnabled="False" VerticalAlignment="Top" Click="buttonOutputFormat_Click"  >
+                            <Button.Content>
+                                <DockPanel FlowDirection="LeftToRight" >
+                                    <Label x:Name="labelOutputFormat" Content="{x:Static resx:OptionsDialog.labelOutputFormat_Text}" ToolTip="{x:Static resx:OptionsDialog.labelOutputFormat_ToolTip}" />
+                                    <Path x:Name="BtnArrowDown" Margin="4" VerticalAlignment="Center" Width="10" Fill="Black" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "/>
+                                    <Path x:Name="BtnArrowUp" Visibility="Collapsed" Margin="4" VerticalAlignment="Center" Width="10" Fill="Black" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,189.041L 311.57,189.041L 306.355,182.942L 301.14,189.041 Z "/>
+                                </DockPanel>
+                            </Button.Content>
+                            <Button.ContextMenu>
+                                <ContextMenu x:Name="menuOutputFormat" Closed="ContextMenu_Closed" >
+                                </ContextMenu>
+                            </Button.ContextMenu>
+                        </Button>
                         <CheckBox x:Name="checkBoxWatch" Content="{x:Static resx:OptionsDialog.checkBoxWatch_Text}" VerticalAlignment="Center" Margin="10,0"/>
-                        <CheckBox x:Name="checkBoxDeskew" Content="{x:Static resx:OptionsDialog.checkBoxDeskew_Text}" VerticalAlignment="Center"/>
                     </StackPanel>
+                </Grid>
+            </TabItem>
+            <TabItem Header="{x:Static resx:OptionsDialog.BulkBatchOptions}">
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*"/>
+                        <ColumnDefinition Width="50*"/>
+                    </Grid.ColumnDefinitions>
+                    <CheckBox x:Name="checkBoxPostProcessing" Content="{x:Static resx:OptionsDialog.checkBoxPostProcessing_Text}" HorizontalAlignment="Left"  VerticalAlignment="Top" />
+                    <CheckBox x:Name="checkBoxCorrectLetterCases" Content="{x:Static resx:OptionsDialog.checkBoxCorrectLetterCases_Text}" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Row="1"/>
+                    <CheckBox x:Name="checkBoxRemoveLineBreaks" Content="{x:Static resx:OptionsDialog.checkBoxRemoveLineBreaks_Text}" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Row="2"/>
+                    <CheckBox x:Name="checkBoxDeskew" Content="{x:Static resx:OptionsDialog.checkBoxDeskew_Text}"  VerticalAlignment="Top" Grid.Column="1"/>
+                    <CheckBox x:Name="checkBoxRemoveLines" Content="{x:Static resx:OptionsDialog.checkBoxRemoveLines_Text}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1"/>
                 </Grid>
             </TabItem>
             <TabItem Header="{x:Static resx:OptionsDialog.Hyphens}">

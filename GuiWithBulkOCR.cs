@@ -72,6 +72,11 @@ namespace VietOCR
             statusForm.Title = Properties.Resources.BulkProcessStatus;
         }
 
+        internal void ButtonOptions_Click(object sender, RoutedEventArgs e)
+        {
+            optionsToolStripMenuItem_Click(sender, e);
+        }
+
         protected override void bulkOCRToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
             if (backgroundWorkerBulk != null && backgroundWorkerBulk.IsBusy)
@@ -80,11 +85,10 @@ namespace VietOCR
                 return;
             }
 
-            BulkDialog bulkDialog = new BulkDialog();
+            BulkDialog bulkDialog = new BulkDialog(this);
             bulkDialog.InputFolder = inputFolder;
             bulkDialog.OutputFolder = outputFolder;
             bulkDialog.OutputFormat = outputFormat;
-            bulkDialog.DeskewEnabled = bulkDeskewEnabled;
 
             Nullable<bool> dialogResult = bulkDialog.ShowDialog();
             if (dialogResult.HasValue && dialogResult.Value)
@@ -92,7 +96,6 @@ namespace VietOCR
                 inputFolder = bulkDialog.InputFolder;
                 outputFolder = bulkDialog.OutputFolder;
                 outputFormat = bulkDialog.OutputFormat;
-                bulkDeskewEnabled = bulkDialog.DeskewEnabled;
 
                 this.statusLabel.Content = Properties.Resources.OCRrunning;
                 Mouse.OverrideCursor = Cursors.Wait;
@@ -148,7 +151,7 @@ namespace VietOCR
             try
             {
                 string outputFilename = imageFile.FullName.Substring(inputFolder.Length + 1);
-                OCRHelper.PerformOCR(imageFile.FullName, Path.Combine(outputFolder, outputFilename), curLangCode, selectedPSM, outputFormat, bulkDeskewEnabled);
+                OCRHelper.PerformOCR(imageFile.FullName, Path.Combine(outputFolder, outputFilename), curLangCode, selectedPSM, outputFormat, options);
             }
             catch
             {

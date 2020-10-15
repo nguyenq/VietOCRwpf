@@ -108,19 +108,47 @@ namespace VietOCR
 
         public override void ProcessFile(string filename)
         {
+            List<RenderedFormat> renderedFormats = new List<RenderedFormat>();
+
+            foreach (String format in OutputFormat.ToUpper().Split(','))
+            {
+                renderedFormats.Add((RenderedFormat)Enum.Parse(typeof(RenderedFormat), format));
+            }
+
             List<IResultRenderer> resultRenderers = new List<IResultRenderer>();
 
-            switch (OutputFormat)
+            foreach (RenderedFormat renderedFormat in renderedFormats)
             {
-                case "text":
-                    resultRenderers.Add(ResultRenderer.CreateTextRenderer(OutputFile));
-                    break;
-                case "hocr":
-                    resultRenderers.Add(ResultRenderer.CreateHOcrRenderer(OutputFile));
-                    break;
-                case "pdf":
-                    resultRenderers.Add(ResultRenderer.CreatePdfRenderer(OutputFile, Datapath, false));
-                    break;
+                switch (renderedFormat)
+                {
+                    case RenderedFormat.HOCR:
+                        resultRenderers.Add(ResultRenderer.CreateHOcrRenderer(OutputFile));
+                        break;
+                    case RenderedFormat.PDF:
+                        resultRenderers.Add(ResultRenderer.CreatePdfRenderer(OutputFile, Datapath, false));
+                        break;
+                    case RenderedFormat.BOX:
+                        resultRenderers.Add(ResultRenderer.CreateBoxRenderer(OutputFile));
+                        break;
+                    case RenderedFormat.UNLV:
+                        resultRenderers.Add(ResultRenderer.CreateUnlvRenderer(OutputFile));
+                        break;
+                    case RenderedFormat.ALTO:
+                        resultRenderers.Add(ResultRenderer.CreateAltoRenderer(OutputFile));
+                        break;
+                    case RenderedFormat.TSV:
+                        resultRenderers.Add(ResultRenderer.CreateTsvRenderer(OutputFile));
+                        break;
+                    case RenderedFormat.LSTMBOX:
+                        resultRenderers.Add(ResultRenderer.CreateLSTMBoxRenderer(OutputFile));
+                        break;
+                    case RenderedFormat.WORDSTRBOX:
+                        resultRenderers.Add(ResultRenderer.CreateWordStrBoxRenderer(OutputFile));
+                        break;
+                    default:
+                        resultRenderers.Add(ResultRenderer.CreateTextRenderer(OutputFile));
+                        break;
+                }
             }
 
             using (IResultRenderer renderer = new AggregateResultRenderer(resultRenderers))
@@ -152,14 +180,20 @@ namespace VietOCR
                         foreach (var pix in pixA)
                         {
                             Pix pixd = null;
+                            Pix pixr = null;
 
                             try
                             {
-                                if (Deskew)
+                                if (ProcessingOptions.Deskew)
                                 {
                                     pixd = pix.Deskew(new ScewSweep(range: 45), Pix.DefaultBinarySearchReduction, Pix.DefaultBinaryThreshold, out Scew scew);
                                 }
-                                using (var page = engine.Process(pixd ?? pix, imageName, psm))
+                                if (ProcessingOptions.RemoveLines)
+                                {
+                                    pixr = ImageHelper.RemoveLines(pixd ?? pix);
+                                }
+
+                                using (var page = engine.Process(pixr ?? pixd ?? pix, imageName, psm))
                                 {
                                     var addedPage = renderer.AddPage(page);
                                 }
@@ -169,6 +203,10 @@ namespace VietOCR
                                 if (pixd != null)
                                 {
                                     ((IDisposable)pixd).Dispose();
+                                }
+                                if (pixr != null)
+                                {
+                                    ((IDisposable)pixr).Dispose();
                                 }
                             }
                         }

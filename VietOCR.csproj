@@ -165,6 +165,7 @@
     <Compile Include="OptionsDialog.xaml.cs">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ProcessingOptions.cs" />
     <Compile Include="SliderDialog.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -289,6 +290,7 @@
     <Resource Include="readme_cs_fr.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="tools.png" />
     <Content Include="x64\libtesseract411.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

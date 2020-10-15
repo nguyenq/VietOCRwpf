@@ -29,16 +29,19 @@ namespace VietOCR
 {
     public class GuiWithSettings : GuiWithUILanguage
     {
-        const string strWatchEnable = "WatchEnable";
-        const string strWatchDeskewEnable = "WatchDeskewEnable";
+        const string strWatchEnabled = "WatchEnabled";
+        const string strDeskewEnabled = "DeskewEnabled";
         const string strWatchFolder = "WatchFolder";
         const string strOutputFolder = "OutputFolder";
         const string strBatchOutputFormat = "BatchOutputFormat";
+        const string strPostProcessingEnabled = "PostProcessingEnabled";
+        const string strCorrectLetterCasesEnabled = "CorrectLetterCasesEnabled";
+        const string strRemoveLinesEnabled = "RemoveLinesEnabled";
+        const string strRemoveLineBreaksEnabled = "RemoveLineBreaksEnabled";
 
         protected string watchFolder;
         protected string outputFolder;
         protected bool watchEnabled;
-        protected bool watchDeskewEnabled;
         protected string outputFormat;
 
         public GuiWithSettings()
@@ -52,13 +55,12 @@ namespace VietOCR
             optionsDialog.WatchFolder = watchFolder;
             optionsDialog.OutputFolder = outputFolder;
             optionsDialog.WatchEnabled = watchEnabled;
-            optionsDialog.WatchDeskewEnabled = watchDeskewEnabled;
             optionsDialog.DangAmbigsPath = dangAmbigsPath;
             optionsDialog.DangAmbigsEnabled = dangAmbigsOn;
             optionsDialog.CurLangCode = curLangCode;
-            optionsDialog.ReplaceHyphensEnabled = replaceHyphensEnabled;
-            optionsDialog.RemoveHyphensEnabled = removeHyphensEnabled;
+            optionsDialog.ProcessingOptions = options;
             optionsDialog.OutputFormat = outputFormat;
+            optionsDialog.SelectedTab = e.Source.GetType().Name != "Button" ? 0 : 2;
 
             Nullable<bool> dialogResult = optionsDialog.ShowDialog();
             if (dialogResult.HasValue && dialogResult.Value)
@@ -66,12 +68,10 @@ namespace VietOCR
                 watchFolder = optionsDialog.WatchFolder;
                 outputFolder = optionsDialog.OutputFolder;
                 watchEnabled = optionsDialog.WatchEnabled;
-                watchDeskewEnabled = optionsDialog.WatchDeskewEnabled;
                 dangAmbigsPath = optionsDialog.DangAmbigsPath;
                 dangAmbigsOn = optionsDialog.DangAmbigsEnabled;
                 curLangCode = optionsDialog.CurLangCode;
-                replaceHyphensEnabled = optionsDialog.ReplaceHyphensEnabled;
-                removeHyphensEnabled = optionsDialog.RemoveHyphensEnabled;
+                options = optionsDialog.ProcessingOptions;
                 outputFormat = optionsDialog.OutputFormat;
 
                 updateWatch();
@@ -95,8 +95,12 @@ namespace VietOCR
         protected override void LoadRegistryInfo(RegistryKey regkey)
         {
             base.LoadRegistryInfo(regkey);
-            watchEnabled = Convert.ToBoolean((int)regkey.GetValue(strWatchEnable, Convert.ToInt32(false)));
-            watchDeskewEnabled = Convert.ToBoolean((int)regkey.GetValue(strWatchDeskewEnable, Convert.ToInt32(false)));
+            watchEnabled = Convert.ToBoolean((int)regkey.GetValue(strWatchEnabled, Convert.ToInt32(false)));
+            options.Deskew = Convert.ToBoolean((int)regkey.GetValue(strDeskewEnabled, Convert.ToInt32(false)));
+            options.PostProcessing = Convert.ToBoolean((int)regkey.GetValue(strPostProcessingEnabled, Convert.ToInt32(false)));
+            options.CorrectLetterCases = Convert.ToBoolean((int)regkey.GetValue(strCorrectLetterCasesEnabled, Convert.ToInt32(false)));
+            options.RemoveLines = Convert.ToBoolean((int)regkey.GetValue(strRemoveLinesEnabled, Convert.ToInt32(false)));
+            options.RemoveLineBreaks = Convert.ToBoolean((int)regkey.GetValue(strRemoveLineBreaksEnabled, Convert.ToInt32(false)));
             watchFolder = (string)regkey.GetValue(strWatchFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
             if (!Directory.Exists(watchFolder)) watchFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             outputFolder = (string)regkey.GetValue(strOutputFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
@@ -107,8 +111,12 @@ namespace VietOCR
         protected override void SaveRegistryInfo(RegistryKey regkey)
         {
             base.SaveRegistryInfo(regkey);
-            regkey.SetValue(strWatchEnable, Convert.ToInt32(watchEnabled));
-            regkey.SetValue(strWatchDeskewEnable, Convert.ToInt32(watchDeskewEnabled));
+            regkey.SetValue(strWatchEnabled, Convert.ToInt32(watchEnabled));
+            regkey.SetValue(strDeskewEnabled, Convert.ToInt32(options.Deskew));
+            regkey.SetValue(strPostProcessingEnabled, Convert.ToInt32(options.PostProcessing));
+            regkey.SetValue(strCorrectLetterCasesEnabled, Convert.ToInt32(options.CorrectLetterCases));
+            regkey.SetValue(strRemoveLinesEnabled, Convert.ToInt32(options.RemoveLines));
+            regkey.SetValue(strRemoveLineBreaksEnabled, Convert.ToInt32(options.RemoveLineBreaks));
             regkey.SetValue(strWatchFolder, watchFolder);
             regkey.SetValue(strOutputFolder, outputFolder);
             regkey.SetValue(strBatchOutputFormat, outputFormat);

@@ -656,11 +656,15 @@ namespace VietOCR
             btn.ContextMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
             btn.ContextMenu.IsOpen = !srClicked;
             srClicked ^= true;
+            BtnArrowDown.Visibility = srClicked ? Visibility.Collapsed : Visibility.Visible;
+            BtnArrowUp.Visibility = srClicked ? Visibility.Visible : Visibility.Collapsed;
         }
 
         private void ContextMenu_Closed(object sender, RoutedEventArgs e)
         {
             srClicked = false;
+            BtnArrowDown.Visibility = Visibility.Visible;
+            BtnArrowUp.Visibility = Visibility.Collapsed;
             Keyboard.ClearFocus();
         }
 

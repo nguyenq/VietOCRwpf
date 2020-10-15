@@ -301,4 +301,25 @@
   <data name="Watch" xml:space="preserve">
     <value>Watch</value>
   </data>
+  <data name="Batch" xml:space="preserve">
+    <value>Batch</value>
+  </data>
+  <data name="BulkBatchOptions" xml:space="preserve">
+    <value>Bulk/Batch Options</value>
+  </data>
+  <data name="checkBoxCorrectLetterCases.Text" xml:space="preserve">
+    <value>Chỉnh ngữ cách</value>
+  </data>
+  <data name="checkBoxPostProcessing.Text" xml:space="preserve">
+    <value>Hậu xử lý</value>
+  </data>
+  <data name="checkBoxRemoveLineBreaks.Text" xml:space="preserve">
+    <value>Nối dòng</value>
+  </data>
+  <data name="checkBoxRemoveLines.Text" xml:space="preserve">
+    <value>Xóa đường kẻ</value>
+  </data>
+  <data name="Please_select_output_format" xml:space="preserve">
+    <value>Hãy chọn một output format.</value>
+  </data>
 </root>

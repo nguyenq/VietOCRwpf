@@ -91,7 +91,7 @@ namespace VietOCR
             set;
         }
 
-        public bool Deskew
+        public ProcessingOptions ProcessingOptions
         {
             get;
             set;

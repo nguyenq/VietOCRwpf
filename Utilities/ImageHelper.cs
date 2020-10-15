@@ -476,7 +476,7 @@ namespace VietOCR.NET.Utilities
             byte[] gray = GrayBMP_File.CreateGrayBitmapArray(input);
             Image result = ImageConverter.byteArrayToImage(gray);
             ((Bitmap)result).SetResolution(input.HorizontalResolution, input.VerticalResolution);
-            
+
             return result;
         }
 
@@ -873,9 +873,9 @@ namespace VietOCR.NET.Utilities
         }
 
         private static double[,] GaussianBlur55 =
-                new double[,]  
-                { { 2, 04, 05, 04, 2 }, 
-                  { 4, 09, 12, 09, 4 }, 
+                new double[,]
+                { { 2, 04, 05, 04, 2 },
+                  { 4, 09, 12, 09, 4 },
                   { 5, 12, 15, 12, 5 },
                   { 4, 09, 12, 09, 4 },
                   { 2, 04, 05, 04, 2 }, };
@@ -917,21 +917,55 @@ namespace VietOCR.NET.Utilities
         {
             using (Pix pix = PixConverter.ToPix(image))
             {
-                // remove horizontal lines
-                using (Pix result = pix.RemoveLines())
+                using (Pix result = RemoveLines(pix))
                 {
-                    // rotate 90 degrees CW
-                    using (Pix result1 = result.Rotate90(1))
+                    return PixConverter.ToBitmap(result);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Remove lines or borders using Leptonica library.
+        /// </summary>
+        /// <param name="pix"></param>
+        /// <returns></returns>
+        public static Pix RemoveLines(Pix pix)
+        {
+            Pix pixGray = null;
+            Pix pixGrayI = null;
+
+            // convert to grayscale if not 8 bpp
+            if (pix.Depth != 8)
+            {
+                pixGray = pix.ConvertTo8(0);
+
+                // invert color if 1 bpp input image
+                if (pix.Depth == 1)
+                {
+                    pixGrayI = pixGray.Invert();
+                }
+            }
+
+            // remove horizontal lines
+            using (Pix result = (pixGrayI ?? pixGray ?? pix).RemoveLines())
+            {
+                if (pixGray != null)
+                {
+                    ((IDisposable)pixGray).Dispose();
+                }
+                if (pixGrayI != null)
+                {
+                    ((IDisposable)pixGrayI).Dispose();
+                }
+
+                // rotate 90 degrees CW
+                using (Pix result1 = result.Rotate90(1))
+                {
+                    // effectively remove vertical lines
+                    using (Pix result2 = result1.RemoveLines())
                     {
-                        // effectively remove vertical lines
-                        using (Pix result2 = result1.RemoveLines())
-                        {
-                            // rotate 90 degrees CCW
-                            using (Pix result3 = result2.Rotate90(-1))
-                            {
-                                return PixConverter.ToBitmap(result3);
-                            }
-                        }
+                        // rotate 90 degrees CCW
+                        return result2.Rotate90(-1);
                     }
                 }
             }
@@ -949,8 +983,8 @@ namespace VietOCR.NET.Utilities
             //var sourcePixFilename = @"processing\w91frag.jpg";
             using (Pix pix = PixConverter.ToPix(image))
             {
-                 PixColormap map = pix.Colormap;
-                 pix.Colormap = null; // work around NPE during despeckle
+                PixColormap map = pix.Colormap;
+                pix.Colormap = null; // work around NPE during despeckle
 
                 // remove speckles
                 using (Pix result = pix.Despeckle(selStr, selSize))

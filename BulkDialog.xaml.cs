@@ -23,6 +23,7 @@ namespace VietOCR
     public partial class BulkDialog : Window
     {
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private GuiWithBulkOCR gui;
 
         public string InputFolder
         {
@@ -38,30 +39,44 @@ namespace VietOCR
 
         public string OutputFormat
         {
-            get { return this.comboBoxOutputFormat.SelectedItem.ToString(); }
-            set
-            {
-                this.comboBoxOutputFormat.SelectedItem = value;
-                if (this.comboBoxOutputFormat.SelectedIndex == -1) this.comboBoxOutputFormat.SelectedIndex = 0;
-            }
-        }
-
-        public bool DeskewEnabled
-        {
             get
             {
-                return this.checkBoxDeskew.IsChecked.Value;
+                List<string> list = new List<string>();
+                foreach (MenuItem item in menuOutputFormat.Items)
+                {
+                    if (item.IsChecked)
+                    {
+                        list.Add(item.Header.ToString());
+                    }
+                }
+                return string.Join(",", list);
             }
+
             set
             {
-                this.checkBoxDeskew.IsChecked = value;
+                string[] list = value.Split(',');
+                foreach (MenuItem item in menuOutputFormat.Items)
+                {
+                    if (list.Contains(item.Header.ToString()))
+                    {
+                        item.IsChecked = true;
+                    }
+                }
             }
         }
 
-        public BulkDialog()
+        public BulkDialog(GuiWithBulkOCR gui)
         {
+            this.gui = gui;
             InitializeComponent();
 
+            foreach (string name in Enum.GetNames(typeof(Tesseract.RenderedFormat)))
+            {
+                MenuItem item = new MenuItem { Header = name };
+                item.IsCheckable = true;
+                item.Click += srMenuItem_Click;
+                this.menuOutputFormat.Items.Add(item);
+            }
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
         }
 
@@ -69,7 +84,6 @@ namespace VietOCR
         {
             this.textBoxInput.Text = InputFolder;
             this.textBoxOutput.Text = OutputFolder;
-            
         }
 
         /// <summary>
@@ -111,29 +125,36 @@ namespace VietOCR
             }
         }
 
-        private void comboBoxOutputFormat_MouseEnter(object sender, MouseEventArgs e)
+        private void buttonOptions_Click(object sender, RoutedEventArgs e)
         {
-            string val = this.comboBoxOutputFormat.SelectedItem.ToString();
-            switch (val)
-            {
-                case "text+":
-                    val = "Text with postprocessing";
-                    break;
-                case "text":
-                    val = "Text with no postprocessing";
-                    break;
-                case "pdf":
-                    val = "PDF";
-                    break;
-                case "hocr":
-                    val = "hOCR";
-                    break;
-                default:
-                    val = null;
-                    break;
-            }
+            this.gui.ButtonOptions_Click(sender, e);
+        }
 
-            this.comboBoxOutputFormat.ToolTip = val;
+        bool srClicked;
+
+        private void buttonOutputFormat_Click(object sender, RoutedEventArgs e)
+        {
+            var btn = sender as Button;
+            btn.ContextMenu.PlacementTarget = btn;
+            btn.ContextMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
+            btn.ContextMenu.IsOpen = !srClicked;
+            srClicked ^= true;
+            BtnArrowDown.Visibility = srClicked ? Visibility.Collapsed : Visibility.Visible;
+            BtnArrowUp.Visibility = srClicked ? Visibility.Visible : Visibility.Collapsed;
+        }
+
+        private void ContextMenu_Closed(object sender, RoutedEventArgs e)
+        {
+            srClicked = false;
+            BtnArrowDown.Visibility = Visibility.Visible;
+            BtnArrowUp.Visibility = Visibility.Collapsed;
+            Keyboard.ClearFocus();
+        }
+
+        private void srMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            srClicked = false;
+            Keyboard.ClearFocus();
         }
     }
 }

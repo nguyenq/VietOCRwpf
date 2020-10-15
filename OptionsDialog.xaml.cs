@@ -44,12 +44,6 @@ namespace VietOCR
             set;
         }
 
-        public bool WatchDeskewEnabled
-        {
-            get;
-            set;
-        }
-
         public string DangAmbigsPath
         {
             get;
@@ -68,31 +62,55 @@ namespace VietOCR
             set;
         }
 
-        public bool ReplaceHyphensEnabled
-        {
-            get;
-            set;
-        }
-
-        public bool RemoveHyphensEnabled
-        {
-            get;
-            set;
-        }
+        public ProcessingOptions ProcessingOptions { get; set; }
 
         public string OutputFormat
         {
-            get { return this.comboBoxOutputFormat.SelectedItem.ToString(); }
+            get
+            {
+                List<string> list = new List<string>();
+                foreach (MenuItem item in menuOutputFormat.Items)
+                {
+                    if (item.IsChecked)
+                    {
+                        list.Add(item.Header.ToString());
+                    }
+                }
+                return string.Join(",", list);
+            }
+
             set
             {
-                this.comboBoxOutputFormat.SelectedItem = value;
-                if (this.comboBoxOutputFormat.SelectedIndex == -1) this.comboBoxOutputFormat.SelectedIndex = 0;
+                string[] list = value.Split(',');
+                foreach (MenuItem item in menuOutputFormat.Items)
+                {
+                    if (list.Contains(item.Header.ToString()))
+                    {
+                        item.IsChecked = true;
+                    }
+                }
+            }
+        }
+
+        public int SelectedTab
+        {
+            set
+            {
+                this.tabControl.SelectedIndex = value;
             }
         }
 
         public OptionsDialog()
         {
             InitializeComponent();
+
+            foreach (string name in Enum.GetNames(typeof(Tesseract.RenderedFormat)))
+            {
+                MenuItem item = new MenuItem { Header = name };
+                item.IsCheckable = true;
+                item.Click += srMenuItem_Click;
+                this.menuOutputFormat.Items.Add(item);
+            }
 
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.openFileDialog1 = new OpenFileDialog();
@@ -105,9 +123,13 @@ namespace VietOCR
             this.checkBoxWatch.IsChecked = WatchEnabled;
             this.textBoxDangAmbigs.Text = DangAmbigsPath;
             this.checkBoxDangAmbigs.IsChecked = DangAmbigsEnabled;
-            this.checkBoxReplaceHyphens.IsChecked = ReplaceHyphensEnabled;
-            this.checkBoxRemoveHyphens.IsChecked = RemoveHyphensEnabled;
-            this.checkBoxDeskew.IsChecked = WatchDeskewEnabled;
+            this.checkBoxReplaceHyphens.IsChecked = ProcessingOptions.ReplaceHyphens;
+            this.checkBoxRemoveHyphens.IsChecked = ProcessingOptions.RemoveHyphens;
+            this.checkBoxDeskew.IsChecked = ProcessingOptions.Deskew;
+            this.checkBoxCorrectLetterCases.IsChecked = ProcessingOptions.CorrectLetterCases;
+            this.checkBoxPostProcessing.IsChecked = ProcessingOptions.PostProcessing;
+            this.checkBoxRemoveLines.IsChecked = ProcessingOptions.RemoveLines;
+            this.checkBoxRemoveLineBreaks.IsChecked = ProcessingOptions.RemoveLineBreaks;
 
             //this.toolTip1.SetToolTip(this.btnWatch, Properties.Resources.Browse);
             //this.toolTip1.SetToolTip(this.btnOutput, Properties.Resources.Browse);
@@ -120,9 +142,13 @@ namespace VietOCR
 
             WatchEnabled = this.checkBoxWatch.IsChecked.Value;
             DangAmbigsEnabled = this.checkBoxDangAmbigs.IsChecked.Value;
-            ReplaceHyphensEnabled = this.checkBoxReplaceHyphens.IsChecked.Value;
-            RemoveHyphensEnabled = this.checkBoxRemoveHyphens.IsChecked.Value;
-            WatchDeskewEnabled = this.checkBoxDeskew.IsChecked.Value;
+            ProcessingOptions.ReplaceHyphens = this.checkBoxReplaceHyphens.IsChecked.Value;
+            ProcessingOptions.RemoveHyphens = this.checkBoxRemoveHyphens.IsChecked.Value;
+            ProcessingOptions.Deskew = this.checkBoxDeskew.IsChecked.Value;
+            ProcessingOptions.CorrectLetterCases = this.checkBoxCorrectLetterCases.IsChecked.Value; 
+            ProcessingOptions.PostProcessing = this.checkBoxPostProcessing.IsChecked.Value;
+            ProcessingOptions.RemoveLines = this.checkBoxRemoveLines.IsChecked.Value;
+            ProcessingOptions.RemoveLineBreaks = this.checkBoxRemoveLineBreaks.IsChecked.Value;
         }
 
         public virtual void ChangeUILanguage(string locale)
@@ -174,30 +200,31 @@ namespace VietOCR
             this.DialogResult = true;
         }
 
-        private void comboBoxOutputFormat_MouseEnter(object sender, MouseEventArgs e)
-        {
-            string val = this.comboBoxOutputFormat.SelectedItem.ToString();
-            switch (val)
-            {
-                case "text+":
-                    val = "Text with postprocessing";
-                    break;
-                case "text":
-                    val = "Text with no postprocessing";
-                    break;
-                case "pdf":
-                    val = "PDF";
-                    break;
-                case "hocr":
-                    val = "hOCR";
-                    break;
-                default:
-                    val = null;
-                    break;
-            }
+        bool srClicked;
 
-            this.comboBoxOutputFormat.ToolTip = val;
+        private void buttonOutputFormat_Click(object sender, RoutedEventArgs e)
+        {
+            var btn = sender as Button;
+            btn.ContextMenu.PlacementTarget = btn;
+            btn.ContextMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
+            btn.ContextMenu.IsOpen = !srClicked;
+            srClicked ^= true;
+            BtnArrowDown.Visibility = srClicked ? Visibility.Collapsed : Visibility.Visible;
+            BtnArrowUp.Visibility = srClicked ? Visibility.Visible : Visibility.Collapsed;
         }
 
+        private void ContextMenu_Closed(object sender, RoutedEventArgs e)
+        {
+            srClicked = false;
+            BtnArrowDown.Visibility = srClicked ? Visibility.Collapsed : Visibility.Visible;
+            BtnArrowUp.Visibility = srClicked ? Visibility.Visible : Visibility.Collapsed;
+            Keyboard.ClearFocus();
+        }
+
+        private void srMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            srClicked = false;
+            Keyboard.ClearFocus();
+        }
     }
 }

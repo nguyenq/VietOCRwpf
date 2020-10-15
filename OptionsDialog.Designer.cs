@@ -27,8 +27,7 @@ namespace VietOCR {
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
-       
+                
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -54,6 +53,15 @@ namespace VietOCR {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Batch.
+        /// </summary>
+        public static string Batch {
+            get {
+                return ResourceManager.GetString("Batch", resourceCulture);
             }
         }
         
@@ -112,6 +120,15 @@ namespace VietOCR {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bulk/Batch Options.
+        /// </summary>
+        public static string BulkBatchOptions {
+            get {
+                return ResourceManager.GetString("BulkBatchOptions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         public static string buttonCancel_Text {
@@ -148,6 +165,15 @@ namespace VietOCR {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Correct Letter Cases.
+        /// </summary>
+        public static string checkBoxCorrectLetterCases_Text {
+            get {
+                return ResourceManager.GetString("checkBoxCorrectLetterCases.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enable.
         /// </summary>
         public static string checkBoxDangAmbigs_Text {
@@ -175,6 +201,15 @@ namespace VietOCR {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Post Processing.
+        /// </summary>
+        public static string checkBoxPostProcessing_Text {
+            get {
+                return ResourceManager.GetString("checkBoxPostProcessing.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Remove soft hyphens.
         /// </summary>
         public static string checkBoxRemoveHyphens_Text {
@@ -189,6 +224,24 @@ namespace VietOCR {
         public static string checkBoxRemoveHyphens_ToolTip {
             get {
                 return ResourceManager.GetString("checkBoxRemoveHyphens.ToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove Line Breaks.
+        /// </summary>
+        public static string checkBoxRemoveLineBreaks_Text {
+            get {
+                return ResourceManager.GetString("checkBoxRemoveLineBreaks.Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove Lines.
+        /// </summary>
+        public static string checkBoxRemoveLines_Text {
+            get {
+                return ResourceManager.GetString("checkBoxRemoveLines.Text", resourceCulture);
             }
         }
         
@@ -324,6 +377,15 @@ namespace VietOCR {
         public static string openFileDialog1_Filter {
             get {
                 return ResourceManager.GetString("openFileDialog1.Filter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please select an output format..
+        /// </summary>
+        public static string Please_select_output_format {
+            get {
+                return ResourceManager.GetString("Please_select_output_format", resourceCulture);
             }
         }
         
