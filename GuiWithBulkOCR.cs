@@ -85,7 +85,7 @@ namespace VietOCR
                 return;
             }
 
-            BulkDialog bulkDialog = new BulkDialog(this);
+            BulkDialog bulkDialog = new BulkDialog { Owner = this };
             bulkDialog.InputFolder = inputFolder;
             bulkDialog.OutputFolder = outputFolder;
             bulkDialog.OutputFormat = outputFormat;

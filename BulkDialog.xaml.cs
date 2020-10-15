@@ -23,7 +23,6 @@ namespace VietOCR
     public partial class BulkDialog : Window
     {
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private GuiWithBulkOCR gui;
 
         public string InputFolder
         {
@@ -65,9 +64,8 @@ namespace VietOCR
             }
         }
 
-        public BulkDialog(GuiWithBulkOCR gui)
+        public BulkDialog()
         {
-            this.gui = gui;
             InitializeComponent();
 
             foreach (string name in Enum.GetNames(typeof(Tesseract.RenderedFormat)))
@@ -132,7 +130,7 @@ namespace VietOCR
 
         private void buttonOptions_Click(object sender, RoutedEventArgs e)
         {
-            this.gui.ButtonOptions_Click(sender, e);
+            ((GuiWithBulkOCR)this.Owner).ButtonOptions_Click(sender, e);
         }
 
         bool srClicked;

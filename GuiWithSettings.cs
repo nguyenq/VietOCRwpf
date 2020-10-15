@@ -51,7 +51,7 @@ namespace VietOCR
         
         protected override void optionsToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            OptionsDialog optionsDialog = new OptionsDialog();
+            OptionsDialog optionsDialog = new OptionsDialog { Owner = this };
             optionsDialog.WatchFolder = watchFolder;
             optionsDialog.OutputFolder = outputFolder;
             optionsDialog.WatchEnabled = watchEnabled;

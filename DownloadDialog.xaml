@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:VietOCR"
         xmlns:resx="clr-namespace:VietOCR"
         mc:Ignorable="d"
-        Title="{x:Static resx:DownloadDialog.this_Title}" Height="245.6" Width="328.8" Loaded="Window_Loaded" ResizeMode="NoResize">
+        Title="{x:Static resx:DownloadDialog.this_Title}" Height="245.6" Width="328.8" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
     <DockPanel>
         <StatusBar DockPanel.Dock="Bottom" Height="24">
             <StatusBarItem>

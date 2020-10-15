@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:VietOCR"
         xmlns:resx="clr-namespace:VietOCR"
         mc:Ignorable="d"
-        Title="{x:Static resx:SplitPdfDialog.this_Title}" Height="212.6" Width="339.2" ResizeMode="NoResize">
+        Title="{x:Static resx:SplitPdfDialog.this_Title}" Height="212.6" Width="339.2" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
     <Grid Margin="10,10,0,20">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*"/>

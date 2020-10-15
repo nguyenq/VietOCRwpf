@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:VietOCR"
         xmlns:resx="clr-namespace:VietOCR"
         mc:Ignorable="d"
-        Title="{x:Static resx:OptionsDialog.this_Title}" Height="220" Width="360" Loaded="Window_Loaded" ResizeMode="NoResize">
+        Title="{x:Static resx:OptionsDialog.this_Title}" Height="220" Width="360" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
     <Grid>
         <TabControl x:Name="tabControl" HorizontalAlignment="Stretch" Height="120" Margin="5,5,5,10" VerticalAlignment="Top">
             <TabItem Header="DangAmbigs.txt">
@@ -58,7 +58,7 @@
                                 </ContextMenu>
                             </Button.ContextMenu>
                         </Button>
-                        <CheckBox x:Name="checkBoxWatch" Content="{x:Static resx:OptionsDialog.checkBoxWatch_Text}" VerticalAlignment="Center" Margin="10,0"/>
+                        <CheckBox x:Name="checkBoxWatch" Content="{x:Static resx:OptionsDialog.checkBoxWatch_Text}" VerticalAlignment="Center" Margin="15,0"/>
                     </StackPanel>
                 </Grid>
             </TabItem>
