@@ -110,7 +110,7 @@ namespace VietOCR
         {
             List<RenderedFormat> renderedFormats = new List<RenderedFormat>();
 
-            foreach (String format in OutputFormat.ToUpper().Split(','))
+            foreach (string format in OutputFormat.ToUpper().Split(','))
             {
                 renderedFormats.Add((RenderedFormat)Enum.Parse(typeof(RenderedFormat), format));
             }
@@ -146,6 +146,7 @@ namespace VietOCR
                         resultRenderers.Add(ResultRenderer.CreateWordStrBoxRenderer(OutputFile));
                         break;
                     default:
+                        // RenderedFormat.TEXT
                         resultRenderers.Add(ResultRenderer.CreateTextRenderer(OutputFile));
                         break;
                 }
@@ -171,7 +172,7 @@ namespace VietOCR
                 ControlParameters(engine);
                 Tesseract.PageSegMode psm = (PageSegMode)Enum.Parse(typeof(PageSegMode), PageSegMode);
 
-                var imageName = Path.GetFileNameWithoutExtension(filename);
+                string imageName = Path.GetFileNameWithoutExtension(filename);
 
                 using (var pixA = LoadPixArray(filename))
                 {

@@ -48,7 +48,7 @@
                         <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" HorizontalAlignment="Left" Name="buttonOutputFormat" ContextMenuService.IsEnabled="False" VerticalAlignment="Top" Click="buttonOutputFormat_Click"  >
                             <Button.Content>
                                 <DockPanel FlowDirection="LeftToRight" >
-                                    <Label x:Name="labelOutputFormat" Content="{x:Static resx:OptionsDialog.labelOutputFormat_Text}" ToolTip="{x:Static resx:OptionsDialog.labelOutputFormat_ToolTip}" />
+                                    <Label x:Name="labelOutputFormat" Content="{x:Static resx:OptionsDialog.labelOutputFormat_Text}" />
                                     <Path x:Name="BtnArrowDown" Margin="4" VerticalAlignment="Center" Width="10" Fill="Black" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "/>
                                     <Path x:Name="BtnArrowUp" Visibility="Collapsed" Margin="4" VerticalAlignment="Center" Width="10" Fill="Black" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,189.041L 311.57,189.041L 306.355,182.942L 301.14,189.041 Z "/>
                                 </DockPanel>

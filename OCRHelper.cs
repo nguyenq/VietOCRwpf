@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.IO;
+﻿using System.IO;
 using System.Drawing;
 using VietOCR.NET.Utilities;
 using VietOCR.NET.Postprocessing;
+using System.Linq;
 
 namespace VietOCR
 {
@@ -34,27 +32,57 @@ namespace VietOCR
             ocrEngine.OutputFile = outputFile;
             ocrEngine.ProcessingOptions = options;
 
-            // convert PDF to TIFF
-            if (imageFile.ToLower().EndsWith(".pdf"))
+            string workingTiffFile = null;
+
+            try
             {
-                imageFile = PdfUtilities.ConvertPdf2Tiff(imageFile);
-            }
-
-            ocrEngine.ProcessFile(imageFile);
-
-            // post-corrections for text+ output
-            if (options.PostProcessing)
-            {
-                string filename = outputFile + ".txt";
-                string result = File.ReadAllText(filename);
-                // postprocess to correct common OCR errors
-                result = Processor.PostProcess(result, langCode);
-                // correct letter cases
-                result = TextUtilities.CorrectLetterCases(result);
-
-                using (StreamWriter sw = new StreamWriter(filename, false, new System.Text.UTF8Encoding()))
+                // convert PDF to TIFF
+                if (imageFile.ToLower().EndsWith(".pdf"))
                 {
-                    sw.Write(result);
+                    workingTiffFile = PdfUtilities.ConvertPdf2Tiff(imageFile);
+                    imageFile = workingTiffFile;
+                }
+
+                ocrEngine.ProcessFile(imageFile);
+
+                if (outputFormat.Split(',').Contains(Tesseract.RenderedFormat.TEXT.ToString()))
+                {
+                    // post-corrections for text output
+                    if (options.PostProcessing || options.CorrectLetterCases || options.RemoveLineBreaks)
+                    {
+                        string outputFilename = outputFile + ".txt";
+                        string result = File.ReadAllText(outputFilename);
+
+                        // postprocess to correct common OCR errors
+                        if (options.PostProcessing)
+                        {
+                            result = Processor.PostProcess(result, langCode);
+                        }
+
+                        // correct letter cases
+                        if (options.CorrectLetterCases)
+                        {
+                            result = TextUtilities.CorrectLetterCases(result);
+                        }
+
+                        // remove line breaks
+                        if (options.RemoveLineBreaks)
+                        {
+                            result = Net.SourceForge.Vietpad.Utilities.TextUtilities.RemoveLineBreaks(result, options.RemoveHyphens);
+                        }
+
+                        using (StreamWriter sw = new StreamWriter(outputFilename, false, new System.Text.UTF8Encoding()))
+                        {
+                            sw.Write(result);
+                        }
+                    }
+                }
+            }
+            finally
+            {
+                if (workingTiffFile != null && File.Exists(workingTiffFile))
+                {
+                    File.Delete(workingTiffFile);
                 }
             }
         }
