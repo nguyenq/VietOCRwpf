@@ -290,7 +290,7 @@
     <Resource Include="readme_cs_fr.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="tools.png" />
+    <Resource Include="Icons\fatcow\tools.png" />
     <Content Include="x64\libtesseract411.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
