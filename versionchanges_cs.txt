@@ -163,3 +163,4 @@ Version 5.7.0 (17 October 2020)
 - Support multiple renderers and provide pre- and post-processing for Bulk/Batch ops
 - Various UI improvements
 - Proper cleanup of working intermediate files
+- Add command-line interface (CLI) support

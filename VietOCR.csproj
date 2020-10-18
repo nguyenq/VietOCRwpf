@@ -101,6 +101,7 @@
     <Compile Include="ChangeCaseDialog.xaml.cs">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ConsoleApp.cs" />
     <Compile Include="Controls\ImageCanvas.cs" />
     <Compile Include="Controls\MoveThumb.cs" />
     <Compile Include="Controls\RedUnderlineAdorner.cs" />
