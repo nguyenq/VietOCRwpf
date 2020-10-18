@@ -14,7 +14,7 @@ namespace VietOCR
 
         void PerformOCR(string[] args)
         {
-            if (args[0] == "-?" || args[0] == "-help" || args.Length == 1 || args.Length >= 8)
+            if (args[0] == "-?" || args[0] == "-help" || args.Length == 1)
             {
                 Console.WriteLine("Usage: vietocr imagefile outputfile [-l lang] [-psm pagesegmode] [text|hocr|pdf|unlv|box|alto|tsv|lstmbox|wordstrbox] [postprocessing] [correctlettercases] [deskew] [removelines] [removelinebreaks]");
                 return;
@@ -33,24 +33,47 @@ namespace VietOCR
 
             HashSet<string> outputFormatSet = new HashSet<string>();
             string[] RENDERERS = Enum.GetNames(typeof(Tesseract.RenderedFormat));
-
-            foreach (string arg in args)
+            string curLangCode = "eng"; //default language
+            string psm = "3"; // or alternatively, "Auto"; // 3 - Fully automatic page segmentation, but no OSD (default)
+            
+            for (int i = 0; i < args.Length; i++)
             {
+                string arg = args[i];
+
+                // command-line options
+                if ("-l" == arg)
+                {
+                    if ((i+1) < args.Length)
+                    {
+                        curLangCode = args[i + 1];
+                    }
+                }
+
+                if ("--psm" == arg)
+                {
+                    if ((i+1) < args.Length)
+                    {
+                        psm = args[i + 1];
+                        try
+                        {
+                            short psmval = Int16.Parse(psm);
+                            if (psmval > 13) throw new ArgumentException();
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Invalid input value for PSM.");
+                            return;
+                        }
+                    }
+                }
+
                 // parse output formats
                 if (RENDERERS.Contains(arg.ToUpper()))
                 {
                     outputFormatSet.Add(arg.ToUpper());
                 }
 
-                if ("postprocessing" == arg)
-                {
-                    options.PostProcessing = true;
-                }
-                if ("correctlettercases" == arg)
-                {
-                    options.CorrectLetterCases = true;
-                }
-                // pre- and post-processing
+                // enable pre-processing
                 if ("deskew" == arg)
                 {
                     options.Deskew = true;
@@ -58,6 +81,16 @@ namespace VietOCR
                 if ("removelines" == arg)
                 {
                     options.RemoveLines = true;
+                }
+
+                // enable post-processing
+                if ("postprocessing" == arg)
+                {
+                    options.PostProcessing = true;
+                }
+                if ("correctlettercases" == arg)
+                {
+                    options.CorrectLetterCases = true;
                 }
                 if ("removelinebreaks" == arg)
                 {
@@ -71,36 +104,6 @@ namespace VietOCR
             }
 
             string outputFormat = string.Join(",", outputFormatSet);
-            Console.WriteLine(outputFormat);
-
-            string curLangCode = "eng"; //default language
-            string psm = "3"; // or alternatively, "Auto"; // 3 - Fully automatic page segmentation, but no OSD (default)
-
-            if (args.Length == 4 || args.Length == 5)
-            {
-                if (args[2].Equals("-l"))
-                {
-                    curLangCode = args[3];
-                }
-                else if (args[2].Equals("-psm"))
-                {
-                    psm = args[3];
-                }
-            }
-            else if (args.Length == 6 || args.Length == 7)
-            {
-                curLangCode = args[3];
-                psm = args[5];
-                try
-                {
-                    Int16.Parse(psm);
-                }
-                catch
-                {
-                    Console.WriteLine("Invalid input value.");
-                    return;
-                }
-            }
 
             try
             {
