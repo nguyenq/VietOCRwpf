@@ -21,6 +21,15 @@ VietOCRwpf is released and distributed under the [Apache License, v2.0](http://w
 * Spellcheck with Hunspell
 * Support for downloading and installing language data packs and appropriate spell dictionaries
 
+## Instructions
+
+The program can run as Windows or console application.
+
+For CLI option:
+```
+vietocr imagefile outputfile [-l lang] [--psm pagesegmode] [text|hocr|pdf|unlv|box|alto|tsv|lstmbox|wordstrbox] [postprocessing] [correctlettercases] [deskew] [removelines] [removelinebreaks]
+```
+
 ## Dependencies
 * [Microsoft .NET Framework 4.8 Redistributable](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 * [Microsoft Visual C++ 2019 Redistributable Package](https://visualstudio.microsoft.com/downloads/)

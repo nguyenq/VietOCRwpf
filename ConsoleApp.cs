@@ -32,7 +32,7 @@ namespace VietOCR
             ProcessingOptions options = new ProcessingOptions();
 
             HashSet<string> outputFormatSet = new HashSet<string>();
-            string[] RENDERERS = Enum.GetNames(typeof(Tesseract.RenderedFormat));
+            string[] renderers = Enum.GetNames(typeof(Tesseract.RenderedFormat));
             string curLangCode = "eng"; //default language
             string psm = "3"; // or alternatively, "Auto"; // 3 - Fully automatic page segmentation, but no OSD (default)
             
@@ -68,7 +68,7 @@ namespace VietOCR
                 }
 
                 // parse output formats
-                if (RENDERERS.Contains(arg.ToUpper()))
+                if (renderers.Contains(arg.ToUpper()))
                 {
                     outputFormatSet.Add(arg.ToUpper());
                 }

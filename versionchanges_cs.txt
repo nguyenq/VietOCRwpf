@@ -159,7 +159,7 @@ Version 5.6.1 (17 April 2020)
 Version 5.6.2 (23 August 2020)
 - Update translations
 
-Version 5.7.0 (17 October 2020)
+Version 5.7.0 (18 October 2020)
 - Support multiple renderers and provide pre- and post-processing for Bulk/Batch ops
 - Various UI improvements
 - Proper cleanup of working intermediate files
