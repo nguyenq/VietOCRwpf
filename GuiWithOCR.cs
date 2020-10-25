@@ -162,6 +162,7 @@ namespace VietOCR
         {
             //this.toolStripProgressBar1.Value = e.ProgressPercentage;
             this.textBox1.AppendText((string)e.UserState);
+            this.textBox1.ScrollToEnd();
         }
 
         private void backgroundWorkerOcr_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
