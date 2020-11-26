@@ -164,3 +164,6 @@ Version 5.7.0 (18 October 2020)
 - Various UI improvements
 - Proper cleanup of working intermediate files
 - Add command-line interface (CLI) support
+
+Version 5.7.1 (25 November 2020)
+- Fix result renderers
