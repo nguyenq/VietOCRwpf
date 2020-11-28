@@ -127,6 +127,7 @@ namespace VietOCR
             this.checkBoxRemoveHyphens.IsChecked = ProcessingOptions.RemoveHyphens;
             this.checkBoxDeskew.IsChecked = ProcessingOptions.Deskew;
             this.checkBoxCorrectLetterCases.IsChecked = ProcessingOptions.CorrectLetterCases;
+            this.checkBoxTextOnlyPdf.IsChecked = ProcessingOptions.TextOnlyPdf;
             this.checkBoxPostProcessing.IsChecked = ProcessingOptions.PostProcessing;
             this.checkBoxRemoveLines.IsChecked = ProcessingOptions.RemoveLines;
             this.checkBoxRemoveLineBreaks.IsChecked = ProcessingOptions.RemoveLineBreaks;
@@ -145,7 +146,8 @@ namespace VietOCR
             ProcessingOptions.ReplaceHyphens = this.checkBoxReplaceHyphens.IsChecked.Value;
             ProcessingOptions.RemoveHyphens = this.checkBoxRemoveHyphens.IsChecked.Value;
             ProcessingOptions.Deskew = this.checkBoxDeskew.IsChecked.Value;
-            ProcessingOptions.CorrectLetterCases = this.checkBoxCorrectLetterCases.IsChecked.Value; 
+            ProcessingOptions.CorrectLetterCases = this.checkBoxCorrectLetterCases.IsChecked.Value;
+            ProcessingOptions.TextOnlyPdf = this.checkBoxTextOnlyPdf.IsChecked.Value;
             ProcessingOptions.PostProcessing = this.checkBoxPostProcessing.IsChecked.Value;
             ProcessingOptions.RemoveLines = this.checkBoxRemoveLines.IsChecked.Value;
             ProcessingOptions.RemoveLineBreaks = this.checkBoxRemoveLineBreaks.IsChecked.Value;

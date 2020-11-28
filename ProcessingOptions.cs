@@ -13,6 +13,7 @@ namespace VietOCR
         public bool RemoveLines { get; set; }
         public bool RemoveLineBreaks { get; set; }
         public bool CorrectLetterCases { get; set; }
+        public bool TextOnlyPdf { get; set; }
         public bool RemoveHyphens { get; set; }
         public bool ReplaceHyphens { get; set; }
     }

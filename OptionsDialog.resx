@@ -264,4 +264,7 @@
   <data name="Please_select_output_format" xml:space="preserve">
     <value>Please select an output format.</value>
   </data>
+  <data name="checkBoxTextOnlyPdf.Text" xml:space="preserve">
+    <value>Text-only PDF</value>
+  </data>
 </root>

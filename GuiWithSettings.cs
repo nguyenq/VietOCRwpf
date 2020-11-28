@@ -36,6 +36,7 @@ namespace VietOCR
         const string strBatchOutputFormat = "BatchOutputFormat";
         const string strPostProcessingEnabled = "PostProcessingEnabled";
         const string strCorrectLetterCasesEnabled = "CorrectLetterCasesEnabled";
+        const string strTextOnlyPdfEnabled = "TextOnlyPdfEnabled";
         const string strRemoveLinesEnabled = "RemoveLinesEnabled";
         const string strRemoveLineBreaksEnabled = "RemoveLineBreaksEnabled";
 
@@ -99,6 +100,7 @@ namespace VietOCR
             options.Deskew = Convert.ToBoolean((int)regkey.GetValue(strDeskewEnabled, Convert.ToInt32(false)));
             options.PostProcessing = Convert.ToBoolean((int)regkey.GetValue(strPostProcessingEnabled, Convert.ToInt32(false)));
             options.CorrectLetterCases = Convert.ToBoolean((int)regkey.GetValue(strCorrectLetterCasesEnabled, Convert.ToInt32(false)));
+            options.TextOnlyPdf = Convert.ToBoolean((int)regkey.GetValue(strTextOnlyPdfEnabled, Convert.ToInt32(false)));
             options.RemoveLines = Convert.ToBoolean((int)regkey.GetValue(strRemoveLinesEnabled, Convert.ToInt32(false)));
             options.RemoveLineBreaks = Convert.ToBoolean((int)regkey.GetValue(strRemoveLineBreaksEnabled, Convert.ToInt32(false)));
             watchFolder = (string)regkey.GetValue(strWatchFolder, Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
@@ -115,6 +117,7 @@ namespace VietOCR
             regkey.SetValue(strDeskewEnabled, Convert.ToInt32(options.Deskew));
             regkey.SetValue(strPostProcessingEnabled, Convert.ToInt32(options.PostProcessing));
             regkey.SetValue(strCorrectLetterCasesEnabled, Convert.ToInt32(options.CorrectLetterCases));
+            regkey.SetValue(strTextOnlyPdfEnabled, Convert.ToInt32(options.TextOnlyPdf));
             regkey.SetValue(strRemoveLinesEnabled, Convert.ToInt32(options.RemoveLines));
             regkey.SetValue(strRemoveLineBreaksEnabled, Convert.ToInt32(options.RemoveLineBreaks));
             regkey.SetValue(strWatchFolder, watchFolder);

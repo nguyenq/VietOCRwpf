@@ -125,7 +125,7 @@ namespace VietOCR
                         resultRenderers.Add(ResultRenderer.CreateHOcrRenderer(OutputFile));
                         break;
                     case RenderedFormat.PDF:
-                        resultRenderers.Add(ResultRenderer.CreatePdfRenderer(OutputFile, Datapath, false));
+                        resultRenderers.Add(ResultRenderer.CreatePdfRenderer(OutputFile, Datapath, ProcessingOptions.TextOnlyPdf));
                         break;
                     case RenderedFormat.BOX:
                         resultRenderers.Add(ResultRenderer.CreateBoxRenderer(OutputFile));
