@@ -1024,7 +1024,7 @@ namespace VietOCR
                 {
                     continue;
                 }
-                langCode += installedLanguageCodes.FirstOrDefault(x => x.Value == lang).Key + "+";
+                langCode += installedLanguageCodes.FirstOrDefault(x => x.Value == lang.Trim()).Key + "+";
             }
 
             return langCode.TrimEnd('+');
