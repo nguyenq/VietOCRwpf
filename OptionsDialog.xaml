@@ -78,7 +78,6 @@
                     <CheckBox x:Name="checkBoxRemoveLineBreaks" Content="{x:Static resx:OptionsDialog.checkBoxRemoveLineBreaks_Text}" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Row="2"/>
                     <CheckBox x:Name="checkBoxDeskew" Content="{x:Static resx:OptionsDialog.checkBoxDeskew_Text}"  VerticalAlignment="Top" Grid.Column="1"/>
                     <CheckBox x:Name="checkBoxRemoveLines" Content="{x:Static resx:OptionsDialog.checkBoxRemoveLines_Text}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1"/>
-                    <CheckBox x:Name="checkBoxTextOnlyPdf" Content="{x:Static resx:OptionsDialog.checkBoxTextOnlyPdf_Text}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="3" Grid.Column="2"/>
                 </Grid>
             </TabItem>
             <TabItem Header="{x:Static resx:OptionsDialog.Hyphens}">

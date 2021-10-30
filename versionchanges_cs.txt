@@ -173,3 +173,6 @@ Version 5.7.2 (28 November 2020)
 
 Version 5.7.3 (5 March 2021)
 - Fix issues with multiple-language selection
+
+Version 6.0.0 (29 October 2021)
+- Upgrade to Tesseract 5.0.0-rc1 & Leptonica 1.82.0

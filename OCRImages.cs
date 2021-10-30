@@ -114,45 +114,8 @@ namespace VietOCR
             {
                 renderedFormats.Add((RenderedFormat)Enum.Parse(typeof(RenderedFormat), format));
             }
-
-            List<IResultRenderer> resultRenderers = new List<IResultRenderer>();
-
-            foreach (RenderedFormat renderedFormat in renderedFormats)
-            {
-                switch (renderedFormat)
-                {
-                    case RenderedFormat.HOCR:
-                        resultRenderers.Add(ResultRenderer.CreateHOcrRenderer(OutputFile));
-                        break;
-                    case RenderedFormat.PDF:
-                        resultRenderers.Add(ResultRenderer.CreatePdfRenderer(OutputFile, Datapath, ProcessingOptions.TextOnlyPdf));
-                        break;
-                    case RenderedFormat.BOX:
-                        resultRenderers.Add(ResultRenderer.CreateBoxRenderer(OutputFile));
-                        break;
-                    case RenderedFormat.UNLV:
-                        resultRenderers.Add(ResultRenderer.CreateUnlvRenderer(OutputFile));
-                        break;
-                    case RenderedFormat.ALTO:
-                        resultRenderers.Add(ResultRenderer.CreateAltoRenderer(OutputFile));
-                        break;
-                    case RenderedFormat.TSV:
-                        resultRenderers.Add(ResultRenderer.CreateTsvRenderer(OutputFile));
-                        break;
-                    case RenderedFormat.LSTMBOX:
-                        resultRenderers.Add(ResultRenderer.CreateLSTMBoxRenderer(OutputFile));
-                        break;
-                    case RenderedFormat.WORDSTRBOX:
-                        resultRenderers.Add(ResultRenderer.CreateWordStrBoxRenderer(OutputFile));
-                        break;
-                    default:
-                        // RenderedFormat.TEXT
-                        resultRenderers.Add(ResultRenderer.CreateTextRenderer(OutputFile));
-                        break;
-                }
-            }
-
-            using (IResultRenderer renderer = new AggregateResultRenderer(resultRenderers))
+            
+            using (IResultRenderer renderer = new AggregateResultRenderer(ResultRenderer.CreateRenderers(OutputFile, Datapath, renderedFormats)))
             {
                 ProcessImageFile(renderer, filename);
             }

@@ -288,15 +288,18 @@
     <Content Include="Data\TessLangDataURL.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="x64\libtesseract500.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="x86\liblept1820.dll" />
+    <None Include="x86\libtesseract500.dll" />
     <Resource Include="readme_cs_fr.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Icons\fatcow\tools.png" />
-    <Content Include="x64\libtesseract411.dll">
+    <Content Include="x64\liblept1820.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="x86\liblept1790.dll" />
-    <None Include="x86\libtesseract411.dll" />
     <Resource Include="readme_cs_ku.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -359,9 +362,6 @@
     <Resource Include="readme_cs_ne.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Content Include="x64\liblept1790.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <EmbeddedResource Include="BulkDialog.ar.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
     </EmbeddedResource>

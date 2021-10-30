@@ -71,6 +71,7 @@ namespace VietOCR
             foreach (string name in Enum.GetNames(typeof(Tesseract.RenderedFormat)))
             {
                 MenuItem item = new MenuItem { Header = name };
+                Console.WriteLine("name: " + name);
                 item.IsCheckable = true;
                 item.StaysOpenOnClick = true;
                 this.menuOutputFormat.Items.Add(item);
