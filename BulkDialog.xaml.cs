@@ -45,7 +45,7 @@ namespace VietOCR
                 {
                     if (item.IsChecked)
                     {
-                        list.Add(item.Header.ToString());
+                        list.Add(((TextBlock)item.Header).Text);
                     }
                 }
                 return string.Join(",", list);
@@ -56,7 +56,7 @@ namespace VietOCR
                 string[] list = value.Split(',');
                 foreach (MenuItem item in menuOutputFormat.Items)
                 {
-                    if (list.Contains(item.Header.ToString()))
+                    if (list.Contains(((TextBlock)item.Header).Text))
                     {
                         item.IsChecked = true;
                     }
@@ -70,13 +70,39 @@ namespace VietOCR
 
             foreach (string name in Enum.GetNames(typeof(Tesseract.RenderedFormat)))
             {
-                MenuItem item = new MenuItem { Header = name };
-                Console.WriteLine("name: " + name);
+                TextBlock tb = new TextBlock { Text = name };
+                MenuItem item = new MenuItem { Header = tb };
                 item.IsCheckable = true;
                 item.StaysOpenOnClick = true;
+                item.Click += Item_Click;
                 this.menuOutputFormat.Items.Add(item);
             }
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+        }
+
+        /// <summary>
+        /// Allows only one PDF option selected.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Item_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem menuItem = (MenuItem)sender;
+            if (menuItem.IsChecked)
+            {
+                string label = ((TextBlock)menuItem.Header).Text;
+
+                if (Tesseract.RenderedFormat.PDF.ToString() == label)
+                {
+                    MenuItem menuItemPDF_TEXTONLY = this.menuOutputFormat.Items.Cast<MenuItem>().Single(item => ((TextBlock)item.Header).Text == Tesseract.RenderedFormat.PDF_TEXTONLY.ToString());
+                    menuItemPDF_TEXTONLY.IsChecked = false;
+                }
+                else if (Tesseract.RenderedFormat.PDF_TEXTONLY.ToString() == label)
+                {
+                    MenuItem menuItemPDF = this.menuOutputFormat.Items.Cast<MenuItem>().Single(item => ((TextBlock)item.Header).Text == Tesseract.RenderedFormat.PDF.ToString());
+                    menuItemPDF.IsChecked = false;
+                }
+            }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -147,7 +173,7 @@ namespace VietOCR
 
         private void ContextMenu_Opened(object sender, RoutedEventArgs e)
         {
-            BtnArrowDown.Visibility =  Visibility.Collapsed;
+            BtnArrowDown.Visibility = Visibility.Collapsed;
             BtnArrowUp.Visibility = Visibility.Visible;
         }
 
