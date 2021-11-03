@@ -378,4 +378,7 @@
   <data name="File_not_exist" xml:space="preserve">
     <value>इनपुट फाइल मौजूद नहीं है </value>
   </data>
+  <data name="Please_select_output_format" xml:space="preserve">
+    <value>Please select an output format.</value>
+  </data>
 </root>

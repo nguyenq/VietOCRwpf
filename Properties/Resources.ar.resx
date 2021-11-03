@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_of_" xml:space="preserve">
+    <value>من</value>
+  </data>
+  <data name="About_VietOCR" xml:space="preserve">
+    <value>عن VietOCR.NET</value>
+  </data>
+  <data name="Access_denied" xml:space="preserve">
+    <value>ليس لديك حق الكتابة إلى المجلد "{0}".
+الرجاء تشغيل البرنامج كمسؤول.</value>
+  </data>
+  <data name="Add_to_Dictionary" xml:space="preserve">
+    <value>اضافة للمعجم</value>
+  </data>
+  <data name="BatchProcessStatus" xml:space="preserve">
+    <value>حالة عملية معالجة الحزمة</value>
+  </data>
+  <data name="Beginning_of_task" xml:space="preserve">
+    <value>بداية المهمة</value>
+  </data>
+  <data name="Bilateral" xml:space="preserve">
+    <value>ثنائي</value>
+  </data>
+  <data name="Brightness" xml:space="preserve">
+    <value>السطوع</value>
+  </data>
+  <data name="Browse" xml:space="preserve">
+    <value>تصفح</value>
+  </data>
+  <data name="Bulk_OCR" xml:space="preserve">
+    <value> التعرف على الأحرف ضوئيا بالجملة</value>
+  </data>
+  <data name="BulkProcessStatus" xml:space="preserve">
+    <value>حالة عملية الجملة</value>
+  </data>
+  <data name="CancelBulkOCR" xml:space="preserve">
+    <value>الغاء التعرف على الأحرف ضوئيا بالجملة</value>
+  </data>
+  <data name="canceled" xml:space="preserve">
+    <value>ملغاة</value>
+  </data>
+  <data name="Cannotloadimage" xml:space="preserve">
+    <value>لا يمكن تحميل الصورة.</value>
+  </data>
+  <data name="Cannotprocess" xml:space="preserve">
+    <value>لا يمكن معالجة</value>
+  </data>
+  <data name="check_output_in" xml:space="preserve">
+    <value>يرجى التحقق من ملف (ملفات) الإخراج في</value>
+  </data>
+  <data name="Clear_Recent_Files" xml:space="preserve">
+    <value>_ امسح الملفات الأخيرة</value>
+  </data>
+  <data name="Contrast" xml:space="preserve">
+    <value>قارن</value>
+  </data>
+  <data name="Correcting_completed" xml:space="preserve">
+    <value>اكتمل التصحيح.</value>
+  </data>
+  <data name="Correcting_errors" xml:space="preserve">
+    <value>تصحيح أخطاء التي تم التعرف عليها ...</value>
+  </data>
+  <data name="created" xml:space="preserve">
+    <value>تم إنشاء.</value>
+  </data>
+  <data name="Do_you_want_to_save_the_changes_to_" xml:space="preserve">
+    <value>هل تريد حفظ التغييرات على</value>
+  </data>
+  <data name="Downloadcanceled" xml:space="preserve">
+    <value>تم إلغاء التنزيل.</value>
+  </data>
+  <data name="Downloadcompleted" xml:space="preserve">
+    <value>تم استكمال التحميل.</value>
+  </data>
+  <data name="Downloaderror" xml:space="preserve">
+    <value>الخطأ تحميل.</value>
+  </data>
+  <data name="Downloading" xml:space="preserve">
+    <value>جارى التحميل...</value>
+  </data>
+  <data name="Elapsed_time" xml:space="preserve">
+    <value>الوقت المنقضي</value>
+  </data>
+  <data name="End_of_task" xml:space="preserve">
+    <value>نهاية المهمة</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="Gamma" xml:space="preserve">
+    <value>جاما</value>
+  </data>
+  <data name="Ignore_All" xml:space="preserve">
+    <value>تجاهل الكل</value>
+  </data>
+  <data name="Inputincomplete" xml:space="preserve">
+    <value>مدخلات غير كاملة.</value>
+  </data>
+  <data name="Inputinvalid" xml:space="preserve">
+    <value>المدخلات غير صالحة</value>
+  </data>
+  <data name="InvalidPageMessage" xml:space="preserve">
+    <value>لا توجد صفحة مرقمة "{0}" في هذه الصورة.</value>
+  </data>
+  <data name="Load_image" xml:space="preserve">
+    <value>تحميل الصورة</value>
+  </data>
+  <data name="LoadImage" xml:space="preserve">
+    <value>الرجاء تحميل الصورة.</value>
+  </data>
+  <data name="Loading_completed" xml:space="preserve">
+    <value>اكتمل التحميل.</value>
+  </data>
+  <data name="Loading_image" xml:space="preserve">
+    <value>جارٍ تحميل الصورة ...</value>
+  </data>
+  <data name="MergePDF_running" xml:space="preserve">
+    <value>جاري دمج PDF  ...</value>
+  </data>
+  <data name="MergePDFcompleted" xml:space="preserve">
+    <value>تم الإنتهاء من دمج PDF.</value>
+  </data>
+  <data name="MergeTIFF_running" xml:space="preserve">
+    <value>جاري دمج TIFF ...</value>
+  </data>
+  <data name="MergeTIFFcompleted" xml:space="preserve">
+    <value>تم الإنتهاء من دمج TIFF.</value>
+  </data>
+  <data name="No_Recent_Files" xml:space="preserve">
+    <value>لا توجد ملفات حديثة</value>
+  </data>
+  <data name="OCRcompleted" xml:space="preserve">
+    <value>تم الإنتهاء من التعرف الضوئي على الحروف.</value>
+  </data>
+  <data name="OCROperation" xml:space="preserve">
+    <value>عملية التعرف الضوئي على الحروف</value>
+  </data>
+  <data name="OCRrunning" xml:space="preserve">
+    <value>جاري التعرف الضوئي على الحروف.</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>فتح</value>
+  </data>
+  <data name="OpenImageFile" xml:space="preserve">
+    <value>فتح مجلد الصور</value>
+  </data>
+  <data name="Page_" xml:space="preserve">
+    <value>صفحة</value>
+  </data>
+  <data name="Please_restart" xml:space="preserve">
+    <value>الرجاء إعادة تشغيل البرنامج حتى يتمكن من تسجيل حزمة (حزم) اللغة الجديدة.</value>
+  </data>
+  <data name="Program_desc" xml:space="preserve">
+    <value>.NET GUI Frontend for Tesseract {0} OCR Engine</value>
+  </data>
+  <data name="readme" xml:space="preserve">
+    <value>readme_cs.html</value>
+  </data>
+  <data name="Require_grayscale" xml:space="preserve">
+    <value>Image may require conversion to grayscale.</value>
+  </data>
+  <data name="Resource_not_exist" xml:space="preserve">
+    <value>المصدر غير متوفر:</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="Save_As" xml:space="preserve">
+    <value>حفظ باسم</value>
+  </data>
+  <data name="Save_Merged_PDF" xml:space="preserve">
+    <value>Save Merged PDF</value>
+  </data>
+  <data name="Save_Multipage_TIFF_Image" xml:space="preserve">
+    <value>Save Multi-page TIFF Image</value>
+  </data>
+  <data name="Scancompleted" xml:space="preserve">
+    <value>تم المسح.</value>
+  </data>
+  <data name="Scanning" xml:space="preserve">
+    <value>مسح ...</value>
+  </data>
+  <data name="ScanningOperation" xml:space="preserve">
+    <value>عملية المسح</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>اختيار</value>
+  </data>
+  <data name="Select_Input_Images" xml:space="preserve">
+    <value>حدد ملفات الصور</value>
+  </data>
+  <data name="Select_Input_PDFs" xml:space="preserve">
+    <value>حدد ملفات PDF</value>
+  </data>
+  <data name="Select_Input_TIFF" xml:space="preserve">
+    <value>إختار ملف TIFF متعدد الصفحات</value>
+  </data>
+  <data name="selectLanguage" xml:space="preserve">
+    <value>يرجى تحديد لغة.</value>
+  </data>
+  <data name="SplitPDF_completed" xml:space="preserve">
+    <value>تم الإنتهاء من تقسيم ملف PDF.</value>
+  </data>
+  <data name="SplitPDF_running" xml:space="preserve">
+    <value>جاري تقسيم PDF...</value>
+  </data>
+  <data name="SplitTIFF_running" xml:space="preserve">
+    <value>جاري تقسيم TIFF ...</value>
+  </data>
+  <data name="SplitTIFFcompleted" xml:space="preserve">
+    <value>تم تقسيم TIFF</value>
+  </data>
+  <data name="suggest_split" xml:space="preserve">
+    <value>قد تحتاج إلى تقسيم ملف PDF إلى ملفات أصغر قبل المتابعة.</value>
+  </data>
+  <data name="Task_canceled" xml:space="preserve">
+    <value>تم إلغاء المهمة</value>
+  </data>
+  <data name="Threshold" xml:space="preserve">
+    <value>Threshold</value>
+  </data>
+  <data name="Untitled" xml:space="preserve">
+    <value>غير معنون</value>
+  </data>
+  <data name="VietOCR_Help" xml:space="preserve">
+    <value>VietOCR.NET مساعدة</value>
+  </data>
+  <data name="ConvertPDFcompleted" xml:space="preserve">
+    <value>اكتمل تحويل ملف PDF.</value>
+  </data>
+  <data name="ConvertPDF_running" xml:space="preserve">
+    <value>جاري تحويل ملفات PDF ...</value>
+  </data>
+  <data name="Select_Input_PDF" xml:space="preserve">
+    <value>حدد ملف PDF</value>
+  </data>
+  <data name="beginning" xml:space="preserve">
+    <value>البداية</value>
+  </data>
+  <data name="Cannot_find_" xml:space="preserve">
+    <value>لم يتمكن من إيجاد</value>
+  </data>
+  <data name="Continue_search_from_" xml:space="preserve">
+    <value>استكمال البحث من</value>
+  </data>
+  <data name="end" xml:space="preserve">
+    <value>النهاية</value>
+  </data>
+  <data name="Regex_Error" xml:space="preserve">
+    <value>خطأ تعبير نمطي</value>
+  </data>
+  <data name="ReplacedOccurrence" xml:space="preserve">
+    <value>Replaced {0} occurrence(s).</value>
+  </data>
+  <data name="Double_sided" xml:space="preserve">
+    <value>من الجانبين</value>
+  </data>
+  <data name="Single_sided" xml:space="preserve">
+    <value>من جانب واحد</value>
+  </data>
+  <data name="File_not_exist" xml:space="preserve">
+    <value>ملف الإدخال غير موجود.</value>
+  </data>
+  <data name="Please_select_output_format" xml:space="preserve">
+    <value>الرجاء إختيار التنسيق الخارجي</value>
+  </data>
+</root>

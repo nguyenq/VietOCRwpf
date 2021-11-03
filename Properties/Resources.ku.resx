@@ -59,46 +59,46 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+  <xsd:schema xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
           <xsd:element name="metadata">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
               </xsd:sequence>
-              <xsd:attribute name="name" use="required" type="xsd:string" />
-              <xsd:attribute name="type" type="xsd:string" />
-              <xsd:attribute name="mimetype" type="xsd:string" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="assembly">
             <xsd:complexType>
-              <xsd:attribute name="alias" type="xsd:string" />
-              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="data">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
-              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-              <xsd:attribute ref="xml:space" />
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
           </xsd:element>
           <xsd:element name="resheader">
             <xsd:complexType>
               <xsd:sequence>
-                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
               </xsd:sequence>
-              <xsd:attribute name="name" type="xsd:string" use="required" />
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
             </xsd:complexType>
           </xsd:element>
         </xsd:choice>
@@ -143,7 +143,7 @@ Please run the program as administrator.</value>
     <value>Brightness</value>
   </data>
   <data name="Browse" xml:space="preserve">
-    <value>Browse</value>
+    <value>گەڕان</value>
   </data>
   <data name="Bulk_OCR" xml:space="preserve">
     <value>Bulk OCR</value>
@@ -167,7 +167,7 @@ Please run the program as administrator.</value>
     <value>Please check output file(s) in </value>
   </data>
   <data name="Clear_Recent_Files" xml:space="preserve">
-    <value>&amp;Clear Recent Files</value>
+    <value>_Clear Recent Files</value>
   </data>
   <data name="Contrast" xml:space="preserve">
     <value>Contrast</value>
@@ -342,5 +342,44 @@ Please run the program as administrator.</value>
   </data>
   <data name="VietOCR_Help" xml:space="preserve">
     <value>VietOCR.NET Help</value>
+  </data>
+  <data name="ConvertPDFcompleted" xml:space="preserve">
+    <value>Convert PDF completed. </value>
+  </data>
+  <data name="ConvertPDF_running" xml:space="preserve">
+    <value>Convert PDF running...</value>
+  </data>
+  <data name="Select_Input_PDF" xml:space="preserve">
+    <value>Select Input PDF</value>
+  </data>
+  <data name="beginning" xml:space="preserve">
+    <value>beginning</value>
+  </data>
+  <data name="Cannot_find_" xml:space="preserve">
+    <value>Cannot find </value>
+  </data>
+  <data name="Continue_search_from_" xml:space="preserve">
+    <value>Continue search from </value>
+  </data>
+  <data name="end" xml:space="preserve">
+    <value>end</value>
+  </data>
+  <data name="Regex_Error" xml:space="preserve">
+    <value>Regex Error</value>
+  </data>
+  <data name="ReplacedOccurrence" xml:space="preserve">
+    <value>Replaced {0} occurrence(s).</value>
+  </data>
+  <data name="Double_sided" xml:space="preserve">
+    <value>Double-sided</value>
+  </data>
+  <data name="Single_sided" xml:space="preserve">
+    <value>Single-sided</value>
+  </data>
+  <data name="File_not_exist" xml:space="preserve">
+    <value>Input file does not exist.</value>
+  </data>
+  <data name="Please_select_output_format" xml:space="preserve">
+    <value>Please select an output format.</value>
   </data>
 </root>

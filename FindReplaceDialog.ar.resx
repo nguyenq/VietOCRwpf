@@ -124,7 +124,7 @@
     <value>استبدال بـ:</value>
   </data>
   <data name="chkboxMatchCase.Text" xml:space="preserve">
-    <value>مراعاة الأحرف الكبيرة والصغيرة</value>
+    <value>مراعاة حالة الأحرف</value>
   </data>
   <data name="chkboxMatchDiacritics.Text" xml:space="preserve">
     <value>مراعاة التشكيل</value>

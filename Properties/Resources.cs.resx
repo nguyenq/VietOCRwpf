@@ -137,7 +137,7 @@ Spusťte, prosím, program jako administrátor.</value>
     <value>Začátek úlohy</value>
   </data>
   <data name="Bilateral" xml:space="preserve">
-    <value>Bilateral</value>
+    <value>Oboustranný</value>
   </data>
   <data name="Brightness" xml:space="preserve">
     <value>Jas</value>
@@ -167,7 +167,7 @@ Spusťte, prosím, program jako administrátor.</value>
     <value>Prověřte, prosím, výstupní soubor v </value>
   </data>
   <data name="Clear_Recent_Files" xml:space="preserve">
-    <value>_Clear Recent Files</value>
+    <value>_Vyprázdnit nedávné soubory</value>
   </data>
   <data name="Contrast" xml:space="preserve">
     <value>Kontrast</value>
@@ -206,7 +206,7 @@ Spusťte, prosím, program jako administrátor.</value>
     <value>Chyba</value>
   </data>
   <data name="Gamma" xml:space="preserve">
-    <value>Gamma</value>
+    <value>Gama</value>
   </data>
   <data name="Ignore_All" xml:space="preserve">
     <value>Přehlížet vše</value>
@@ -269,13 +269,13 @@ Spusťte, prosím, program jako administrátor.</value>
     <value>Spusťte, prosím, program znovu, aby se mohly přihlásit nové jazykové balíky.</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>.NET GUI Frontend for Tesseract {0} OCR Engine</value>
+    <value>Uživatelské rozhraní .NET pro rozpoznávací stroj Tesseract {0}</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs_cs.html</value>
   </data>
   <data name="Require_grayscale" xml:space="preserve">
-    <value>Image may require conversion to grayscale.</value>
+    <value>Obrázek může vyžadovat převod do stupňů šedi.</value>
   </data>
   <data name="Resource_not_exist" xml:space="preserve">
     <value>Zdroj neexistuje.</value>
@@ -335,7 +335,7 @@ Spusťte, prosím, program jako administrátor.</value>
     <value>Úloha přerušena</value>
   </data>
   <data name="Threshold" xml:space="preserve">
-    <value>Threshold</value>
+    <value>Práh</value>
   </data>
   <data name="Untitled" xml:space="preserve">
     <value>Nepojmenovaný</value>
@@ -344,39 +344,42 @@ Spusťte, prosím, program jako administrátor.</value>
     <value>Nápověda VietOCR.NET</value>
   </data>
   <data name="ConvertPDFcompleted" xml:space="preserve">
-    <value>Convert PDF completed. </value>
+    <value>Převod PDF dokončen.</value>
   </data>
   <data name="ConvertPDF_running" xml:space="preserve">
-    <value>Convert PDF running...</value>
+    <value>Převod PDF běží...</value>
   </data>
   <data name="Select_Input_PDF" xml:space="preserve">
-    <value>Select Input PDF</value>
+    <value>Vybrat vstupní PDF</value>
   </data>
   <data name="beginning" xml:space="preserve">
-    <value>beginning</value>
+    <value>začátek</value>
   </data>
   <data name="Cannot_find_" xml:space="preserve">
-    <value>Cannot find </value>
+    <value>Nelze najít</value>
   </data>
   <data name="Continue_search_from_" xml:space="preserve">
-    <value>Continue search from </value>
+    <value>Pokračovat v hledání od</value>
   </data>
   <data name="end" xml:space="preserve">
-    <value>end</value>
+    <value>konec</value>
   </data>
   <data name="Regex_Error" xml:space="preserve">
-    <value>Regex Error</value>
+    <value>Chyba v regulárním výrazu</value>
   </data>
   <data name="ReplacedOccurrence" xml:space="preserve">
-    <value>Replaced {0} occurrence(s).</value>
+    <value>Nahrazeno {0} výskyt(ů).</value>
   </data>
   <data name="Double_sided" xml:space="preserve">
-    <value>Double-sided</value>
+    <value>Oboustranná</value>
   </data>
   <data name="Single_sided" xml:space="preserve">
-    <value>Single-sided</value>
+    <value>Jednostranná</value>
   </data>
   <data name="File_not_exist" xml:space="preserve">
     <value>Vstupní soubor neexistuje.</value>
+  </data>
+  <data name="Please_select_output_format" xml:space="preserve">
+    <value>Vyberte, prosím, výstupní formát.</value>
   </data>
 </root>

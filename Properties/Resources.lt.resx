@@ -379,4 +379,7 @@ Paleiskite šią programą administratoriaus teisėmis.</value>
   <data name="File_not_exist" xml:space="preserve">
     <value>Įvesties failas neegzistuoja</value>
   </data>
+  <data name="Please_select_output_format" xml:space="preserve">
+    <value>Pasirinkite išvesties formatą.</value>
+  </data>
 </root>

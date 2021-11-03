@@ -379,4 +379,7 @@
   <data name="File_not_exist" xml:space="preserve">
     <value>ಇನ್ಪುಟ್ ಕಡತ ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ.</value>
   </data>
+  <data name="Please_select_output_format" xml:space="preserve">
+    <value>ಔಟ್ಪುಟ್ ಶೈಲಿಯೊಂದನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.</value>
+  </data>
 </root>

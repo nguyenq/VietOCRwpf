@@ -379,4 +379,7 @@ Proszę uruchomić program jako administrator.</value>
   <data name="File_not_exist" xml:space="preserve">
     <value>Plik wejściowy nie istnieje.</value>
   </data>
+  <data name="Please_select_output_format" xml:space="preserve">
+    <value>Please select an output format.</value>
+  </data>
 </root>
