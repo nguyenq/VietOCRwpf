@@ -40,7 +40,7 @@ namespace VietOCR
 
             List<MenuItem> ar = new List<MenuItem>();
 
-            String[] uiLangs = { "ar-SA", "bn-IN", "ca-ES", "cs-CZ", "de-DE", "en-US", "es-ES", "et-EE", "fa-IR", "fi-FI", "fr-FR", "hi-IN", "hu-HU", "it-IT", "ja-JP", "kn-In", "ku-Arab-IQ", "lt-LT", "ne-NP", "nl-NL", "pl-PL", "ru-RU", "sd-Deva", "sk-SK", "tr-TR", "vi-VN", "zh-Hans" };
+            String[] uiLangs = { "ar-SA", "bn-IN", "ca-ES", "cs-CZ", "de-DE", "en-US", "es-ES", "et-EE", "fa-IR", "fi-FI", "fr-FR", "hi-IN", "hu-HU", "it-IT", "ja-JP", "kn-In", "ku-Arab-IQ", "lt-LT", "ne-NP", "nl-NL", "pl-PL", "pt-PT", "ru-RU", "sd-Deva", "sk-SK", "sl-SI", "tr-TR", "vi-VN", "zh-Hans" };
             foreach (string uiLang in uiLangs)
             {
                 MenuItem miuil = new MenuItem();

@@ -437,6 +437,7 @@
   </data>
   <data name="wordWrapToolStripMenuItem.Text" xml:space="preserve">
     <value>_W वर्ड रैप</value>
+  </data>
   <data name="despeckleToolStripMenuItem.Text" xml:space="preserve">
     <value>बिंदुओं को हटायें</value>
   </data>
