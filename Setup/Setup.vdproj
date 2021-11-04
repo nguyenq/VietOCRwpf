@@ -15,12 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_07AA569223F14B21B6A038669F3CABAB"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_0BA64AC4137C44519A1AE2D0960E09EB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -29,6 +23,12 @@
         {
         "MsmKey" = "8:_0F3E4877B418BAA2BD86D241CCBF9ACE"
         "OwnerKey" = "8:_E6D93875DFE84F2394DF8922F6D448CC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_174C51557FD14C8BAF800AFCC816D999"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -135,6 +135,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_A95D02D9A61F434390CE424788461280"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_C52422E2F6B04A2B86A6CEEAB94C88AB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -160,12 +166,6 @@
         "Entry"
         {
         "MsmKey" = "8:_E6D93875DFE84F2394DF8922F6D448CC"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_E9F36D98541A43BDA3D958DDB20E6E85"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -316,26 +316,6 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_07AA569223F14B21B6A038669F3CABAB"
-            {
-            "SourcePath" = "8:..\\readme_cs_pt.html"
-            "TargetName" = "8:readme_cs_pt.html"
-            "Tag" = "8:"
-            "Folder" = "8:_2ADB5FD5B87C4D4C97B718374331A546"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0BA64AC4137C44519A1AE2D0960E09EB"
             {
             "SourcePath" = "8:..\\readme_cs_nl.html"
@@ -385,6 +365,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_174C51557FD14C8BAF800AFCC816D999"
+            {
+            "SourcePath" = "8:..\\readme_cs_pt.html"
+            "TargetName" = "8:readme_cs_pt.html"
+            "Tag" = "8:"
+            "Folder" = "8:_2ADB5FD5B87C4D4C97B718374331A546"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_19CA1B0E4AD72686ED7D4B69F492B41C"
@@ -749,6 +749,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A95D02D9A61F434390CE424788461280"
+            {
+            "SourcePath" = "8:..\\readme_cs_sd.html"
+            "TargetName" = "8:readme_cs_sd.html"
+            "Tag" = "8:"
+            "Folder" = "8:_2ADB5FD5B87C4D4C97B718374331A546"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C52422E2F6B04A2B86A6CEEAB94C88AB"
             {
             "SourcePath" = "8:..\\readme_cs_ca.html"
@@ -840,26 +860,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E9F36D98541A43BDA3D958DDB20E6E85"
-            {
-            "SourcePath" = "8:..\\readme_cs_sd.html"
-            "TargetName" = "8:readme_cs_sd.html"
-            "Tag" = "8:"
-            "Folder" = "8:_2ADB5FD5B87C4D4C97B718374331A546"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F65291418B7D310C4CE9F0B362F96354"
             {
             "AssemblyRegister" = "3:1"
@@ -948,7 +948,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:VietOCR"
         "ProductCode" = "8:{8ADEF0D9-8C11-4419-8019-BB3A85401456}"
-        "PackageCode" = "8:{F43A19EE-F94B-4CC0-9D18-C3BE1209FB05}"
+        "PackageCode" = "8:{ED34850F-7C02-4591-8911-381789A018B5}"
         "UpgradeCode" = "8:{9DB2C555-29D0-4CEC-996E-E7FD9315AD50}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
