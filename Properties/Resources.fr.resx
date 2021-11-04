@@ -379,4 +379,7 @@ Veuillez lancer le programme en tant qu'administrateur.</value>
   <data name="File_not_exist" xml:space="preserve">
     <value>Le fichier source n'existe pas. </value>
   </data>
+  <data name="Please_select_output_format" xml:space="preserve">
+    <value>Please select an output format.</value>
+  </data>
 </root>

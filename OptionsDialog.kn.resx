@@ -243,4 +243,25 @@
   <data name="Hyphens" xml:space="preserve">
     <value>ಹೈಫನ್‌ಗಳು</value>
   </data>
+  <data name="Batch" xml:space="preserve">
+    <value>ಗುಂಪು</value>
+  </data>
+  <data name="BulkBatchOptions" xml:space="preserve">
+    <value>ಬೃಹತ್/ಗುಂಪು ಆಯ್ಕೆಗಳು‍</value>
+  </data>
+  <data name="checkBoxCorrectLetterCases.Text" xml:space="preserve">
+    <value>ಪದದ ‍ಕೇಸ್‍ ಬದಲಿಸಿ</value>
+  </data>
+  <data name="checkBoxPostProcessing.Text" xml:space="preserve">
+    <value>ಕಾರ್ಯಾ-ನಂತರದ ಪ್ರಕ್ರಿಯೆ</value>
+  </data>
+  <data name="checkBoxRemoveLineBreaks.Text" xml:space="preserve">
+    <value>ಸಾಲಿನ ವಿರಾಮಗಳನ್ನು ತೆಗೆದುಹಾಕಿ</value>
+  </data>
+  <data name="checkBoxRemoveLines.Text" xml:space="preserve">
+    <value>ಸಾಲುಗಳನ್ನು ಅಳಿಸು</value>
+  </data>
+  <data name="Please_select_output_format" xml:space="preserve">
+    <value>ಔಟ್ಪುಟ್ ಶೈಲಿಯೊಂದನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.</value>
+  </data>
 </root>

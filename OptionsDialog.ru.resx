@@ -169,7 +169,7 @@
     <value/>
   </data>
   <data name="openFileDialog1.Filter" xml:space="preserve">
-    <value>Text Files (*.txt)|*.txt</value>
+    <value>Текстовые файлы (*.txt)|*.txt</value>
   </data>
   <data name="buttonCancel.ToolTip" xml:space="preserve">
     <value/>
@@ -242,5 +242,26 @@
   </data>
   <data name="Hyphens" xml:space="preserve">
     <value>Дефисы</value>
+  </data>
+  <data name="Batch" xml:space="preserve">
+    <value>Пакетная обработка</value>
+  </data>
+  <data name="BulkBatchOptions" xml:space="preserve">
+    <value>Опции пакетной обработки</value>
+  </data>
+  <data name="checkBoxCorrectLetterCases.Text" xml:space="preserve">
+    <value>Правильный регистр букв</value>
+  </data>
+  <data name="checkBoxPostProcessing.Text" xml:space="preserve">
+    <value>Постобработка</value>
+  </data>
+  <data name="checkBoxRemoveLineBreaks.Text" xml:space="preserve">
+    <value>Удалить переносы</value>
+  </data>
+  <data name="checkBoxRemoveLines.Text" xml:space="preserve">
+    <value>Удалить линии</value>
+  </data>
+  <data name="Please_select_output_format" xml:space="preserve">
+    <value>Пожалуйста, выберите формат вывода</value>
   </data>
 </root>

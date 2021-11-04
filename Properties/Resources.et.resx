@@ -146,7 +146,7 @@ Please run the program as administrator.</value>
     <value>Sirvi</value>
   </data>
   <data name="Bulk_OCR" xml:space="preserve">
-    <value>Bulk OCR</value>
+    <value>Hulgi tekstituvastus</value>
   </data>
   <data name="BulkProcessStatus" xml:space="preserve">
     <value>Bulk Process Status</value>
@@ -305,7 +305,7 @@ Please run the program as administrator.</value>
     <value>Vali</value>
   </data>
   <data name="Select_Input_Images" xml:space="preserve">
-    <value>Select Input Images</value>
+    <value>Vali sisendpildid</value>
   </data>
   <data name="Select_Input_PDFs" xml:space="preserve">
     <value>Select Input PDFs</value>
@@ -378,5 +378,8 @@ Please run the program as administrator.</value>
   </data>
   <data name="File_not_exist" xml:space="preserve">
     <value>Sisendfaili pole olemas.</value>
+  </data>
+  <data name="Please_select_output_format" xml:space="preserve">
+    <value>Palun vali väljundi vorming.</value>
   </data>
 </root>

@@ -243,4 +243,25 @@
   <data name="Hyphens" xml:space="preserve">
     <value>Brūkšneliai</value>
   </data>
+  <data name="Batch" xml:space="preserve">
+    <value>Paketinis apdorojimas</value>
+  </data>
+  <data name="BulkBatchOptions" xml:space="preserve">
+    <value>Paketinio apdorojimo parinktys</value>
+  </data>
+  <data name="checkBoxCorrectLetterCases.Text" xml:space="preserve">
+    <value>Taisyti raidžių registrą</value>
+  </data>
+  <data name="checkBoxPostProcessing.Text" xml:space="preserve">
+    <value>Papildomas apdorojimas</value>
+  </data>
+  <data name="checkBoxRemoveLineBreaks.Text" xml:space="preserve">
+    <value>Šalinti eilučių skirtukus</value>
+  </data>
+  <data name="checkBoxRemoveLines.Text" xml:space="preserve">
+    <value>Šalinti linijas</value>
+  </data>
+  <data name="Please_select_output_format" xml:space="preserve">
+    <value>Pasirinkite išvesties formatą.</value>
+  </data>
 </root>

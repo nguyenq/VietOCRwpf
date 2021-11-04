@@ -1,0 +1,101 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>VietOCR.NET - .NET WPF GUI Frontend para o motor OCR Tesseract</title>
+</head>
+<body>
+    <div>
+        <h2 align="center">VietOCR.NET</h2>
+        <h3>DESCRIÇÃO</h3>
+        <p><a href="http://vietocr.sourceforge.net/">VietOCR.NET</a>
+            é um rosto .NET WPF GUI para o <a href="https://github.com/tesseract-ocr">motor OCR Tesseract</a>, fornecendo reconhecimento de caracteres em formatos de imagem comuns,
+            e imagens multi-página. O programa tem pós-processamento, o que ajuda a corrigir erros
+            encontrados habitualmente em processos OCR, melhorando a taxa de precisão do resultado.
+            O programa também funciona como aplicação de consola, executado a partir da linha de
+            comandos.</p>
+        <p>Agora suportado o processamento em lote. O programa observa uma pasta com novas imagens,
+processando-as automaticamente e imprimindo o resultado
+do reconhecimento numa pasta de saída.</p>
+        <h3>REQUISITOS DO SISTEMA</h3>
+        <p><a href="https://dotnet.microsoft.com/download/dotnet-framework/net48">Microsoft .NET Framework 4.8</a>.</p>
+        <p>Se encontrou erros &quot;<i>Exception has been thrown by the target of an invocation</i>&quot;, por favor instale o
+            <a href="https://visualstudio.microsoft.com/downloads/">Microsoft Visual C++ 2019 Redistributable Package</a>.</p>
+        <h3>INSTALAÇÃO</h3>
+        <p>Se não tem permissão para instalar em <code>C:\Program Files</code>,
+            pode especificar outra pasta no diálogo de instalação.</p>
+        <p>Suporte à digitalização fornecido por Windows Image Acquisition Library v2.0.</p>
+        <p>O suporte a PDF é possível via <a href="http://www.ghostscript.com/">GPL Ghostscript</a>. Após instalar a biblioteca, por favor garanta que a biblioteca
+            dinâmica <code>gsdll64.dll</code> está no caminho de procura, definindo a variável se ambiente <code>Path</code>,
+            acessível pelo &#39; Painel de controlo &gt;
+            Sistema &gt; separador Avançado &gt; Variáveis de ambiente. Por exemplo, acrescente o seguinte
+            à variável <code>Path</code> para GS versão 9.55.0:</p>
+        <blockquote>
+            <p><code>;C:\Program Files\gs\gs9.55.0\bin</code></p>
+        </blockquote>
+        <p>A verificação ortográfica está disponível via Hunspell, cujos <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">dicionários</a> (<code>.aff</code>, <code>.dic</code>) devem estar colocados na pasta <code>dict</code>
+            do VietOCR.</p>
+        <h3>INSTRUÇÕES</h3>
+        <p>Os <a href="https://github.com/tesseract-ocr/tessdata">pacotes de dados de idioma</a>
+            para o Tesseract devem ser descomprimidos para a pasta de instalação do <code>tesseract</code>;
+            os ficheiros de dados, cujos nomes começam por códigos ISO639-3, estarão colocados na sub-pasta <code>tessdata</code>.
+            O VietOCR também oferece suporte à transferência e instalação de pacotes
+            de idioma seleccionados via menu <em>Transferir dados de idiomas</em>. Dependendo da localização
+            da pasta <code>tessdata</code>, poderá ter de executar o programa como administrador
+            para instalar os dados, se a pasta estiver dentro de uma pasta do sistema,
+             tal como <code>C:\Program Files</code>.</p>
+        <p>Os dados do idioma Vietnamita foram gerados para Times New Roman, Arial, Verdana,
+e Courier New. Por conseguinte, o reconhecimento teria uma melhor taxa de sucesso
+para imagens com letras semelhantes. Imagens de OCR que têm a aparência de letra
+diferentes das fontes suportadas geralmente, exigirão <a href="https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract">treinar</a> o Tesseract para criar outro pacote de idioma especificamente para
+            esses tipos. Também foram empacotados dados de idioma para algumas letras VNI e TCVN3 (ABC)
+            nas versões mais recentes.</p>
+        <p>Imagens a analisar devem ser digitalizadas pelo menos de 200 DPI (dot per
+            inch) a 400 DPI monocromáticas (preto e branco) ou escala de cinzentos. Digitalizar a resoluções
+            superiores não resulta necessariamente em mais precisão, que pode ser
+            actualmente superior a 97% para Vietnamita. E a próxima versão do Tesseract pode ser
+            ainda melhor. Ainda assim, as taxas reais ainda dependem grandemente da qualidade de
+            imagem digitalizada. As definições típicas de digitalização são de 300 DPI e 1 bpp (bit
+            por pixel) preto e branco ou 8 bpp escala de cinzentos não comprimido em formato TIFF ou PNG.</p>
+        <p>O modo <em>Capturar ecrã</em> oferece melhores taxas de reconhecimento em imagens de baixa resolução,
+            tais como impressões de ecrã, redefinindo a escala para 300 DPI.</p>
+        <p>Em complemento ao algoritmo interno de pós-processamento, pode adicionar o seu próprio
+            esquema de substituição de texto via ficheiro de texto delimitado por tabulações e com codificação UTF-8 chamado <code>x.DangAmbigs.txt</code>,
+            onde x é o código ISO639-3 do idioma. São suportadas substituições simples e por expressão regular.</p>
+        <p>Pode pôr parâmetros de controlo init-only e non-init em <code>tessdata/configs/tess_configs</code>
+            e <code>tess_configvars</code>, respectivamente, para modificar o comportamento do Tesseract.
+</p>
+        <p>São fornecidas algumas ferramentas internas para unir várias imagens ou ficheiros PDF,
+            para convenientes operações OCR, ou para dividir um ficheiro PDF em vários mais pequenos, se for
+            muito grande, o que poderia causar excepções de falta de memória.</p>
+        <h3>PÓS-PROCESSAMENTO</h3>
+        <p>Os erros de reconhecimento podem ser geralmente classificados em três categorias. Muitos deles
+            estão relacionados com as maiúsculas — por exemplo: hOa, nhắC — o que pode
+            ser facilmente corrigido com um banal editor Unicode. Muitos outros são resultado
+            do processo OCR, tais como acentos em falta, letras erradas com forma
+            semelhante, etc. — huu – hưu, mang – marg, h0a – hoa, la – 1a, uhìu - nhìn. Estes podem
+            também ser corrigidos com programas de verificação ortográfica. A função interna de pós-processamento
+            ajuda a corrigir muitos dos erros acima mencionados.</p>
+        <p>A última categoria de erros é a mais difícil de detectar, porque são erros semânticos,
+            o que significa que as palavras são válidas no dicionário, mas estão no contexto
+            errado — e.g., tinh – tình, vân – vấn. Estes erros requerem uma leitura
+            atenta e correcção manual de acordo com a imagem original.</p>
+        <p>Seguem-se instruções para corrigir os dois primeiros tipos de erro OCR
+            com a funcionalidade interna:</p>
+        <ol style="margin-top: 0in" start="1" type="1">
+<li>Agrupar linhas: as linhas devem estar agrupadas em parágrafos a que pertençam, uma vez que o
+                OCR transforma cada linha num parágrafo. Use <i>Remover quebras de linha</i>
+                sob o menu <i>Formatar</i>. Note que esta operação pode não ser necessária para poemas.</li>
+            <li>Seleccione <i>Alterar maiúsculas</i>, também sob o menu <i>Formatar</i> e escolha <i>
+                    Maiúsculas
+                    na frase
+                </i> para corrigir a maioria dos erros de maiúsculas. Localize e repare os restantes manualmente.</li>
+            <li>Corrija os erros ortográficos com o <i>verificador ortográfico interno</i>.</li>
+        </ol>
+<p>Durante o processo, conseguem-se eliminar a maioria dos erros comuns. Os restantes,
+            erros semânticos, são poucos, mas requerem edição humana para tornar
+            o documento digitalizado igual ao original.</p>
+        <p>Se tiver questões, por favor, coloque-as no <a href="http://sourceforge.net/projects/vietocr/forums">fórum do VietOCR </a>.</p>
+        <hr>
+</div>
+</body>
+</html>
