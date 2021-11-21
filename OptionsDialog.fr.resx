@@ -142,7 +142,7 @@
     <value>Options</value>
   </data>
   <data name="checkBoxDangAmbigs.Text" xml:space="preserve">
-    <value>Enable</value>
+    <value>Permettre</value>
   </data>
   <data name="labelOutputFormat.ToolTip" xml:space="preserve">
     <value/>
@@ -178,10 +178,10 @@
     <value/>
   </data>
   <data name="checkBoxWatch.Text" xml:space="preserve">
-    <value>Enable</value>
+    <value>Permettre</value>
   </data>
   <data name="labelPath.Text" xml:space="preserve">
-    <value>Path:</value>
+    <value>Chemin:</value>
   </data>
   <data name="labelOutputFormat.Text" xml:space="preserve">
     <value>Format de sortie</value>
@@ -196,7 +196,7 @@
     <value>DangAmbigs.txt</value>
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
-    <value>Watch</value>
+    <value>Cibler</value>
   </data>
   <data name="labelOutput.ToolTip" xml:space="preserve">
     <value/>
@@ -208,7 +208,7 @@
     <value>...</value>
   </data>
   <data name="labelWatch.Text" xml:space="preserve">
-    <value>Watch Folder:</value>
+    <value>Dossier cible:</value>
   </data>
   <data name="buttonOK.Text" xml:space="preserve">
     <value>OK</value>
@@ -232,7 +232,7 @@
     <value>Redresser</value>
   </data>
   <data name="Watch" xml:space="preserve">
-    <value>Watch</value>
+    <value>Cibler</value>
   </data>
   <data name="checkBoxRemoveHyphens.ToolTip" xml:space="preserve">
     <value>Supprimer les traits d'union conditionnels après la suppression des retours à la ligne. </value>
@@ -244,16 +244,16 @@
     <value>Traits d'union</value>
   </data>
   <data name="Batch" xml:space="preserve">
-    <value>Batch</value>
+    <value>Par lot</value>
   </data>
   <data name="BulkBatchOptions" xml:space="preserve">
-    <value>Bulk/Batch Options</value>
+    <value>Options du traitement par lots</value>
   </data>
   <data name="checkBoxCorrectLetterCases.Text" xml:space="preserve">
-    <value>Correct Letter Cases</value>
+    <value>Corriger la casse</value>
   </data>
   <data name="checkBoxPostProcessing.Text" xml:space="preserve">
-    <value>Post Processing</value>
+    <value>Post-traitement</value>
   </data>
   <data name="checkBoxRemoveLineBreaks.Text" xml:space="preserve">
     <value>Supprimer les sauts de ligne</value>
@@ -262,6 +262,6 @@
     <value>Supprimer les lignes</value>
   </data>
   <data name="Please_select_output_format" xml:space="preserve">
-    <value>Please select an output format.</value>
+    <value>Veuillez choisir un format de sortie</value>
   </data>
 </root>
