@@ -121,93 +121,24 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="this.Title" xml:space="preserve">
-    <value>Diviser le PDF</value>
+    <value>Zamenjaj velikost črk</value>
   </data>
-  <data name="this.ToolTip" xml:space="preserve">
-    <value/>
+  <data name="buttonChange.Text" xml:space="preserve">
+    <value>Spremeni</value>
   </data>
-  <data name="buttonBrowseInput.Text" xml:space="preserve">
-    <value>...</value>
+  <data name="buttonClose.Text" xml:space="preserve">
+    <value>Zapri</value>
   </data>
-  <data name="buttonBrowseInput.ToolTip" xml:space="preserve">
-    <value>Parcourir</value>
+  <data name="radioButton1.Text" xml:space="preserve">
+    <value>Kot v stavku</value>
   </data>
-  <data name="buttonBrowseOutput.Text" xml:space="preserve">
-    <value>...</value>
+  <data name="radioButton2.Text" xml:space="preserve">
+    <value>male črke</value>
   </data>
-  <data name="buttonBrowseOutput.ToolTip" xml:space="preserve">
-    <value>Parcourir</value>
+  <data name="radioButton3.Text" xml:space="preserve">
+    <value>VELIKE ČRKE</value>
   </data>
-  <data name="buttonCancel.Text" xml:space="preserve">
-    <value>Annuler</value>
-  </data>
-  <data name="buttonCancel.ToolTip" xml:space="preserve">
-    <value/>
-  </data>
-  <data name="buttonSplit.Text" xml:space="preserve">
-    <value>Diviser</value>
-  </data>
-  <data name="buttonSplit.ToolTip" xml:space="preserve">
-    <value/>
-  </data>
-  <data name="labelFrom.Text" xml:space="preserve">
-    <value>De:</value>
-  </data>
-  <data name="labelFrom.ToolTip" xml:space="preserve">
-    <value/>
-  </data>
-  <data name="labelInput.Text" xml:space="preserve">
-    <value>Entrée:</value>
-  </data>
-  <data name="labelInput.ToolTip" xml:space="preserve">
-    <value/>
-  </data>
-  <data name="labelNumOfPages.Text" xml:space="preserve">
-    <value>Nombre de pages par fichier:</value>
-  </data>
-  <data name="labelNumOfPages.ToolTip" xml:space="preserve">
-    <value/>
-  </data>
-  <data name="labelOutput.Text" xml:space="preserve">
-    <value>Destination:</value>
-  </data>
-  <data name="labelOutput.ToolTip" xml:space="preserve">
-    <value/>
-  </data>
-  <data name="labelTo.Text" xml:space="preserve">
-    <value>Vers:</value>
-  </data>
-  <data name="labelTo.ToolTip" xml:space="preserve">
-    <value/>
-  </data>
-  <data name="radioButtonFiles.Text" xml:space="preserve">
-    <value>Fichiers</value>
-  </data>
-  <data name="radioButtonFiles.ToolTip" xml:space="preserve">
-    <value/>
-  </data>
-  <data name="radioButtonPages.Text" xml:space="preserve">
-    <value>Pages</value>
-  </data>
-  <data name="radioButtonPages.ToolTip" xml:space="preserve">
-    <value/>
-  </data>
-  <data name="textBoxFrom.ToolTip" xml:space="preserve">
-    <value/>
-  </data>
-  <data name="textBoxInput.ToolTip" xml:space="preserve">
-    <value/>
-  </data>
-  <data name="textBoxNumOfPages.Text" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="textBoxNumOfPages.ToolTip" xml:space="preserve">
-    <value/>
-  </data>
-  <data name="textBoxOutput.ToolTip" xml:space="preserve">
-    <value/>
-  </data>
-  <data name="textBoxTo.ToolTip" xml:space="preserve">
-    <value/>
+  <data name="radioButton4.Text" xml:space="preserve">
+    <value>Velike Začetnice Besed</value>
   </data>
 </root>
