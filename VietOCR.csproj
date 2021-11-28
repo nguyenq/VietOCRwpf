@@ -436,7 +436,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.ru.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.sd.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
@@ -452,7 +451,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.vi.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="BulkDialog.zh-Hans.resx">
       <DependentUpon>BulkDialog.xaml</DependentUpon>
@@ -529,6 +527,9 @@
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.sk.resx">
+      <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeCaseDialog.sl.resx">
       <DependentUpon>ChangeCaseDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeCaseDialog.tr.resx">
@@ -891,7 +892,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.lt.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.ne.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
@@ -925,11 +925,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.tr.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.vi.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.zh-Hans.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
