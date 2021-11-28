@@ -32,5 +32,5 @@ vietocr imagefile outputfile [-l lang] [--psm pagesegmode] [text|hocr|pdf|unlv|b
 
 ## Dependencies
 * [Microsoft .NET Framework 4.8 Redistributable](https://dotnet.microsoft.com/download/dotnet-framework/net48)
-* [Microsoft Visual C++ 2019 Redistributable Package](https://visualstudio.microsoft.com/downloads/)
+* [Microsoft Visual C++ 2022 Redistributable Package](https://visualstudio.microsoft.com/downloads/)
 * [GPL Ghostscript](http://www.ghostscript.com)

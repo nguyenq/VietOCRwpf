@@ -11,13 +11,13 @@
         <p>Programoje numatytas ir urminis vaizdų apdorojimas. Programa gali stebėti nurodytą aplanką ir, jame atsiradus naujų failų, automatiškai juos apdoroti, o atpažintus tekstus įrašyti į rezultatams talpinti nurodytą aplanką.</p>
         <h3>REIKALAVIMAI SISTEMAI</h3>
         <p><a href="https://dotnet.microsoft.com/download/dotnet-framework/net48">„Microsoft .NET Framework 4.8“ platforma</a>.</p>
-        <p>Jeigu, bandydami paleisti „VietOCR.NET“, susiduriate su klaidos pranešimu „<i>Exception has been thrown by the target of an invocation</i>“, kompiuteryje turėtumėte įdiegti <a href="https://visualstudio.microsoft.com/downloads/">„Microsoft Visual C++ 2019 Redistributable Package“ platinamąjį paketą</a>.</p>
+        <p>Jeigu, bandydami paleisti „VietOCR.NET“, susiduriate su klaidos pranešimu „<i>Exception has been thrown by the target of an invocation</i>“, kompiuteryje turėtumėte įdiegti <a href="https://visualstudio.microsoft.com/downloads/">„Microsoft Visual C++ 2022 Redistributable Package“ platinamąjį paketą</a>.</p>
         <h3>PROGRAMOS ĮDIEGIMAS</h3>
         <p>Jeigu neturite teisių programos įdiegti kaip įprasta į <code>C:\Program Files</code> aplanką, diegimo metu galėsite nurodyti kitą paskirties aplanką.</p>
         <p>Skenerio programiniam palaikymui yra naudojama „Windows Image Acquisition Library 2.0“ biblioteka.</p>
-        <p>PDF failų palaikymas galimas naudojant „<a href="http://www.ghostscript.com/">GPL Ghostscript</a>“ priemonę. Ją įdiegus, reikia užtikrinti, kad dinaminė biblioteka <code>gsdll64.dll</code> patektų į sisteminės failų paieškos kelią, papildant aplinkos kintamąjį <code>Path</code>, kurį galite redaguoti, atvėrę Valdymo skydą, jame spustelėję piktogramą „Sistema“, tada atvėrę kortelę „Išsamiau“ ir spustelėję mygtuką „Aplinkos kintamieji“. Pavyzdžiui, „GhostScript 9.54.0“ atveju, kintamąjį <code>Path</code> reikėtų papildyti tokia eilute:</p>
+        <p>PDF failų palaikymas galimas naudojant „<a href="http://www.ghostscript.com/">GPL Ghostscript</a>“ priemonę. Ją įdiegus, reikia užtikrinti, kad dinaminė biblioteka <code>gsdll64.dll</code> patektų į sisteminės failų paieškos kelią, papildant aplinkos kintamąjį <code>Path</code>, kurį galite redaguoti, atvėrę Valdymo skydą, jame spustelėję piktogramą „Sistema“, tada atvėrę kortelę „Išsamiau“ ir spustelėję mygtuką „Aplinkos kintamieji“. Pavyzdžiui, „GhostScript 9.55.0“ atveju, kintamąjį <code>Path</code> reikėtų papildyti tokia eilute:</p>
         <blockquote>
-            <p><code>;C:\Program Files\gs\gs9.54.0\bin</code></p>
+            <p><code>;C:\Program Files\gs\gs9.55.0\bin</code></p>
         </blockquote>
         <p>Rašybos tikrinimo funkcija galima panaudojant „Hunspell“ tikrintuvę, kurios <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">žodynų</a> failai (<code>.aff</code>, <code>.dic</code>) turėtų būti patalpinti į aplanką <code>dict</code>, esantį „VietOCR“ programos aplanke.</p>
         <h3>INSTRUKCIJOS</h3>
