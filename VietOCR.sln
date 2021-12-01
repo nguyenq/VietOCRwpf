@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VietOCR", "VietOCR.csproj", "{1DDD5F42-D710-4AB7-BAA9-5A8C2A83EFCF}"
 EndProject
@@ -30,8 +30,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_ResXSortingComparison = CurrentCulture
-		RESX_SortFileContentOnSave = True
 		SolutionGuid = {631CDFDA-3AEA-40F5-8FD9-F9827F80034C}
+		RESX_SortFileContentOnSave = True
+		RESX_ResXSortingComparison = CurrentCulture
 	EndGlobalSection
 EndGlobal
