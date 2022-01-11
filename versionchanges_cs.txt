@@ -180,3 +180,6 @@ Version 5.8.0 (28 November 2021)
 Version 6.0.0 (1 December 2021)
 - Upgrade to Tesseract 5.0.0
 - New UI languages
+
+Version 6.1.0 (11 January 2022)
+- Upgrade to Tesseract 5.0.1
