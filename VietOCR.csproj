@@ -288,10 +288,10 @@
     <Content Include="Data\TessLangDataURL.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="x64\libtesseract510.dll">
+    <Content Include="x64\libtesseract520.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="x86\libtesseract510.dll" />
+    <None Include="x86\libtesseract520.dll" />
     <Resource Include="readme_cs_pt.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
