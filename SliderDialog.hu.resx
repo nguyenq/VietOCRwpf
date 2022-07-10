@@ -121,54 +121,15 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="this.Title" xml:space="preserve">
-    <value>Свойства изображения</value>
+    <value>Képvezérlés</value>
   </data>
-  <data name="buttonOK.Text" xml:space="preserve">
-    <value>OK</value>
+  <data name="buttonApply.Text" xml:space="preserve">
+    <value>Alkalmaz</value>
   </data>
-  <data name="comboBox3.Items" xml:space="preserve">
-    <value>пикселей</value>
+  <data name="buttonCancel.Text" xml:space="preserve">
+    <value>Mégsem</value>
   </data>
-  <data name="comboBox3.Items1" xml:space="preserve">
-    <value>дюймов</value>
-  </data>
-  <data name="comboBox3.Items2" xml:space="preserve">
-    <value>сантиметров</value>
-  </data>
-  <data name="comboBox4.Items" xml:space="preserve">
-    <value>пикселей</value>
-  </data>
-  <data name="comboBox4.Items1" xml:space="preserve">
-    <value>дюймов</value>
-  </data>
-  <data name="comboBox4.Items2" xml:space="preserve">
-    <value>сантиметров</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>DPI</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>DPI</value>
-  </data>
-  <data name="labelBitDepth.Text" xml:space="preserve">
-    <value>Глубина цвета</value>
-  </data>
-  <data name="labelHeight.Text" xml:space="preserve">
-    <value>Высота</value>
-  </data>
-  <data name="labelWidth.Text" xml:space="preserve">
-    <value>Ширина</value>
-  </data>
-  <data name="labelXRes.Text" xml:space="preserve">
-    <value>Разрешение по X</value>
-  </data>
-  <data name="labelYRes.Text" xml:space="preserve">
-    <value>Разрешение по Y</value>
-  </data>
-  <data name="comboBoxUnitH.ToolTip" xml:space="preserve">
-    <value>Единица</value>
-  </data>
-  <data name="comboBoxUnitW.ToolTip" xml:space="preserve">
-    <value>Единица</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Címke</value>
   </data>
 </root>

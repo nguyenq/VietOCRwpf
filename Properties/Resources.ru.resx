@@ -167,7 +167,7 @@
     <value>Пожалуйста, проверьте выходной(ые) файл(ы) в</value>
   </data>
   <data name="Clear_Recent_Files" xml:space="preserve">
-    <value>_Clear Recent Files</value>
+    <value>О_чистить последние файлы</value>
   </data>
   <data name="Contrast" xml:space="preserve">
     <value>Контраст</value>
@@ -344,37 +344,37 @@
     <value>Справка</value>
   </data>
   <data name="ConvertPDFcompleted" xml:space="preserve">
-    <value>Convert PDF completed. </value>
+    <value>Преобразование PDF завершено. </value>
   </data>
   <data name="ConvertPDF_running" xml:space="preserve">
-    <value>Convert PDF running...</value>
+    <value>Выполняется преобразование PDF...</value>
   </data>
   <data name="Select_Input_PDF" xml:space="preserve">
-    <value>Select Input PDF</value>
+    <value>Выбрать входной PDF</value>
   </data>
   <data name="beginning" xml:space="preserve">
-    <value>beginning</value>
+    <value>начала</value>
   </data>
   <data name="Cannot_find_" xml:space="preserve">
-    <value>Cannot find </value>
+    <value>Не удалось найти </value>
   </data>
   <data name="Continue_search_from_" xml:space="preserve">
-    <value>Continue search from </value>
+    <value>Продолжить поиск с </value>
   </data>
   <data name="end" xml:space="preserve">
-    <value>end</value>
+    <value>конца</value>
   </data>
   <data name="Regex_Error" xml:space="preserve">
-    <value>Regex Error</value>
+    <value>Ошибка в регулярном выражении</value>
   </data>
   <data name="ReplacedOccurrence" xml:space="preserve">
-    <value>Replaced {0} occurrence(s).</value>
+    <value>Заменено вхождений: {0}.</value>
   </data>
   <data name="Double_sided" xml:space="preserve">
-    <value>Double-sided</value>
+    <value>Двусторонняя</value>
   </data>
   <data name="Single_sided" xml:space="preserve">
-    <value>Single-sided</value>
+    <value>Односторонняя</value>
   </data>
   <data name="File_not_exist" xml:space="preserve">
     <value>Входной файл не существует.</value>

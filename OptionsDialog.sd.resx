@@ -244,16 +244,16 @@
     <value>اعرابون</value>
   </data>
   <data name="Batch" xml:space="preserve">
-    <value>Batch</value>
+    <value>بيچ</value>
   </data>
   <data name="BulkBatchOptions" xml:space="preserve">
     <value>Bulk/Batch Options</value>
   </data>
   <data name="checkBoxCorrectLetterCases.Text" xml:space="preserve">
-    <value>Correct Letter Cases</value>
+    <value>اکرن کي  درست ڪريو</value>
   </data>
   <data name="checkBoxPostProcessing.Text" xml:space="preserve">
-    <value>Post Processing</value>
+    <value>آخري سنوار</value>
   </data>
   <data name="checkBoxRemoveLineBreaks.Text" xml:space="preserve">
     <value>سٽن جي ٽوڙ کي ختم ڪريو</value>
@@ -262,6 +262,6 @@
     <value>سٽن کي تلف ڪريو</value>
   </data>
   <data name="Please_select_output_format" xml:space="preserve">
-    <value>Please select an output format.</value>
+    <value>آئوٽ پٽ فارميٽ کي چونڊيو</value>
   </data>
 </root>

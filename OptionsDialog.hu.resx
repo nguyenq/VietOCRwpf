@@ -117,58 +117,151 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="tabPage1.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="btnOutput.ToolTip" xml:space="preserve">
+    <value>Böngészés</value>
+  </data>
+  <data name="btnWatch.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="labelWatch.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="tabPage2.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="tabControl1.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="labelOutput.Text" xml:space="preserve">
+    <value>Kimeneti mappa:</value>
+  </data>
   <data name="this.Title" xml:space="preserve">
-    <value>Свойства изображения</value>
+    <value>Opciók</value>
+  </data>
+  <data name="checkBoxDangAmbigs.Text" xml:space="preserve">
+    <value>Bekapcsol</value>
+  </data>
+  <data name="labelOutputFormat.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="textBoxWatch.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="textBoxDangAmbigs.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="textBoxOutput.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="btnDangAmbigs.ToolTip" xml:space="preserve">
+    <value>Böngészés</value>
+  </data>
+  <data name="labelPath.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="checkBoxDangAmbigs.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="checkBoxWatch.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="openFileDialog1.Filter" xml:space="preserve">
+    <value>Szövegfájlok (*.txt)|*.txt</value>
+  </data>
+  <data name="buttonCancel.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="comboBoxOutputFormat.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="checkBoxWatch.Text" xml:space="preserve">
+    <value>Bekapcsol</value>
+  </data>
+  <data name="labelPath.Text" xml:space="preserve">
+    <value>Útvonal:</value>
+  </data>
+  <data name="labelOutputFormat.Text" xml:space="preserve">
+    <value>Kimeneti formátum</value>
+  </data>
+  <data name="btnDangAmbigs.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="btnWatch.ToolTip" xml:space="preserve">
+    <value>Böngészés</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>DangAmbigs.txt</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Figyelés</value>
+  </data>
+  <data name="labelOutput.ToolTip" xml:space="preserve">
+    <value/>
+  </data>
+  <data name="buttonCancel.Text" xml:space="preserve">
+    <value>Mégsem</value>
+  </data>
+  <data name="btnOutput.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="labelWatch.Text" xml:space="preserve">
+    <value>Figyelt mappa:</value>
   </data>
   <data name="buttonOK.Text" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="comboBox3.Items" xml:space="preserve">
-    <value>пикселей</value>
+  <data name="buttonOK.ToolTip" xml:space="preserve">
+    <value/>
   </data>
-  <data name="comboBox3.Items1" xml:space="preserve">
-    <value>дюймов</value>
+  <data name="checkBoxRemoveHyphens.Text" xml:space="preserve">
+    <value>Távolítsa el a lágy kötőjeleket</value>
   </data>
-  <data name="comboBox3.Items2" xml:space="preserve">
-    <value>сантиметров</value>
+  <data name="checkBoxReplaceHyphens.Text" xml:space="preserve">
+    <value>Cserélje le a kötőjeleket lágy kötőjelekre</value>
   </data>
-  <data name="comboBox4.Items" xml:space="preserve">
-    <value>пикселей</value>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Hyphens</value>
   </data>
-  <data name="comboBox4.Items1" xml:space="preserve">
-    <value>дюймов</value>
+  <data name="tabPage3.ToolTip" xml:space="preserve">
+    <value/>
   </data>
-  <data name="comboBox4.Items2" xml:space="preserve">
-    <value>сантиметров</value>
+  <data name="checkBoxDeskew.Text" xml:space="preserve">
+    <value>Ferdeségkorrekció</value>
   </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>DPI</value>
+  <data name="Watch" xml:space="preserve">
+    <value>Figyelés</value>
   </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>DPI</value>
+  <data name="checkBoxRemoveHyphens.ToolTip" xml:space="preserve">
+    <value>Távolítsa el a lágy kötőjeleket a sortörések eltávolítása után</value>
   </data>
-  <data name="labelBitDepth.Text" xml:space="preserve">
-    <value>Глубина цвета</value>
+  <data name="checkBoxReplaceHyphens.ToolTip" xml:space="preserve">
+    <value>Helyesírás-ellenőrző szótár segítségével cserélje le a sorok végén lévő kötőjeleket lágy kötőjelekre</value>
   </data>
-  <data name="labelHeight.Text" xml:space="preserve">
-    <value>Высота</value>
+  <data name="Hyphens" xml:space="preserve">
+    <value>Hyphens</value>
   </data>
-  <data name="labelWidth.Text" xml:space="preserve">
-    <value>Ширина</value>
+  <data name="Batch" xml:space="preserve">
+    <value>Kötegelt</value>
   </data>
-  <data name="labelXRes.Text" xml:space="preserve">
-    <value>Разрешение по X</value>
+  <data name="BulkBatchOptions" xml:space="preserve">
+    <value>Tömeges/kötegelt opciók</value>
   </data>
-  <data name="labelYRes.Text" xml:space="preserve">
-    <value>Разрешение по Y</value>
+  <data name="checkBoxCorrectLetterCases.Text" xml:space="preserve">
+    <value>Betűkorrekció</value>
   </data>
-  <data name="comboBoxUnitH.ToolTip" xml:space="preserve">
-    <value>Единица</value>
+  <data name="checkBoxPostProcessing.Text" xml:space="preserve">
+    <value>Utókezelés</value>
   </data>
-  <data name="comboBoxUnitW.ToolTip" xml:space="preserve">
-    <value>Единица</value>
+  <data name="checkBoxRemoveLineBreaks.Text" xml:space="preserve">
+    <value>Távolítsa el a sortöréseket</value>
+  </data>
+  <data name="checkBoxRemoveLines.Text" xml:space="preserve">
+    <value>Vonalak eltávolítása</value>
+  </data>
+  <data name="Please_select_output_format" xml:space="preserve">
+    <value>Kérem válasszon egy kimeneti formátumot.</value>
   </data>
 </root>
