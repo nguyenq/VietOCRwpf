@@ -121,28 +121,28 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
   <data name="this.Title" xml:space="preserve">
-    <value>Свойства изображения</value>
+    <value>Képbeállítások</value>
   </data>
   <data name="buttonOK.Text" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="comboBox3.Items" xml:space="preserve">
-    <value>пикселей</value>
+    <value>pixel</value>
   </data>
   <data name="comboBox3.Items1" xml:space="preserve">
-    <value>дюймов</value>
+    <value>hüvelyk</value>
   </data>
   <data name="comboBox3.Items2" xml:space="preserve">
-    <value>сантиметров</value>
+    <value>cm</value>
   </data>
   <data name="comboBox4.Items" xml:space="preserve">
-    <value>пикселей</value>
+    <value>pixel</value>
   </data>
   <data name="comboBox4.Items1" xml:space="preserve">
-    <value>дюймов</value>
+    <value>hüvelyk</value>
   </data>
   <data name="comboBox4.Items2" xml:space="preserve">
-    <value>сантиметров</value>
+    <value>cm</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
     <value>DPI</value>
@@ -151,24 +151,24 @@
     <value>DPI</value>
   </data>
   <data name="labelBitDepth.Text" xml:space="preserve">
-    <value>Глубина цвета</value>
+    <value>Bitmélység</value>
   </data>
   <data name="labelHeight.Text" xml:space="preserve">
-    <value>Высота</value>
+    <value>Magasság</value>
   </data>
   <data name="labelWidth.Text" xml:space="preserve">
-    <value>Ширина</value>
+    <value>Szélesség</value>
   </data>
   <data name="labelXRes.Text" xml:space="preserve">
-    <value>Разрешение по X</value>
+    <value>X-felbontás</value>
   </data>
   <data name="labelYRes.Text" xml:space="preserve">
-    <value>Разрешение по Y</value>
+    <value>Y-felbontás</value>
   </data>
   <data name="comboBoxUnitH.ToolTip" xml:space="preserve">
-    <value>Единица</value>
+    <value>Egység</value>
   </data>
   <data name="comboBoxUnitW.ToolTip" xml:space="preserve">
-    <value>Единица</value>
+    <value>Egység</value>
   </data>
 </root>

@@ -117,58 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"/>
+  <data name="labelFind.Text" xml:space="preserve">
+    <value>Keressen _valamit:</value>
+  </data>
+  <data name="labelReplace.Text" xml:space="preserve">
+    <value>_Cseréje ezzel:</value>
+  </data>
+  <data name="chkboxMatchCase.Text" xml:space="preserve">
+    <value>E_gyező karakter</value>
+  </data>
+  <data name="chkboxMatchDiacritics.Text" xml:space="preserve">
+    <value>Match D_iacritics</value>
+  </data>
+  <data name="radiobtnUp.Text" xml:space="preserve">
+    <value>Keresés _felfelé</value>
+  </data>
+  <data name="radiobtnDown.Text" xml:space="preserve">
+    <value>Keresés _lefelé</value>
+  </data>
+  <data name="grpboxDirection.Text" xml:space="preserve">
+    <value>Irány</value>
+  </data>
+  <data name="btnFindNext.Text" xml:space="preserve">
+    <value>_Következő keresése</value>
+  </data>
+  <data name="btnReplace.Text" xml:space="preserve">
+    <value>_Csere</value>
+  </data>
+  <data name="btnReplaceAll.Text" xml:space="preserve">
+    <value>Cserélje _mindet</value>
+  </data>
+  <data name="btnClose.Text" xml:space="preserve">
+    <value>_Bezár</value>
+  </data>
+  <data name="chkboxMatchRegex.Text" xml:space="preserve">
+    <value>Reguláris ki_fejezés</value>
+  </data>
   <data name="this.Title" xml:space="preserve">
-    <value>Свойства изображения</value>
+    <value>Keresés és csere</value>
   </data>
-  <data name="buttonOK.Text" xml:space="preserve">
-    <value>OK</value>
-  </data>
-  <data name="comboBox3.Items" xml:space="preserve">
-    <value>пикселей</value>
-  </data>
-  <data name="comboBox3.Items1" xml:space="preserve">
-    <value>дюймов</value>
-  </data>
-  <data name="comboBox3.Items2" xml:space="preserve">
-    <value>сантиметров</value>
-  </data>
-  <data name="comboBox4.Items" xml:space="preserve">
-    <value>пикселей</value>
-  </data>
-  <data name="comboBox4.Items1" xml:space="preserve">
-    <value>дюймов</value>
-  </data>
-  <data name="comboBox4.Items2" xml:space="preserve">
-    <value>сантиметров</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>DPI</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>DPI</value>
-  </data>
-  <data name="labelBitDepth.Text" xml:space="preserve">
-    <value>Глубина цвета</value>
-  </data>
-  <data name="labelHeight.Text" xml:space="preserve">
-    <value>Высота</value>
-  </data>
-  <data name="labelWidth.Text" xml:space="preserve">
-    <value>Ширина</value>
-  </data>
-  <data name="labelXRes.Text" xml:space="preserve">
-    <value>Разрешение по X</value>
-  </data>
-  <data name="labelYRes.Text" xml:space="preserve">
-    <value>Разрешение по Y</value>
-  </data>
-  <data name="comboBoxUnitH.ToolTip" xml:space="preserve">
-    <value>Единица</value>
-  </data>
-  <data name="comboBoxUnitW.ToolTip" xml:space="preserve">
-    <value>Единица</value>
+  <data name="chkboxMatchWholeWord.Text" xml:space="preserve">
+    <value>Teljes _szöveg egyezés</value>
   </data>
 </root>

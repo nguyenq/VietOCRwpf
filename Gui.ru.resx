@@ -124,10 +124,10 @@
     <value>_Автообрезка</value>
   </data>
   <data name="bilateralToolStripMenuItem.Text" xml:space="preserve">
-    <value>_Двусторонние</value>
+    <value>Дусто_ронний</value>
   </data>
   <data name="brightenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Яркость...</value>
+    <value>_Яркость...</value>
   </data>
   <data name="bulkOCRToolStripMenuItem.Text" xml:space="preserve">
     <value>Пакетное распознавание...</value>
@@ -142,136 +142,136 @@
     <value>_Изменить регистр...</value>
   </data>
   <data name="commandToolStripMenuItem.Text" xml:space="preserve">
-    <value>Действия</value>
+    <value>_Команда</value>
   </data>
   <data name="contrastToolStripMenuItem.Text" xml:space="preserve">
-    <value>Контраст...</value>
+    <value>_Контрастность...</value>
   </data>
   <data name="cropToolStripMenuItem.Text" xml:space="preserve">
-    <value>_Обрезать</value>
+    <value>Об_резать</value>
   </data>
   <data name="deskewToolStripMenuItem.Text" xml:space="preserve">
-    <value>Исправить перекос</value>
+    <value>Устранение _перекоса</value>
   </data>
   <data name="downloadLangDataToolStripMenuItem.Text" xml:space="preserve">
-    <value>Скачать данные по языкам...</value>
+    <value>_Загрузить данные языков...</value>
   </data>
   <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>Файл</value>
+    <value>_Файл</value>
   </data>
   <data name="filterToolStripMenuItem.Text" xml:space="preserve">
-    <value>Фильтры</value>
+    <value>_Фильтры</value>
   </data>
   <data name="fontToolStripMenuItem.Text" xml:space="preserve">
-    <value>Шрифт...</value>
+    <value>_Шрифт...</value>
   </data>
   <data name="formatToolStripMenuItem.Text" xml:space="preserve">
-    <value>Формат</value>
+    <value>Ф_ормат</value>
   </data>
   <data name="gammaToolStripMenuItem.Text" xml:space="preserve">
-    <value>_Гамма...</value>
+    <value>Г_амма</value>
   </data>
   <data name="grayscaleToolStripMenuItem.Text" xml:space="preserve">
-    <value>Обесцвечивание</value>
+    <value>Оттенки _серого</value>
   </data>
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
-    <value>Справка</value>
+    <value>_Справка</value>
   </data>
   <data name="helpToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Справка</value>
+    <value>С_правка VietOCR.NET</value>
   </data>
   <data name="imageToolStripMenuItem.Text" xml:space="preserve">
-    <value>Изображение</value>
+    <value>_Изображение</value>
   </data>
   <data name="invertToolStripMenuItem.Text" xml:space="preserve">
-    <value>Обратить цвета</value>
+    <value>_Инвертировать</value>
   </data>
   <data name="menuStrip1.Text" xml:space="preserve">
     <value>menuStrip1</value>
   </data>
   <data name="mergePdfToolStripMenuItem.Text" xml:space="preserve">
-    <value>Объединить PDF...</value>
+    <value>Объединить _PDF...</value>
   </data>
   <data name="mergeTiffToolStripMenuItem.Text" xml:space="preserve">
-    <value>Объединить TIFF...</value>
+    <value>Объединить _TIFF...</value>
   </data>
   <data name="metadataToolStripMenuItem.Text" xml:space="preserve">
-    <value>Свойства...</value>
+    <value>С_войства...</value>
   </data>
   <data name="monochromeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Черно-белое</value>
+    <value>_Чёрно-белый</value>
   </data>
   <data name="oCRAllPagesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Распознать все</value>
+    <value>Распознать _все</value>
   </data>
   <data name="oCRToolStripMenuItem.Text" xml:space="preserve">
-    <value>Распознать</value>
+    <value>_Распознать</value>
   </data>
   <data name="oemToolStripMenuItem.Text" xml:space="preserve">
-    <value>OCR _Engine Mode</value>
+    <value>Режим OCR-_движка</value>
   </data>
   <data name="openToolStripMenuItem.Text" xml:space="preserve">
-    <value>Открыть...</value>
+    <value>_Открыть...</value>
   </data>
   <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Параметры...</value>
+    <value>_Параметры...</value>
   </data>
   <data name="postprocessToolStripMenuItem.Text" xml:space="preserve">
-    <value>Обратбока</value>
+    <value>_Постобработка</value>
   </data>
   <data name="psmToolStripMenuItem.Text" xml:space="preserve">
-    <value>Режим разбиения страницы</value>
+    <value>Режим _сегментации страницы</value>
   </data>
   <data name="quitToolStripMenuItem.Text" xml:space="preserve">
-    <value>Выход</value>
+    <value>В_ыход</value>
   </data>
   <data name="recentFilesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Последние файлы</value>
+    <value>_Последние файлы</value>
   </data>
   <data name="removeLineBreaksToolStripMenuItem.Text" xml:space="preserve">
-    <value>Удалить переносы</value>
+    <value>_Удалять разрывы строк</value>
   </data>
   <data name="removeLinesToolStripMenuItem.Text" xml:space="preserve">
     <value>_Удалить линии</value>
   </data>
   <data name="saveAsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Сохранить как...</value>
+    <value>Сохранить _как...</value>
   </data>
   <data name="saveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Сохранить</value>
+    <value>_Сохранить</value>
   </data>
   <data name="scanToolStripMenuItem.Text" xml:space="preserve">
-    <value>Сканировать...</value>
+    <value>Ска_нировать...</value>
   </data>
   <data name="screenshotModeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Решим скриншота</value>
+    <value>Режим _скриншота</value>
   </data>
   <data name="segmentedRegionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>_Показать сегментированные регионы</value>
+    <value>Показать с_егментированные области</value>
   </data>
   <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Настройки</value>
+    <value>Н_астройки</value>
   </data>
   <data name="sharpenToolStripMenuItem.Text" xml:space="preserve">
-    <value>Резкость</value>
+    <value>_Резкость</value>
   </data>
   <data name="smoothToolStripMenuItem.Text" xml:space="preserve">
-    <value>Размывание</value>
+    <value>Раз_мытие</value>
   </data>
   <data name="splitPdfToolStripMenuItem.Text" xml:space="preserve">
-    <value>Разбить PDF...</value>
+    <value>_Разделить PDF...</value>
   </data>
   <data name="splitTiffToolStripMenuItem.Text" xml:space="preserve">
-    <value>_Разбить TIFF</value>
+    <value>Раздел_ить TIFF...</value>
   </data>
   <data name="statusStrip1.Text" xml:space="preserve">
     <value>statusStrip1</value>
   </data>
   <data name="thresholdToolStripMenuItem.Text" xml:space="preserve">
-    <value>_Порог...</value>
+    <value>_Порог</value>
   </data>
   <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Инструменты</value>
+    <value>Инструм_енты</value>
   </data>
   <data name="toolStrip1.Text" xml:space="preserve">
     <value>toolStrip1</value>
@@ -301,7 +301,7 @@
     <value>Следующая страница</value>
   </data>
   <data name="toolStripBtnOCR.Text" xml:space="preserve">
-    <value>Распознование</value>
+    <value>Распознавание</value>
   </data>
   <data name="toolStripBtnOCR.ToolTipText" xml:space="preserve">
     <value>Распознать</value>
@@ -322,13 +322,13 @@
     <value>Против часовой</value>
   </data>
   <data name="toolStripBtnRotateCCW.ToolTipText" xml:space="preserve">
-    <value>Повернуть против часовой</value>
+    <value>Повернуть против часовой стрелки</value>
   </data>
   <data name="toolStripBtnRotateCW.Text" xml:space="preserve">
     <value>По часовой</value>
   </data>
   <data name="toolStripBtnRotateCW.ToolTipText" xml:space="preserve">
-    <value>Повернуть по часовой</value>
+    <value>Повернуть по часовой стрелке</value>
   </data>
   <data name="toolStripBtnSave.Text" xml:space="preserve">
     <value>Сохранить</value>
@@ -361,19 +361,19 @@
     <value>Вставить изображение из буфера обмена</value>
   </data>
   <data name="toolStripButtonPostProcess.ToolTipText" xml:space="preserve">
-    <value>Обратбока</value>
+    <value>Постобработка</value>
   </data>
   <data name="toolStripButtonRemoveLineBreaks.ToolTipText" xml:space="preserve">
-    <value>Удалить переносы</value>
+    <value>Удалить разрывы строк</value>
   </data>
   <data name="toolStripButtonSpellCheck.ToolTipText" xml:space="preserve">
     <value>Проверка орфографии</value>
   </data>
   <data name="toolStripDropDownButtonSegmentedRegions.Text" xml:space="preserve">
-    <value>сегментированные регионы</value>
+    <value>Сегментированные области</value>
   </data>
   <data name="toolStripDropDownButtonSegmentedRegions.ToolTipText" xml:space="preserve">
-    <value>сегментированные регионы</value>
+    <value>Сегментированные области</value>
   </data>
   <data name="toolStripLabelLanguage.Text" xml:space="preserve">
     <value>Язык распознавания</value>
@@ -403,7 +403,7 @@
     <value>Изображение:</value>
   </data>
   <data name="toolStripStatusLabelDim.ToolTipText" xml:space="preserve">
-    <value>Размер изображения и глубина бита</value>
+    <value>Размер изображения и битовая глубина</value>
   </data>
   <data name="toolStripStatusLabelDimValue.Text" xml:space="preserve">
     <value>0 × 0px  0bpp</value>
@@ -412,13 +412,13 @@
     <value>OEM:</value>
   </data>
   <data name="toolStripStatusLabelOEM.ToolTipText" xml:space="preserve">
-    <value>OCR Engine Mode</value>
+    <value>Режим OCR-движка</value>
   </data>
   <data name="toolStripStatusLabelPSM.Text" xml:space="preserve">
     <value>PSM:</value>
   </data>
   <data name="toolStripStatusLabelPSM.ToolTipText" xml:space="preserve">
-    <value>Режим разбиение на страницы</value>
+    <value>Режим сегментации страницы</value>
   </data>
   <data name="toolStripStatusLabelSM.Text" xml:space="preserve">
     <value>Режим скриншота:</value>
@@ -427,28 +427,28 @@
     <value>Режим скриншота</value>
   </data>
   <data name="uiLanguageToolStripMenuItem.Text" xml:space="preserve">
-    <value>Язык интерфейса</value>
+    <value>Язык _интерфейса</value>
   </data>
   <data name="undoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Отменить</value>
+    <value>От_менить</value>
   </data>
   <data name="vietInputMethodToolStripMenuItem.Text" xml:space="preserve">
-    <value>Режим ввода Viet</value>
+    <value>_Метод ввода Viet</value>
   </data>
   <data name="wordWrapToolStripMenuItem.Text" xml:space="preserve">
-    <value>Перенос слов</value>
+    <value>_Перенос слов</value>
   </data>
   <data name="despeckleToolStripMenuItem.Text" xml:space="preserve">
-    <value>Remove Speckles</value>
+    <value>Удалить мусор</value>
   </data>
   <data name="upto2x2ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Up to 2x2</value>
+    <value>2x2 и мельче</value>
   </data>
   <data name="upto3x3ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Up to 3x3</value>
+    <value>3x3 и мельче</value>
   </data>
   <data name="convertPdfToolStripMenuItem.Text" xml:space="preserve">
-    <value>_Convert PDF to TIFF...</value>
+    <value>_Преобразовать PDF в TIFF...</value>
   </data>
   <data name="toolStripBtnFind.Text" xml:space="preserve">
     <value>Найти и заменить</value>
@@ -457,12 +457,12 @@
     <value>Найти и заменить</value>
   </data>
   <data name="doubleSidedPageToolStripMenuItem.Text" xml:space="preserve">
-    <value>Double-sided Page</value>
+    <value>Двусторонняя страница</value>
   </data>
   <data name="toolStripStatusLabelPage.Text" xml:space="preserve">
     <value>Страница:</value>
   </data>
   <data name="toolStripStatusLabelPage.ToolTipText" xml:space="preserve">
-    <value>Sided Page</value>
+    <value>Односторонняя страница</value>
   </data>
 </root>

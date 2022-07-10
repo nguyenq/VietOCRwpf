@@ -256,7 +256,7 @@
     <value>Постобработка</value>
   </data>
   <data name="checkBoxRemoveLineBreaks.Text" xml:space="preserve">
-    <value>Удалить переносы</value>
+    <value>Удалить разрывы строк</value>
   </data>
   <data name="checkBoxRemoveLines.Text" xml:space="preserve">
     <value>Удалить линии</value>

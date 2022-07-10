@@ -1,0 +1,93 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>VietOCR.NET - .NET WPF GUI kasutajaliides Tesseracti tekstituvastusele</title>
+</head>
+<body>
+    <div>
+        <h2 align="center">VietOCR.NET</h2>
+        <h3>KIRJELDUS</h3>
+        <p><a href="http://vietocr.sourceforge.net/">VietOCR.NET</a>
+            on .NET WPF kasutajaliides <a href="https://github.com/tesseract-ocr">Tesseracti tekstituvastusmootorile</a>, mis võimaldab tuvastada teksti tavalisematelt pildivormingutest
+            ja mitmeleheküljelistelt piltidelt. Järeltöötlus võimaldab parandada vigasid,
+            mis tulevad tekstituvastusel sageli ette ning niimoodi saad täpsema tulemuse.
+            Programm töötab ka käsurealt.</p>
+        <p>Nüüd on toetatud ka hulgitöötlus. Programm jälgib kausta pandud uusi faile, sooritab
+neis automaatselt tekstittuvastuse ning paneb tulemuseks saadud failid väljundkausta.</p>
+        <h3>SÜSTEEMINÕUDED</h3>
+        <p><a href="https://dotnet.microsoft.com/download/dotnet-framework/net48">Microsoft .NET Framework 4.8</a>.</p>
+        <p>Kui sulle näidatakse veateadet &quot;<i>Exception has been thrown by the target of an invocation</i>&quot;, siis palun paigalda
+            <a href="https://visualstudio.microsoft.com/downloads/">Microsoft Visual C++ 2022 Redistributable Package</a>.</p>
+        <h3>PAIGALDAMINE</h3>
+        <p>Kui sul pole õigusi installida programme kausta <code>C:\Program Files</code>,
+            siis saad paigaldamise ajal määrata mõne teise kausta.</p>
+        <p>Skännimise tuge pakub Windowsi Image Acquisition Library v2.0.</p>
+        <p>PDF tuge pakub <a href="http://www.ghostscript.com/">GPL Ghostscript</a>. Pärast selle teegi paigaldamist, veendu, et sünaamilise laadimise teek <code>gsdll64.dll</code> oleks süsteemi muutujates määratud seades <code>Path</code>            Ava Windows&#39; Control Panel &gt; System &gt; Advanced tab &gt; Environment Variables. Võid lisada <code>Path</code> muutuja väärtuse GS versioonile 9.55.0:</p>
+        <blockquote>
+            <p><code>;C:\Program Files\gs\gs9.55.0\bin</code></p>
+        </blockquote>
+        <p>Õigekirjakontrolli eest hoolitseb Hunspell, mille <a href="http://wiki.services.openoffice.org/wiki/Dictionaries">sõnastiku</a> failid (<code>.aff</code>, <code>.dic</code>) peaks olema pandud VietOCR kausta <code>dict</code>.</p>
+        <h3>JUHENDID</h3>
+        <p><a href="https://github.com/tesseract-ocr/tessdata">Tesseracti keelepakid</a>
+            peaks lahti pakkima programmifailide alamkausta <code>tesseract</code>.
+            Andmefailid, mille nimed algavad ISO639-3 koodidega, pannakse alamkausta <code>tessdata</code>.
+            VietOCR võimaldab soovitud keelepakke alla laadida ja paigaldada kasutades
+menüüs olevat valikut <em>Laadi keele andmed alla...</em>. Sõltuvalt kausta<code>tessdata</code>
+asukohast võib juhtuda, et sa pead käivitama programmi administraatorina,
+et saaksid allalaaditud andmed paigaldada süsteemikausta
+nagu näiteks <code>C:\Program Files</code>.</p>
+        <p>Vietnami keeleandmed on loodud fontidega Times New Roman, Arial, Verdana,
+            ja Courier New. Seega töötab tekstituvastus paremini piltidel, millel on sarnased
+            fondid. Teiste fontide puhul on tavaliselt vaja Tesseracti <a href="https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract">õpetada</a>
+neid fonte ära tundma ning luua teised keelepakid spetsiaalselt nende fontide jaoks.
+            Viimases versioonis on ka keeleandmed  mõningate VNI ja TCVN3 (ABC) fontide
+jaoks.</p>
+        <p>Tekstituvastuse jaoks peaksid pildid olema skännitud vähemalt resolutsiooniga 200 DPI (punkti
+tolli kohta) kuni 400 DPI ning ühevärvilisena (must-valge) või halltoonides. Kõrgema
+resolutsiooniga skännimine ei anna tingimata paremat tulemust. Vietnami keele jaoks on täpsus
+praegu kõrgem kui 97% ning järgmine Tesseracti versioon võib seda veelgi parandada. Isegi seda
+arvesse võttes, sõltub tulemus siiski skännitud pildi kvaliteedist. Tüüpiline eelistus skännimise
+jaoks on 300 DPI ja 1 bpp (bitti piksli kohta) must-valge või 8 bpp hallskaalas pakkimata
+TIFF või PNG vorming.</p>
+        <p><em>Ekraanipildi režiim</em> võimaldab paremini tuvastada madalama resolutsiooniga pilte nagu
+            näiteks ekraanipildid, tõstes nende punktitiheduse 300 DPI-ni.</p>
+        <p>Lisaks sisseehitatud teksti järeltöötluse algoritmile võid lisada oma kohandatud teksti asendamise
+skeeme kasutades UTF-8 tabulaatoritega eraldatud tekstifaile nimega <code>x.DangAmbigs.txt</code>,
+            kus x on ISO639-3 keelekood. Toetatud on lihtteksti asendused ja Regex asendused.</p>
+        <p>Parameetritele <code>tessdata/configs/tess_configs</code> ja <code>tess_configvars</code> failidele
+võib lisada parameetrid init-only ja non-init control, et muuta Tesseract&#39;i
+            käitumist.</p>
+        <p>Saadaval on mõned sisseehitatud tööriistad et liita kokku mitu pilti või PDF-faili üheks failiks,
+            ei neid mugavalt tekstituvastuse toiminguteks kasutada või siis jagada liiga suur PDF-fail
+            väiksemateks, et vältida mälupuudusest tekkinud veateateid.</p>
+        <h3>JÄRELTÖÖTLUS</h3>
+        <p>Tekstituvastusvead saab üldiselt jagada kolme kategooriasse. Paljud vead on seotud
+suur-või väike tähtedega — näiteks: hOa, nhắC — mida võib kergesti parandada Unicode
+tekstiredaktoritega. Mitmed teised tekstituvastuse vead on diakriitiliste märkide segamini
+ajamine sellega sarnase kujuga märkidega nt. — huu – hưu, mang – marg, h0a – hoa, la – 1a,
+uhìu - nhìn. Ka neid võib kergesti parandada õigekeelekontrolliga. Sisseehitatud järeltöötluse
+funktsioon võib paljude selliste vigade puhul abiks olla.</p>
+        <p>Viimase kategooria vigade parandamine on kõige raskem, kuna need on mõttega seotud vead,
+mis tähendab, et need sõnad on sõnastikus olemas, aga need ei sobi tähenduse poolest konteksti.
+Nt.— e.g., tinh – tình, vân – vấn. Selliste vigade parandamiseks peab tekstitoimetaja need üle
+lugema ning vead ise käsitsi vastavalt algsele pildile parandama.</p>
+        <p>Siin on juhendid, kuidas parandada esimesed kaks enamlevinud tekstituvastuse viga
+kasutades sisseehitatud funktsionaalsust:</p>
+        <ol style="margin-top: 0in" start="1" type="1">
+<li>Grupeeri read. Read grupeeritakse lõikude järgi.
+                Iga lõik pannakse eraldi ühele reale. Kasuta menüüs <i>Vorming</i> olevat
+valikut <i>Eemalda reavahetused</i>. Pane tähele, et luuletuste jaoks pole see hea valik.</li>
+            <li>Tee menüüst <i>Vorming</i> valik <i>Muuda tekstisuurust</i> ning sealt <i>
+                    Suurtähed
+                    lause alguses
+                </i>, et parandada enimlevinud suutähtede probleemid. Tuvasta ülejäänud probleemid teksti üle vaadates.</li>
+            <li>Paranda kirjavigu kasutades sisseehitatud <i>Õigekirjakontrolli</i>.</li>
+        </ol>
+<p>Ülaltoodud tööprotsessiga saab parandada enimlevinud vead.
+            Ülejäänud vigu ei peaks olema väga palju, aga nende parandamine nõuab inimese poolt
+ teksti üle vaatamist ja vajalike paranduste tegemist, et saada originaalile vastav tekstidokument</p>
+        <p>Kui sul on veel küsimusi, siis palun postita need <a href="http://sourceforge.net/projects/vietocr/forums">VietOCR foorumisse</a>.</p>
+        <hr>
+</div>
+</body>
+</html>

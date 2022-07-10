@@ -118,14 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="_of_" xml:space="preserve">
-    <value> of </value>
+    <value>/</value>
   </data>
   <data name="About_VietOCR" xml:space="preserve">
     <value>VietOCR info</value>
   </data>
   <data name="Access_denied" xml:space="preserve">
-    <value>You have no write access to "{0}" folder.
-Please run the program as administrator.</value>
+    <value>Sul pole kaustas "{0}" kirjutusõiguseid.
+Palun käivita programm administraatorina.</value>
   </data>
   <data name="Add_to_Dictionary" xml:space="preserve">
     <value>Lisa sõnaraamatusse</value>
@@ -149,10 +149,10 @@ Please run the program as administrator.</value>
     <value>Hulgi tekstituvastus</value>
   </data>
   <data name="BulkProcessStatus" xml:space="preserve">
-    <value>Bulk Process Status</value>
+    <value>Hulgitöötluse staatus</value>
   </data>
   <data name="CancelBulkOCR" xml:space="preserve">
-    <value>Cancel Bulk OCR</value>
+    <value>Tühista hulgi tekstituvastus</value>
   </data>
   <data name="canceled" xml:space="preserve">
     <value>tühistatud.</value>
@@ -167,7 +167,7 @@ Please run the program as administrator.</value>
     <value>Palun kontrolli väljundfaile (või faile) kaustas </value>
   </data>
   <data name="Clear_Recent_Files" xml:space="preserve">
-    <value>_Clear Recent Files</value>
+    <value>_Tühjenda viimaste failide nimekiri</value>
   </data>
   <data name="Contrast" xml:space="preserve">
     <value>Kontrast</value>
@@ -218,7 +218,7 @@ Please run the program as administrator.</value>
     <value>Vigane sisend.</value>
   </data>
   <data name="InvalidPageMessage" xml:space="preserve">
-    <value>There is no page numbered '{0}' in this image.</value>
+    <value>Selles pildis pole lehekülge numbriga '{0}'.</value>
   </data>
   <data name="Load_image" xml:space="preserve">
     <value>Laadi pilt</value>
@@ -266,13 +266,13 @@ Please run the program as administrator.</value>
     <value>Lehekülg</value>
   </data>
   <data name="Please_restart" xml:space="preserve">
-    <value>Please restart the program so that it could register the new language pack(s).</value>
+    <value>Palun taaskäivita programm nii, et see võiks tuvastada uue keelepaki.</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>.NET GUI Frontend for Tesseract {0} OCR Engine</value>
+    <value>.NET GUI kasutajaliides Tesseract {0} tekstituvastusmootorile</value>
   </data>
   <data name="readme" xml:space="preserve">
-    <value>readme_cs.html</value>
+    <value>readme_cs_et.html</value>
   </data>
   <data name="Require_grayscale" xml:space="preserve">
     <value>Võimalik, et pilt tuleb muuta halltoonidesse.</value>
@@ -308,7 +308,7 @@ Please run the program as administrator.</value>
     <value>Vali sisendpildid</value>
   </data>
   <data name="Select_Input_PDFs" xml:space="preserve">
-    <value>Select Input PDFs</value>
+    <value>Vali sisend PDF-id</value>
   </data>
   <data name="Select_Input_TIFF" xml:space="preserve">
     <value>Vali mitmeleheküljeline TIFF fail</value>
@@ -329,7 +329,7 @@ Please run the program as administrator.</value>
     <value>TIFF-ide jagamine on lõpetatud.</value>
   </data>
   <data name="suggest_split" xml:space="preserve">
-    <value>You may need to split the PDF file into smaller files before proceed.</value>
+    <value>Võimalik, et pead enne jätkamist jagama PDF-i väiksemateks failideks.</value>
   </data>
   <data name="Task_canceled" xml:space="preserve">
     <value>Ülesanne katkestati</value>
@@ -344,37 +344,37 @@ Please run the program as administrator.</value>
     <value>VietOCR.NET abi</value>
   </data>
   <data name="ConvertPDFcompleted" xml:space="preserve">
-    <value>Convert PDF completed. </value>
+    <value>PDF-i konvertimine on lõpetatud.</value>
   </data>
   <data name="ConvertPDF_running" xml:space="preserve">
-    <value>Convert PDF running...</value>
+    <value>PDF-ide konvertimine on käimas...</value>
   </data>
   <data name="Select_Input_PDF" xml:space="preserve">
-    <value>Select Input PDF</value>
+    <value>Vali sisend PDF</value>
   </data>
   <data name="beginning" xml:space="preserve">
-    <value>beginning</value>
+    <value>algusest</value>
   </data>
   <data name="Cannot_find_" xml:space="preserve">
-    <value>Cannot find </value>
+    <value>Ei leia</value>
   </data>
   <data name="Continue_search_from_" xml:space="preserve">
-    <value>Continue search from </value>
+    <value>Jätka otsimist</value>
   </data>
   <data name="end" xml:space="preserve">
-    <value>end</value>
+    <value>lõpust</value>
   </data>
   <data name="Regex_Error" xml:space="preserve">
-    <value>Regex Error</value>
+    <value>Regex tõrge</value>
   </data>
   <data name="ReplacedOccurrence" xml:space="preserve">
-    <value>Replaced {0} occurrence(s).</value>
+    <value>Asendatud {0} kohas.</value>
   </data>
   <data name="Double_sided" xml:space="preserve">
-    <value>Double-sided</value>
+    <value>Kahepoolne</value>
   </data>
   <data name="Single_sided" xml:space="preserve">
-    <value>Single-sided</value>
+    <value>Ühepoolne</value>
   </data>
   <data name="File_not_exist" xml:space="preserve">
     <value>Sisendfaili pole olemas.</value>

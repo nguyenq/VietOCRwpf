@@ -169,7 +169,7 @@
     <value/>
   </data>
   <data name="openFileDialog1.Filter" xml:space="preserve">
-    <value>Text Files (*.txt)|*.txt</value>
+    <value>Tekstifailid (*.txt)|*.txt</value>
   </data>
   <data name="buttonCancel.ToolTip" xml:space="preserve">
     <value/>
@@ -217,13 +217,13 @@
     <value/>
   </data>
   <data name="checkBoxRemoveHyphens.Text" xml:space="preserve">
-    <value>Remove soft hyphens</value>
+    <value>Eemalda kohanduvad sidekriipsud</value>
   </data>
   <data name="checkBoxReplaceHyphens.Text" xml:space="preserve">
-    <value>Replace hyphens with soft hyphens</value>
+    <value>Asenda sidekriipsud kohanduvate sidekriipsudega</value>
   </data>
   <data name="tabPage3.Text" xml:space="preserve">
-    <value>Hyphens</value>
+    <value>Sidekriipsud</value>
   </data>
   <data name="tabPage3.ToolTip" xml:space="preserve">
     <value/>
@@ -235,25 +235,25 @@
     <value>Jälgi</value>
   </data>
   <data name="checkBoxRemoveHyphens.ToolTip" xml:space="preserve">
-    <value>Remove soft hyphens after removing line breaks</value>
+    <value>Eemalda pärast reavahetuste eemaldamist mittejäigad poolitusmärgid</value>
   </data>
   <data name="checkBoxReplaceHyphens.ToolTip" xml:space="preserve">
-    <value>Replace hyphens at the end of lines with soft hyphens using spellcheck dictionary</value>
+    <value>Asenda rea lõpus olevad sidekriipsud kohanduvate sidekriipsudega.</value>
   </data>
   <data name="Hyphens" xml:space="preserve">
-    <value>Hyphens</value>
+    <value>Sidekriipsud</value>
   </data>
   <data name="Batch" xml:space="preserve">
-    <value>Batch</value>
+    <value>Hulgitöötlus</value>
   </data>
   <data name="BulkBatchOptions" xml:space="preserve">
-    <value>Bulk/Batch Options</value>
+    <value>Hulgitöötluse valikud</value>
   </data>
   <data name="checkBoxCorrectLetterCases.Text" xml:space="preserve">
-    <value>Correct Letter Cases</value>
+    <value>Paranda tähesuurused</value>
   </data>
   <data name="checkBoxPostProcessing.Text" xml:space="preserve">
-    <value>Post Processing</value>
+    <value>Järeltöötlus</value>
   </data>
   <data name="checkBoxRemoveLineBreaks.Text" xml:space="preserve">
     <value>Eemalda reavahetused</value>

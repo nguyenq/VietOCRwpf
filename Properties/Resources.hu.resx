@@ -118,268 +118,268 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="_of_" xml:space="preserve">
-    <value>od</value>
+    <value>:</value>
   </data>
   <data name="About_VietOCR" xml:space="preserve">
-    <value>O programu VietOCR.NET</value>
+    <value>VietOCR.NET névjegye</value>
   </data>
   <data name="Access_denied" xml:space="preserve">
-    <value>Nimate pravic pisanja v mapo "{0}".
-Zaženite program kot skrbnik.</value>
+    <value>Nincs írási jogosultsága a "{0}" mappához
+Kérjük, futtassa a programot rendszergazdaként</value>
   </data>
   <data name="Add_to_Dictionary" xml:space="preserve">
-    <value>Dodaj v slovar</value>
+    <value>Adja a szótárhoz</value>
   </data>
   <data name="BatchProcessStatus" xml:space="preserve">
-    <value>Stanje paketnega postopka</value>
+    <value>Kötegelt folyamat állapota</value>
   </data>
   <data name="Beginning_of_task" xml:space="preserve">
-    <value>Začetek opravila</value>
+    <value>A feladat kezdése</value>
   </data>
   <data name="Bilateral" xml:space="preserve">
-    <value>Bilateralno</value>
+    <value>Kétoldalú</value>
   </data>
   <data name="Brightness" xml:space="preserve">
-    <value>Svetlost</value>
+    <value>Fényerő</value>
   </data>
   <data name="Browse" xml:space="preserve">
-    <value>Prebrskaj</value>
+    <value>Böngészés</value>
   </data>
   <data name="Bulk_OCR" xml:space="preserve">
-    <value>Paketni OCR</value>
+    <value>Kötegelt OCR</value>
   </data>
   <data name="BulkProcessStatus" xml:space="preserve">
-    <value>Stanje paketnega postopka</value>
+    <value>Kötegelt folyamat állapota</value>
   </data>
   <data name="CancelBulkOCR" xml:space="preserve">
-    <value>Prekliči paketni OCR</value>
+    <value>Kötegelt OCR megszakítása</value>
   </data>
   <data name="canceled" xml:space="preserve">
-    <value>preklicano.</value>
+    <value>megszakítva.</value>
   </data>
   <data name="Cannotloadimage" xml:space="preserve">
-    <value>Slike ni mogoče naložiti.</value>
+    <value>Nem lehet a képet betölteni.</value>
   </data>
   <data name="Cannotprocess" xml:space="preserve">
-    <value>Ni mogoče obdelati</value>
+    <value>Nem lehet végrehajtani</value>
   </data>
   <data name="check_output_in" xml:space="preserve">
-    <value>Preverite izhodne datoteke v</value>
+    <value>Kérjük, ellenőrizze a kimeneti fájl(oka)t</value>
   </data>
   <data name="Clear_Recent_Files" xml:space="preserve">
-    <value>Po_čisti nedavne datoteke</value>
+    <value>_Legutóbbi fájlok elfelejtése</value>
   </data>
   <data name="Contrast" xml:space="preserve">
-    <value>Kontrast</value>
+    <value>Kontraszt</value>
   </data>
   <data name="Correcting_completed" xml:space="preserve">
-    <value>Popravljanje dokončano.</value>
+    <value>Korrigálás elkészült.</value>
   </data>
   <data name="Correcting_errors" xml:space="preserve">
-    <value>Popravljanje napak prepoznave ...</value>
+    <value>Felismerési hibák korrekciója...</value>
   </data>
   <data name="created" xml:space="preserve">
-    <value>je ustvarjeno.</value>
+    <value>létre lett hozva.</value>
   </data>
   <data name="Do_you_want_to_save_the_changes_to_" xml:space="preserve">
-    <value>Ali želite shraniti spremembe v </value>
+    <value>Menteni szeretné a változtatásokat a következőbe:</value>
   </data>
   <data name="Downloadcanceled" xml:space="preserve">
-    <value>Prenos preklican.</value>
+    <value>Letöltés megszakítva.</value>
   </data>
   <data name="Downloadcompleted" xml:space="preserve">
-    <value>Prenos zaključen.</value>
+    <value>Letöltés elkészült.</value>
   </data>
   <data name="Downloaderror" xml:space="preserve">
-    <value>Napaka pri prenašanju.</value>
+    <value>Letöltési hiba.</value>
   </data>
   <data name="Downloading" xml:space="preserve">
-    <value>Prenašanje ...</value>
+    <value>Letöltés...</value>
   </data>
   <data name="Elapsed_time" xml:space="preserve">
-    <value>Pretečen čas</value>
+    <value>Eltelt idő</value>
   </data>
   <data name="End_of_task" xml:space="preserve">
-    <value>Konec opravila</value>
+    <value>A feladat vége</value>
   </data>
   <data name="Error" xml:space="preserve">
-    <value>Napaka</value>
+    <value>Hiba</value>
   </data>
   <data name="Gamma" xml:space="preserve">
-    <value>Gama</value>
+    <value>Gamma</value>
   </data>
   <data name="Ignore_All" xml:space="preserve">
-    <value>Prezri vse</value>
+    <value>Mindet figyelmen kívül hagyja</value>
   </data>
   <data name="Inputincomplete" xml:space="preserve">
-    <value>Vhod ni celovit.</value>
+    <value>Bevitel elkészült.</value>
   </data>
   <data name="Inputinvalid" xml:space="preserve">
-    <value>Vhod ni veljaven.</value>
+    <value>Érvénytelen bevitel.</value>
   </data>
   <data name="InvalidPageMessage" xml:space="preserve">
-    <value>V tej sliki ni strani s številko {0}.</value>
+    <value>Ezen a képen nincs '{0}' számú oldal.</value>
   </data>
   <data name="Load_image" xml:space="preserve">
-    <value>Naloži sliko</value>
+    <value>Kép betöltése</value>
   </data>
   <data name="LoadImage" xml:space="preserve">
-    <value>Naložite sliko.</value>
+    <value>Kérem töltsön be egy képet.</value>
   </data>
   <data name="Loading_completed" xml:space="preserve">
-    <value>Nalaganje dokončano.</value>
+    <value>Betöltés elkészült.</value>
   </data>
   <data name="Loading_image" xml:space="preserve">
-    <value>Nalaganje slike ...</value>
+    <value>Kép betöltése...</value>
   </data>
   <data name="MergePDF_running" xml:space="preserve">
-    <value>Spajanje PDF je v teku ...</value>
+    <value>PDF összeolvasztása fut...</value>
   </data>
   <data name="MergePDFcompleted" xml:space="preserve">
-    <value>Spajanje PDF je dokončano,</value>
+    <value>PDF összeolvasztása elkészült.</value>
   </data>
   <data name="MergeTIFF_running" xml:space="preserve">
-    <value>Spajanje TIFF je v teku ...</value>
+    <value>TIFF összeolvasztása fut...</value>
   </data>
   <data name="MergeTIFFcompleted" xml:space="preserve">
-    <value>Spajanje TIFF je dokončano.</value>
+    <value>TIFF összeolvasztása elkészült</value>
   </data>
   <data name="No_Recent_Files" xml:space="preserve">
-    <value>Ni nedavnih datotek</value>
+    <value>Nincsenek korábbi fájlok</value>
   </data>
   <data name="OCRcompleted" xml:space="preserve">
-    <value>Optično prepoznavanje znakov je dokončano.</value>
+    <value>OCR elkészült.</value>
   </data>
   <data name="OCROperation" xml:space="preserve">
-    <value>Operacija OCR</value>
+    <value>OCR művelet</value>
   </data>
   <data name="OCRrunning" xml:space="preserve">
-    <value>Optično prepoznavanje znakov (OCR) je v teku ...</value>
+    <value>OCR épp fut...</value>
   </data>
   <data name="Open" xml:space="preserve">
-    <value>Odpri</value>
+    <value>Megnyitás</value>
   </data>
   <data name="OpenImageFile" xml:space="preserve">
-    <value>Odpri slikovno datoteko</value>
+    <value>Képfájl megnyitása</value>
   </data>
   <data name="Page_" xml:space="preserve">
-    <value>Stran</value>
+    <value>Lap</value>
   </data>
   <data name="Please_restart" xml:space="preserve">
-    <value>Program ponovno zaženite, da bo lahko registriral nove jezikovne pakete.</value>
+    <value>Kérjük, indítsa újra a programot, hogy az alkalmazás regisztrálhassa az új nyelvi csomagokat.</value>
   </data>
   <data name="Program_desc" xml:space="preserve">
-    <value>Uporabniški vmesnik .NET za pogon OCR Tesseract {0} </value>
+    <value>.NET  grafikus felület Tesseract {0} OCR motorhoz</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs.html</value>
   </data>
   <data name="Require_grayscale" xml:space="preserve">
-    <value>Slika morda potrebuje pretvorbo v sivinsko.</value>
+    <value>Előfordulhat, hogy a képet szürkeárnyalatossá kell konvertálni.</value>
   </data>
   <data name="Resource_not_exist" xml:space="preserve">
-    <value>Vir ne obstaja.</value>
+    <value>A forrás nem létezik.</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Shrani</value>
+    <value>Mentés</value>
   </data>
   <data name="Save_As" xml:space="preserve">
-    <value>Shrani kot</value>
+    <value>Mentés mint</value>
   </data>
   <data name="Save_Merged_PDF" xml:space="preserve">
-    <value>Shrani spojeni PDF</value>
+    <value>Összeolvasztott PDF mentése</value>
   </data>
   <data name="Save_Multipage_TIFF_Image" xml:space="preserve">
-    <value>Shrani večstransko sliko TIFF</value>
+    <value>Többlapos TIFF kép mentése</value>
   </data>
   <data name="Scancompleted" xml:space="preserve">
-    <value>Optično branje dokončano.</value>
+    <value>Beolvasás elkészült.</value>
   </data>
   <data name="Scanning" xml:space="preserve">
-    <value>Optično branje ...</value>
+    <value>Beolvasás...</value>
   </data>
   <data name="ScanningOperation" xml:space="preserve">
-    <value>Operacija optičnega branja</value>
+    <value>Beolvasási művelet</value>
   </data>
   <data name="Select" xml:space="preserve">
-    <value>Izberi</value>
+    <value>Kiválasztás</value>
   </data>
   <data name="Select_Input_Images" xml:space="preserve">
-    <value>Izberite vhodne slike</value>
+    <value>Bemeneti képek kiválasztása</value>
   </data>
   <data name="Select_Input_PDFs" xml:space="preserve">
-    <value>Izberite vhodne PDF-je</value>
+    <value>Bemeneti PDF-ek választása</value>
   </data>
   <data name="Select_Input_TIFF" xml:space="preserve">
-    <value>Izberite vhodni večstranski TIFF</value>
+    <value>Válassza a Többoldalas TIFF bevitele lehetőséget</value>
   </data>
   <data name="selectLanguage" xml:space="preserve">
-    <value>Izberite želeni jezik.</value>
+    <value>Kérem válasszon egy nyelvet.</value>
   </data>
   <data name="SplitPDF_completed" xml:space="preserve">
-    <value>Delitev PDF dokončana.</value>
+    <value>PDF szétvágása elkészült.</value>
   </data>
   <data name="SplitPDF_running" xml:space="preserve">
-    <value>Delitev PDF je v teku ...</value>
+    <value>PDF vágása épp fut...</value>
   </data>
   <data name="SplitTIFF_running" xml:space="preserve">
-    <value>Delitev TIFF je v teku ...</value>
+    <value>TIFF vágása épp fut...</value>
   </data>
   <data name="SplitTIFFcompleted" xml:space="preserve">
-    <value>Delitev TIFF dokončana.</value>
+    <value>TIFF szétvágása elkészült.</value>
   </data>
   <data name="suggest_split" xml:space="preserve">
-    <value>Datoteko PDF boste morda morali pred nadaljevanjem razdeliti na manjše datoteke.</value>
+    <value>Előfordulhat, hogy a PDF-fájlt kisebb fájlokra kell osztania a folytatás előtt.</value>
   </data>
   <data name="Task_canceled" xml:space="preserve">
-    <value>Opravilo preklicano</value>
+    <value>Feladat megszakítva</value>
   </data>
   <data name="Threshold" xml:space="preserve">
-    <value>Prag</value>
+    <value>Küszöb</value>
   </data>
   <data name="Untitled" xml:space="preserve">
-    <value>Neimenovano</value>
+    <value>Névtelen</value>
   </data>
   <data name="VietOCR_Help" xml:space="preserve">
-    <value>Pomoč VietOCR.NET</value>
+    <value>VietOCR.NET Súgó</value>
   </data>
   <data name="ConvertPDFcompleted" xml:space="preserve">
-    <value>Pretvorba PDF končana.</value>
+    <value>PDF átalakítás elkészült.</value>
   </data>
   <data name="ConvertPDF_running" xml:space="preserve">
-    <value>Pretvorba PDF je v teku ...</value>
+    <value>PDF átalakítás fut...</value>
   </data>
   <data name="Select_Input_PDF" xml:space="preserve">
-    <value>Izberite vhodni PDF</value>
+    <value>Bemeneti PDF választása</value>
   </data>
   <data name="beginning" xml:space="preserve">
-    <value>začetek</value>
+    <value>kezdés</value>
   </data>
   <data name="Cannot_find_" xml:space="preserve">
-    <value>Ni mogoče najti</value>
+    <value>Nem található</value>
   </data>
   <data name="Continue_search_from_" xml:space="preserve">
-    <value>Nadaljuj z iskanjem od</value>
+    <value>Keresés folytatása innen:</value>
   </data>
   <data name="end" xml:space="preserve">
-    <value>konec</value>
+    <value>befejezés</value>
   </data>
   <data name="Regex_Error" xml:space="preserve">
-    <value>Napaka regularnega izraza</value>
+    <value>Regex hiba</value>
   </data>
   <data name="ReplacedOccurrence" xml:space="preserve">
-    <value>Zamenjanih {0} pojavitev.</value>
+    <value> {0} lecserélt előforulás(ok).</value>
   </data>
   <data name="Double_sided" xml:space="preserve">
-    <value>Obojestransko</value>
+    <value>Kétoldalú</value>
   </data>
   <data name="Single_sided" xml:space="preserve">
-    <value>Enostransko</value>
+    <value>Egyoldalas</value>
   </data>
   <data name="File_not_exist" xml:space="preserve">
-    <value>Vhodna datoteka ne obstaja.</value>
+    <value>Bemeneti fájl nem létezik.</value>
   </data>
   <data name="Please_select_output_format" xml:space="preserve">
-    <value>Izberite izhodni zapis.</value>
+    <value>Kérem válasszon egy kimeneti formátumot.</value>
   </data>
 </root>
