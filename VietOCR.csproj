@@ -288,6 +288,7 @@
     <Content Include="Data\TessLangDataURL.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="readme_cs_et.html" />
     <Content Include="x64\libtesseract520.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -636,7 +637,13 @@
     <EmbeddedResource Include="FindReplaceDialog.es.resx">
       <DependentUpon>FindReplaceDialog.xaml</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FindReplaceDialog.et.resx">
+      <DependentUpon>FindReplaceDialog.xaml</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FindReplaceDialog.fr.resx">
+      <DependentUpon>FindReplaceDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindReplaceDialog.hu.resx">
       <DependentUpon>FindReplaceDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindReplaceDialog.kn.resx">
@@ -700,6 +707,9 @@
     <EmbeddedResource Include="Gui.hi.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui.hu.resx">
+      <DependentUpon>Gui.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui.it.resx">
       <DependentUpon>Gui.xaml</DependentUpon>
@@ -793,6 +803,9 @@
     <EmbeddedResource Include="ImageInfoDialog.hi.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ImageInfoDialog.hu.resx">
+      <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ImageInfoDialog.it.resx">
       <DependentUpon>ImageInfoDialog.xaml</DependentUpon>
     </EmbeddedResource>
@@ -878,6 +891,9 @@
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="OptionsDialog.hu.resx">
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OptionsDialog.it.resx">
       <DependentUpon>OptionsDialog.xaml</DependentUpon>
     </EmbeddedResource>
@@ -942,6 +958,7 @@
     <EmbeddedResource Include="Properties\Resources.fa.resx" />
     <EmbeddedResource Include="Properties\Resources.fr.resx" />
     <EmbeddedResource Include="Properties\Resources.hi.resx" />
+    <EmbeddedResource Include="Properties\Resources.hu.resx" />
     <EmbeddedResource Include="Properties\Resources.it.resx" />
     <EmbeddedResource Include="Properties\Resources.ja.resx" />
     <EmbeddedResource Include="Properties\Resources.kn.resx" />
@@ -991,6 +1008,9 @@
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SliderDialog.hi.resx">
+      <DependentUpon>SliderDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SliderDialog.hu.resx">
       <DependentUpon>SliderDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SliderDialog.it.resx">
@@ -1074,6 +1094,9 @@
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.hi.resx">
+      <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitPdfDialog.hu.resx">
       <DependentUpon>SplitPdfDialog.xaml</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SplitPdfDialog.it.resx">
