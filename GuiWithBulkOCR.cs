@@ -25,6 +25,7 @@ using System.Threading;
 using System.Globalization;
 using System.Windows;
 using System.Windows.Input;
+using System.Linq;
 
 namespace VietOCR
 {
@@ -34,6 +35,7 @@ namespace VietOCR
         const string strBulkOutputFolder = "BulkOutputFolder";
         const string strBulkOutputFormat = "BulkOutputFormat";
         const string strBulkDeskewEnable = "BulkDeskewEnable";
+        readonly string[] imageFilters = ".tif|.jpg|.jpeg|.gif|.png|.bmp|.pdf".Split('|');
 
         private string inputFolder;
         private string outputFolder;
@@ -126,12 +128,9 @@ namespace VietOCR
         {
             // Get the BackgroundWorker that raised this event.
             BackgroundWorker worker = sender as BackgroundWorker;
-            string imageFilters = "*.tif|*.jpg|*.jpeg|*.gif|*.png|*.bmp|*.pdf";
-            List<string> files = new List<string>();
-            foreach (string filter in imageFilters.Split('|'))
-            {
-                files.AddRange(Directory.GetFiles(inputFolder, filter, SearchOption.AllDirectories));
-            }
+
+            List<string> files = Directory.EnumerateFiles(inputFolder, "*.*", SearchOption.AllDirectories)
+                .Where(f => imageFilters.Contains(Path.GetExtension(f).ToLower())).ToList();
 
             for (int i = 0; i < files.Count; i++)
             {

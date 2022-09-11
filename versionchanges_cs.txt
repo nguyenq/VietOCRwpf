@@ -192,3 +192,6 @@ Version 6.3.0 (7 July 2022)
 
 Version 6.3.1 (10 July 2022)
 - Update translations
+
+Version 6.3.2 (11 September 2022)
+- Improve BulkOCR's GetFiles performance
