@@ -39,7 +39,7 @@ namespace VietOCR.NET.Postprocessing
             }
         }
 
-        public static string PostProcess(string text, string langCode, string dangAmbigsPath, bool dangAmbigsOn, bool replaceHyphens)
+        public static string PostProcess(string text, string langCode, string dangAmbigsPath, bool dangAmbigsEnabled, bool replaceHyphens)
         {
             if (text.Trim().Length == 0)
             {
@@ -52,7 +52,7 @@ namespace VietOCR.NET.Postprocessing
             }
 
             // correct using external x.DangAmbigs.txt file first, if enabled
-            if (dangAmbigsOn)
+            if (dangAmbigsEnabled)
             {
                 StringBuilder strB = new StringBuilder(text);
 

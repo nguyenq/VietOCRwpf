@@ -15,5 +15,7 @@ namespace VietOCR
         public bool CorrectLetterCases { get; set; }
         public bool RemoveHyphens { get; set; }
         public bool ReplaceHyphens { get; set; }
+        public bool DangAmbigsEnabled { get; set; }
+        public string DangAmbigsPath { get; set; }
     }
 }

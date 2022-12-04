@@ -44,19 +44,7 @@ namespace VietOCR
             set;
         }
 
-        public string DangAmbigsPath
-        {
-            get;
-            set;
-        }
-
         public string CurLangCode
-        {
-            get;
-            set;
-        }
-
-        public bool DangAmbigsEnabled
         {
             get;
             set;
@@ -148,8 +136,8 @@ namespace VietOCR
             this.textBoxWatch.Text = WatchFolder;
             this.textBoxOutput.Text = OutputFolder;
             this.checkBoxWatch.IsChecked = WatchEnabled;
-            this.textBoxDangAmbigs.Text = DangAmbigsPath;
-            this.checkBoxDangAmbigs.IsChecked = DangAmbigsEnabled;
+            this.textBoxDangAmbigs.Text = ProcessingOptions.DangAmbigsPath;
+            this.checkBoxDangAmbigs.IsChecked = ProcessingOptions.DangAmbigsEnabled;
             this.checkBoxReplaceHyphens.IsChecked = ProcessingOptions.ReplaceHyphens;
             this.checkBoxRemoveHyphens.IsChecked = ProcessingOptions.RemoveHyphens;
             this.checkBoxDeskew.IsChecked = ProcessingOptions.Deskew;
@@ -168,7 +156,7 @@ namespace VietOCR
             base.OnClosed(ea);
 
             WatchEnabled = this.checkBoxWatch.IsChecked.Value;
-            DangAmbigsEnabled = this.checkBoxDangAmbigs.IsChecked.Value;
+            ProcessingOptions.DangAmbigsEnabled = this.checkBoxDangAmbigs.IsChecked.Value;
             ProcessingOptions.ReplaceHyphens = this.checkBoxReplaceHyphens.IsChecked.Value;
             ProcessingOptions.RemoveHyphens = this.checkBoxRemoveHyphens.IsChecked.Value;
             ProcessingOptions.Deskew = this.checkBoxDeskew.IsChecked.Value;
@@ -211,14 +199,14 @@ namespace VietOCR
         private void btnDangAmbigs_Click(object sender, RoutedEventArgs e)
         {
             this.openFileDialog1.Title = String.Format("Set Path to {0}.DangAmbigs.txt", CurLangCode);
-            this.openFileDialog1.InitialDirectory = DangAmbigsPath;
+            this.openFileDialog1.InitialDirectory = ProcessingOptions.DangAmbigsPath;
 
             Nullable<bool> result = openFileDialog1.ShowDialog();
 
             if (result.HasValue && result.Value)
             {
-                DangAmbigsPath = System.IO.Path.GetDirectoryName(this.openFileDialog1.FileName);
-                this.textBoxDangAmbigs.Text = DangAmbigsPath;
+                ProcessingOptions.DangAmbigsPath = System.IO.Path.GetDirectoryName(this.openFileDialog1.FileName);
+                this.textBoxDangAmbigs.Text = ProcessingOptions.DangAmbigsPath;
             }
         }
 

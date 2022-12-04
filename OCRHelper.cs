@@ -56,7 +56,7 @@ namespace VietOCR
                         // postprocess to correct common OCR errors
                         if (options.PostProcessing)
                         {
-                            result = Processor.PostProcess(result, langCode);
+                            result = Processor.PostProcess(result, langCode, options.DangAmbigsPath, options.DangAmbigsEnabled, options.ReplaceHyphens);
                         }
 
                         // correct letter cases

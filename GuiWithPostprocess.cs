@@ -26,12 +26,10 @@ namespace VietOCR
     public class GuiWithPostprocess : GuiWithOCR
     {
         const string strDangAmbigsPath = "DangAmbigsPath";
-        const string strDangAmbigsOn = "DangAmbigsOn";
+        const string strDangAmbigsEnabled = "DangAmbigsEnabled";
         const string strReplaceHyphensEnabled = "ReplaceHyphensEnabled";
         const string strRemoveHyphensEnabled = "RemoveHyphensEnabled";
 
-        protected string dangAmbigsPath;
-        protected bool dangAmbigsOn;
         protected ProcessingOptions options;
 
         private System.ComponentModel.BackgroundWorker backgroundWorkerCorrect;
@@ -73,7 +71,7 @@ namespace VietOCR
         {
             // Perform post-OCR corrections
             string text = (string)e.Argument;
-            e.Result = Processor.PostProcess(text, curLangCode, dangAmbigsPath, dangAmbigsOn, options.ReplaceHyphens);
+            e.Result = Processor.PostProcess(text, curLangCode, options.DangAmbigsPath, options.DangAmbigsEnabled, options.ReplaceHyphens);
         }
 
         private void backgroundWorkerCorrect_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -135,9 +133,9 @@ namespace VietOCR
         {
             base.LoadRegistryInfo(regkey);
 
-            dangAmbigsPath = (string)regkey.GetValue(strDangAmbigsPath, Path.Combine(baseDir, "Data"));
-            dangAmbigsOn = Convert.ToBoolean(
-                (int)regkey.GetValue(strDangAmbigsOn, Convert.ToInt32(true)));
+            options.DangAmbigsPath = (string)regkey.GetValue(strDangAmbigsPath, Path.Combine(baseDir, "Data"));
+            options.DangAmbigsEnabled = Convert.ToBoolean(
+                (int)regkey.GetValue(strDangAmbigsEnabled, Convert.ToInt32(true)));
             options.ReplaceHyphens = Convert.ToBoolean(
                 (int)regkey.GetValue(strReplaceHyphensEnabled, Convert.ToInt32(true)));
             options.RemoveHyphens = Convert.ToBoolean(
@@ -148,8 +146,8 @@ namespace VietOCR
         {
             base.SaveRegistryInfo(regkey);
 
-            regkey.SetValue(strDangAmbigsPath, dangAmbigsPath);
-            regkey.SetValue(strDangAmbigsOn, Convert.ToInt32(dangAmbigsOn));
+            regkey.SetValue(strDangAmbigsPath, options.DangAmbigsPath);
+            regkey.SetValue(strDangAmbigsEnabled, Convert.ToInt32(options.DangAmbigsEnabled));
             regkey.SetValue(strReplaceHyphensEnabled, Convert.ToInt32(options.ReplaceHyphens));
             regkey.SetValue(strRemoveHyphensEnabled, Convert.ToInt32(options.RemoveHyphens));
         }

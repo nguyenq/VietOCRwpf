@@ -56,8 +56,6 @@ namespace VietOCR
             optionsDialog.WatchFolder = watchFolder;
             optionsDialog.OutputFolder = outputFolder;
             optionsDialog.WatchEnabled = watchEnabled;
-            optionsDialog.DangAmbigsPath = dangAmbigsPath;
-            optionsDialog.DangAmbigsEnabled = dangAmbigsOn;
             optionsDialog.CurLangCode = curLangCode;
             optionsDialog.ProcessingOptions = options;
             optionsDialog.OutputFormat = outputFormat;
@@ -69,8 +67,6 @@ namespace VietOCR
                 watchFolder = optionsDialog.WatchFolder;
                 outputFolder = optionsDialog.OutputFolder;
                 watchEnabled = optionsDialog.WatchEnabled;
-                dangAmbigsPath = optionsDialog.DangAmbigsPath;
-                dangAmbigsOn = optionsDialog.DangAmbigsEnabled;
                 curLangCode = optionsDialog.CurLangCode;
                 options = optionsDialog.ProcessingOptions;
                 outputFormat = optionsDialog.OutputFormat;
