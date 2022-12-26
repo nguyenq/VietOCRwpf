@@ -53,11 +53,6 @@ namespace VietOCR
             this.backgroundWorkerLoad.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerLoad_RunWorkerCompleted);
         }
 
-        protected override void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            base.Window_Loaded(sender, e);
-            updateMRUMenu();
-        }
 
         /// <summary>
         /// Opens image or text file.
@@ -341,7 +336,7 @@ namespace VietOCR
             }
             else
             {
-                return SaveTextFile();
+                return SaveTextFile(textFilename);
             }
         }
 
@@ -370,7 +365,7 @@ namespace VietOCR
             {
                 // Save document 
                 textFilename = dlg.FileName;
-                return SaveTextFile();
+                return SaveTextFile(textFilename);
             }
             else
             {
@@ -378,16 +373,16 @@ namespace VietOCR
             }
         }
 
-        bool SaveTextFile()
+        bool SaveTextFile(string fileName)
         {
             this.Cursor = Cursors.Wait;
 
             try
             {
-                using (StreamWriter sw = new StreamWriter(textFilename, false, new System.Text.UTF8Encoding()))
+                using (StreamWriter sw = new StreamWriter(fileName, false, new System.Text.UTF8Encoding()))
                 {
                     sw.Write(this.textBox1.Text);
-                    updateMRUList(textFilename);
+                    updateMRUList(fileName);
                 }
             }
             catch (Exception exc)
@@ -416,12 +411,8 @@ namespace VietOCR
             if (result.HasValue && result.Value)
             {
                 // Open document 
-                string filename = dlg.FileName;
-                inputfilename = filename;
-                this.Title = System.IO.Path.GetFileName(filename) + " - " + strProgName;
-                openFile(filename);
+                openFile(dlg.FileName);
                 filterIndex = dlg.FilterIndex;
-                updateMRUList(filename);
             }
         }
 
