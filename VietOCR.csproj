@@ -289,13 +289,13 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="readme_cs_et.html" />
-    <Content Include="x64\libleptonica1830.dll">
+    <Content Include="x64\libleptonica1831.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="x64\libtesseract530.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="x86\libleptonica1830.dll" />
+    <None Include="x86\libleptonica1831.dll" />
     <None Include="x86\libtesseract530.dll" />
     <Resource Include="readme_cs_pt.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
