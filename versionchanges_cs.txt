@@ -203,3 +203,6 @@ Version 6.5.0 (26 December 2022)
 
 Version 6.6.0 (29 January 2023)
 - Upgrade to Leptonica 1.83.1
+
+Version 6.7.0 (3 April 2023)
+- Upgrade to Tesseract 5.3.1
