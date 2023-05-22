@@ -55,6 +55,47 @@ namespace VietOCR.NET.Utilities
         }
 
         /// <summary>
+        /// Convert PDF to TIFF format using GS natively.
+        /// </summary>
+        /// <param name="inputPdfFile"></param>
+        /// <returns>a multi-page TIFF image</returns>
+        public static string ConvertPdf2TiffGS(string inputPdfFile)
+        {
+            string tempDirectory = Path.Combine(Path.GetTempPath(), "tessimages" + Path.GetFileNameWithoutExtension(Path.GetRandomFileName()));
+            Directory.CreateDirectory(tempDirectory);
+
+            PDFConvert converter = new PDFConvert();
+            converter.GraphicsAlphaBit = 4;
+            converter.TextAlphaBit = 4;
+            converter.ResolutionX = 300; // -r300
+            converter.OutputFormat = "tiffgray"; // -sDEVICE
+            converter.ThrowOnlyException = true; // rethrow exceptions
+
+            string sOutputFile = string.Format("{0}\\workingimage.tif", tempDirectory);
+
+            try
+            {
+                bool success = converter.Convert(inputPdfFile, sOutputFile);
+
+                if (success)
+                {
+                    return sOutputFile;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            finally
+            {
+                if (!Directory.EnumerateFileSystemEntries(tempDirectory).Any())
+                {
+                    Directory.Delete(tempDirectory);
+                }
+            }
+        }
+
+        /// <summary>
         /// Convert PDF to PNG format.
         /// </summary>
         /// <param name="inputPdfFile"></param>

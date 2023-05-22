@@ -465,7 +465,7 @@ namespace VietOCR
             string[] inputFiles = (string[])e.Argument;
             foreach (string inputFile in inputFiles)
             {
-                string outputTiffFile = PdfUtilities.ConvertPdf2Tiff(inputFile);
+                string outputTiffFile = PdfUtilities.ConvertPdf2TiffGS(inputFile);
                 string targetFile = Path.Combine(Path.GetDirectoryName(inputFile), Path.GetFileNameWithoutExtension(inputFile) + ".tif");
                 File.Delete(targetFile);
                 File.Move(outputTiffFile, targetFile);

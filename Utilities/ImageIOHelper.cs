@@ -39,7 +39,7 @@ namespace VietOCR.NET.Utilities
                 // convert PDF to TIFF
                 if (imageFile.Name.ToLower().EndsWith(".pdf"))
                 {
-                    workingTiffFileName = PdfUtilities.ConvertPdf2Tiff(imageFile.FullName);
+                    workingTiffFileName = PdfUtilities.ConvertPdf2TiffGS(imageFile.FullName);
                     imageFile = new FileInfo(workingTiffFileName);
                 }
 
