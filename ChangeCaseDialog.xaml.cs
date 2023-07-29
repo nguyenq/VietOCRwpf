@@ -8,16 +8,10 @@ namespace VietOCR
     /// </summary>
     public partial class ChangeCaseDialog : Window
     {
-        private string selectedCase;
-
         public event RoutedEventHandler CloseDlg;
         public event RoutedEventHandler ChangeCase;
 
-        public string SelectedCase
-        {
-            set { selectedCase = value; }
-            get { return selectedCase; }
-        }
+        public string SelectedCase { set; get; }
 
         public ChangeCaseDialog()
         {
@@ -28,7 +22,7 @@ namespace VietOCR
         {
             foreach (RadioButton rb in this.radioButtonPanel.Children)
             {
-                if (rb.Tag.ToString() == selectedCase)
+                if (rb.Tag.ToString() == SelectedCase)
                 {
                     // Select Case last saved
                     rb.IsChecked = true;
@@ -43,7 +37,7 @@ namespace VietOCR
             {
                 if (rb.IsChecked.Value)
                 {
-                    selectedCase = rb.Tag.ToString();
+                    SelectedCase = rb.Tag.ToString();
                     break;
                 }
             }
