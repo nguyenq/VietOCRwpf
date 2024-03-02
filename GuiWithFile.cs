@@ -22,7 +22,6 @@ using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media.Imaging;
 using VietOCR.NET.Utilities;
 
 namespace VietOCR
@@ -124,7 +123,7 @@ namespace VietOCR
                 imageList = ImageIOHelper.GetImageList(imageFile);
             }
 
-            e.Result = imageFile;
+            e.Result = Tuple.Create(imageFile.Name, tuple.Item2);
         }
 
         private void backgroundWorkerLoad_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -148,7 +147,9 @@ namespace VietOCR
             else
             {
                 // Finally, handle the case where the operation succeeded.
-                loadImage((FileInfo)e.Result);
+                var tuple = e.Result as Tuple<string, bool>;
+                loadImage(tuple.Item2);
+                this.Title = tuple.Item1 + " - " + strProgName;
                 this.statusLabel.Content = Properties.Resources.Loading_completed;
             }
 
@@ -160,7 +161,7 @@ namespace VietOCR
             this.oCRAllPagesToolStripMenuItem.IsEnabled = true;
         }
 
-        void loadImage(FileInfo imageFile)
+        void loadImage(bool isShiftDown)
         {
             if (imageList == null)
             {
@@ -168,7 +169,7 @@ namespace VietOCR
                 return;
             }
 
-            if (Keyboard.Modifiers == ModifierKeys.Shift)
+            if (isShiftDown)
             {
                 imageIndex = imageTotal;
             } 
@@ -203,8 +204,6 @@ namespace VietOCR
             // clear undo buffer
             clearStack();
 
-            this.Title = imageFile.Name + " - " + strProgName;
-            this.statusLabel.Content = null;
             this.imageCanvas.Deselect();
 
             this.buttonFitImage.IsEnabled = true;
