@@ -112,7 +112,11 @@ namespace VietOCR
             FileInfo imageFile = new FileInfo(inputfilename);
             if (tuple.Item2)
             {
-                // open add 
+                // open add
+                if (imageList == null)
+                {
+                    imageList = new List<System.Drawing.Image>();
+                }
                 ((List<System.Drawing.Image>)imageList).AddRange(ImageIOHelper.GetImageList(imageFile));
             }
             else
