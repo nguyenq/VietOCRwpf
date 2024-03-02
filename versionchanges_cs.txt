@@ -217,4 +217,5 @@ Version 6.10.0 (4 January 2024)
 - Upgrade to Leptonica 1.84.1
 
 Version 6.11.0 (1 March 2024)
+- Upgrade to Tesseract 5.3.4
 - Implement open add image functionality using Shift key
