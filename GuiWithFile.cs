@@ -100,17 +100,26 @@ namespace VietOCR
             this.toolStripProgressBar1.IsEnabled = true;
             this.toolStripProgressBar1.Visibility = Visibility.Visible;
             //this.toolStripProgressBar1.Style = ProgressBarStyle.Marquee;
-
-            this.backgroundWorkerLoad.RunWorkerAsync(selectedFile);
+            this.backgroundWorkerLoad.RunWorkerAsync(Tuple.Create(selectedFile, Keyboard.Modifiers == ModifierKeys.Shift));
             updateMRUList(selectedFile);
         }
 
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private void backgroundWorkerLoad_DoWork(object sender, DoWorkEventArgs e)
         {
-            inputfilename = (string)e.Argument;
+            var tuple = e.Argument as Tuple<string, bool>;
+            inputfilename = tuple.Item1;
             FileInfo imageFile = new FileInfo(inputfilename);
-            imageList = ImageIOHelper.GetImageList(imageFile);
+            if (tuple.Item2)
+            {
+                // open add 
+                ((List<System.Drawing.Image>)imageList).AddRange(ImageIOHelper.GetImageList(imageFile));
+            }
+            else
+            {
+                imageList = ImageIOHelper.GetImageList(imageFile);
+            }
+
             e.Result = imageFile;
         }
 
@@ -155,8 +164,16 @@ namespace VietOCR
                 return;
             }
 
+            if (Keyboard.Modifiers == ModifierKeys.Shift)
+            {
+                imageIndex = imageTotal;
+            } 
+            else
+            {
+                imageIndex = 0;
+            }
+
             imageTotal = imageList.Count;
-            imageIndex = 0;
 
             //this.pictureBox1.Dock = DockStyle.None;
             //this.pictureBox1.SizeMode = PictureBoxSizeMode.Normal;
@@ -170,7 +187,7 @@ namespace VietOCR
                 this.comboBoxPageNum.Items.Add(i + 1);
             }
             this.comboBoxPageNum.IsEnabled = false;
-            this.comboBoxPageNum.SelectedIndex = 0;
+            this.comboBoxPageNum.SelectedIndex = imageIndex;
             this.comboBoxPageNum.IsEnabled = true;
 
             this.labelTotalPages.Content = " / " + imageTotal.ToString();

@@ -215,3 +215,6 @@ Version 6.9.0 (24 October 2023)
 
 Version 6.10.0 (4 January 2024)
 - Upgrade to Leptonica 1.84.1
+
+Version 6.11.0 (1 March 2024)
+- Implement open add image functionality using Shift key
