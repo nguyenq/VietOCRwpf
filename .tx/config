@@ -1,68 +1,68 @@
 [main]
 host = https://www.transifex.com
 
-[vietocr.BulkDialog_resx]
-file_filter = BulkDialog.<lang>.resx
-source_file = BulkDialog.resx
-source_lang = en
-type = RESX
+[o:vietocr:p:vietocr:r:BulkDialog_resx]
+file_filter            = BulkDialog.<lang>.resx
+source_file            = BulkDialog.resx
+source_lang            = en
+type                   = RESX
 
-[vietocr.ChangeCaseDialog_resx]
-file_filter = ChangeCaseDialog.<lang>.resx
-source_file = ChangeCaseDialog.resx
-source_lang = en
-type = RESX
+[o:vietocr:p:vietocr:r:ChangeCaseDialog_resx]
+file_filter            = ChangeCaseDialog.<lang>.resx
+source_file            = ChangeCaseDialog.resx
+source_lang            = en
+type                   = RESX
 
-[vietocr.DownloadDialog_resx]
-file_filter = DownloadDialog.<lang>.resx
-source_file = DownloadDialog.resx
-source_lang = en
-type = RESX
+[o:vietocr:p:vietocr:r:DownloadDialog_resx]
+file_filter            = DownloadDialog.<lang>.resx
+source_file            = DownloadDialog.resx
+source_lang            = en
+type                   = RESX
 
-[vietocr.FindReplaceDialog_resx]
-file_filter = FindReplaceDialog.<lang>.resx
-source_file = FindReplaceDialog.resx
-source_lang = en
-type = RESX
+[o:vietocr:p:vietocr:r:FindReplaceDialog_resx]
+file_filter            = FindReplaceDialog.<lang>.resx
+source_file            = FindReplaceDialog.resx
+source_lang            = en
+type                   = RESX
 
-[vietocr.Gui_resx]
-file_filter = Gui.<lang>.resx
-source_file = Gui.resx
-source_lang = en
-type = RESX
+[o:vietocr:p:vietocr:r:Gui_resx]
+file_filter            = Gui.<lang>.resx
+source_file            = Gui.resx
+source_lang            = en
+type                   = RESX
 
-[vietocr.ImageInfoDialog_resx]
-file_filter = ImageInfoDialog.<lang>.resx
-source_file = ImageInfoDialog.resx
-source_lang = en
-type = RESX
+[o:vietocr:p:vietocr:r:ImageInfoDialog_resx]
+file_filter            = ImageInfoDialog.<lang>.resx
+source_file            = ImageInfoDialog.resx
+source_lang            = en
+type                   = RESX
 
-[vietocr.OptionsDialog_resx]
-file_filter = OptionsDialog.<lang>.resx
-source_file = OptionsDialog.resx
-source_lang = en
-type = RESX
+[o:vietocr:p:vietocr:r:OptionsDialog_resx]
+file_filter            = OptionsDialog.<lang>.resx
+source_file            = OptionsDialog.resx
+source_lang            = en
+type                   = RESX
 
-[vietocr.Resources_resx]
-file_filter = Properties/Resources.<lang>.resx
-source_file = Properties/Resources.resx
-source_lang = en
-type = RESX
+[o:vietocr:p:vietocr:r:Resources_resx]
+file_filter            = Properties/Resources.<lang>.resx
+source_file            = Properties/Resources.resx
+source_lang            = en
+type                   = RESX
 
-[vietocr.SliderDialog_resx]
-file_filter = SliderDialog.<lang>.resx
-source_file = SliderDialog.resx
-source_lang = en
-type = RESX
+[o:vietocr:p:vietocr:r:SliderDialog_resx]
+file_filter            = SliderDialog.<lang>.resx
+source_file            = SliderDialog.resx
+source_lang            = en
+type                   = RESX
 
-[vietocr.SplitPdfDialog_resx]
-file_filter = SplitPdfDialog.<lang>.resx
-source_file = SplitPdfDialog.resx
-source_lang = en
-type = RESX
+[o:vietocr:p:vietocr:r:SplitPdfDialog_resx]
+file_filter            = SplitPdfDialog.<lang>.resx
+source_file            = SplitPdfDialog.resx
+source_lang            = en
+type                   = RESX
 
-[vietocr.readme_cs_html]
-file_filter = readme_cs_<lang>.html
-source_file = readme_cs.html
-source_lang = en
-type = HTML
+[o:vietocr:p:vietocr:r:readme_cs_html]
+file_filter            = readme_cs_<lang>.html
+source_file            = readme_cs.html
+source_lang            = en
+type                   = HTML
