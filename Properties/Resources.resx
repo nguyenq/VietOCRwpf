@@ -273,6 +273,7 @@ Please run the program as administrator.</value>
   </data>
   <data name="readme" xml:space="preserve">
     <value>readme_cs.html</value>
+    <comment>Localizers: change this to "readme_cs_xx.html" (where "xx" is your locale code) if you are localizing the readme_cs.html file. Leave untranslated otherwise.</comment>
   </data>
   <data name="Require_grayscale" xml:space="preserve">
     <value>Image may require conversion to grayscale.</value>
