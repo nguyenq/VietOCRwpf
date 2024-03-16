@@ -18,7 +18,6 @@ using Microsoft.Win32;
 
 using Tesseract;
 using Net.SourceForge.Vietpad.InputMethod;
-using Net.SourceForge.Vietpad.Utilities;
 using VietOCR.NET.Utilities;
 
 namespace VietOCR
@@ -349,7 +348,7 @@ namespace VietOCR
         }
 
         protected string inputfilename;
-        protected IList<System.Drawing.Image> imageList = new List<System.Drawing.Image>();
+        protected List<System.Drawing.Image> imageList = new List<System.Drawing.Image>();
 
         protected virtual void buttonCancelOCR_Click(object sender, RoutedEventArgs e)
         {
@@ -679,7 +678,7 @@ namespace VietOCR
 
         protected void setSegmentedRegions()
         {
-            if (!this.segmentedRegionsToolStripMenuItem.IsChecked || imageList == null || this.buttonActualSize.IsEnabled)
+            if (!this.segmentedRegionsToolStripMenuItem.IsChecked || !imageList.Any() || this.buttonActualSize.IsEnabled)
             {
                 this.imageCanvas.SegmentedRegions = null;
                 return;

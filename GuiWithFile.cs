@@ -18,6 +18,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -172,7 +173,7 @@ namespace VietOCR
 
         void loadImage(bool isShiftDown)
         {
-            if (imageList == null)
+            if (!imageList.Any())
             {
                 MessageBox.Show(this, Properties.Resources.Cannotloadimage, strProgName, MessageBoxButton.OK, MessageBoxImage.Error);
                 return;

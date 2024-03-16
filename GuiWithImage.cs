@@ -14,17 +14,13 @@
  * limitations under the License.
 */
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using Microsoft.Win32;
 using System.Drawing.Imaging;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Controls;
-
+using System.Linq;
 using VietOCR.NET.Utilities;
 
 namespace VietOCR
@@ -51,7 +47,7 @@ namespace VietOCR
 
         protected override void metadataToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (imageList == null)
+            if (!imageList.Any())
             {
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
@@ -71,7 +67,7 @@ namespace VietOCR
 
         protected override void brightenToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (imageList == null)
+            if (!imageList.Any())
             {
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
@@ -93,7 +89,7 @@ namespace VietOCR
 
         protected override void contrastToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (imageList == null)
+            if (!imageList.Any())
             {
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
@@ -137,7 +133,7 @@ namespace VietOCR
 
         protected override void deskewToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (imageList == null)
+            if (!imageList.Any())
             {
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
@@ -160,7 +156,7 @@ namespace VietOCR
 
         protected override void autocropToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (imageList == null)
+            if (!imageList.Any())
             {
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
@@ -181,7 +177,7 @@ namespace VietOCR
 
         protected override void cropToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (imageList == null)
+            if (!imageList.Any())
             {
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
@@ -210,7 +206,7 @@ namespace VietOCR
 
         protected override void removeLinesToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (imageList == null)
+            if (!imageList.Any())
             {
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
@@ -231,7 +227,7 @@ namespace VietOCR
 
         protected override void despeckle2x2ToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (imageList == null)
+            if (!imageList.Any())
             {
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
@@ -252,7 +248,7 @@ namespace VietOCR
 
         protected override void despeckle3x3ToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (imageList == null)
+            if (!imageList.Any())
             {
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
@@ -284,7 +280,7 @@ namespace VietOCR
 
         protected override void grayscaleToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (imageList == null)
+            if (!imageList.Any())
             {
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
@@ -297,7 +293,7 @@ namespace VietOCR
 
         protected override void monochromeToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (imageList == null)
+            if (!imageList.Any())
             {
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
@@ -310,7 +306,7 @@ namespace VietOCR
 
         protected override void gammaToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (imageList == null)
+            if (!imageList.Any())
             {
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
@@ -343,7 +339,7 @@ namespace VietOCR
 
         protected override void thresholdToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (imageList == null)
+            if (!imageList.Any())
             {
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
@@ -376,7 +372,7 @@ namespace VietOCR
 
         protected override void bilateralToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (imageList == null)
+            if (!imageList.Any())
             {
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
@@ -389,7 +385,7 @@ namespace VietOCR
 
         protected override void invertToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (imageList == null)
+            if (!imageList.Any())
             {
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
@@ -402,7 +398,7 @@ namespace VietOCR
 
         protected override void sharpenToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (imageList == null)
+            if (!imageList.Any())
             {
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
@@ -415,7 +411,7 @@ namespace VietOCR
 
         protected override void smoothToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            if (imageList == null)
+            if (!imageList.Any())
             {
                 MessageBox.Show(this, Properties.Resources.LoadImage, strProgName);
                 return;
