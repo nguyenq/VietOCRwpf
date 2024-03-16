@@ -33,7 +33,7 @@ namespace VietOCR
         private string strClearRecentFiles;
         const string strFilterIndex = "FilterIndex";
         const string strMruList = "MruList";
-        private System.ComponentModel.BackgroundWorker backgroundWorkerLoad;
+        private BackgroundWorker backgroundWorkerLoad;
 
         protected System.Drawing.Image CurrentImage
         {
@@ -45,13 +45,12 @@ namespace VietOCR
             // 
             // backgroundWorkerLoad
             // 
-            this.backgroundWorkerLoad = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorkerLoad = new BackgroundWorker();
             this.backgroundWorkerLoad.WorkerReportsProgress = true;
             this.backgroundWorkerLoad.WorkerSupportsCancellation = true;
-            this.backgroundWorkerLoad.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerLoad_DoWork);
-            this.backgroundWorkerLoad.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerLoad_RunWorkerCompleted);
+            this.backgroundWorkerLoad.DoWork += new DoWorkEventHandler(this.backgroundWorkerLoad_DoWork);
+            this.backgroundWorkerLoad.RunWorkerCompleted += new RunWorkerCompletedEventHandler(this.backgroundWorkerLoad_RunWorkerCompleted);
         }
-
 
         /// <summary>
         /// Opens image or text file.
@@ -59,6 +58,18 @@ namespace VietOCR
         /// <param name="selectedFile"></param>
         protected override void openFile(string selectedFile)
         {
+            OpenFiles(new[] { selectedFile });
+        }
+
+
+        /// <summary>
+        /// Opens images or text file.
+        /// </summary>
+        /// <param name="selectedFiles"></param>
+        void OpenFiles(string[] selectedFiles)
+        {
+            string selectedFile = selectedFiles[0];
+
             if (!File.Exists(selectedFile))
             {
                 MessageBox.Show(this, Properties.Resources.File_not_exist, strProgName, MessageBoxButton.OK, MessageBoxImage.Error);
@@ -99,31 +110,29 @@ namespace VietOCR
             this.toolStripProgressBar1.IsEnabled = true;
             this.toolStripProgressBar1.Visibility = Visibility.Visible;
             //this.toolStripProgressBar1.Style = ProgressBarStyle.Marquee;
-            this.backgroundWorkerLoad.RunWorkerAsync(Tuple.Create(selectedFile, Keyboard.Modifiers == ModifierKeys.Shift));
+            this.backgroundWorkerLoad.RunWorkerAsync(Tuple.Create(selectedFiles, Keyboard.Modifiers == ModifierKeys.Shift));
             updateMRUList(selectedFile);
         }
 
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         private void backgroundWorkerLoad_DoWork(object sender, DoWorkEventArgs e)
         {
-            var tuple = e.Argument as Tuple<string, bool>;
-            inputfilename = tuple.Item1;
-            FileInfo imageFile = new FileInfo(inputfilename);
-            if (tuple.Item2)
+            var tuple = e.Argument as Tuple<string[], bool>;
+            string[] fileNames = tuple.Item1;
+            inputfilename = fileNames[0];
+
+            if (!tuple.Item2)
             {
-                // open add
-                if (imageList == null)
-                {
-                    imageList = new List<System.Drawing.Image>();
-                }
-                ((List<System.Drawing.Image>)imageList).AddRange(ImageIOHelper.GetImageList(imageFile));
-            }
-            else
-            {
-                imageList = ImageIOHelper.GetImageList(imageFile);
+                imageList.Clear();
             }
 
-            e.Result = Tuple.Create(imageFile.Name, tuple.Item2);
+            foreach (string fileName in fileNames)
+            {
+                FileInfo imageFile = new FileInfo(fileName);
+                ((List<System.Drawing.Image>)imageList).AddRange(ImageIOHelper.GetImageList(imageFile));
+            }
+
+            e.Result = Tuple.Create(fileNames, tuple.Item2);
         }
 
         private void backgroundWorkerLoad_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -147,9 +156,9 @@ namespace VietOCR
             else
             {
                 // Finally, handle the case where the operation succeeded.
-                var tuple = e.Result as Tuple<string, bool>;
+                var tuple = e.Result as Tuple<string[], bool>;
                 loadImage(tuple.Item2);
-                this.Title = tuple.Item1 + " - " + strProgName;
+                this.Title = tuple.Item1[0] + " - " + strProgName;
                 this.statusLabel.Content = Properties.Resources.Loading_completed;
             }
 
@@ -172,7 +181,7 @@ namespace VietOCR
             if (isShiftDown)
             {
                 imageIndex = imageTotal;
-            } 
+            }
             else
             {
                 imageIndex = 0;
@@ -420,6 +429,7 @@ namespace VietOCR
         protected override void Open_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Multiselect = true;
 
             // Set filter for file extension and default file extension 
             dlg.Filter = "All Image Files|*.bmp;*.gif;*.jpg;*.jpeg;*.png;*.tif;*.tiff;*.pdf|Image Files (*.bmp)|*.bmp|Image Files (*.gif)|*.gif|Image Files (*.jpg;*.jpeg)|*.jpg;*.jpeg|Image Files (*.png)|*.png|Image Files (*.tif;*.tiff)|*.tif;*.tiff|PDF Files (*.pdf)|*.pdf|UTF-8 Text Files (*.txt)|*.txt";
@@ -430,8 +440,7 @@ namespace VietOCR
 
             if (result.HasValue && result.Value)
             {
-                // Open document 
-                openFile(dlg.FileName);
+                OpenFiles(dlg.FileNames);
                 filterIndex = dlg.FilterIndex;
             }
         }

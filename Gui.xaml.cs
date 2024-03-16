@@ -349,7 +349,7 @@ namespace VietOCR
         }
 
         protected string inputfilename;
-        protected IList<System.Drawing.Image> imageList;
+        protected IList<System.Drawing.Image> imageList = new List<System.Drawing.Image>();
 
         protected virtual void buttonCancelOCR_Click(object sender, RoutedEventArgs e)
         {

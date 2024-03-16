@@ -221,3 +221,6 @@ Version 6.11.0 (13 March 2024)
 - Implement open add image functionality using Shift key
 - Adjust size and position of dialogs and components to accommodate long localized text
 - Update translations
+
+Version 6.11.1 (16 March 2024)
+- Support open multiple file selection
