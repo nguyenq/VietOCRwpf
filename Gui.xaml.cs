@@ -375,6 +375,11 @@ namespace VietOCR
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
         }
 
+        protected virtual void selectThumbnail(int index)
+        {
+            MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);
+        }
+
         protected virtual void brightenToolStripMenuItem_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(TO_BE_IMPLEMENTED, strProgName);

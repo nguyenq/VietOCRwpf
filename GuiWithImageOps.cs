@@ -63,6 +63,7 @@ namespace VietOCR
             //}
 
             setButton();
+            selectThumbnail(imageIndex);
         }
 
         protected override void buttonFitImage_Click(object sender, RoutedEventArgs e)

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
@@ -10,22 +11,28 @@ namespace VietOCR
 {
     public class GuiWithThumbnail : GuiWithFile
     {
-        private System.ComponentModel.BackgroundWorker backgroundWorkerLoadThumbnail;
+        private BackgroundWorker backgroundWorkerLoadThumbnail;
         private Style toggleButtonStyle;
 
         public GuiWithThumbnail()
         {
             toggleButtonStyle = new Style(typeof(RadioButton), (Style)FindResource(typeof(ToggleButton)));
-            this.backgroundWorkerLoadThumbnail = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorkerLoadThumbnail = new BackgroundWorker();
             this.backgroundWorkerLoadThumbnail.WorkerReportsProgress = true;
-            this.backgroundWorkerLoadThumbnail.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerLoadThumbnail_DoWork);
-            this.backgroundWorkerLoadThumbnail.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorkerLoadThumbnail_ProgressChanged);
+            this.backgroundWorkerLoadThumbnail.DoWork += new DoWorkEventHandler(this.backgroundWorkerLoadThumbnail_DoWork);
+            this.backgroundWorkerLoadThumbnail.ProgressChanged += new ProgressChangedEventHandler(this.backgroundWorkerLoadThumbnail_ProgressChanged);
+            this.backgroundWorkerLoadThumbnail.RunWorkerCompleted += BackgroundWorkerLoadThumbnail_RunWorkerCompleted;
         }
 
         protected override void loadThumbnails()
         {
             this.panelThumbnail.Children.Clear();
             this.backgroundWorkerLoadThumbnail.RunWorkerAsync();
+        }
+
+        protected override void selectThumbnail(int index)
+        {
+            this.panelThumbnail.Children.OfType<RadioButton>().ElementAt(index).IsChecked = true;
         }
 
         private void backgroundWorkerLoadThumbnail_DoWork(object sender, DoWorkEventArgs e)
@@ -59,6 +66,22 @@ namespace VietOCR
             label.HorizontalAlignment = HorizontalAlignment.Center;
             label.Margin = new Thickness(0, -5, 0, 0);
             this.panelThumbnail.Children.Add(label);
+        }
+
+        private void BackgroundWorkerLoadThumbnail_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                MessageBox.Show(e.Error.Message);
+            }
+            else if (e.Cancelled)
+            {
+                //cancelled
+            }
+            else
+            {
+                selectThumbnail(imageIndex);
+            }
         }
 
         private void radioButton_Click(object sender, RoutedEventArgs e)
