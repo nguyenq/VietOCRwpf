@@ -1,11 +1,12 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Drawing;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 
 namespace VietOCR
 {
@@ -61,6 +62,21 @@ namespace VietOCR
             rb.Tag = e.ProgressPercentage;
             rb.Click += new RoutedEventHandler(this.radioButton_Click);
             this.panelThumbnail.Children.Add(rb);
+            Rectangle rect = new Rectangle();
+            rect.HorizontalAlignment = HorizontalAlignment.Right;
+            rect.Width = 10;
+            rect.Height = 10;
+            SolidColorBrush mySolidColorBrush = new SolidColorBrush();
+            mySolidColorBrush.Color = System.Windows.Media.Color.FromArgb(255, 0, 128, 128);
+            //rect.Stroke = mySolidColorBrush;
+            rect.Fill = mySolidColorBrush;
+            rect.Margin= new Thickness(0, -10, 0, 0);
+
+            System.Windows.Data.Binding binding = new System.Windows.Data.Binding("IsChecked");
+            binding.Converter = new System.Windows.Controls.BooleanToVisibilityConverter();
+            binding.Source = rb;
+            rect.SetBinding(UIElement.VisibilityProperty, binding);
+            this.panelThumbnail.Children.Add(rect);
             Label label = new Label();
             label.Content = e.ProgressPercentage + 1;
             label.HorizontalAlignment = HorizontalAlignment.Center;
