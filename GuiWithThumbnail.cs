@@ -32,7 +32,7 @@ namespace VietOCR
 
         protected override void selectThumbnail(int index)
         {
-            this.panelThumbnail.Children.OfType<RadioButton>().ElementAt(index).IsChecked = true;
+            this.panelThumbnail.Children.OfType<RadioButton>().Where(x => (int) x.Tag == index).First().IsChecked = true;
         }
 
         private void backgroundWorkerLoadThumbnail_DoWork(object sender, DoWorkEventArgs e)
