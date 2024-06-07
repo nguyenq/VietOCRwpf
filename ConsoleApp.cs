@@ -16,7 +16,7 @@ namespace VietOCR
         {
             if (args[0] == "-?" || args[0] == "-help" || args.Length == 1)
             {
-                Console.WriteLine("Usage: vietocr imagefile outputfile [-l lang] [--psm pagesegmode] [text|hocr|pdf|pdf_textonly|unlv|box|alto|tsv|lstmbox|wordstrbox] [postprocessing] [correctlettercases] [deskew] [removelines] [removelinebreaks]");
+                Console.WriteLine("Usage: vietocr imagefile outputfile [-l lang] [--psm pagesegmode] [text|hocr|pdf|pdf_textonly|unlv|box|alto|page|tsv|lstmbox|wordstrbox] [postprocessing] [correctlettercases] [deskew] [removelines] [removelinebreaks]");
                 return;
             }
 
