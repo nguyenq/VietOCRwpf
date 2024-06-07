@@ -224,3 +224,6 @@ Version 6.11.0 (13 March 2024)
 
 Version 6.11.1 (16 March 2024)
 - Support open multiple file selection
+
+Version 6.12.0 (7 June 2024)
+- Upgrade to Tesseract 5.4.0
