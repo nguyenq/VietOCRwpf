@@ -292,10 +292,10 @@
     <Content Include="x64\libleptonica1841.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="x64\libtesseract540.dll">
+    <Content Include="x64\libtesseract541.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="x86\libtesseract540.dll" />
+    <None Include="x86\libtesseract541.dll" />
     <None Include="x86\libleptonica1841.dll" />
     <Resource Include="readme_cs_pt.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
