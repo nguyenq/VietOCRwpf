@@ -35,7 +35,7 @@ namespace VietOCR
         const string strBulkOutputFolder = "BulkOutputFolder";
         const string strBulkOutputFormat = "BulkOutputFormat";
         const string strBulkDeskewEnable = "BulkDeskewEnable";
-        readonly string[] imageFilters = ".tif|.jpg|.jpeg|.gif|.png|.bmp|.pdf".Split('|');
+        readonly string[] imageFilters = ".tif|.tiff|.jpg|.jpeg|.gif|.png|.bmp|.pdf".Split('|');
 
         private string inputFolder;
         private string outputFolder;
@@ -189,7 +189,7 @@ namespace VietOCR
             // First, handle the case where an exception was thrown.
             if (e.Error != null)
             {
-                this.statusLabel.Content = String.Empty;
+                this.statusLabel.Content = string.Empty;
                 this.statusForm.TextBox.AppendText(e.Error.Message + Environment.NewLine);
             }
             else if (e.Cancelled)
@@ -217,7 +217,7 @@ namespace VietOCR
             TimeSpan ts = stopWatch.Elapsed;
 
             // Format and display the TimeSpan value. 
-            string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
+            string elapsedTime = string.Format("{0:00}:{1:00}:{2:00}", ts.Hours, ts.Minutes, ts.Seconds);
             this.statusForm.TextBox.AppendText("\t" + Properties.Resources.Elapsed_time + ": " + elapsedTime + Environment.NewLine);
             this.statusForm.TextBox.ScrollToEnd();
         }
