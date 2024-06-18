@@ -57,7 +57,7 @@ namespace VietOCR
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            String xmlFilePath = Path.Combine(baseDir, "Data/TessLangDataURL.xml");
+            string xmlFilePath = Path.Combine(baseDir, "Data/TessLangDataURL.xml");
             availableLanguageCodes = new Dictionary<string, string>();
             VietOCR.NET.Utilities.Utilities.LoadFromXML(availableLanguageCodes, xmlFilePath);
 
@@ -140,7 +140,7 @@ namespace VietOCR
 
             if (!isWriteAccess)
             {
-                string msg = String.Format(Properties.Resources.Access_denied, Path.Combine(baseDir, TESS_DATA).ToString());
+                string msg = string.Format(Properties.Resources.Access_denied, Path.Combine(baseDir, TESS_DATA).ToString());
                 MessageBox.Show(msg, Gui.strProgName, MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }

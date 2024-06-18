@@ -111,7 +111,7 @@ namespace VietOCR
                 return;
             }
 
-            List<String> suggests = speller.Suggest(curWord);
+            List<string> suggests = speller.Suggest(curWord);
             if (suggests == null || suggests.Count == 0)
             {
                 return;

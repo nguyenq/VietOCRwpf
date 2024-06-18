@@ -63,7 +63,7 @@ namespace VietOCR.NET.Utilities
             //form.SuspendLayout();
             // If available, assign localized text to Form and fields with Text property.
 
-            String text = resources.GetString("this.Title");
+            string text = resources.GetString("this.Title");
             if (text != null)
                 form.Title = text;
 
@@ -99,7 +99,7 @@ namespace VietOCR.NET.Utilities
                                 fieldInfo.GetValue(form), new object[] { text });
                         }
                     }
-                    else if (fieldType.GetProperty("Text", typeof(String)) != null)
+                    else if (fieldType.GetProperty("Text", typeof(string)) != null)
                     {
                         text = resources.GetString(fieldInfo.Name + ".Text");
                         if (text != null)
@@ -109,7 +109,7 @@ namespace VietOCR.NET.Utilities
                                 fieldInfo.GetValue(form), new object[] { text });
                         }
                     }
-                    else if (fieldType.GetProperty("ToolTipText", typeof(String)) != null)
+                    else if (fieldType.GetProperty("ToolTipText", typeof(string)) != null)
                     {
                         text = resources.GetString(fieldInfo.Name + ".ToolTipText");
                         if (text != null)

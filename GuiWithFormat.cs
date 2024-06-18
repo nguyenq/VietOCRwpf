@@ -161,7 +161,7 @@ namespace VietOCR
         protected override void LoadRegistryInfo(RegistryKey regkey)
         {
             base.LoadRegistryInfo(regkey);
-            selectedCase = (string)regkey.GetValue(strSelectedCase, String.Empty);
+            selectedCase = (string)regkey.GetValue(strSelectedCase, string.Empty);
         }
 
         protected override void SaveRegistryInfo(RegistryKey regkey)

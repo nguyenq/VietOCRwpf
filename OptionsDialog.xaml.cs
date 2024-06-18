@@ -198,7 +198,7 @@ namespace VietOCR
 
         private void btnDangAmbigs_Click(object sender, RoutedEventArgs e)
         {
-            this.openFileDialog1.Title = String.Format("Set Path to {0}.DangAmbigs.txt", CurLangCode);
+            this.openFileDialog1.Title = string.Format("Set Path to {0}.DangAmbigs.txt", CurLangCode);
             this.openFileDialog1.InitialDirectory = ProcessingOptions.DangAmbigsPath;
 
             Nullable<bool> result = openFileDialog1.ShowDialog();

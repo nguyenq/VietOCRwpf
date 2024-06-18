@@ -16,7 +16,7 @@ namespace VietOCR.NET.Postprocessing
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        public static string CorrectLetterCases(String input)
+        public static string CorrectLetterCases(string input)
         {
             // lower uppercase letters ended by lowercase letters except the first letter
             Regex regex = new Regex("(?<=\\p{L}+)(\\p{Lu}+)(?=\\p{Ll}+)");

@@ -150,7 +150,7 @@ namespace VietOCR
             // First, handle the case where an exception was thrown.
             if (e.Error != null)
             {
-                this.statusLabel.Content = String.Empty;
+                this.statusLabel.Content = string.Empty;
                 MessageBox.Show(this, e.Error.Message, strProgName, MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else if (e.Cancelled)
@@ -166,7 +166,7 @@ namespace VietOCR
                 this.statusLabel.Content = Properties.Resources.MergeTIFFcompleted;
                 MessageBox.Show(this, Properties.Resources.MergeTIFFcompleted + Path.GetFileName(e.Result.ToString()) + Properties.Resources.created, strProgName, MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            this.statusLabel.Content = String.Empty;
+            this.statusLabel.Content = string.Empty;
             this.textBox1.Cursor = null;
             this.Cursor = null;
         }
@@ -211,7 +211,7 @@ namespace VietOCR
             // move temp TIFF files to selected folder
             for (int i = 0; i < filenames.Count; i++)
             {
-                string outfilename = String.Format("{0}-{1:000}.tif", basefilename, i + 1);
+                string outfilename = string.Format("{0}-{1:000}.tif", basefilename, i + 1);
                 File.Delete(outfilename);
                 File.Move(filenames[i], outfilename);
             }
@@ -230,7 +230,7 @@ namespace VietOCR
             // First, handle the case where an exception was thrown.
             if (e.Error != null)
             {
-                this.statusLabel.Content = String.Empty;
+                this.statusLabel.Content = string.Empty;
                 MessageBox.Show(this, e.Error.Message, strProgName, MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else if (e.Cancelled)
@@ -246,7 +246,7 @@ namespace VietOCR
                 this.statusLabel.Content = Properties.Resources.SplitTIFFcompleted;
                 MessageBox.Show(this, Properties.Resources.SplitTIFFcompleted, strProgName, MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            this.statusLabel.Content = String.Empty;
+            this.statusLabel.Content = string.Empty;
             this.textBox1.Cursor = null;
             this.Cursor = null;
         }
@@ -282,7 +282,7 @@ namespace VietOCR
             }
             else
             {
-                string outputFilename = String.Empty;
+                string outputFilename = string.Empty;
 
                 if (args.OutputFilename.EndsWith(".pdf"))
                 {
@@ -321,7 +321,7 @@ namespace VietOCR
             // First, handle the case where an exception was thrown.
             if (e.Error != null)
             {
-                this.statusLabel.Content = String.Empty;
+                this.statusLabel.Content = string.Empty;
                 MessageBox.Show(this, e.Error.Message, strProgName, MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else if (e.Cancelled)
@@ -337,7 +337,7 @@ namespace VietOCR
                 this.statusLabel.Content = Properties.Resources.SplitPDF_completed;
                 MessageBox.Show(this, Properties.Resources.SplitPDF_completed + "\n" + Properties.Resources.check_output_in + Path.GetDirectoryName(e.Result.ToString()), strProgName, MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            this.statusLabel.Content = String.Empty;
+            this.statusLabel.Content = string.Empty;
             this.textBox1.Cursor = null;
             this.Cursor = null;
         }
@@ -409,7 +409,7 @@ namespace VietOCR
             // First, handle the case where an exception was thrown.
             if (e.Error != null)
             {
-                this.statusLabel.Content = String.Empty;
+                this.statusLabel.Content = string.Empty;
                 MessageBox.Show(this, e.Error.Message, strProgName, MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else if (e.Cancelled)
@@ -425,7 +425,7 @@ namespace VietOCR
                 this.statusLabel.Content = Properties.Resources.MergePDFcompleted;
                 MessageBox.Show(this, Properties.Resources.MergePDFcompleted + Path.GetFileName(e.Result.ToString()) + Properties.Resources.created, strProgName, MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            this.statusLabel.Content = String.Empty;
+            this.statusLabel.Content = string.Empty;
             this.textBox1.Cursor = null;
             this.Cursor = null;
         }
@@ -486,7 +486,7 @@ namespace VietOCR
             // First, handle the case where an exception was thrown.
             if (e.Error != null)
             {
-                this.statusLabel.Content = String.Empty;
+                this.statusLabel.Content = string.Empty;
                 MessageBox.Show(this, e.Error.Message, strProgName, MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else if (e.Cancelled)
@@ -503,7 +503,7 @@ namespace VietOCR
                 MessageBox.Show(this, Properties.Resources.ConvertPDFcompleted + "\n" + Properties.Resources.check_output_in + Path.GetDirectoryName(e.Result.ToString()), strProgName, MessageBoxButton.OK, MessageBoxImage.Information);
 
             }
-            this.statusLabel.Content = String.Empty;
+            this.statusLabel.Content = string.Empty;
             this.textBox1.Cursor = null;
             this.Cursor = null;
         }

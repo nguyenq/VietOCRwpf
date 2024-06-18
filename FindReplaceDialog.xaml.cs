@@ -118,7 +118,7 @@ namespace VietOCR
                 text = this.ReplaceText;
                 comboBox = this.cbReplace;
             }
-            if (text == String.Empty) return;
+            if (text == string.Empty) return;
 
             if (!comboBox.Items.Contains(text))
             {

@@ -16,7 +16,7 @@ namespace VietOCR.NET.Utilities
 {
     class FileExtractor
     {
-        public static void ExtractCompressedFile(String compressedArchiveName, String destFolder) 
+        public static void ExtractCompressedFile(string compressedArchiveName, string destFolder) 
         {
             if (compressedArchiveName.ToLower().EndsWith(".zip"))
             {
@@ -43,7 +43,7 @@ namespace VietOCR.NET.Utilities
             }
         }
         
-        public static void ExtractTGZ(String gzArchiveName, String destFolder)
+        public static void ExtractTGZ(string gzArchiveName, string destFolder)
         {
             Stream inStream = File.OpenRead(gzArchiveName);
             Stream gzipStream = new GZipInputStream(inStream);
@@ -81,7 +81,7 @@ namespace VietOCR.NET.Utilities
             {
                 FileStream fs = File.OpenRead(archiveFilenameIn);
                 zf = new ZipFile(fs);
-                if (!String.IsNullOrEmpty(password))
+                if (!string.IsNullOrEmpty(password))
                 {
                     zf.Password = password;		// AES encrypted entries are handled automatically
                 }
@@ -91,7 +91,7 @@ namespace VietOCR.NET.Utilities
                     {
                         continue;			// Ignore directories
                     }
-                    String entryFileName = zipEntry.Name;
+                    string entryFileName = zipEntry.Name;
                     // to remove the folder from the entry:- entryFileName = Path.GetFileName(entryFileName);
                     // Optionally match entrynames against a selection list here to skip as desired.
                     // The unpacked length is available in the zipEntry.Size property.
@@ -100,7 +100,7 @@ namespace VietOCR.NET.Utilities
                     Stream zipStream = zf.GetInputStream(zipEntry);
 
                     // Manipulate the output filename here as desired.
-                    String fullZipToPath = Path.Combine(outFolder, entryFileName);
+                    string fullZipToPath = Path.Combine(outFolder, entryFileName);
                     string directoryName = Path.GetDirectoryName(fullZipToPath);
                     if (directoryName.Length > 0)
                         Directory.CreateDirectory(directoryName);

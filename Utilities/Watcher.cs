@@ -12,7 +12,7 @@ namespace VietOCR.NET.Utilities
     /// </summary>
     public class Watcher
     {
-        private Queue<String> queue;
+        private Queue<string> queue;
         private Regex filters = new Regex(@".*\.(tif|tiff|jpg|jpeg|gif|png|bmp|pdf)$", RegexOptions.IgnoreCase);
 
         private FileSystemWatcher watcher;
@@ -30,7 +30,7 @@ namespace VietOCR.NET.Utilities
         }
 
         //[PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
-        public Watcher(Queue<String> q, string watchFolder)
+        public Watcher(Queue<string> q, string watchFolder)
         {
             queue = q;
 

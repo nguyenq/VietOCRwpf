@@ -32,7 +32,7 @@ namespace VietOCR
 {
     public class GuiWithBatch : GuiWithSettings
     {
-        private Queue<String> queue;
+        private Queue<string> queue;
         private Watcher watcher;
         private DispatcherTimer aTimer;
         private StatusForm statusForm;
@@ -49,7 +49,7 @@ namespace VietOCR
         {
             base.Window_Loaded(sender, e);
 
-            queue = new Queue<String>();
+            queue = new Queue<string>();
             watcher = new Watcher(queue, watchFolder);
             watcher.Enabled = watchEnabled;
 

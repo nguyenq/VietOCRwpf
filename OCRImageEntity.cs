@@ -72,9 +72,9 @@ namespace VietOCR
             set; get;
         }
 
-        String lang;
+        string lang;
 
-        public String Language
+        public string Language
         {
             get { return lang; }
             set { lang = value; }
@@ -85,7 +85,7 @@ namespace VietOCR
         /** Vertical Resolution */
         private int dpiY;
 
-        public OCRImageEntity(IList<Image> images, string inputfilename, int index, Rectangle rect, bool doublesided, String lang)
+        public OCRImageEntity(IList<Image> images, string inputfilename, int index, Rectangle rect, bool doublesided, string lang)
         {
             this.images = images;
             this.inputfilename = inputfilename;

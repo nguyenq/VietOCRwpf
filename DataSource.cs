@@ -87,7 +87,7 @@ namespace VietOCR
         private static string WriteSelectedLanguagesString(IList<string> list)
         {
             if (list.Count == 0)
-                return String.Empty;
+                return string.Empty;
 
             StringBuilder builder = new StringBuilder(list[0]);
 

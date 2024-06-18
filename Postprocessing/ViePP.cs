@@ -28,7 +28,7 @@ namespace VietOCR.NET.Postprocessing
 
         public string PostProcess(string text)
         {
-            // Move all of these String replace to external vie.DangAmbigs.txt.
+            // Move all of these string replace to external vie.DangAmbigs.txt.
             // The file location also gives users more control over the choice of word corrections.
             //// substitute Vietnamese letters frequently misrecognized by Tesseract 2.03
             //StringBuilder strB = new StringBuilder(text);

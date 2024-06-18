@@ -21,7 +21,7 @@ namespace VietOCR
         TextBox textbox;
         string localeId;
         static ObservableCollection<CharacterRange> spellingErrorRanges = new ObservableCollection<CharacterRange>();
-        static ObservableCollection<String> userWordList = new ObservableCollection<String>();
+        static ObservableCollection<string> userWordList = new ObservableCollection<string>();
         static DateTime mapLastModified = DateTime.MinValue;
         Hunspell spellChecker;
 
@@ -118,7 +118,7 @@ namespace VietOCR
             }
 
             StringBuilder sb = new StringBuilder();
-            foreach (String word in misspelledWords)
+            foreach (string word in misspelledWords)
             {
                 sb.Append(word).Append("|");
             }
@@ -151,9 +151,9 @@ namespace VietOCR
             return false;
         }
 
-        List<String> SpellCheck(List<String> words)
+        List<string> SpellCheck(List<string> words)
         {
-            List<String> misspelled = new List<String>();
+            List<string> misspelled = new List<string>();
 
             foreach (string word in words)
             {
@@ -166,9 +166,9 @@ namespace VietOCR
             return misspelled;
         }
 
-        List<String> ParseText(String text)
+        List<string> ParseText(string text)
         {
-            List<String> words = new List<String>();
+            List<string> words = new List<string>();
             BreakIterator boundary = BreakIterator.GetWordInstance();
             boundary.Text = text;
             int start = boundary.First();
@@ -184,9 +184,9 @@ namespace VietOCR
             return words;
         }
 
-        public List<String> Suggest(string misspelled)
+        public List<string> Suggest(string misspelled)
         {
-            List<String> list = new List<String>();
+            List<string> list = new List<string>();
             list.Add(misspelled);
 
             if (SpellCheck(list).Count == 0)

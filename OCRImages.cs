@@ -57,7 +57,7 @@ namespace VietOCR
                         {
                             string text = OutputFormat == "hocr" ? page.GetHOCRText(pageNum - 1) : page.GetText();
 
-                            if (text == null) return String.Empty;
+                            if (text == null) return string.Empty;
                             strB.Append(text);
                         }
                     }

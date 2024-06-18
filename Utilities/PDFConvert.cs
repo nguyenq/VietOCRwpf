@@ -739,21 +739,21 @@ namespace ConvertPDF
                 if (_iResolutionX > 0)
                 {
                     if (_iResolutionY > 0)
-                        lstExtraArgs.Add(String.Format(GS_ResolutionXYFormat, _iResolutionX, _iResolutionY));
+                        lstExtraArgs.Add(string.Format(GS_ResolutionXYFormat, _iResolutionX, _iResolutionY));
                     else
-                        lstExtraArgs.Add(String.Format(GS_ResolutionXFormat, _iResolutionX));
+                        lstExtraArgs.Add(string.Format(GS_ResolutionXFormat, _iResolutionX));
                 }
                 if (_iFirstPageToConvert > 0)
-                    lstExtraArgs.Add(String.Format(GS_FirstPageFormat, _iFirstPageToConvert));
+                    lstExtraArgs.Add(string.Format(GS_FirstPageFormat, _iFirstPageToConvert));
                 if (_iLastPageToConvert > 0)
                 {
                     if ((_iFirstPageToConvert > 0) && (_iFirstPageToConvert > _iLastPageToConvert))
                         throw new ArgumentOutOfRangeException(string.Format("The 1st page to convert ({0}) can't be after then the last one ({1}).", _iFirstPageToConvert, _iLastPageToConvert));
-                    lstExtraArgs.Add(String.Format(GS_LastPageFormat, _iLastPageToConvert));
+                    lstExtraArgs.Add(string.Format(GS_LastPageFormat, _iLastPageToConvert));
                 }
                 //Set in how many threads i want to do the work
                 if (_iRenderingThreads > 0)
-                    lstExtraArgs.Add(String.Format(GS_RenderingThreads, _iRenderingThreads));
+                    lstExtraArgs.Add(string.Format(GS_RenderingThreads, _iRenderingThreads));
 
                 //If i want to redirect write it to the standard output!
                 if (_bRedirectIO)

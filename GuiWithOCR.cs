@@ -173,7 +173,7 @@ namespace VietOCR
             // First, handle the case where an exception was thrown.
             if (e.Error != null)
             {
-                this.statusLabel.Content = String.Empty;
+                this.statusLabel.Content = string.Empty;
                 MessageBox.Show(e.Error.Message, Properties.Resources.OCROperation, MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else if (e.Cancelled)

@@ -17,7 +17,7 @@ namespace Net.SourceForge.Vietpad.Utilities
             Regex regex = new Regex("\\p{IsCombiningDiacriticalMarks}+");
 
             string strFormD = accented.Normalize(NormalizationForm.FormD);
-            return regex.Replace(strFormD, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
+            return regex.Replace(strFormD, string.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
         }
     }
 }

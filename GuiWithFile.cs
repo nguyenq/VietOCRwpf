@@ -144,7 +144,7 @@ namespace VietOCR
             // First, handle the case where an exception was thrown.
             if (e.Error != null)
             {
-                this.statusLabel.Content = String.Empty;
+                this.statusLabel.Content = string.Empty;
                 MessageBox.Show(e.Error.Message, Properties.Resources.Load_image, MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else if (e.Cancelled)
@@ -341,7 +341,7 @@ namespace VietOCR
         /// Update MRU List.
         /// </summary>
         /// <param name="fileName"></param>
-        private void updateMRUList(String fileName)
+        private void updateMRUList(string fileName)
         {
             if (mruList.Contains(fileName))
             {
@@ -451,7 +451,7 @@ namespace VietOCR
             base.LoadRegistryInfo(regkey);
             filterIndex = (int)regkey.GetValue(strFilterIndex, 1);
 
-            string[] fileNames = ((string)regkey.GetValue(strMruList, String.Empty)).Split(new[] { Path.PathSeparator }, StringSplitOptions.RemoveEmptyEntries);
+            string[] fileNames = ((string)regkey.GetValue(strMruList, string.Empty)).Split(new[] { Path.PathSeparator }, StringSplitOptions.RemoveEmptyEntries);
 
             foreach (string fileName in fileNames)
             {

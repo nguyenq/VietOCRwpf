@@ -10,8 +10,8 @@ namespace VietOCR
 {
     public class GuiWithFindReplace : GuiWithPostprocess
     {
-        string strFind = String.Empty, strReplace = String.Empty;
-        string textFind = String.Empty, textReplace = String.Empty;
+        string strFind = string.Empty, strReplace = string.Empty;
+        string textFind = string.Empty, textReplace = string.Empty;
         //ComboBox.ObjectCollection itemsFind, itemsReplace;
 
         bool bMatchCase = false, bMatchDiacritics = false, bMatchRegex = false, bSearchDown = true;
@@ -129,7 +129,7 @@ namespace VietOCR
                 {
                     while (iStart + strFind.Length <= textBox1.Text.Length)
                     {
-                        if (String.Compare(strFind, 0, searchData, iStart, strFind.Length, !bMatchCase) == 0)
+                        if (string.Compare(strFind, 0, searchData, iStart, strFind.Length, !bMatchCase) == 0)
                         {
                             textBox1.SelectionStart = iStart;
                             textBox1.SelectionLength = strFind.Length;
@@ -183,7 +183,7 @@ namespace VietOCR
 
                     while (iStart >= 0)
                     {
-                        if (String.Compare(strFind, 0, searchData, iStart, strFind.Length, !bMatchCase) == 0)
+                        if (string.Compare(strFind, 0, searchData, iStart, strFind.Length, !bMatchCase) == 0)
                         {
                             textBox1.SelectionStart = iStart;
                             textBox1.SelectionLength = strFind.Length;
@@ -262,7 +262,7 @@ namespace VietOCR
                     return;
                 }
             }
-            else if (String.Compare(strFind, selectedText, !bMatchCase) == 0)
+            else if (string.Compare(strFind, selectedText, !bMatchCase) == 0)
             {
                 textBox1.SelectedText = strReplace;
             }
@@ -333,7 +333,7 @@ namespace VietOCR
 
                 for (int i = 0; i <= strB.Length - strFind.Length;)
                 {
-                    if (String.Compare(strTemp, i, strFind, 0, strFind.Length, !bMatchCase) == 0)
+                    if (string.Compare(strTemp, i, strFind, 0, strFind.Length, !bMatchCase) == 0)
                     {
                         strB.Remove(i, strFind.Length);
                         strB.Insert(i, strReplace);

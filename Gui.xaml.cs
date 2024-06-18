@@ -606,7 +606,7 @@ namespace VietOCR
 
         protected virtual void LoadRegistryInfo(RegistryKey regkey)
         {
-            string selectedLanguagesText = (string)regkey.GetValue(strOcrLanguage, String.Empty);
+            string selectedLanguagesText = (string)regkey.GetValue(strOcrLanguage, string.Empty);
             dataSource.SelectedLanguages = new ObservableCollection<string>(selectedLanguagesText.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries).Select(p => p.Trim()).Distinct().ToList());
             curLangCode = GetLangCodes(selectedLanguagesText);
 

@@ -145,7 +145,7 @@ namespace VietOCR
             if (worker.CancellationPending)
             {
                 e.Cancel = true;
-                return String.Empty;
+                return string.Empty;
             }
 
             return RecognizeText(imageEntities, inputName);
