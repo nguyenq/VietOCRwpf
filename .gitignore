@@ -10,6 +10,5 @@
 /.vs
 /packages
 /TestResults
-/Test/bin/Debug
-/Test/obj/Debug
-/Test/obj/Release
+/Test/bin
+/Test/obj
