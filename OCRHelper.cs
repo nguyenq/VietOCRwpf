@@ -3,6 +3,7 @@ using System.Drawing;
 using VietOCR.NET.Utilities;
 using VietOCR.NET.Postprocessing;
 using System.Linq;
+using System;
 
 namespace VietOCR
 {

@@ -1,22 +1,19 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.IO;
+using System.Security.AccessControl;
 using VietOCR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace VietOCR.Tests
+namespace UnitTest
 {
-    [TestClass()]
-    public class ConsoleAppTests
+    [TestClass]
+    public sealed class ConsoleAppTests
     {
-        [TestMethod()]
+        [TestMethod]
         public void MainTest()
         {
-            string[] args = {"vietsample.tif", "out",  "-l", "vie", "pdf_textonly" };
+            string[] args = { "samples/vietsample.tif", "out", "-l", "vie", "pdf_textonly" };
             ConsoleApp.Main(args);
-            //Assert.Fail();
+            Assert.IsTrue(File.Exists("out.pdf"));
         }
     }
 }
