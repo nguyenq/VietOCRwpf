@@ -240,3 +240,6 @@ Version 6.15.0 (5 June 2025)
 
 Version 6.15.1 (27 September 2025)
 - Update Leptonica 1.86.0
+
+Version 6.15.2 (27 December 2025)
+- Update Leptonica 1.87.0
