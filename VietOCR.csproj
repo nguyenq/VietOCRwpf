@@ -67,7 +67,7 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
-    <Reference Include="Tesseract, Version=5.5.1.1, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Tesseract, Version=5.5.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Library\Tesseract.dll</HintPath>
     </Reference>
@@ -292,10 +292,10 @@
     <Content Include="x64\libleptonica1870.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="x64\libtesseract551.dll">
+    <Content Include="x64\libtesseract552.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="x86\libtesseract551.dll" />
+    <None Include="x86\libtesseract552.dll" />
     <None Include="x86\libleptonica1870.dll" />
     <Resource Include="readme_cs_pt.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
