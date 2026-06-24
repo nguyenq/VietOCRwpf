@@ -295,8 +295,6 @@
     <Content Include="x64\libtesseract552.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="x86\libtesseract552.dll" />
-    <None Include="x86\libleptonica1870.dll" />
     <Resource Include="readme_cs_pt.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
