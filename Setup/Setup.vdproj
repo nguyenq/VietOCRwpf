@@ -184,19 +184,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_31E1244901A4E898DBFC4DE6184DBD82"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_32040A7FDB3B00F48831EC7C5AE3228C"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_99C7C42B9DEC4A0F6344BE52156EDFF6"
+        "OwnerKey" = "8:_7E1D56C10526E547B9C780FEB09F49B7"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -208,7 +196,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7E1D56C10526E547B9C780FEB09F49B7"
+        "OwnerKey" = "8:_99C7C42B9DEC4A0F6344BE52156EDFF6"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_32040A7FDB3B00F48831EC7C5AE3228C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_31E1244901A4E898DBFC4DE6184DBD82"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -256,7 +256,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\VietOCR.NET-6.16.0_64\\Setup.msi"
+        "OutputFilename" = "8:Release\\VietOCR.NET-6.17.0_64\\Setup.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -443,11 +443,6 @@
             "AssemblyAsmDisplayName" = "8:NHunspell, Version=1.2.5554.16953, Culture=neutral, PublicKeyToken=1ac793ea843b4366, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_31E1244901A4E898DBFC4DE6184DBD82"
-                    {
-                    "Name" = "8:NHunspell.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:NHunspell.dll"
             "TargetName" = "8:"
@@ -474,11 +469,6 @@
             "AssemblyAsmDisplayName" = "8:VietKeyInput, Version=4.0.6120.35364, Culture=neutral, PublicKeyToken=7c2367f2fb8ce189, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_32040A7FDB3B00F48831EC7C5AE3228C"
-                    {
-                    "Name" = "8:VietKeyInput.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:VietKeyInput.dll"
             "TargetName" = "8:"
@@ -525,11 +515,6 @@
             "AssemblyAsmDisplayName" = "8:MultiComboBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_550108E7600DED4D70A00CCC85A88FB4"
-                    {
-                    "Name" = "8:MultiComboBox.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:MultiComboBox.dll"
             "TargetName" = "8:"
@@ -676,11 +661,6 @@
             "AssemblyAsmDisplayName" = "8:ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_7E1D56C10526E547B9C780FEB09F49B7"
-                    {
-                    "Name" = "8:ICSharpCode.SharpZipLib.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:ICSharpCode.SharpZipLib.dll"
             "TargetName" = "8:"
@@ -747,11 +727,6 @@
             "AssemblyAsmDisplayName" = "8:Tesseract, Version=5.5.2.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_99C7C42B9DEC4A0F6344BE52156EDFF6"
-                    {
-                    "Name" = "8:Tesseract.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Tesseract.dll"
             "TargetName" = "8:"
@@ -947,20 +922,20 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:VietOCR"
-        "ProductCode" = "8:{DFC6944B-C0D4-4753-856D-3A3F0A85D6EB}"
-        "PackageCode" = "8:{F2CB6758-2EE9-4BE2-9E92-874D68F199FE}"
+        "ProductCode" = "8:{C7A020D1-6FF9-4C9C-AA04-FCCC80EB37CC}"
+        "PackageCode" = "8:{6B898EC2-CA0C-4B6C-A874-C39615B50BCD}"
         "UpgradeCode" = "8:{9DB2C555-29D0-4CEC-996E-E7FD9315AD50}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:6.16.0"
+        "ProductVersion" = "8:6.17.0"
         "Manufacturer" = "8:VietUnicode"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://sourceforge.net/projects/vietocr/support"
         "Title" = "8:Setup for VietOCR.NET"
-        "Subject" = "8:Installer for VietOCR.NET v6.16.0"
+        "Subject" = "8:Installer for VietOCR.NET v6.17.0"
         "ARPCONTACT" = "8:Quan Nguyen"
         "Keywords" = "8:Vietnamese OCR"
         "ARPCOMMENTS" = "8:http://vietocr.sf.net"

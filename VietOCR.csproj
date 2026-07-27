@@ -292,7 +292,7 @@
     <Content Include="x64\libleptonica1870.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="x64\libtesseract552.dll">
+    <Content Include="x64\libtesseract553.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Resource Include="readme_cs_pt.html">
