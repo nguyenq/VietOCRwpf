@@ -249,3 +249,6 @@ Version 6.16.0 (16 January 2026)
 
 Version 6.17.0 (27 July 2026)
 - Upgrade to Tesseract 5.5.3
+
+Version 6.18.0 (1 November 2026)
+- Upgrade to Tesseract 5.5.4
